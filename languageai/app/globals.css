@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('/Mona-Sans.woff2') format('woff2 supports variations'),
+    url('/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+html {
+  font-family: 'Mona Sans';
+  scroll-behavior: smooth;
+  scrollbar-width: 2px;
+}
+
+.clamped-h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem) !important;
+}
+
+@keyframes textPathAnimate {
+  0% {
+    startOffset: 0;
+  }
+
+  100% {
+    startOffset: 100%;
+  }
+}
+
+.animate-text {
+  animation: textPathAnimate 10s linear infinite;
+}
+
+/* Crossed state */
+.line1.cross {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.line2.cross {
+  opacity: 0;
+}
+
+.line3.cross {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
