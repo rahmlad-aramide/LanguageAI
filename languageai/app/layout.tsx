@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://res.cloudinary.com/dh4rm7b7b/image/upload/b_rgb:FFFFFF/c_pad,ar_1:1/v1707299721/Language-AI/logo_l1j3ny.png'),
+  metadataBase: new URL(
+    "https://res.cloudinary.com/dh4rm7b7b/image/upload/b_rgb:FFFFFF/c_pad,ar_1:1/v1707299721/Language-AI/logo_l1j3ny.png"
+  ),
   title: "LanguageAI",
   description: "Empowering Global Communication and Language Mastery",
   generator: "Rahmlad",
@@ -46,8 +49,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin> */}
-        {/* <Link rel="preload" href="/Mona-Sans.woff2" as="font" type="font/woff2"></Link> */}
+      {/* <Link rel="preload" href="/Mona-Sans.woff2" as="font" type="font/woff2"></Link> */}
       <body>{children}</body>
+      <Analytics />
     </html>
   );
 }
