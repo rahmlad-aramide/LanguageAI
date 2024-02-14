@@ -1,9 +1,20 @@
+import { Download, Paste, Select } from "@/src/assets/svg";
+import { ReactElement, ReactNode } from "react";
+
 interface ILanguagesData {
   language: string;
   key: string;
   flag: string;
 }
 
+export interface StepProps {
+  icon: () => JSX.Element;
+  background: string;
+  border: string;
+  number: string;
+  heading: string;
+  body: string;
+}
 export const languagesData: ILanguagesData[] = [
   {
     language: "Arabic",
@@ -266,57 +277,30 @@ export const languagesData: ILanguagesData[] = [
     flag: "si",
   },
 ];
-// export const languagesData = [
-//     {"language": "Arabic", "key": "ar_AR", "flag": "https://flagcdn.com/w320/sa.png"},
-//     {"language": "Czech", "key": "cs_CZ", "flag": "https://flagcdn.com/w320/cz.png"},
-//     {"language": "German", "key": "de_DE", "flag": "https://flagcdn.com/w320/de.png"},
-//     {"language": "English", "key": "en_XX", "flag": "https://flagcdn.com/w320/gb.png"},
-//     {"language": "Spanish", "key": "es_XX", "flag": "https://flagcdn.com/w320/es.png"},
-//     {"language": "Estonian", "key": "et_EE", "flag": "https://flagcdn.com/w320/ee.png"},
-//     {"language": "Finnish", "key": "fi_FI", "flag": "https://flagcdn.com/w320/fi.png"},
-//     {"language": "French", "key": "fr_XX", "flag": "https://flagcdn.com/w320/fr.png"},
-//     {"language": "Gujarati", "key": "gu_IN", "flag": "https://flagcdn.com/w320/in.png"},
-//     {"language": "Hindi", "key": "hi_IN", "flag": "https://flagcdn.com/w320/in.png"},
-//     {"language": "Italian", "key": "it_IT", "flag": "https://flagcdn.com/w320/it.png"},
-//     {"language": "Japanese", "key": "ja_XX", "flag": "https://flagcdn.com/w320/jp.png"},
-//     {"language": "Kazakh", "key": "kk_KZ", "flag": "https://flagcdn.com/w320/kz.png"},
-//     {"language": "Korean", "key": "ko_KR", "flag": "https://flagcdn.com/w320/kr.png"},
-//     {"language": "Lithuanian", "key": "lt_LT", "flag": "https://flagcdn.com/w320/lt.png"},
-//     {"language": "Latvian", "key": "lv_LV", "flag": "https://flagcdn.com/w320/lv.png"},
-//     {"language": "Burmese", "key": "my_MM", "flag": "https://flagcdn.com/w320/mm.png"},
-//     {"language": "Nepali", "key": "ne_NP", "flag": "https://flagcdn.com/w320/np.png"},
-//     {"language": "Dutch", "key": "nl_XX", "flag": "https://flagcdn.com/w320/nl.png"},
-//     {"language": "Romanian", "key": "ro_RO", "flag": "https://flagcdn.com/w320/ro.png"},
-//     {"language": "Russian", "key": "ru_RU", "flag": "https://flagcdn.com/w320/ru.png"},
-//     {"language": "Sinhala", "key": "si_LK", "flag": "https://flagcdn.com/w320/lk.png"},
-//     {"language": "Turkish", "key": "tr_TR", "flag": "https://flagcdn.com/w320/tr.png"},
-//     {"language": "Vietnamese", "key": "vi_VN", "flag": "https://flagcdn.com/w320/vn.png"},
-//     {"language": "Chinese", "key": "zh_CN", "flag": "https://flagcdn.com/w320/cn.png"},
-//     {"language": "Afrikaans", "key": "af_ZA", "flag": "https://flagcdn.com/w320/za.png"},
-//     {"language": "Azerbaijani", "key": "az_AZ", "flag": "https://flagcdn.com/w320/az.png"},
-//     {"language": "Bengali", "key": "bn_IN", "flag": "https://flagcdn.com/w320/in.png"},
-//     {"language": "Persian", "key": "fa_IR", "flag": "https://flagcdn.com/w320/ir.png"},
-//     {"language": "Hebrew", "key": "he_IL", "flag": "https://flagcdn.com/w320/il.png"},
-//     {"language": "Croatian", "key": "hr_HR", "flag": "https://flagcdn.com/w320/hr.png"},
-//     {"language": "Indonesian", "key": "id_ID", "flag": "https://flagcdn.com/w320/id.png"},
-//     {"language": "Georgian", "key": "ka_GE", "flag": "https://flagcdn.com/w320/ge.png"},
-//     {"language": "Khmer", "key": "km_KH", "flag": "https://flagcdn.com/w320/kh.png"},
-//     {"language": "Macedonian", "key": "mk_MK", "flag": "https://flagcdn.com/w320/mk.png"},
-//     {"language": "Malayalam", "key": "ml_IN", "flag": "https://flagcdn.com/w320/in.png"},
-//     {"language": "Mongolian", "key": "mn_MN", "flag": "https://flagcdn.com/w320/mn.png"},
-//     {"language": "Marathi", "key": "mr_IN", "flag": "https://flagcdn.com/w320/in.png"},
-//     {"language": "Polish", "key": "pl_PL", "flag": "https://flagcdn.com/w320/pl.png"},
-//     {"language": "Pashto", "key": "ps_AF", "flag": "https://flagcdn.com/w320/af.png"},
-//     {"language": "Portuguese", "key": "pt_XX", "flag": "https://flagcdn.com/w320/pt.png"},
-//     {"language": "Swedish", "key": "sv_SE", "flag": "https://flagcdn.com/w320/se.png"},
-//     {"language": "Swahili", "key": "sw_KE", "flag": "https://flagcdn.com/w320/ke.png"},
-//     {"language": "Tamil", "key": "ta_IN", "flag": "https://flagcdn.com/w320/in.png"},
-//     {"language": "Telugu", "key": "te_IN", "flag": "https://flagcdn.com/w320/in.png"},
-//     {"language": "Thai", "key": "th_TH", "flag": "https://flagcdn.com/w320/th.png"},
-//     {"language": "Tagalog", "key": "tl_XX", "flag": "https://flagcdn.com/w320/ph.png"},
-//     {"language": "Ukrainian", "key": "uk_UA", "flag": "https://flagcdn.com/w320/ua.png"},
-//     {"language": "Urdu", "key": "ur_PK", "flag": "https://flagcdn.com/w320/pk.png"},
-//     {"language": "Xhosa", "key": "xh_ZA", "flag": "https://flagcdn.com/w320/za.png"},
-//     {"language": "Galician", "key": "gl_ES", "flag": "https://flagcdn.com/w320/es.png"},
-//     {"language": "Slovene", "key": "sl_SI", "flag": "https://flagcdn.com/w320/si.png"}
-// ]
+
+export const stepsData: StepProps[] = [
+  {
+    icon: Select,
+    background: "#F5FAFF",
+    border: "#D2E9FF",
+    number: "01",
+    heading: "Select",
+    body: "Choose your desired language you want to translate you doc/text to.",
+  },
+  {
+    icon: Paste,
+    background: "#FDFAF4",
+    border: "#FAE0AE",
+    number: "02",
+    heading: "Paste",
+    body: "Paste your text document or upload your document.",
+  },
+  {
+    icon: Download,
+    background: "#F1F0FF",
+    border: "#D0CDFE",
+    number: "03",
+    heading: "Download",
+    body: "Download your copy within a few seconds.",
+  },
+];
