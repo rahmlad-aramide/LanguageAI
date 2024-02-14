@@ -12,14 +12,14 @@ export const Translation: React.FC = () => {
 
   return (
     <section id="translate">
-      <div className="bg-[#EE076814] w-[calc(100%_-_16px)] sm:w-[calc(100%_-_28px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-[2.5rem] mt-7 md:mt-14 pt-11 pb-4 px-8 md:px-11">
+      <div className="bg-[#EE076814] w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-xl md:rounded-[2.5rem] mt-7 md:mt-14 pt-11 pb-4 px-8 md:px-11">
         <h2 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
           Translate your words or documents
         </h2>
         <p className="text-sm md:text-xl text-center text-[#475467] px-4 pt-3">
           Choose the language you want to transitioned into below:
         </p>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-3.5 w-full max-w-3xl lg:max-w-4xl mx-auto mb-4 mt-2 md:mt-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-3.5 w-full max-w-lg lg:max-w-4xl mx-auto mb-4 mt-2 md:mt-10">
           <SelectLanguage
             language={sourceLanguage}
             setLanguage={setSourceLanguage}
@@ -44,7 +44,7 @@ export const Translation: React.FC = () => {
             secondLanguage={sourceLanguage}
           />
         </div>
-        <div className="flex justify-center w-full max-w-3xl lg:max-w-4xl mx-auto mb-8">
+        <div className="flex justify-center w-full max-w-lg lg:max-w-4xl mx-auto mb-8">
           <textarea
             className="w-full h-64 rounded-lg shadow border-[0.4px] border-primary outline-none focus:border-2 resize-none p-5"
             // rows={5}

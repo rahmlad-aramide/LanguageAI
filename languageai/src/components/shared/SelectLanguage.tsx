@@ -2,24 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Button } from "..";
-
-// LanguageOption.tsx
-type LanguageOption = {
-  code: string; // Country code for the flag
-  language: string; // Language name
-};
-
-// Define your languages and corresponding flags
-const languageOptions: LanguageOption[] = [
-  { code: "ng", language: "English" },
-  { code: "ng", language: "Hausa" },
-  { code: "fr", language: "French" },
-  { code: "es", language: "Spanish" },
-  { code: "de", language: "German" },
-  { code: "jp", language: "Japanese" },
-  { code: "cn", language: "Chinese" },
-  { code: "ru", language: "Russian" },
-];
+import { languagesData } from "@/app/data";
 
 interface SelectLanguageProps {
   language: string;
@@ -36,10 +19,10 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const selectedLanguageOption = languageOptions.find(
+  const selectedLanguageOption = languagesData.find(
     (option) => option.language === language
   );
-  
+
   return (
     <div className="relative w-full">
       <Button
@@ -50,7 +33,7 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
         {selectedLanguageOption ? (
           <>
             <Image
-              src={`https://flagcdn.com/16x12/${selectedLanguageOption.code}.png`}
+              src={`https://flagcdn.com/16x12/${selectedLanguageOption.flag}.png`}
               alt=""
               width={16}
               height={12}
@@ -86,10 +69,10 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
         </span>
       </Button>
       {isOpen && (
-        <ul className="absolute grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full h-32 overflow-y-auto border rounded mt-1 bg-white shadow outline-primary outline-offset-4 z-10">
-          {languageOptions.map((option) => (
+        <ul className="absolute grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 w-full h-80 md:h-40 overflow-y-auto border rounded mt-1 bg-white shadow outline-primary outline-offset-4 z-10">
+          {languagesData.map((option) => (
             <li
-              key={option.code}
+              key={option.key}
               className={`${
                 option.language === secondLanguage
                   ? "hover:bg-transparent opacity-60 cursor-not-allowed"
@@ -102,7 +85,7 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
               }}
             >
               <Image
-                src={`https://flagcdn.com/16x12/${option.code}.png`}
+                src={`https://flagcdn.com/16x12/${option.flag}.png`}
                 alt=""
                 className="w-4 h-3 mr-2"
                 width={16}

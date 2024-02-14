@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="pt-8 md:pt-16 space-y-10 flex flex-col md:flex-row w-[90%] max-w-6xl mx-auto"
+      className="pt-8 md:pt-16 space-y-10 flex flex-col md:flex-row  w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto"
     >
       <div className="w-full md:w-1/2 flex flex-col items-start gap-10 ml-0 md:ml-5">
         <div className="flex flex-col w-full">
@@ -21,8 +21,8 @@ export const Hero: React.FC = () => {
             Connect with the World.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-3 w-[90%] mx-auto md:ml-0">
-          <Button className="font-bold w-full md:w-fit text-center">
+        <div className="flex flex-col md:flex-row gap-3 w-[calc(100%_-_16px)] sm:w-[calc(100%_-_28px)] mx-auto md:ml-0">
+          <Button className="font-bold w-full md:w-fit max-w-lg mx-auto text-center">
             Translate Your Words
           </Button>
           <Button
