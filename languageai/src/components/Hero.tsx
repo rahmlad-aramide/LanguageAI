@@ -9,19 +9,19 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="pt-48 flex flex-col md:flex-row w-[90%] max-w-6xl mx-auto"
+      className="pt-8 md:pt-16 space-y-10 flex flex-col md:flex-row w-[90%] max-w-6xl mx-auto"
     >
-      <div className="w-full md:w-1/2 flex flex-col items-start gap-10 ml-5">
-        <div className="flex flex-col">
-          <h1 className="clamped-h1 text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-semibold leading-[4.5rem] mb-6 text-[#1F0610] text-center md:text-left">
+      <div className="w-full md:w-1/2 flex flex-col items-start gap-10 ml-0 md:ml-5">
+        <div className="flex flex-col w-full">
+          <h1 className="clamped-h1 font-semibold leading-[2.8125rem] md:leading-[3.5rem] lg:leading-[4.5rem] mb-6 text-[#1F0610] text-center md:text-left max-w-[20ch] mx-auto">
             Empowering Global Communication and Language Mastery
           </h1>
-          <p className="text-sm md:text-xl text-[#1F0610]/80 text-center md:text-left">
+          <p className="text-sm md:text-xl text-[#1F0610]/80 text-center md:text-left max-w-[38ch] md:max-w-full mx-auto">
             With Language.ai, Translate with Precision, Learn with Passion,
             Connect with the World.
           </p>
         </div>
-        <div className="flex gap-3">
+        <div className="flex flex-col md:flex-row gap-3 w-[90%] mx-auto md:ml-0">
           <Button className="font-bold w-full md:w-fit text-center">
             Translate Your Words
           </Button>
@@ -33,19 +33,17 @@ export const Hero: React.FC = () => {
           </Button>
         </div>
         <div className="flex flex-col w-full">
-          {/* <div aria-label="horizontal line" className="w-full h-[0.5px] bg-[#1F0610]"></div>
-            <br /> */}
-          <hr className="w-full h-[0.5px] bg-[#1f0610] border-0 mb-4" />
-          <div className="flex gap-2 items-center">
+          <hr className="w-full h-[0.5px] bg-[#1f0610] border-0 mb-4 opacity-50 md:opacity-100" />
+          <div className="flex gap-1 sm:gap-2 items-center justify-center md:justify-start">
             <Image width={152} height={40} src={avatars} alt="Avatars" />
-            <div className="flex flex-col font-medium">
-              <span className="flex gap-2 items-center font-semibold">
+            <div className="flex flex-col font-medium text-xs md:text-base">
+              <span className="flex gap-0 sm:gap-2 justify-start items-center font-semibold">
                 <Image
                   width={116}
                   height={20}
                   src={stars}
                   alt="Star"
-                  className="w-full h-fit"
+                  className="w-full h-fit scale-90 md:scale-100 -ml-1.5"
                 />
                 5.0
               </span>
@@ -60,7 +58,7 @@ export const Hero: React.FC = () => {
           width={1341}
           height={1168}
           alt="A 3 by 3 grid of shapes and images"
-          className="w-full h-auto -mr-10"
+          className="w-full h-auto mr-0 md:-mr-10"
         />
       </div>
     </section>

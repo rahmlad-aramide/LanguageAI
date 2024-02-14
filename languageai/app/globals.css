@@ -37,7 +37,7 @@ html {
 
 /* Crossed state */
 .line1.cross {
-  transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
 
 .line2.cross {
@@ -45,5 +45,5 @@ html {
 }
 
 .line3.cross {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }

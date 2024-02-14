@@ -22,9 +22,9 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white h-fit flex justify-center items-center fixed top-0 w-full z-50">
-      <div className="bg-transparent md:bg-lightPrimary flex justify-between items-center w-full md:w-[90%] max-w-7xl mx-auto mt-5 mb-4 md:mb-2 md:mt-6 h-fit md:h-20 rounded-full px-7">
-        <div className="mr-4">
+    <nav className="flex justify-center items-center h-fit w-full z-50">
+      <div className="md:bg-lightPrimary flex justify-between items-center w-full md:w-[90%] max-w-7xl mx-auto py-3 md:mt-6 mb-0 md:mb-2 h-fit md:h-20 rounded-none md:rounded-full px-4 md:px-7">
+        <div className="mr-4 md:bg-transparent">
           <Link
             href="#"
             aria-label="Language.ai"

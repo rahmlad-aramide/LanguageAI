@@ -1,165 +1,72 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
-import { SelectLanguage } from ".";
-
-// type LanguageOption = {
-//   code: string; // Country code for the flag
-//   language: string; // Language name
-// };
-
-// // Define your languages and corresponding flags
-// const languageOptions: LanguageOption[] = [
-//   { code: "ng", language: "Hausa" },
-//   { code: "fr", language: "French" },
-//   { code: "es", language: "Spanish" },
-//   { code: "de", language: "German" },
-//   { code: "jp", language: "Japanese" },
-//   { code: "cn", language: "Chinese" },
-//   { code: "ru", language: "Russian" },
-// ];
-
-// interface SelectLanguageProps {
-//   language: string;
-//   setLanguage: (language: string) => void;
-// }
-
-// // <Image src={`https://flagcdn.com/16x12/${option.code}.png`} alt="" className="w-4 h-3 mr-2" />
-// export const SelectLanguage: React.FC<SelectLanguageProps> = ({
-//   language,
-//   setLanguage,
-// }) => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   return (
-//     <div className="relative">
-//       <button
-//         className="w-full border rounded px-3 py-2 bg-white shadow outline-none flex items-center justify-between"
-//         onClick={() => setIsOpen(!isOpen)}
-//       >
-//         <span>
-//           <Image
-//             src={`https://flagcdn.com/16x12/ng.png`}
-//             alt=""
-//             width={16}
-//             height={12}
-//             className="w-4 h-3 mr-2"
-//           />
-//         </span>
-//         <span>{language || "Select a language"}</span>
-//         <span>▼</span>
-//       </button>
-//       {isOpen && (
-//         <div className="absolute border rounded mt-1 bg-white shadow outline-none z-10">
-//           {languageOptions.map(
-//             (option) =>
-//               option.language !== language && (
-//                 <div
-//                   key={option.code}
-//                   className="px-3 py-2 flex items-center cursor-pointer hover:bg-gray-100"
-//                   onClick={() => {
-//                     setLanguage(option.language);
-//                     setIsOpen(false);
-//                   }}
-//                 >
-//                   <span>
-//                     <Image
-//                       src={`https://flagcdn.com/16x12/ng.png`}
-//                       alt=""
-//                       className="w-4 h-3 mr-2"
-//                       width={16}
-//                       height={12}
-//                     />
-//                   </span>
-//                   <span className="mr-2">{option.language}</span>
-//                 </div>
-//               )
-//           )}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// import { Button, SelectLanguage } from ".";
-// LanguageOption.tsx
-// type LanguageOption = {
-//   code: string; // Country code for the flag
-//   language: string; // Language name
-// };
-
-// // Define your languages and corresponding flags
-// const languageOptions: LanguageOption[] = [
-//   { code: "ng", language: "Hausa" },
-//   { code: "fr", language: "French" },
-//   { code: "es", language: "Spanish" },
-//   { code: "de", language: "German" },
-//   { code: "jp", language: "Japanese" },
-//   { code: "cn", language: "Chinese" },
-//   { code: "ru", language: "Russian" },
-// ];
-
-// interface SelectLanguageProps {
-//   language: string;
-//   setLanguage: (language: string) => void;
-// }
-
-// export const SelectLanguage: React.FC<SelectLanguageProps> = ({
-//   language,
-//   setLanguage,
-// }) => {
-//   return (
-//     <select
-//       className="w-full border rounded px-3 py-2 bg-white shadow outline-none"
-//       value={language}
-//       onChange={(e) => setLanguage(e.target.value)}
-//     >
-//       {languageOptions.map(
-//         (option) =>
-//           option.language !== language && (
-//             <option key={option.code} value={option.language}>
-//               <div className="flex items-center">
-//                 <Image
-//                   src={`https://flagcdn.com/16x12/${option.code}.png`}
-//                   alt={option.language}
-//                   className="w-4 h-3 mr-2"
-//                   width={16}
-//                   height={12}
-//                 />
-//                 {option.language}
-//               </div>
-//             </option>
-//           )
-//       )}
-//     </select>
-//   );
-// };
+import { SelectLanguage } from "./shared/SelectLanguage";
+import { Arrows } from "../assets/svg";
+import { Button } from ".";
+import { inter } from "@/app/page";
 
 export const Translation: React.FC = () => {
-  const [sourceLanguage, setSourceLanguage] = useState("");
-  const [targetLanguage, setTargetLanguage] = useState("");
+  const [sourceLanguage, setSourceLanguage] = useState("English");
+  const [targetLanguage, setTargetLanguage] = useState("French");
+  const [invert, setInvert] = useState(false);
+
   return (
-    <section>
-      <div className="bg-[#EE076814] w-[90%] max-w-6xl mx-auto rounded-[2.5rem]">
-        <h2>Translate your words or documents</h2>
-        <p>Choose the language you want to transitioned into below:</p>
-        <div className="flex">
-          {/* <Button>French</Button>
-          <Button>English</Button> */}
+    <section id="translate">
+      <div className="bg-[#EE076814] w-[calc(100%_-_16px)] sm:w-[calc(100%_-_28px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-[2.5rem] mt-7 md:mt-14 pt-11 pb-4 px-8 md:px-11">
+        <h2 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
+          Translate your words or documents
+        </h2>
+        <p className="text-sm md:text-xl text-center text-[#475467] px-4 pt-3">
+          Choose the language you want to transitioned into below:
+        </p>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-3.5 w-full max-w-3xl lg:max-w-4xl mx-auto mb-4 mt-2 md:mt-10">
           <SelectLanguage
             language={sourceLanguage}
             setLanguage={setSourceLanguage}
+            secondLanguage={targetLanguage}
           />
+          <Button
+            variant="text"
+            className={`${
+              invert ? "rotate-180" : "rotate-360"
+            } transition duration-200 outline-transparent focus:outline-primary px-0`}
+            onClick={() => {
+              setSourceLanguage(targetLanguage);
+              setTargetLanguage(sourceLanguage);
+              setInvert(!invert);
+            }}
+          >
+            <Arrows />
+          </Button>
           <SelectLanguage
             language={targetLanguage}
             setLanguage={setTargetLanguage}
+            secondLanguage={sourceLanguage}
           />
-          <select name="a" id="a">
-            <option value="b">b</option>
-            <option value="b">b</option>
-            <option value="b">b</option>
-            <option value="b">b</option>
-          </select>
+        </div>
+        <div className="flex justify-center w-full max-w-3xl lg:max-w-4xl mx-auto mb-8">
+          <textarea
+            className="w-full h-64 rounded-lg shadow border-[0.4px] border-primary outline-none focus:border-2 resize-none p-5"
+            // rows={5}
+            placeholder="Select the language pair and input or paste the text for translation"
+          />
+        </div>
+        <div className="w-full max-w-sm mx-auto">
+          <Button fullWidth={true} className="font-bold">
+            Translate
+          </Button>
+          <Button
+            fullWidth={true}
+            variant="text"
+            className={`${inter.className} text-primary font-bold italic underline underline-offset-4 mt-6 mb-2 pt-0 pb-0`}
+          >
+            <em>Or upload A PDF document</em>
+          </Button>
+          <p
+            className={`${inter.className} font-light text-[#475467] text-center`}
+          >
+            <em>Document size: Max 10MB</em>
+          </p>
         </div>
       </div>
     </section>

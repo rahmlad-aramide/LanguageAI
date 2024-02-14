@@ -11,6 +11,7 @@ type LanguageOption = {
 
 // Define your languages and corresponding flags
 const languageOptions: LanguageOption[] = [
+  { code: "ng", language: "English" },
   { code: "ng", language: "Hausa" },
   { code: "fr", language: "French" },
   { code: "es", language: "Spanish" },
@@ -23,24 +24,27 @@ const languageOptions: LanguageOption[] = [
 interface SelectLanguageProps {
   language: string;
   setLanguage: (language: string) => void;
+  // disabled: boolean;
+  secondLanguage: string;
 }
 
 // <Image src={`https://flagcdn.com/16x12/${option.code}.png`} alt="" className="w-4 h-3 mr-2" />
 export const SelectLanguage: React.FC<SelectLanguageProps> = ({
   language,
   setLanguage,
+  secondLanguage,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const selectedLanguageOption = languageOptions.find(
     (option) => option.language === language
   );
-
+  
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <Button
         variant="outlined"
-        className="w-full border rounded px-3 py-2 bg-transparent shadow outline-none flex items-center justify-between"
+        className="w-full border rounded px-3 py-2 bg-transparent shadow outline-none flex items-center justify-center"
         onClick={() => setIsOpen(!isOpen)}
       >
         {selectedLanguageOption ? (
@@ -50,16 +54,20 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
               alt=""
               width={16}
               height={12}
-              className="w-4 h-3 mr-2"
+              className="w-4 h-3 mr-3"
               // unoptimized={true} // Use unoptimized for external URLs not configured in next.config.js
             />
-            <span>{selectedLanguageOption.language}</span>
+            <span className="font-medium">
+              {selectedLanguageOption.language}
+            </span>
           </>
         ) : (
           <span>Select a language</span>
         )}
         <span
-          className={`${isOpen ? "rotate-180" : ""} transition duration-200 `}
+          className={`${
+            isOpen ? "rotate-180" : ""
+          } transition duration-200 ml-2`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,13 +86,18 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
         </span>
       </Button>
       {isOpen && (
-        <div className="absolute border rounded mt-1 bg-white shadow outline-primary outline-offset-4 z-10">
+        <ul className="absolute grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full h-32 overflow-y-auto border rounded mt-1 bg-white shadow outline-primary outline-offset-4 z-10">
           {languageOptions.map((option) => (
-            <div
+            <li
               key={option.code}
-              className="px-3 py-2 flex items-center cursor-pointer hover:bg-gray-100"
+              className={`${
+                option.language === secondLanguage
+                  ? "hover:bg-transparent opacity-60 cursor-not-allowed"
+                  : "hover:bg-gray-100 opacity-100 cursor-pointer"
+              } px-3 py-2 flex items-center`}
               onClick={() => {
-                setLanguage(option.language);
+                option.language !== secondLanguage &&
+                  setLanguage(option.language);
                 setIsOpen(false);
               }}
             >
@@ -97,9 +110,9 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
                 unoptimized={true}
               />
               <span>{option.language}</span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );
