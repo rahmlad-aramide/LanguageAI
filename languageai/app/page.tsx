@@ -1,9 +1,7 @@
 import { Hero, HowItWorks, Navbar } from "@/src/components";
 import { CircularCTA } from "@/src/components/CircularCTA";
 import { Translation } from "@/src/components/Translation";
-import { Inter } from "next/font/google";
 
-export const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>

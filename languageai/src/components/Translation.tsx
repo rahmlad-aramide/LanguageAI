@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SelectLanguage } from "./shared/SelectLanguage";
 import { Arrows } from "../assets/svg";
 import { Button } from ".";
-import { inter } from "@/app/page";
+import { inter } from "@/app/fonts";
 
 export const Translation: React.FC = () => {
   const [sourceLanguage, setSourceLanguage] = useState("English");
