@@ -1,20 +1,6 @@
 import { Download, Paste, Select } from "@/src/assets/svg";
-import { ReactElement, ReactNode } from "react";
+import { ILanguagesData, StepProps } from "@/types";
 
-interface ILanguagesData {
-  language: string;
-  key: string;
-  flag: string;
-}
-
-export interface StepProps {
-  icon: () => JSX.Element;
-  background: string;
-  border: string;
-  number: string;
-  heading: string;
-  body: string;
-}
 export const languagesData: ILanguagesData[] = [
   {
     language: "Arabic",

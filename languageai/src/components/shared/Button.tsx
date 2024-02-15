@@ -8,6 +8,7 @@ interface ButtonProps {
   fullWidth?: boolean;
   href?: string;
   variant?: "text" | "outlined" | "primary";
+  type?: "button" | "submit" | "reset"; 
   onClick?: () => void;
 }
 export const Button: React.FC<ButtonProps> = ({
@@ -17,17 +18,19 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth = false,
   href,
   variant = "primary",
+  type="button",
   onClick,
 }) => {
   const variantStyles = {
     text: "border outline-transparent focus:outline-primary border-transparent bg-transparent",
     primary:
-      "border outline-transparent focus:outline-primary border-primary bg-primary text-white",
+      "border outline-transparent focus:outline-primary border-primary disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed text-white",
     outlined:
       "border outline-transparent focus:outline-primary border-primary text-primary bg-transparent",
   };
   return (
     <button
+      type={type}
       onClick={onClick}
       disabled={disabled}
       className={`${className} ${fullWidth ? "w-full" : "w-fit"} ${

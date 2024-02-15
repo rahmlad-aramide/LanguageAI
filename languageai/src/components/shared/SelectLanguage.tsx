@@ -3,12 +3,13 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "..";
 import { languagesData } from "@/app/data";
+import { selectedLanguageOption } from "./helper";
 
 interface SelectLanguageProps {
   language: string;
   setLanguage: (language: string) => void;
-  // disabled: boolean;
   secondLanguage: string;
+  onChange: () => void
 }
 
 // <Image src={`https://flagcdn.com/16x12/${option.code}.png`} alt="" className="w-4 h-3 mr-2" />
@@ -16,17 +17,15 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
   language,
   setLanguage,
   secondLanguage,
+  onChange,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const selectedLanguageOption = languagesData.find(
-    (option) => option.language === language
-  );
-
   const filteredLanguages = languagesData.filter((option) =>
     option.language.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  const selectedLanguage = selectedLanguageOption(language)
 
   return (
     <div className="relative w-full">
@@ -35,10 +34,10 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
         className="w-full border rounded px-3 py-2 bg-transparent shadow outline-none flex items-center justify-center"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {selectedLanguageOption ? (
+        {selectedLanguage ? (
           <>
             <Image
-              src={`https://flagcdn.com/16x12/${selectedLanguageOption.flag}.png`}
+              src={`https://flagcdn.com/16x12/${selectedLanguage.flag}.png`}
               alt=""
               width={16}
               height={12}
@@ -46,7 +45,7 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
               // unoptimized={true} // Use unoptimized for external URLs not configured in next.config.js
             />
             <span className="font-medium">
-              {selectedLanguageOption.language}
+              {selectedLanguage.language}
             </span>
           </>
         ) : (
@@ -95,6 +94,7 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
                   option.language !== secondLanguage &&
                     setLanguage(option.language);
                   setIsOpen(false);
+                  onChange();
                 }}
               >
                 <Image

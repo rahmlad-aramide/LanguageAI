@@ -50,7 +50,9 @@ export default function RootLayout({
     <html lang="en">
       {/* <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin> */}
       {/* <Link rel="preload" href="/Mona-Sans.woff2" as="font" type="font/woff2"></Link> */}
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
       <Analytics />
     </html>
   );

@@ -13,7 +13,8 @@ const config: Config = {
         primary: "#EE0768",
         lightPrimary: '#FFEFF6',
         secondary: '#050B2C',
-        dark: '#1F0610'
+        dark: '#1F0610',
+        disabled: '#F5A3B9'
       },
     },
   },

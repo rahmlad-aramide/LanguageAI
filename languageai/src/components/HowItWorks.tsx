@@ -1,6 +1,7 @@
 "use client";
-import { StepProps, stepsData } from "@/app/data";
+import { stepsData } from "@/app/data";
 import { inter } from "@/app/fonts";
+import { StepProps } from "@/types";
 
 const Step: React.FC<StepProps> = ({
   icon,
@@ -10,6 +11,7 @@ const Step: React.FC<StepProps> = ({
   heading,
   body,
 }) => {
+
   return (
     <div className="flex flex-col items-center md:items-start">
       <div
@@ -31,7 +33,10 @@ const Step: React.FC<StepProps> = ({
     </div>
   );
 };
+
+
 export const HowItWorks: React.FC = () => {
+    
   return (
     <section className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] mx-auto mb-36">
       <h2 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4 mt-20">
