@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-3 w-[calc(100%_-_16px)] sm:w-[calc(100%_-_28px)] md:w-fit mx-auto md:ml-0">
-          <Button className="font-bold w-full md:w-fit max-w-lg mx-auto text-center">
+          <Button className="font-bold w-full md:w-fit max-w-sm mx-auto text-center">
             Translate Your Words
           </Button>
           <Button

@@ -9,7 +9,7 @@ interface SelectLanguageProps {
   language: string;
   setLanguage: (language: string) => void;
   secondLanguage: string;
-  onChange: () => void
+  onChange: () => void;
 }
 
 // <Image src={`https://flagcdn.com/16x12/${option.code}.png`} alt="" className="w-4 h-3 mr-2" />
@@ -25,13 +25,13 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
   const filteredLanguages = languagesData.filter((option) =>
     option.language.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  const selectedLanguage = selectedLanguageOption(language)
+  const selectedLanguage = selectedLanguageOption(language);
 
   return (
     <div className="relative w-full">
       <Button
         variant="outlined"
-        className="w-full border rounded px-3 py-2 bg-transparent shadow outline-none flex items-center justify-center"
+        className="w-full border rounded px-3 py-2 bg-transparent shadow outline-none flex items-center justify-center max-w-sm md:max-w-full mx-auto"
         onClick={() => setIsOpen(!isOpen)}
       >
         {selectedLanguage ? (
@@ -44,9 +44,7 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
               className="w-4 h-3 mr-3"
               // unoptimized={true} // Use unoptimized for external URLs not configured in next.config.js
             />
-            <span className="font-medium">
-              {selectedLanguage.language}
-            </span>
+            <span className="font-medium">{selectedLanguage.language}</span>
           </>
         ) : (
           <span>Select a language</span>
