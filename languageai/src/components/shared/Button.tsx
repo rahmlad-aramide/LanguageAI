@@ -9,7 +9,9 @@ interface ButtonProps {
   href?: string;
   variant?: "text" | "outlined" | "primary";
   type?: "button" | "submit" | "reset"; 
+  ariaLabel?: string;
   onClick?: () => void;
+  onBlur?: () => void;
 }
 export const Button: React.FC<ButtonProps> = ({
   children,
@@ -19,7 +21,9 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   variant = "primary",
   type="button",
+  ariaLabel,
   onClick,
+  onBlur,
 }) => {
   const variantStyles = {
     text: "border outline-transparent focus:outline-primary border-transparent bg-transparent",
@@ -30,8 +34,10 @@ export const Button: React.FC<ButtonProps> = ({
   };
   return (
     <button
+      aria-label={ariaLabel}
       type={type}
       onClick={onClick}
+      onBlur={onBlur}
       disabled={disabled}
       className={`${className} ${fullWidth ? "w-full" : "w-fit"} ${
         variantStyles[variant]

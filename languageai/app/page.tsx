@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime"
 import { Hero, HowItWorks, Navbar } from "@/src/components";
 import { CircularCTA } from "@/src/components/CircularCTA";
 import { Translation } from "@/src/components/Translation";

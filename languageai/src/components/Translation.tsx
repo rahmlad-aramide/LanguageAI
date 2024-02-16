@@ -1,25 +1,42 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { SelectLanguage } from "./shared/SelectLanguage";
-import { Arrows } from "../assets/svg";
-import { Button } from ".";
+import "regenerator-runtime/runtime";
+import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
 import { inter } from "@/app/fonts";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
+import { SelectLanguage } from "./shared/SelectLanguage";
+import {
+  Arrows,
+  Copy,
+  Mic,
+  MicPause,
+  MicPlay,
+  MicStop,
+  Speaker,
+} from "../assets/svg";
+import { Button } from ".";
 import { selectedLanguageOption } from "./shared/helper";
 import translate from "@/app/api";
 import { useNotification } from "../contexts";
+import { TextArea } from "./shared/TextArea";
 
 export const Translation: React.FC = () => {
   const { notify } = useNotification();
+  const { transcript, listening, browserSupportsSpeechRecognition } =
+    useSpeechRecognition();
   const inputRef = useRef<HTMLTextAreaElement>(null);
-  const [text, setText] = useState("");
+  const outputRef = useRef<HTMLTextAreaElement>(null);
+  const [text, setText] = useState<string>("");
   const [output, setOutput] = useState<string>("");
-  const [error, setError] = useState<string | null>("");
-  const [translateButton, setTranslateButton] = useState<boolean>(true)
+  const [translateButton, setTranslateButton] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
   const [sourceLanguage, setSourceLanguage] = useState("English");
   const [targetLanguage, setTargetLanguage] = useState("French");
   const [invert, setInvert] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [micOn, setMicOn] = useState<boolean>(listening);
+  const [micMode, setMicMode] = useState<"play" | "pause" | "stop">("play");
 
   const sourceLang = `${selectedLanguageOption(sourceLanguage)?.key}`;
   const targetLang = `${selectedLanguageOption(targetLanguage)?.key}`;
@@ -35,6 +52,116 @@ export const Translation: React.FC = () => {
     }
   }, [output]);
 
+  const handleMic = useCallback(() => {
+    setMicOn(true);
+    notify("Start speaking to your mic...", "inform");
+    if (!browserSupportsSpeechRecognition) {
+      setMicOn(false);
+      notify("Your browser does not support speech recognition", "warn");
+    }
+    SpeechRecognition.startListening();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [browserSupportsSpeechRecognition]);
+
+  const handlePause = useCallback(() => {
+    setMicMode("play");
+    SpeechRecognition.stopListening();
+    notify("Recording paused...", "inform");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleContinue = useCallback(() => {
+    setMicOn(true);
+    setMicMode("pause");
+    notify("Continue speaking to your mic...", "inform");
+    SpeechRecognition.startListening();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleStop = useCallback(() => {
+    setMicOn(false);
+    setMicMode("stop");
+    SpeechRecognition.stopListening();
+    notify("Recording stopped, you can translate now!", "success");
+    setTranslateButton(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleSpeak = useCallback(
+    (text: string) => {
+      if ("speechSynthesis" in window && text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
+        notify("You are now listening to your texts...", "inform");
+      } else {
+        notify("Sorry, Text-to-Speech is not supported.", "warn");
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [text]
+  );
+
+  const handleSubmit = useCallback(
+    async (e: FormEvent) => {
+      e.preventDefault();
+      setLoading(true);
+      setOutput("");
+
+      if (!text.trim()) {
+        setLoading(false);
+        notify("Please, enter the texts to translate", "error");
+        return;
+      }
+
+      try {
+        const translatedText = await translate({
+          text,
+          sourceLang,
+          targetLang,
+        });
+        setOutput(translatedText);
+        notify("Text translated successfully!", "success");
+        setTranslateButton(false);
+      } catch (error) {
+        const errorMessage =
+          error instanceof Error
+            ? error.message
+            : "An unexpected error occurred";
+        notify(errorMessage, "error");
+        setOutput("");
+      } finally {
+        setLoading(false);
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [
+      text,
+      sourceLang,
+      targetLang,
+      translate,
+      notify,
+      setLoading,
+      setOutput,
+      setTranslateButton,
+    ]
+  );
+
+  useEffect(() => {
+    micMode === "play" && setText(transcript);
+    micMode === "pause" &&
+      setText((prev) => prev.trim() + " " + transcript.trim());
+  }, [transcript, micMode]);
+
+  const handleCopy = useCallback(async () => {
+    if (navigator.clipboard && text) {
+      await navigator.clipboard.writeText(text);
+      notify("Text copied to clipboard!", "success");
+    } else {
+      notify("Sorry, Clipboard functionality is not supported.", "warn");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [text]);
+
   return (
     <section id="translate">
       <div className="bg-[#EE076814] w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-xl md:rounded-[2.5rem] mt-7 md:mt-14 pt-11 pb-4 px-8 md:px-11">
@@ -49,7 +176,11 @@ export const Translation: React.FC = () => {
             language={sourceLanguage}
             setLanguage={setSourceLanguage}
             secondLanguage={targetLanguage}
-            onChange={()=>{setTranslateButton(true); setText(""); setOutput("")}}
+            onChange={() => {
+              setTranslateButton(true);
+              setText("");
+              setOutput("");
+            }}
           />
           <Button
             variant="text"
@@ -72,82 +203,103 @@ export const Translation: React.FC = () => {
             language={targetLanguage}
             setLanguage={setTargetLanguage}
             secondLanguage={sourceLanguage}
-            onChange={()=>{setOutput(""); setTranslateButton(true)}}
+            onChange={() => {
+              setOutput("");
+              setTranslateButton(true);
+            }}
           />
         </div>
-        <form
-          onSubmit={async (e) => {
-            e.preventDefault();
-            setLoading(true);
-            setOutput("");
-            if (!text.trim()) {
-              setLoading(false);
-              notify("Please, enter the texts to translate", "error");
-              return;
-            }
-
-            try {
-              // Attempt to translate the text
-              const translatedText = await translate({
-                text,
-                sourceLang,
-                targetLang,
-              });
-
-              // If successful, update the output state and clear any existing error
-              setOutput(translatedText);
-              setError(null);
-              notify("Text translated successfully!", "success");
-              setTranslateButton(false);
-            } catch (error) {
-              if (error instanceof Error) {
-                setError(error.message);
-                notify(error.message, "error");
-              } else {
-                setError("An unexpected error occurred");
-                notify("An unexpected error occurred", "error");
-                console.log(error);
-              }
-              setOutput("");
-            } finally {
-              if (error) {
-                notify(error, "error");
-              }
-              if (output) {
-                notify("Text translated successfully!", "success");
-              }
-              setLoading(false);
-            }
-          }}
-        >
+        <form onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row gap-8 justify-center w-full max-w-lg lg:max-w-4xl mx-auto mb-8 mt-8 md:mt-0">
-            <textarea
-              className="w-full h-64 rounded-lg shadow border-[0.4px] border-primary outline-none focus:border-2 resize-none p-5"
-              ref={inputRef}
-              value={text}
-              onChange={(e) => {setText(e.target.value); output && setTranslateButton(true)}}
-              placeholder="Select the language pair and input or paste the text for translation"
-            />
-            {isVisible && (
-              <textarea
-                className="w-full h-64 rounded-lg shadow border-[0.4px] border-primary outline-none focus:border-2 resize-none p-5"
-                value={output}
-                onChange={(e) => setOutput(e.target.value)}
-                placeholder="Your output will be displayed here"
+            <div className="w-full h-64 flex flex-col items-end rounded-lg bg-white shadow border-[0.4px] border-primary outline-none focus-within:border-2 resize-none">
+              <TextArea
+                ref={inputRef}
+                value={text}
+                onChange={(e) => {
+                  setText(e.target.value);
+                  output && setTranslateButton(true);
+                }}
               />
+              <div className="flex justify-between w-full items-center">
+                {micOn && (
+                  <div className="flex gap-2 m-4 mt-1">
+                    <Button
+                      onClick={handlePause}
+                      disabled={!listening}
+                      className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                    >
+                      <MicPause className="h-4" />
+                    </Button>
+                    <Button
+                      disabled={listening || micMode === "pause"}
+                      onClick={handleContinue}
+                      className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                    >
+                      <MicPlay className="h-4" />
+                    </Button>
+                    <Button
+                      onClick={handleStop}
+                      className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                    >
+                      <MicStop className="h-4" />
+                    </Button>
+                  </div>
+                )}
+                <div className="flex gap-2 m-4 mt-1 ml-auto">
+                  <Button
+                    onClick={() => handleSpeak(text)}
+                    disabled={!text}
+                    className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                  >
+                    <Speaker className="h-4" />
+                  </Button>
+                  <Button
+                    disabled={listening}
+                    onClick={handleMic}
+                    className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                  >
+                    <Mic />
+                  </Button>
+                </div>
+              </div>
+            </div>
+            {isVisible && (
+              <div className="w-full h-64 flex flex-col items-end rounded-lg bg-white shadow border-[0.4px] border-primary outline-none focus-within:border-2 resize-none">
+                <TextArea
+                  ref={outputRef}
+                  value={output}
+                  onChange={(e) => setOutput(e.target.value)}
+                  placeholder="Your output will be displayed here"
+                />
+                <div className="flex gap-2 m-4 mt-1">
+                  <Button
+                    onClick={() => handleSpeak(output)}
+                    disabled={!output || micOn}
+                    className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                  >
+                    <Speaker className="h-4" />
+                  </Button>
+                  <Button
+                    onClick={handleCopy}
+                    className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                  >
+                    <Copy />
+                  </Button>
+                </div>
+              </div>
             )}
           </div>
           <div className="w-full max-w-sm mx-auto">
-            {translateButton &&
+            {translateButton && (
               <Button
                 fullWidth={true}
                 className="font-bold"
                 type="submit"
-                disabled={loading}
+                disabled={loading || micOn}
               >
                 {loading ? "Translating..." : "Translate"}
               </Button>
-            }
+            )}
             <Button
               fullWidth={true}
               variant="text"

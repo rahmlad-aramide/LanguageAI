@@ -101,3 +101,196 @@ export const Download = () => {
     </svg>
   );
 };
+
+interface SVGProps {
+  className?: string;
+}
+
+export const Speaker = ({ className }: SVGProps) => {
+  return (
+    <svg
+      width={16}
+      height={17}
+      viewBox="0 0 16 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M7.174 4.037l-3.176 2.54H1.457v3.812h2.54l3.177 2.541V4.037zM10.058 6.235a3.176 3.176 0 010 4.49M12.3 3.992a6.352 6.352 0 010 8.983"
+        stroke="#EE0768"
+        strokeWidth={0.846994}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const Mic = ({ className }: SVGProps) => {
+  return (
+    <svg
+      width={16}
+      height={17}
+      viewBox="0 0 16 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M8.204 2.131A1.906 1.906 0 006.3 4.037v4.447a1.906 1.906 0 003.811 0V4.037A1.906 1.906 0 008.204 2.13z"
+        stroke="#EE0768"
+        strokeWidth={0.846994}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12.651 7.213v1.27a4.447 4.447 0 11-8.893 0v-1.27M8.204 12.93v1.906"
+        stroke="#EE0768"
+        strokeWidth={0.846994}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const Copy = ({ className }: SVGProps) => {
+  return (
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M10.623 1.901H6.29c-.25 0-.502.126-.69.314-.189.189-.314.44-.314.691v8.04c0 .25.125.502.314.69.188.189.44.315.69.315h6.156c.251 0 .502-.126.69-.315.19-.188.315-.44.315-.69V4.728L10.623 1.9z"
+        stroke="#EE0768"
+        strokeWidth={0.837455}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M2.772 5.418v8.04c0 .251.126.502.314.69.189.19.44.315.691.315h6.155M10.31 1.901v3.14h3.14"
+        stroke="#EE0768"
+        strokeWidth={0.837455}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const MicPlay = ({ className }: SVGProps) => {
+  return (
+    <svg
+      width="24"
+      height="25.5"
+      viewBox="0 0 16 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M8.204 2.131A1.906 1.906 0 006.3 4.037v4.447a1.906 1.906 0 003.811 0V4.037A1.906 1.906 0 008.204 2.13z"
+        stroke="#EE0768"
+        strokeWidth="0.846994"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12.651 7.213v1.27a4.447 4.447 0 11-8.893 0v-1.27M8.204 12.93v1.906"
+        stroke="#EE0768"
+        strokeWidth="0.846994"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <polygon points="12,1 12,7 16,4" fill="#EE0768" />
+    </svg>
+  );
+};
+
+export const MicPause = ({ className }: SVGProps) => {
+  return (
+    <svg
+      width="20"
+      height="21.25"
+      viewBox="0 0 16 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M8.204 2.131A1.906 1.906 0 006.3 4.037v4.447a1.906 1.906 0 003.811 0V4.037A1.906 1.906 0 008.204 2.13z"
+        stroke="#EE0768"
+        strokeWidth="0.846994"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12.651 7.213v1.27a4.447 4.447 0 11-8.893 0v-1.27M8.204 12.93v1.906"
+        stroke="#EE0768"
+        strokeWidth="0.846994"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <rect x="12" y="0" width="2" height="6" fill="#EE0768" />
+      <rect x="15" y="0" width="2" height="6" fill="#EE0768" />
+    </svg>
+  );
+};
+
+export const MicStop = ({ className }: SVGProps) => {
+  return (
+    <svg width="20" height="21.25" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+  <path d="M8.204 2.131A1.906 1.906 0 006.3 4.037v4.447a1.906 1.906 0 003.811 0V4.037A1.906 1.906 0 008.204 2.13z" stroke="#EE0768" strokeWidth="0.846994" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M12.651 7.213v1.27a4.447 4.447 0 11-8.893 0v-1.27M8.204 12.93v1.906" stroke="#EE0768" strokeWidth="0.846994" strokeLinecap="round" strokeLinejoin="round"/>
+  <rect x="0" y="0" width="4" height="4" fill="#EE0768"/>
+</svg>
+
+  )
+}
+export const MicReset = ({ className }: SVGProps) => {
+  return (
+    <svg
+      width="24"
+      height="25.5"
+      viewBox="0 0 16 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M8.204 2.131A1.906 1.906 0 006.3 4.037v4.447a1.906 1.906 0 003.811 0V4.037A1.906 1.906 0 008.204 2.13z"
+        stroke="#EE0768"
+        strokeWidth="0.846994"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12.651 7.213v1.27a4.447 4.447 0 11-8.893 0v-1.27M8.204 12.93v1.906"
+        stroke="#EE0768"
+        strokeWidth="0.846994"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8 1v4m0 -4l-1 1m1 -1l1 1M15 8h-4m4 0l-1 -1m1 1l-1 1"
+        stroke="#EE0768"
+        strokeWidth="0.846994"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M13.5 8a5.5 5.5 0 1 1-11 0"
+        stroke="#EE0768"
+        strokeWidth="0.846994"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

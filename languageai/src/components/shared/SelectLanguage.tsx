@@ -33,6 +33,7 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
         variant="outlined"
         className="w-full border rounded px-3 py-2 bg-transparent shadow outline-none flex items-center justify-center max-w-sm md:max-w-full mx-auto"
         onClick={() => setIsOpen(!isOpen)}
+        onBlur={() => setIsOpen(false)}
       >
         {selectedLanguage ? (
           <>
