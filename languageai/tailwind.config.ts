@@ -16,6 +16,10 @@ const config: Config = {
         dark: '#1F0610',
         disabled: '#F5A3B9'
       },
+      backgroundImage: {
+        footer: "url('/footer-bg.svg')",
+        footerMobile: "url('/footer-bg-mobile.svg')",
+      },
     },
   },
   plugins: [],

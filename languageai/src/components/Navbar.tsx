@@ -71,26 +71,26 @@ export const Navbar: React.FC = () => {
         >
           <ul
             data-aos="zoom-in"
-            className="flex items-center md:justify-end flex-col md:flex-row mt-0 w-full gap-8"
+            className="flex items-center md:justify-end flex-col md:flex-row mt-0 w-full gap-2 md:gap-5"
           >
-            <li className="mb-5 md:mb-0">
+            <li className="mb-3 md:mb-0">
               <Link href="#home" className="relative group">
                 Home
               </Link>
             </li>
-            <li className="mb-5 md:mb-0">
+            <li className="mb-3 md:mb-0">
               <Link href="#features" className="relative group">
-                Features
+                How it works
               </Link>
             </li>
-            <li className="mb-5 md:mb-0">
+            <li className="mb-3 md:mb-0">
               <Link href="#stories" className="relative group">
-                Stories
+                About us
               </Link>
             </li>
-            <li className="mb-5 md:mb-0">
+            <li className="mb-0 md:mb-0">
               <Link href="#contact" className="relative group">
-                Contact Us
+                Contact us
               </Link>
             </li>
           </ul>

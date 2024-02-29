@@ -287,6 +287,6 @@ export const stepsData: StepProps[] = [
     border: "#D0CDFE",
     number: "03",
     heading: "Download",
-    body: "Download your copy within a few seconds.",
+    body: "Download your copy in just a few seconds.",
   },
 ];

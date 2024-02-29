@@ -222,41 +222,41 @@ export const Translation: React.FC = () => {
               />
               <div className="flex justify-between w-full items-center">
                 {micOn && (
-                  <div className="flex gap-2 m-4 mt-1">
+                  <div className="flex gap-2 mx-2 md:mx-4 m-4 mt-1">
                     <Button
                       onClick={handlePause}
                       disabled={!listening}
-                      className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                      className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                     >
                       <MicPause className="h-4" />
                     </Button>
                     <Button
                       disabled={listening || micMode === "pause"}
                       onClick={handleContinue}
-                      className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                      className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                     >
                       <MicPlay className="h-4" />
                     </Button>
                     <Button
                       onClick={handleStop}
-                      className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                      className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                     >
                       <MicStop className="h-4" />
                     </Button>
                   </div>
                 )}
-                <div className="flex gap-2 m-4 mt-1 ml-auto">
+                <div className="flex gap-2 mx-2 md:mx-4 m-4 mt-1 ml-auto">
                   <Button
                     onClick={() => handleSpeak(text)}
                     disabled={!text}
-                    className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                    className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                   >
                     <Speaker className="h-4" />
                   </Button>
                   <Button
                     disabled={listening}
                     onClick={handleMic}
-                    className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                    className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                   >
                     <Mic />
                   </Button>
@@ -275,13 +275,13 @@ export const Translation: React.FC = () => {
                   <Button
                     onClick={() => handleSpeak(output)}
                     disabled={!output || micOn}
-                    className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                    className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                   >
                     <Speaker className="h-4" />
                   </Button>
                   <Button
                     onClick={handleCopy}
-                    className="rounded-2xl !px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
+                    className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                   >
                     <Copy />
                   </Button>

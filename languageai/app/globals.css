@@ -14,7 +14,10 @@
 html {
   font-family: 'Mona Sans';
   scroll-behavior: smooth;
-  scrollbar-width: 2px;
+}
+
+body {
+  scroll-behavior: smooth;
 }
 
 .clamped-h1 {
