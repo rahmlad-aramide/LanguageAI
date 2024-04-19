@@ -4,6 +4,13 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import icon from "../assets/icon.png";
 
+const links = [
+  { link: "Home", href: "#" },
+  { link: "Features", href: "/#features" },
+  { link: "How it works?", href: "/#how-it-works" },
+  { link: "Contact Us", href: "/#contact" },
+];
+
 export const Navbar: React.FC = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const [isToggled, setIsToggled] = useState(false);
@@ -23,21 +30,22 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="flex justify-center items-center h-fit w-full z-50">
-      <div className="md:bg-lightPrimary flex justify-between items-center w-full sm:w-[calc(100%_-_32px)] md:w-[calc(100%_-_120px)] max-w-7xl mx-auto py-3 md:mt-6 mb-0 md:mb-2 h-fit md:h-20 rounded-none md:rounded-full px-4 md:px-7">
+      <div className="md:bg-primary/10 backdrop-blur-[6px] flex justify-between items-center w-full sm:w-[calc(100%_-_32px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto py-3 md:mt-6 mb-0 md:mb-2 h-fit md:h-20 rounded-none md:rounded-full px-4 md:px-7">
         <div className="mr-4 md:bg-transparent">
           <Link
             href="#"
             aria-label="Language.ai"
-            className="flex gap-2 text-lg font-bold text-secondary"
+            className="flex text-lg font-bold text-secondary items-center"
           >
             <Image
               src={icon}
-              width={49}
-              height={54}
+              width={25}
+              height={25}
+              sizes="100vw"
               alt="Language.ai"
-              className="w-6 h-auto"
+              className="w-6 h-6"
             />
-            Language.ai
+            <span className="ml-2">Language.ai</span>
           </Link>
         </div>
         <button
@@ -73,26 +81,16 @@ export const Navbar: React.FC = () => {
             data-aos="zoom-in"
             className="flex items-center md:justify-end flex-col md:flex-row mt-0 w-full gap-2 md:gap-5"
           >
-            <li className="mb-3 md:mb-0">
-              <Link href="#home" className="relative group">
-                Home
-              </Link>
-            </li>
-            <li className="mb-3 md:mb-0">
-              <Link href="#features" className="relative group">
-                How it works
-              </Link>
-            </li>
-            <li className="mb-3 md:mb-0">
-              <Link href="#stories" className="relative group">
-                About us
-              </Link>
-            </li>
-            <li className="mb-0 md:mb-0">
-              <Link href="#contact" className="relative group">
-                Contact us
-              </Link>
-            </li>
+            {links.map((link, idx) => (
+              <li key={idx} className="mb-3 last:mb-0 md:mb-0">
+                <Link
+                  href={link.href}
+                  className="font-semibold text-[rgba(31,6,16,0.70)]"
+                >
+                  {link.link}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

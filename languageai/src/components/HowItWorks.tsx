@@ -35,7 +35,7 @@ const Step: React.FC<StepProps> = ({
 
 export const HowItWorks: React.FC = () => {
   return (
-    <section id="features" className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] lg:w-[calc(100%_-_300px)] max-w-6xl mx-auto mb-36">
+    <section id="how-it-works" className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] lg:w-[calc(100%_-_300px)] max-w-6xl mx-auto mb-36">
       <h2 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4 mt-20">
         Get to know how it works in just three STEPS!
       </h2>

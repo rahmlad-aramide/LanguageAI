@@ -11,7 +11,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
   ref,
   value,
   onChange,
-  placeholder = "Select the language pair and input or paste the text for translation",
+  placeholder = "Select the language pair and type or paste the text for translation...",
 }) => {
   return (
     <textarea

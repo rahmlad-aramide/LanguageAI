@@ -4,6 +4,7 @@ import { CircularCTA } from "@/src/components/CircularCTA";
 import { Translation } from "@/src/components/Translation";
 import { NotificationProvider } from "@/src/contexts";
 import { Footer } from "@/src/components/Footer";
+import {Features} from "@/src/components/Features";
 
 export default function Home() {
   return (
@@ -13,11 +14,12 @@ export default function Home() {
       </header>
       <main className="relative">
         <Hero />
-        {/* <CircularCTA /> */}
+        <CircularCTA />
         <Translation />
+        <Features />
         <HowItWorks />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </NotificationProvider>
   );
 }

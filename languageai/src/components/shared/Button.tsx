@@ -7,7 +7,7 @@ interface ButtonProps {
   disabled?: boolean;
   fullWidth?: boolean;
   href?: string;
-  variant?: "text" | "outlined" | "primary";
+  variant?: "text" | "outlined" | "primary" | "white";
   type?: "button" | "submit" | "reset"; 
   ariaLabel?: string;
   onClick?: () => void;
@@ -29,6 +29,8 @@ export const Button: React.FC<ButtonProps> = ({
     text: "border outline-transparent focus:outline-primary border-transparent bg-transparent",
     primary:
       "border outline-transparent focus:outline-primary border-primary disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed text-white",
+    white:
+      "border outline-transparent focus:outline-primary border-primary disabled:border-disabled bg-white disabled:bg-disabled disabled:cursor-not-allowed text-primary",
     outlined:
       "border outline-transparent focus:outline-primary border-primary text-primary bg-transparent",
   };

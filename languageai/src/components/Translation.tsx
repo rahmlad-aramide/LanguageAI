@@ -163,8 +163,9 @@ export const Translation: React.FC = () => {
   }, [text]);
 
   return (
-    <section id="translate">
-      <div className="bg-[#EE076814] w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-xl md:rounded-[2.5rem] mt-7 md:mt-14 pt-11 pb-4 px-8 md:px-11">
+    <section>
+      <div id="translate" className="h-7 md:h-20"></div>
+      <div className="bg-[#EE076814] w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-xl md:rounded-[2.5rem] pt-11 pb-4 px-8 md:px-11">
         <h2 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
           Translate your words or documents
         </h2>
@@ -305,7 +306,7 @@ export const Translation: React.FC = () => {
               variant="text"
               className={`${inter.className} text-primary font-bold italic underline underline-offset-4 mt-6 mb-2 pt-0 pb-0`}
             >
-              <em>Or upload A PDF document</em>
+              Or upload A PDF document
             </Button>
             <p
               className={`${inter.className} font-light text-[#475467] text-center`}

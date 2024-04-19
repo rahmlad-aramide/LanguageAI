@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import { Button } from "./shared/Button";
 import hero from "../assets/hero.png";
 import avatars from "../assets/avatars.png";
 import stars from "../assets/stars.png";
@@ -9,9 +8,9 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="pt-8 md:pt-16 space-y-10 flex flex-col md:flex-row  w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto"
+      className="pt-8 md:pt-16 flex flex-col md:flex-row  w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto"
     >
-      <div className="w-full md:w-1/2 flex flex-col items-start gap-10 ml-0 md:ml-5">
+      <div className="w-full md:w-1/2 flex flex-col items-start gap-10 -mt-3">
         <div className="flex flex-col w-full">
           <h1 className="clamped-h1 font-semibold leading-[2.8125rem] md:leading-[3.5rem] lg:leading-[4.5rem] mb-6 text-[#1F0610] text-center md:text-left max-w-[20ch] mx-auto">
             Empowering Global Communication and Language Mastery
@@ -33,7 +32,7 @@ export const Hero: React.FC = () => {
           </Button>
         </div>
         <div className="flex flex-col w-full">
-          <hr className="w-full h-[0.5px] bg-[#1f0610] border-0 mb-4 opacity-50 md:opacity-100" />
+          <hr className="w-full md:w-2/3 h-[0.5px] bg-[#1f0610] border-0 mb-4 opacity-50 md:opacity-100" />
           <div className="flex gap-1 sm:gap-2 items-center justify-center md:justify-start">
             <Image width={152} height={40} src={avatars} alt="Avatars" />
             <div className="flex flex-col font-medium text-xs md:text-base">
@@ -52,13 +51,13 @@ export const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/2 flex flex-col items-end">
+      <div className="w-full md:w-1/2 flex flex-col">
         <Image
           src={hero}
           width={1341}
           height={1168}
           alt="A 3 by 3 grid of shapes and images"
-          className="w-full h-auto mr-0 md:-mr-10"
+          className="w-full h-auto"
         />
       </div>
     </section>

@@ -33,7 +33,6 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
         variant="outlined"
         className="w-full border rounded px-3 py-2 bg-transparent shadow outline-none flex items-center justify-center max-w-sm md:max-w-full mx-auto"
         onClick={() => setIsOpen(!isOpen)}
-        onBlur={() => setIsOpen(false)}
       >
         {selectedLanguage ? (
           <>
@@ -43,7 +42,7 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
               width={16}
               height={12}
               className="w-4 h-3 mr-3"
-              // unoptimized={true} // Use unoptimized for external URLs not configured in next.config.js
+              // unoptimized={true}
             />
             <span className="font-medium">{selectedLanguage.language}</span>
           </>
