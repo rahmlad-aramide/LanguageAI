@@ -1,10 +1,16 @@
+'use client'
 import Image from "next/image";
 import hero from "../assets/hero.png";
+import heroMobile from "../assets/hero-mobile.png";
 import avatars from "../assets/avatars.png";
 import stars from "../assets/stars.png";
 import { Button } from ".";
+import { useModal } from "../contexts";
+import { UploadFile } from "./UploadFile";
 
 export const Hero: React.FC = () => {
+  const {openModal} = useModal();
+
   return (
     <section
       id="home"
@@ -25,6 +31,7 @@ export const Hero: React.FC = () => {
             Translate Your Words
           </Button>
           <Button
+            onClick={()=>{openModal(<UploadFile />)}}
             variant="text"
             className="underline underline-offset-4 font-semibold w-full md:w-fit text-center"
           >
@@ -54,10 +61,17 @@ export const Hero: React.FC = () => {
       <div className="w-full md:w-1/2 flex flex-col">
         <Image
           src={hero}
-          width={1341}
+          width={1179}
           height={1168}
           alt="A 3 by 3 grid of shapes and images"
-          className="w-full h-auto"
+          className="hidden w-full h-auto md:flex"
+        />
+        <Image
+          src={heroMobile}
+          width={700}
+          height={847}
+          alt="A 3 by 3 grid of shapes and images"
+          className="flex w-full h-auto md:hidden mt-8"
         />
       </div>
     </section>

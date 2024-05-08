@@ -18,11 +18,13 @@ import {
 import { Button } from ".";
 import { selectedLanguageOption } from "./shared/helper";
 import translate from "@/app/api";
-import { useNotification } from "../contexts";
+import { useModal, useNotification } from "../contexts";
 import { TextArea } from "./shared/TextArea";
+import { UploadFile } from "./UploadFile";
 
 export const Translation: React.FC = () => {
   const { notify } = useNotification();
+  const {openModal} = useModal()
   const { transcript, listening, browserSupportsSpeechRecognition } =
     useSpeechRecognition();
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -302,6 +304,7 @@ export const Translation: React.FC = () => {
               </Button>
             )}
             <Button
+              onClick={()=>openModal(<UploadFile />)}
               fullWidth={true}
               variant="text"
               className={`${inter.className} text-primary font-bold italic underline underline-offset-4 mt-6 mb-2 pt-0 pb-0`}
