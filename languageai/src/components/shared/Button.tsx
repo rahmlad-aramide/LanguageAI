@@ -1,3 +1,4 @@
+import { LoadingIndicator } from "@/src/assets/svg";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -12,6 +13,7 @@ interface ButtonProps {
   ariaLabel?: string;
   onClick?: () => void;
   onBlur?: () => void;
+  loading?: boolean;
 }
 export const Button: React.FC<ButtonProps> = ({
   children,
@@ -24,9 +26,10 @@ export const Button: React.FC<ButtonProps> = ({
   ariaLabel,
   onClick,
   onBlur,
+  loading = false
 }) => {
   const variantStyles = {
-    text: "border outline-transparent focus:outline-primary border-transparent bg-transparent",
+    text: "border-none outline-transparent focus:outline-none border-transparent bg-transparent",
     primary:
       "border outline-transparent focus:outline-primary border-primary disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed text-white",
     white:
@@ -45,7 +48,7 @@ export const Button: React.FC<ButtonProps> = ({
         variantStyles[variant]
       } py-2.5 px-[1.125rem] rounded-lg transition-all`}
     >
-      {href ? <Link href={href}>{children}</Link> : <>{children}</>}
+      {href ? <Link href={href}>{loading? <LoadingIndicator />:children}</Link> : <>{loading? <LoadingIndicator />:children}</>}
     </button>
   );
 };

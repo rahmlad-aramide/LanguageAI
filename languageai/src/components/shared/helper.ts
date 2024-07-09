@@ -1,11 +1,13 @@
-import { languagesData } from "@/app/data";
+import { documentLanguagesData, navLanguagesData, textLanguagesData } from "@/app/[locale]/data";
 
 export const selectedLanguageOption = (language: string) =>
-  languagesData.find((option) => option.language === language);
+  textLanguagesData.find((option) => option.language === language);
 
-// export const handleSpeak = (text: string) => {
-//   console.log("speaker text",text)
-  
-// };
+export const selectedDocLanguageOption = (language: string) =>
+  documentLanguagesData.find((option) => option.language === language);
 
-// export const handleCopy = 
+export const selectedNavLanguageOption = (locale: string) =>
+  navLanguagesData.find((option) => option.key === locale);
+
+export const selectedNavLocaleOption = (language: string) =>
+  navLanguagesData.find((option) => option.language === language);

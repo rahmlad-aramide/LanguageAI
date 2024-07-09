@@ -1,0 +1,120 @@
+{
+  "Navbar": {
+    "navLinks": {
+      "link1": "Funktionen",
+      "link2": "Wie es funktioniert",
+      "link3": "Über uns"
+    }
+  },
+  "Hero": {
+    "heading": {
+      "headingText": "Stärkung der globalen Kommunikation und Sprachbeherrschung",
+      "bodyText": "Mit Language.ai, übersetzen Sie mit Präzision, lernen Sie mit Leidenschaft, verbinden Sie sich mit der Welt."
+    },
+    "cta": {
+      "buttonText": "Übersetzen Sie Ihre Worte",
+      "buttonLink": "Oder Datei ablegen"
+    },
+    "ratings": {
+      "star": "5.0",
+      "reviews": "aus über 120 Bewertungen"
+    }
+  },
+  "Translation": {
+    "heading": {
+      "headingText": "Übersetzen Sie Ihre Worte oder Dokumente",
+      "bodyText": "Wählen Sie unten die Sprache aus, in die Sie wechseln möchten:"
+    },
+    "cta": {
+      "buttonText": "Übersetzen",
+      "buttonLink": "Oder laden Sie ein PDF-Dokument hoch",
+      "instructionText": "Dokumentgröße: max. 10MB"
+    },
+    "placeholder": "Wählen Sie das Sprachpaar aus und geben Sie den Text zum Übersetzen ein oder fügen Sie ihn ein...",
+    "placeholder2": "Ihre Ausgabe wird hier angezeigt",
+    "uploadContent": {
+      "instructionText1": "Datei hierher ziehen",
+      "or": "oder",
+      "instructionText2": "klicken zum Durchsuchen",
+      "instructionText3": "(max. 10 MB)"
+    }
+  },
+  "Features": {
+    "heading": {
+      "headingText": "Wir bieten eine Reihe von hochmodernen Funktionen",
+      "bodyText": "Bei Language AI sind wir stolz darauf, Funktionen anzubieten, die darauf ausgelegt sind, Ihre Spracherfahrung zu revolutionieren."
+    },
+    "gridContents": {
+      "feature1": {
+        "headingText": "Text-zu-Sprache-Funktionalität",
+        "bodyText": "Schriftlichen Text in gesprochene Worte umwandeln, um das Verständnis von Textinhalten auditiv zu ermöglichen."
+      },
+      "feature2": {
+        "headingText": "Übersetzung von über 130 Sprachen",
+        "bodyText": "Übersetzen Sie Textinhalte in über 130 Sprachen, überwinden Sie Sprachbarrieren und ermöglichen Sie die Kommunikation über verschiedene Sprachlandschaften hinweg."
+      },
+      "feature3": {
+        "headingText": "Möglichkeit, die Ausgabe zu kopieren und überall einzufügen",
+        "bodyText": "Kopieren Sie den übersetzten Textausgang einfach von der Plattform und fügen Sie ihn an gewünschter Stelle ein, z. B. in Dokumenten, E-Mails oder Messaging-Anwendungen, zur weiteren Verwendung oder zum Teilen."
+      },
+      "feature4": {
+        "headingText": "Bequeme Drag-and-Drop-Funktion für die Dateiübersetzung",
+        "bodyText": "Vereinfachen Sie den Übersetzungsprozess, indem Sie Dateien mit Textinhalten einfach per Drag-and-Drop auf die Plattform ziehen, wodurch die manuelle Eingabe entfällt und die Effizienz gesteigert wird."
+      }
+    }
+  },
+  "HowItWorks": {
+    "heading": {
+      "headingText": "Erfahren Sie, wie es in nur drei Schritten funktioniert!",
+      "bodyText": "Bitte folgen Sie den unten stehenden Schritten, um zu erfahren, wie die Übersetzungen perfekt funktionieren"
+    },
+    "gridContents": {
+      "step1": {
+        "number": "01",
+        "heading": "Auswählen",
+        "body": "Wählen Sie die gewünschte Sprache aus, in die Sie Ihr Dokument/Ihren Text übersetzen möchten."
+      },
+      "step2": {
+        "number": "02",
+        "heading": "Einfügen",
+        "body": "Fügen Sie Ihr Textdokument ein oder laden Sie Ihr Dokument hoch."
+      },
+      "step3": {
+        "number": "03",
+        "heading": "Herunterladen",
+        "body": "Laden Sie Ihre Kopie in nur wenigen Sekunden herunter."
+      }
+    }
+  },
+  "About": {
+    "heading": "Über uns",
+    "body": {
+      "strong": "LanguageAI",
+      "normal": "bietet erstklassige Sprachübersetzungsdienste in über 130 Sprachen an. Wir helfen Einzelpersonen und Unternehmen dabei, Sprachbarrieren zu überwinden und ihre Sprachlernziele zu erreichen...",
+      "button": "Erfahren Sie mehr"
+    }
+  },
+  "Footer": {
+    "heading": {
+      "headingText": "Kontaktieren Sie uns",
+      "bodyText": "Unsere Plattform ist benutzerfreundlich und einfach zu navigieren, und wir bieten eine Reihe von Ressourcen, um Lernenden zu helfen, ihre Sprachkenntnisse zu verbessern.",
+      "buttonText": "Chatten Sie mit uns"
+    },
+    "links": {
+      "heading": "Links",
+      "links": {
+        "link1": "Wie benutzt man",
+        "link2": "Funktionen",
+        "link3": "Über uns"
+      }
+    },
+    "legal": {
+      "heading": "Rechtliches",
+      "links": {
+        "link1": "Cookie-Richtlinie",
+        "link2": "Datenschutzrichtlinie",
+        "link3": "AGB"
+      }
+    }
+  }
+}

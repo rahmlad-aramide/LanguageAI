@@ -1,0 +1,120 @@
+{
+  "Navbar": {
+    "navLinks": {
+      "link1": "Recursos",
+      "link2": "Como funciona",
+      "link3": "Sobre"
+    }
+  },
+  "Hero": {
+    "heading": {
+      "headingText": "Empoderando a Comunicação Global e o Domínio do Idioma",
+      "bodyText": "Com Language.ai, Traduza com Precisão, Aprenda com Paixão, Conecte-se com o Mundo."
+    },
+    "cta": {
+      "buttonText": "Traduza suas Palavras",
+      "buttonLink": "Ou solte um arquivo"
+    },
+    "ratings": {
+      "star": "5.0",
+      "reviews": "de mais de 120 avaliações"
+    }
+  },
+  "Translation": {
+    "heading": {
+      "headingText": "Traduza suas palavras ou documentos",
+      "bodyText": "Escolha o idioma para o qual você deseja fazer a transição abaixo:"
+    },
+    "cta": {
+      "buttonText": "Traduzir",
+      "buttonLink": "Ou carregue um documento PDF",
+      "instructionText": "Tamanho do documento: Máx 10MB"
+    },
+    "placeholder": "Selecione o par de idiomas e digite ou cole o texto para tradução...",
+    "placeholder2": "Sua saída será exibida aqui",
+    "uploadContent": {
+      "instructionText1": "Arraste o arquivo aqui",
+      "or": "ou",
+      "instructionText2": "clique para procurar",
+      "instructionText3": "(Máximo de 10MB)"
+    }
+  },
+  "Features": {
+    "heading": {
+      "headingText": "Oferecemos uma gama de recursos avançados",
+      "bodyText": "Na Language AI, temos orgulho em oferecer recursos projetados para revolucionar sua experiência linguística."
+    },
+    "gridContents": {
+      "feature1": {
+        "headingText": "Funcionalidade de Texto para Fala",
+        "bodyText": "Converta texto escrito em palavras faladas, permitindo a compreensão auditiva do conteúdo do texto."
+      },
+      "feature2": {
+        "headingText": "Tradução de Mais de 130 Idiomas",
+        "bodyText": "Traduza o conteúdo do texto entre mais de 130 idiomas, quebrando barreiras linguísticas e permitindo a comunicação em diversos contextos linguísticos."
+      },
+      "feature3": {
+        "headingText": "Capacidade de Copiar a Saída e Colar em Qualquer Lugar",
+        "bodyText": "Copie facilmente a saída do texto traduzido da plataforma e cole-a em qualquer local desejado, como documentos, e-mails ou aplicativos de mensagens, para uso ou compartilhamento posterior."
+      },
+      "feature4": {
+        "headingText": "Recurso Conveniente de Arrastar e Soltar para Tradução de Arquivos",
+        "bodyText": "Simplifique o processo de tradução arrastando e soltando arquivos contendo conteúdo de texto na plataforma, eliminando a necessidade de entrada manual e aumentando a eficiência."
+      }
+    }
+  },
+  "HowItWorks": {
+    "heading": {
+      "headingText": "Conheça como funciona em apenas três etapas!",
+      "bodyText": "Por favor, siga os passos abaixo para saber como as traduções funcionam perfeitamente"
+    },
+    "gridContents": {
+      "step1": {
+        "number": "01",
+        "heading": "Selecionar",
+        "body": "Escolha o idioma desejado para o qual você deseja traduzir seu documento/texto."
+      },
+      "step2": {
+        "number": "02",
+        "heading": "Colar",
+        "body": "Cole seu documento de texto ou carregue seu documento."
+      },
+      "step3": {
+        "number": "03",
+        "heading": "Baixar",
+        "body": "Baixe sua cópia em apenas alguns segundos."
+      }
+    }
+  },
+  "About": {
+    "heading": "Sobre",
+    "body": {
+      "strong": "LanguageAI",
+      "normal": "oferece serviços de tradução de alta qualidade em mais de 130 idiomas. Dedicado a ajudar indivíduos e empresas a quebrar barreiras linguísticas e alcançar seus objetivos de aprendizado de idiomas...",
+      "button": "Saiba mais"
+    }
+  },
+  "Footer": {
+    "heading": {
+      "headingText": "Entre em Contato Conosco",
+      "bodyText": "Nossa plataforma é fácil de usar e navegar, e fornecemos uma variedade de recursos para ajudar os alunos a melhorar suas habilidades linguísticas.",
+      "buttonText": "Converse Conosco"
+    },
+    "links": {
+      "heading": "Links",
+      "links": {
+        "link1": "Como usar",
+        "link2": "Recursos",
+        "link3": "Sobre"
+      }
+    },
+    "legal": {
+      "heading": "Legal",
+      "links": {
+        "link1": "Política de Cookies",
+        "link2": "Política de Privacidade",
+        "link3": "Termos e Condições"
+      }
+    }
+  }
+}

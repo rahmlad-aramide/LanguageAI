@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  height: 100%;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.clamped-h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem) !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+#navbar a, #footer a {
+  position: relative;
+  width: fit-content;
+}
+
+#navbar a::after, #footer a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s ease;
+  transform: translate3d(0, 0, 0);
+}
+#navbar a::after {
+  background-color: #1f0610b3;
+}
+#footer a::after {
+  background-color: #fff;
+}
+#navbar a:hover::after, #footer a:hover::after {
+  width: 100% !important;
+}
+
+/* Crossed state */
+.line1.cross {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.line2.cross {
+  opacity: 0;
+}
+
+.line3.cross {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+#footer {
+  background-image: url('../../src/assets/LanguageAI-footer.png');
+  background-position: bottom right;
+  background-size: 320px;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1025px) {
+  #footer { 
+    background-size: 1025px;
+  }
+}
+@media (max-width: 1024px) {
+  #footer { 
+    background-size: 768px;
+  }
+}
+@media (max-width: 768px) {
+  #footer { 
+    background-size: 448px;
+  }
+}
+@media (max-width: 448px) {
+  #footer { 
+    background-size: 320px;
+  }
+}

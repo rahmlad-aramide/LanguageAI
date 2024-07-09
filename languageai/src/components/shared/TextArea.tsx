@@ -1,14 +1,14 @@
 import { RefObject } from "react";
 
 interface TextAreaProps {
-  ref?: any;
+  refProp?: RefObject<HTMLTextAreaElement> | undefined;
   value: string;
   onChange: (e: any) => void;
   placeholder?: string;
 }
 
 export const TextArea: React.FC<TextAreaProps> = ({
-  ref,
+  refProp,
   value,
   onChange,
   placeholder = "Select the language pair and type or paste the text for translation...",
@@ -16,7 +16,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
   return (
     <textarea
       className="w-full h-full rounded-lg bg-transparent outline-none focus:border-none resize-none p-5 m-0.5"
-      ref={ref}
+      ref={refProp}
       value={value}
       onChange={onChange}
       placeholder={placeholder}

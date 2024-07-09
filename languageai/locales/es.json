@@ -1,0 +1,120 @@
+{
+  "Navbar": {
+    "navLinks": {
+      "link1": "Características",
+      "link2": "Cómo funciona",
+      "link3": "Acerca de"
+    }
+  },
+  "Hero": {
+    "heading": {
+      "headingText": "Empoderando la comunicación global y el dominio del idioma",
+      "bodyText": "Con Language.ai, traduce con precisión, aprende con pasión, conéctate con el mundo."
+    },
+    "cta": {
+      "buttonText": "Traduce tus palabras",
+      "buttonLink": "O suelta un archivo"
+    },
+    "ratings": {
+      "star": "5.0",
+      "reviews": "de más de 120 reseñas"
+    }
+  },
+  "Translation": {
+    "heading": {
+      "headingText": "Traduce tus palabras o documentos",
+      "bodyText": "Elija el idioma al que desea hacer la transición a continuación:"
+    },
+    "cta": {
+      "buttonText": "Traducir",
+      "buttonLink": "O cargue un documento PDF",
+      "instructionText": "Tamaño del documento: máximo 10 MB"
+    },
+    "placeholder": "Seleccione el par de idiomas y escriba o pegue el texto para traducir...",
+    "placeholder2": "Su resultado se mostrará aquí",
+    "uploadContent": {
+      "instructionText1": "Arrastrar archivo aquí",
+      "or": "o",
+      "instructionText2": "haga clic para explorar",
+      "instructionText3": "(10 MB máx)"
+    }
+  },
+  "Features": {
+    "heading": {
+      "headingText": "Ofrecemos una gama de funciones de vanguardia",
+      "bodyText": "En Language AI, nos enorgullecemos de ofrecer funciones diseñadas para revolucionar su experiencia lingüística."
+    },
+    "gridContents": {
+      "feature1": {
+        "headingText": "Funcionalidad de texto a voz",
+        "bodyText": "Convierta texto escrito en palabras habladas, lo que permite la comprensión auditiva del contenido textual."
+      },
+      "feature2": {
+        "headingText": "Traducción de más de 130 idiomas",
+        "bodyText": "Traduce el contenido del texto entre más de 130 idiomas, eliminando las barreras del idioma y permitiendo la comunicación a través de diversos paisajes lingüísticos."
+      },
+      "feature3": {
+        "headingText": "Posibilidad de copiar la salida y pegarla en cualquier lugar",
+        "bodyText": "Copie fácilmente la salida de texto traducido desde la plataforma y péguelo en cualquier lugar deseado, como documentos, correos electrónicos o aplicaciones de mensajería, para su uso o compartición."
+      },
+      "feature4": {
+        "headingText": "Función conveniente de arrastrar y soltar para la traducción de archivos",
+        "bodyText": "Simplifique el proceso de traducción simplemente arrastrando y soltando archivos que contienen contenido de texto en la plataforma, eliminando la necesidad de entrada manual y aumentando la eficiencia."
+      }
+    }
+  },
+  "HowItWorks": {
+    "heading": {
+      "headingText": "¡Conozca cómo funciona en solo tres pasos!",
+      "bodyText": "Por favor, siga los pasos a continuación para saber cómo funcionan las traducciones a la perfección"
+    },
+    "gridContents": {
+      "step1": {
+        "number": "01",
+        "heading": "Seleccionar",
+        "body": "Elija el idioma deseado al que desea traducir su documento/texto."
+      },
+      "step2": {
+        "number": "02",
+        "heading": "Pegar",
+        "body": "Pegue su documento de texto o cargue su documento."
+      },
+      "step3": {
+        "number": "03",
+        "heading": "Descargar",
+        "body": "Descargue su copia en solo unos segundos."
+      }
+    }
+  },
+  "About": {
+    "heading": "Acerca de",
+    "body": {
+      "strong": "LanguageAI",
+      "normal": "ofrece servicios de traducción de idiomas de primer nivel en más de 130 idiomas. Dedicado a ayudar a individuos y empresas a romper las barreras del idioma y alcanzar sus objetivos de aprendizaje de idiomas...",
+      "button": "Más información"
+    }
+  },
+  "Footer": {
+    "heading": {
+      "headingText": "Póngase en contacto con nosotros",
+      "bodyText": "Nuestra plataforma es fácil de usar y navegar, y proporcionamos una gama de recursos para ayudar a los estudiantes a mejorar sus habilidades lingüísticas.",
+      "buttonText": "Chatea con nosotros"
+    },
+    "links": {
+      "heading": "Enlaces",
+      "links": {
+        "link1": "Cómo usar",
+        "link2": "Características",
+        "link3": "Acerca de"
+      }
+    },
+    "legal": {
+      "heading": "Legal",
+      "links": {
+        "link1": "Política de cookies",
+        "link2": "Política de privacidad",
+        "link3": "Términos y condiciones"
+      }
+    }
+  }
+}

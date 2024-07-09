@@ -1,0 +1,120 @@
+{
+  "Navbar": {
+    "navLinks": {
+      "link1": "機能",
+      "link2": "使い方",
+      "link3": "概要"
+    }
+  },
+  "Hero": {
+    "heading": {
+      "headingText": "グローバルコミュニケーションと語学習得の強化",
+      "bodyText": "Language.aiで、正確に翻訳し、情熱を持って学び、世界とつながりましょう。"
+    },
+    "cta": {
+      "buttonText": "あなたの言葉を翻訳する",
+      "buttonLink": "またはファイルをドロップ"
+    },
+    "ratings": {
+      "star": "5.0",
+      "reviews": "120+ レビューから"
+    }
+  },
+  "Translation": {
+    "heading": {
+      "headingText": "言葉や文書を翻訳する",
+      "bodyText": "以下の言語を選択してください:"
+    },
+    "cta": {
+      "buttonText": "翻訳する",
+      "buttonLink": "またはPDF文書をアップロード",
+      "instructionText": "文書のサイズ: 最大10MB"
+    },
+    "placeholder": "言語ペアを選択し、翻訳するテキストを入力または貼り付けてください...",
+    "placeholder2": "ここに出力が表示されます",
+    "uploadContent": {
+      "instructionText1": "ファイルをここにドラッグ",
+      "or": "または",
+      "instructionText2": "クリックしてブラウズ",
+      "instructionText3": "(最大10MB)"
+    }
+  },
+  "Features": {
+    "heading": {
+      "headingText": "最先端の機能を提供します",
+      "bodyText": "Language AIでは、言語体験を革命的にするために設計された機能を誇りに思っています。"
+    },
+    "gridContents": {
+      "feature1": {
+        "headingText": "テキスト読み上げ機能",
+        "bodyText": "書かれたテキストを音声に変換し、テキスト内容の聴覚理解を可能にします。"
+      },
+      "feature2": {
+        "headingText": "130以上の言語の翻訳",
+        "bodyText": "130以上の言語間でテキスト内容を翻訳し、言語の壁を越えて多様な言語環境でのコミュニケーションを可能にします。"
+      },
+      "feature3": {
+        "headingText": "出力をコピーしてどこでも貼り付ける機能",
+        "bodyText": "プラットフォームから翻訳されたテキスト出力を簡単にコピーし、ドキュメント、メール、メッセージアプリなどの任意の場所に貼り付けて、さらに使用したり共有したりできます。"
+      },
+      "feature4": {
+        "headingText": "ファイル翻訳のための便利なドラッグアンドドロップ機能",
+        "bodyText": "テキスト内容を含むファイルをプラットフォームにドラッグアンドドロップするだけで翻訳プロセスを簡略化し、手動入力の必要性を排除し、効率を向上させます。"
+      }
+    }
+  },
+  "HowItWorks": {
+    "heading": {
+      "headingText": "3つのステップで使い方を知る",
+      "bodyText": "以下の手順に従って、翻訳が完璧に機能する方法を確認してください"
+    },
+    "gridContents": {
+      "step1": {
+        "number": "01",
+        "heading": "選択",
+        "body": "ドキュメント/テキストを翻訳したい目的の言語を選択します。"
+      },
+      "step2": {
+        "number": "02",
+        "heading": "貼り付け",
+        "body": "テキストドキュメントを貼り付けるか、ドキュメントをアップロードします。"
+      },
+      "step3": {
+        "number": "03",
+        "heading": "ダウンロード",
+        "body": "数秒でコピーをダウンロードします。"
+      }
+    }
+  },
+  "About": {
+    "heading": "概要",
+    "body": {
+      "strong": "LanguageAI",
+      "normal": "130以上の言語で最高品質の翻訳サービスを提供します。個人や企業が言語の壁を越え、言語学習の目標を達成するのを支援することに専念しています...",
+      "button": "詳細はこちら"
+    }
+  },
+  "Footer": {
+    "heading": {
+      "headingText": "お問い合わせ",
+      "bodyText": "当プラットフォームは使いやすく、ナビゲートも簡単で、学習者が言語スキルを向上させるためのさまざまなリソースを提供しています。",
+      "buttonText": "チャットで話す"
+    },
+    "links": {
+      "heading": "リンク",
+      "links": {
+        "link1": "使い方",
+        "link2": "機能",
+        "link3": "概要"
+      }
+    },
+    "legal": {
+      "heading": "法務",
+      "links": {
+        "link1": "クッキーポリシー",
+        "link2": "プライバシーポリシー",
+        "link3": "利用規約"
+      }
+    }
+  }
+}

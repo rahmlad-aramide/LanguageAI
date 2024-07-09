@@ -1,0 +1,120 @@
+{
+  "Navbar": {
+    "navLinks": {
+      "link1": "功能",
+      "link2": "如何运作",
+      "link3": "关于我们"
+    }
+  },
+  "Hero": {
+    "heading": {
+      "headingText": "提升全球沟通与语言掌握能力",
+      "bodyText": "通过 Language.ai，精准翻译，热情学习，与世界连接。"
+    },
+    "cta": {
+      "buttonText": "翻译您的文字",
+      "buttonLink": "或拖拽文件"
+    },
+    "ratings": {
+      "star": "5.0",
+      "reviews": "超过 120 条评价"
+    }
+  },
+  "Translation": {
+    "heading": {
+      "headingText": "翻译您的文字或文件",
+      "bodyText": "选择您想要转换的语言如下："
+    },
+    "cta": {
+      "buttonText": "翻译",
+      "buttonLink": "或上传 PDF 文件",
+      "instructionText": "文件大小：最大 10MB"
+    },
+    "placeholder": "选择语言对并输入或粘贴要翻译的文本...",
+     "placeholder2": "您的输出将显示在这里",
+    "uploadContent": {
+      "instructionText1": "将文件拖到这里",
+      "or": "或",
+      "instructionText2": "点击浏览",
+      "instructionText3": "(最大10MB)"
+    }
+  },
+  "Features": {
+    "heading": {
+      "headingText": "我们提供一系列最先进的功能",
+      "bodyText": "在 Language AI，我们自豪地提供旨在革新您的语言体验的功能。"
+    },
+    "gridContents": {
+      "feature1": {
+        "headingText": "文本转语音功能",
+        "bodyText": "将书面文本转换为口语，使文本内容的听觉理解成为可能。"
+      },
+      "feature2": {
+        "headingText": "支持130多种语言的翻译",
+        "bodyText": "在130多种语言之间翻译文本内容，打破语言障碍，实现跨越多样语言景观的沟通。"
+      },
+      "feature3": {
+        "headingText": "复制输出并粘贴到任何地方的能力",
+        "bodyText": "轻松从平台复制翻译后的文本输出，并将其粘贴到任何所需的位置，例如文档、电子邮件或消息应用程序，以便进一步使用或分享。"
+      },
+      "feature4": {
+        "headingText": "方便的拖拽功能用于文件翻译",
+        "bodyText": "通过简单地将包含文本内容的文件拖放到平台上简化翻译过程，消除手动输入的需求并提高效率。"
+      }
+    }
+  },
+  "HowItWorks": {
+    "heading": {
+      "headingText": "了解如何在三个步骤内完成工作！",
+      "bodyText": "请按照以下步骤操作，以了解翻译如何完美运行"
+    },
+    "gridContents": {
+      "step1": {
+        "number": "01",
+        "heading": "选择",
+        "body": "选择您想要将文档/文本翻译成的目标语言。"
+      },
+      "step2": {
+        "number": "02",
+        "heading": "粘贴",
+        "body": "粘贴您的文本文档或上传您的文档。"
+      },
+      "step3": {
+        "number": "03",
+        "heading": "下载",
+        "body": "仅需几秒钟即可下载您的副本。"
+      }
+    }
+  },
+  "About": {
+    "heading": "关于我们",
+    "body": {
+      "strong": "LanguageAI",
+      "normal": "提供超过130种语言的顶级语言翻译服务。致力于帮助个人和企业打破语言障碍，实现他们的语言学习目标...",
+      "button": "了解更多"
+    }
+  },
+  "Footer": {
+    "heading": {
+      "headingText": "联系我们",
+      "bodyText": "我们的平台用户友好且易于导航，我们提供一系列资源，帮助学习者提高他们的语言技能。",
+      "buttonText": "与我们聊天"
+    },
+    "links": {
+      "heading": "链接",
+      "links": {
+        "link1": "如何使用",
+        "link2": "功能",
+        "link3": "关于我们"
+      }
+    },
+    "legal": {
+      "heading": "法律",
+      "links": {
+        "link1": "Cookie 政策",
+        "link2": "隐私政策",
+        "link3": "条款和条件"
+      }
+    }
+  }
+}

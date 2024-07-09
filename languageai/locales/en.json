@@ -1,0 +1,120 @@
+{
+  "Navbar": {
+    "navLinks": {
+        "link1": "Features",
+        "link2": "How it works",
+        "link3": "About"
+    }
+  },
+  "Hero": {
+    "heading": {
+      "headingText": "Empowering Global Communication and Language Mastery",
+      "bodyText": "With Language.ai, Translate with Precision, Learn with Passion, Connect with the World."
+    },
+    "cta": {
+      "buttonText": "Translate Your Words",
+      "buttonLink": "Or drop a file"
+    },
+    "ratings": {
+      "star": "5.0",
+      "reviews": "from 120+ reviews"
+    }
+  },
+  "Translation": {
+    "heading": {
+      "headingText": "Translate your words or documents",
+      "bodyText": "Choose the language you want to transition into below:"
+    },
+    "cta": {
+      "buttonText": "Translate",
+      "buttonLink": "Or upload a PDF document",
+      "instructionText": "Document size: Max 10MB"
+    },
+    "placeholder": "Select the language pair and type or paste the text for translation...",
+    "placeholder2": "Your output will be displayed here",
+    "uploadContent": {
+      "instructionText1": "Drag file here",
+      "or": "or",
+      "instructionText2": "click to browse",
+      "instructionText3": "(10MB Max)"
+    }
+  },
+  "Features": {
+    "heading": {
+      "headingText": "We offer an array of cutting-edge features",
+      "bodyText": "At Language AI, we take pride in offering features designed to revolutionize your language experience."
+    },
+    "gridContents": {
+      "feature1": {
+        "headingText": "Text-to-Speech Functionality",
+        "bodyText": "Convert written text into spoken words, allowing for auditory comprehension of text content."
+      },
+      "feature2": {
+        "headingText": "Translation of Over 130 Languages",
+        "bodyText": "Translate text content between more than 130 languages, breaking down language barriers and enabling communication across diverse linguistic landscapes."
+      },
+      "feature3": {
+        "headingText": "Ability to Copy the Output and Paste Anywhere",
+        "bodyText": "Easily copy the translated text output from the platform and paste it into any desired location, such as documents, emails, or messaging applications, for further use or sharing."
+      },
+      "feature4": {
+        "headingText": "Convenient Drag-and-Drop Feature for File Translation",
+        "bodyText": "Streamline the translation process by simply dragging and dropping files containing text content onto the platform, eliminating the need for manual input and enhancing efficiency."
+      }
+    }
+  },
+  "HowItWorks": {
+    "heading": {
+      "headingText": "Get to know how it works in just three STEPS!",
+      "bodyText": "Kindly follow the steps below to know how the translations works perfectly"
+    },
+    "gridContents": {
+      "step1": {
+        "number": "01",
+        "heading": "Select",
+        "body": "Choose your desired language you want to translate you doc/text to."
+      },
+      "step2": {
+        "number": "02",
+        "heading": "Paste",
+        "body": "Paste your text document or upload your document."
+      },
+      "step3": {
+        "number": "03",
+        "heading": "Download",
+        "body": "Download your copy in just a few seconds."
+      }
+    }
+  },
+  "About": {
+    "heading": "About",
+    "body": {
+        "strong": "LanguageAI",
+        "normal": "offers top-notch language translation services in over 130 languages. Dedicated to helping individuals and businesses break down language barriers and achieve their language learning goals...",
+        "button": "Learn More"
+    }
+  },
+  "Footer": {
+    "heading": {
+        "headingText": "Get in Contact With Us",
+        "bodyText": "Our platform is user-friendly and easy to navigate, and we provide a range of resources to help learners improve their language skills.",
+        "buttonText": "Chat with us"
+    },
+    "links": {
+        "heading": "Links",
+        "links": {
+            "link1": "How to use",
+            "link2": "Features",
+            "link3": "About"
+        }
+    },
+    "legal": {
+        "heading": "Legal",
+        "links": {
+            "link1": "Cookies policy",
+            "link2": "Privacy policy",
+            "link3": "Terms & Conditions"
+        }
+    }
+  }
+}
