@@ -55,20 +55,11 @@ export const ClientNavbar: React.FC<{
 
   const handleOpenNav = () => {
     setIsToggled(!isToggled);
-    const navClassList = navRef.current?.classList;
-
-    if (navClassList?.contains("translate-x-full")) {
-      navClassList.remove("translate-x-full");
-      navClassList.add("right-5");
-    } else {
-      navClassList?.add("translate-x-full");
-      navClassList?.remove("right-5");
-    }
   };
 
   return (
     <nav id="navbar" className="flex justify-center items-center h-fit w-full z-50">
-      <div className="md:bg-primary/10 backdrop-blur-[6px] flex justify-between items-center w-full sm:w-[calc(100%_-_32px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto py-3 md:mt-6 mb-0 md:mb-2 h-fit md:h-20 rounded-none md:rounded-full px-4 md:px-7">
+      <div className="md:bg-primary/10 backdrop-blur-[6px] flex justify-between items-center w-full sm:w-[calc(100%_-_32px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto py-3 md:mt-6 mb-0 md:mb-2 h-fit md:h-20 rounded-none md:rounded-full px-4 md:px-7 z-50">
         <div className="mr-4 md:bg-transparent">
           <Link
             href="#"
@@ -97,7 +88,7 @@ export const ClientNavbar: React.FC<{
         </button>
         <div
           ref={navRef}
-          className="flex fixed md:relative bg-white md:bg-transparent shadow-lg md:shadow-none border md:border-none rounded-xl md:rounded-full top-[70px] md:top-auto right-0 h-fit md:h-[50px] p-8 md:p-0 w-fit md:w-full max-w-[456px] translate-x-full md:translate-x-0 transition duration-200"
+          className={`flex absolute md:relative bg-white md:bg-transparent shadow-lg md:shadow-none border md:border-none rounded-xl md:rounded-full md:top-auto h-fit md:h-[50px] p-8 md:p-0 w-fit md:w-full max-w-[456px] transition-all duration-200 right-0 z-40 ${isToggled ? "top-14" : "-top-[250px]"}`}
         >
           <ul className="flex items-center md:justify-end flex-col md:flex-row mt-0 w-full gap-2 md:gap-5">
             <LocaleSwitcher locale={locale} />
