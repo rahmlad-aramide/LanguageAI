@@ -176,13 +176,16 @@ const endpoint = documentTranslatorEndpoint;
 const apiKey = translatorKey;
 const credentials = { key: apiKey ?? "" };
 
+import { promises as fs } from 'fs';
 export const mainTranslator = async(document: File,
   from: string,
   to: string,):Promise<any> => {
   console.log("== Synchronous Document Translation ==");
 
+  let path = "C:/Users/USER/Desktop/document.pdf";
   const client = createClient(endpoint, credentials);
   const formData = new FormData();
+  const fileContent = await fs.readFile('', 'utf8');
   formData.append("document", document);
   formData.get("document")
 
@@ -195,8 +198,8 @@ export const mainTranslator = async(document: File,
     body: [
       {
         name: "document",
-        body: document,
-        filename: document.name,
+        body: fileContent,
+        filename: "document.pdf",
         contentType: "application/pdf",
       },
     ],
@@ -224,10 +227,13 @@ export const mainTranslator = async(document: File,
 
   return response.body;
 }
+
+
 export const mainTranslatorOld = async(document: File,
+  fileContent: any,
   from: string,
   to: string,):Promise<any> => {
-  console.log("== Synchronous Document Translation ==");
+  console.log("== Synchronous Document Translation Starts ==");
 
   const client = createClient(endpoint, credentials);
   const formData = new FormData();
@@ -241,6 +247,7 @@ export const mainTranslatorOld = async(document: File,
     body: [
       {
         name: "document",
+        // body: fileContent,
         // body: "This is a test.",
         body: `
         <!DOCTYPE html>
@@ -256,8 +263,8 @@ export const mainTranslatorOld = async(document: File,
         </body>
         </html>
         `,
-        filename: "test-input.html",
-        contentType: "text/html",
+        filename: "document.pdf",
+        contentType: "application/pdf",
       },
     ],
   };
@@ -269,10 +276,71 @@ export const mainTranslatorOld = async(document: File,
   console.log(
     "Response code: " + response.status + ", Response body: " + response.body
   );
+  console.log("== Synchronous Document Translation Ends ==");
 
   // mainTranslator().catch((err) => {
   //   console.error(err);
   // });
 
   return response.body;
+}
+
+import { readFile } from 'fs/promises';
+// import { createClient, DocumentTranslateParameters, isUnexpected } from '@azure/ai-language-text';
+
+export const mainTranslatorNew = async (
+  filePath: string,
+  from: string,
+  to: string,
+): Promise<any> => {
+  console.log("== Synchronous Document Translation Starts ==");
+
+  const client = createClient(endpoint, credentials);
+
+  // Read the file content
+  const fileContent = await readFile(filePath);
+
+  // Get the file name and extension
+  const fileName = filePath.split('/').pop() || 'document';
+  const fileExtension = fileName.split('.').pop() || '';
+  console.log("File name", fileName, 'fileExtension', fileExtension, "filePath", filePath)
+
+  // Determine the content type based on the file extension
+  let contentType = 'application/octet-stream'; // default
+  if (fileExtension === 'txt') contentType = 'text/plain';
+  if (fileExtension === 'html') contentType = 'text/html';
+  if (fileExtension === 'pdf') contentType = 'application/pdf';
+  // Add more content types as needed
+
+  const options: DocumentTranslateParameters = {
+    queryParameters: {
+      targetLanguage: 'hi' //to,
+    },
+    contentType: "multipart/form-data",
+    // contentType,
+    body: [
+      {
+        name: "document",
+        body: fileContent,
+        filename: fileName,
+        contentType: contentType,
+      },
+    ],
+  };
+
+  try {
+    const response = await client.path("/document:translate").post(options);
+    if (isUnexpected(response)) {
+      throw response.body;
+    }
+    console.log(
+      "Response code: " + response.status + ", Response body: " + response.body
+    );
+    console.log("== Synchronous Document Translation Ends ==");
+    return response.body;
+  } catch (error) {
+    console.error("Translation error:", error);
+    throw error;
+    // return error;
+  }
 }

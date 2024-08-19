@@ -11,7 +11,7 @@ export async function translateText ({text,
   }
 
   try {
-  const response = await fetch('/api/translate-text', {
+  const response = await fetch('/en/api/translate-text', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export async function translateDocument ({file,
   }
 
   try {
-  const response = await fetch('/api/translate-document', {
+  const response = await fetch('/en/api/translate-document', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -51,7 +51,7 @@ export const ClientFooter: React.FC <{
     formData.append("document", file);
     console.log("Translate button clicked");
     try {
-      const response = await fetch("/api/test", {
+      const response = await fetch("/en/api/test", {
         method: "POST",
         body: formData,
       });
