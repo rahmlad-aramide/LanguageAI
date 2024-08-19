@@ -10,6 +10,7 @@ import { testTranslator } from "@/app/[locale]/api";
 import { useLocale } from "next-intl";
 import { Locale } from "@/i18n.config";
 import { ArrowDark, ThreeFeathers } from "@/src/assets/svg";
+import { getExtension } from "@/app/[locale]/utils/helper";
 
 export const ClientFooter: React.FC <{
   headingText: string;
@@ -27,6 +28,7 @@ export const ClientFooter: React.FC <{
   const [file, setFile] = useState<File | null>(null);
   const locale = useLocale() as Locale;
   const isArabic = locale === 'ar';
+  const [ loading, setLoading] = useState(false);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files) {
@@ -34,22 +36,34 @@ export const ClientFooter: React.FC <{
     }
   };
   const handleTranslate = useCallback(async () => {
-    if (!file) {
+    setLoading(true);
+    // if (!file) {
+    //   console.log("No file selected");
+    //   return;
+    // }
+    // console.log(`
+    //     file: ${file},
+    //     fileName: ${file.name}
+    //     body: ${file.text},
+    //     contentType: "application/pdf",
+    //     type: ${file.type}
+    //     arrayBuffer: ${file.arrayBuffer}
+    //     `);
+    const filePath = "C:/Users/USER/Desktop/index.docx";
+    function getFileName(filePath: string): string {
+      return filePath.split('\\').pop() || filePath.split('/').pop() || '';
+  }
+    // const formData = new FormData();
+    // formData.append("document", file);
+    // console.log("Translate button clicked");
+    const formData = new FormData();
+    if(!file){
       console.log("No file selected");
       return;
     }
-    console.log(`
-        file: ${file},
-        fileName: ${file.name}
-        body: ${file.text},
-        contentType: "application/pdf",
-        type: ${file.type}
-        arrayBuffer: ${file.arrayBuffer}
-        `);
-
-    const formData = new FormData();
-    formData.append("document", file);
-    console.log("Translate button clicked");
+    formData.append("file", file);
+    formData.append("from", "en");
+    formData.append("to", "fr");
     try {
       const response = await fetch("/en/api/test", {
         method: "POST",
@@ -58,14 +72,24 @@ export const ClientFooter: React.FC <{
 
       console.log("translated text in test translator", response);
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        console.log("Response was not ok, returned:", response)
+        throw new Error("Response was not ok");
       }
 
+      // const jsonResponse = await response.json();
+      // const content = jsonResponse;
+      // console.log("translated text json response parsed", jsonResponse);
+      // const content = jsonResponse?.data.replace(/^\uFEFF/, ''); // Access the data key to get the HTML content
+
+      // const blob = new Blob([content], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
+      // const blob = new Blob([content], { type: "text/html" });
       const blob = await response?.blob();
-      const url = window.URL.createObjectURL(new Blob([blob]));
+      const url = window.URL.createObjectURL(blob);
+
+      // const url = window.URL.createObjectURL(new Blob([blob], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" }));
       const link = document.createElement("a");
       link.href = url;
-      link.setAttribute("download", "translated.html");
+      link.setAttribute("download", `LanguageAI_${getFileName(filePath)}`);
       document.body.appendChild(link);
       link.click();
       link?.parentNode?.removeChild(link);
@@ -76,6 +100,7 @@ export const ClientFooter: React.FC <{
       console.log("error from testTranslation catch body:", errorMessage);
     }
   }, [file]);
+
   return (
     <>
       <section className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] mx-auto justify-center">
@@ -136,7 +161,7 @@ export const ClientFooter: React.FC <{
             name="document"
             accept=".pdf"
             onChange={handleFileChange}
-            className="hidden"
+            // className="hidden"
           />
           <div className="flex flex-col md:flex-row justify-between space-y-6 gap-2">
             <div>

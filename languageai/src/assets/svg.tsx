@@ -570,11 +570,11 @@ export const UploadIconActive = () => {
   );
 }
 
-export const Document = () => {
+export const Document = ({fileExtension}:{fileExtension:string}) => {
 return (
   <div className='relative'>
     <div className='absolute top-2.5 bg-[#BF1F16] w-[95%] text-center text-white text-[8px]'>
-      PDF
+      {fileExtension}
     </div>
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -687,7 +687,7 @@ export const ThreeFeathers = (props: any) => {
 export const ArrowDark = (props: any) => {
   return (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="29" height="22" viewBox="0 0 29 22" fill="none">
-  <path d="M0.183105 10.7668L28.0001 10.7668M28.0001 10.7668C24.4113 10.6706 17.2336 8.38278 17.2336 0.000354097M28.0001 10.7668C24.4113 10.7347 17.2336 12.8432 17.2336 21.5332" stroke="black" stroke-width="3.37175"/>
+  <path d="M0.183105 10.7668L28.0001 10.7668M28.0001 10.7668C24.4113 10.6706 17.2336 8.38278 17.2336 0.000354097M28.0001 10.7668C24.4113 10.7347 17.2336 12.8432 17.2336 21.5332" stroke="black" strokeWidth="3.37175"/>
 </svg>
   )
 }

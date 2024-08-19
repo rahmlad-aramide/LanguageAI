@@ -286,10 +286,12 @@ export const mainTranslatorOld = async(document: File,
 }
 
 import { readFile } from 'fs/promises';
+import { getMimeType } from "./helper";
 // import { createClient, DocumentTranslateParameters, isUnexpected } from '@azure/ai-language-text';
 
 export const mainTranslatorNew = async (
-  filePath: string,
+  // filePath: string,
+  file: File,
   from: string,
   to: string,
 ): Promise<any> => {
@@ -298,34 +300,49 @@ export const mainTranslatorNew = async (
   const client = createClient(endpoint, credentials);
 
   // Read the file content
-  const fileContent = await readFile(filePath);
+  // const fileContent = await readFile(filePath);
 
   // Get the file name and extension
-  const fileName = filePath.split('/').pop() || 'document';
-  const fileExtension = fileName.split('.').pop() || '';
-  console.log("File name", fileName, 'fileExtension', fileExtension, "filePath", filePath)
+  // const fileName = filePath.split('/').pop() || 'document';
+  // const fileExtension = fileName.split('.').pop() || '';
+  // console.log("File name", fileName, 'fileExtension', fileExtension, "filePath", filePath);
+  // console.log('content type', getMimeType(filePath))
 
   // Determine the content type based on the file extension
-  let contentType = 'application/octet-stream'; // default
-  if (fileExtension === 'txt') contentType = 'text/plain';
-  if (fileExtension === 'html') contentType = 'text/html';
-  if (fileExtension === 'pdf') contentType = 'application/pdf';
+  // let contentType = 'application/octet-stream'; // default
+  // if (fileExtension === 'txt') contentType = 'text/plain';
+  // if (fileExtension === 'html') contentType = 'text/html';
+  // if (fileExtension === 'pdf') contentType = 'application/pdf';
   // Add more content types as needed
 
+  const arrayBuffer = await file.arrayBuffer();
+  const uint8Array = new Uint8Array(arrayBuffer);
   const options: DocumentTranslateParameters = {
     queryParameters: {
-      targetLanguage: 'hi' //to,
+      sourceLanguage: from,
+      targetLanguage: to,
     },
     contentType: "multipart/form-data",
+    // body: file,
     // contentType,
     body: [
       {
         name: "document",
-        body: fileContent,
-        filename: fileName,
-        contentType: contentType,
+        body: uint8Array,
+        filename: file.name,
+        contentType: file.type,
+        // contentType: getMimeType(filePath),
       },
     ],
+    // body: [
+    //   {
+    //     name: "document",
+    //     body: fileContent,
+    //     filename: fileName,
+    //     contentType: 'text/plain',
+    //     // contentType: getMimeType(filePath),
+    //   },
+    // ],
   };
 
   try {

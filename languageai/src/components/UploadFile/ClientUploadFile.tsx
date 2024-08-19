@@ -11,10 +11,13 @@ import {
 } from "../../assets/svg";
 import thumbGif from "./thumbs.gif";
 import { Button } from "../shared/Button";
-import { useNotification } from "../../contexts";
+import { useModal, useNotification } from "../../contexts";
 import { SelectLanguage } from "../shared/SelectLanguage";
 import { Arrows } from "../../assets/svg";
 import { selectedLanguageOption } from "../shared/helper";
+import axios from "axios";
+import generateUniqueId from "generate-unique-id";
+import { generateAcceptObject } from "@/app/[locale]/utils/helper";
 
 export function formatFileSize(fileSizeBytes: number) {
   // Define size units and their respective suffixes
@@ -77,10 +80,11 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
   instructionText3: string;
   or: string;}> = ({ instructionText1, instructionText2, instructionText3, or}) => {
   const { notify } = useNotification();
+  const {closeModal} = useModal()
   const [text, setText] = useState<string>("");
   const [output, setOutput] = useState<string>("");
-  const [translatedDocumentUrl, setTranslatedDocumentUrl] =
-    useState<string>("");
+  const [translatedDocument, setTranslatedDocument] =
+    useState<Blob | null>(null);
   const [translateButton, setTranslateButton] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
   const [sourceLanguage, setSourceLanguage] = useState("English");
@@ -100,9 +104,7 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
       onDragLeave: () => setEntering(false),
       maxFiles: 1,
       multiple: false,
-      accept: {
-        "application/pdf": [".pdf"],
-      },
+      accept: generateAcceptObject(),
       onDrop: (acceptedFiles, fileRejections) => {
         setEntering(false);
         setUploadedFile(acceptedFiles);
@@ -114,7 +116,7 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
     return (
       <div key={idx} className="flex items-center gap-2">
         <div className="h-8">
-          <Document />
+          <Document fileExtension={extractFileExtension(file?.name) || 'TXT'} />
         </div>
         <p className="text-xs font-semibold text-[#424348] text-left">
           {file.name}
@@ -127,6 +129,8 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
     ({ errors }) => `${errors[0].message}`
   );
 
+
+  console.log('acceptedObjects', generateAcceptObject())
   const handleTranslateDocument = async () => {
     setLoading(true);
     if (!uploadedFile) {
@@ -135,21 +139,34 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
       return;
     }
 
-    try {
-      const formData = new FormData();
-      formData.append("file", uploadedFile[0]);
-      formData.append("from", sourceLang);
-      formData.append("to", targetLang);
+    const endpoint = process.env.NEXT_PUBLIC_DOCUMENT_TRANSLATOR_ENDPOINT;
+    const path = "/translator/document:translate";
+    const url = `${endpoint}${path}`;
 
-      const response = await fetch("/api/translate-document", {
-        method: "POST",
-        body: formData,
+    const headers = {
+      "Ocp-Apim-Subscription-Key": process.env.NEXT_PUBLIC_TRANSLATOR_KEY
+    };
+
+    const params = {
+      "sourceLanguage": sourceLang,
+      "targetLanguage": targetLang,
+      "api-version": "2024-05-01"
+    };
+
+    const formData = new FormData();
+    formData.append('document', uploadedFile[0], uploadedFile[0].name);
+    try {
+
+      const response = await axios.post(url, formData, {
+        headers,
+        params,
+        responseType: 'blob'
       });
 
-      const result = await response.json();
+      const result = await response.data;
       console.log("translated document result", result);
       notify("Translated document successfully", "success");
-      setTranslatedDocumentUrl(result);
+      setTranslatedDocument(result);
     } catch (err: any) {
       console.log(err);
       notify(err.message, "error");
@@ -158,6 +175,25 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleDownload = () => {
+    if (!translatedDocument) return;
+
+    const url = window.URL.createObjectURL(translatedDocument);
+    const a = document.createElement('a');
+    a.href = url;
+    const uid = generateUniqueId({
+      length: 6,
+    });
+    const fileName = uploadedFile? `LanguageAI_${uid}_${uploadedFile[0].name}` : `LanguageAI_${uid}.txt`;
+    a.download = fileName;
+    a.click();
+    window.URL.revokeObjectURL(url);
+    setTranslatedDocument(null);
+    setUploadedFile(null);
+    closeModal();
+    
   };
 
   return (
@@ -264,22 +300,11 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
             </div>
             <div className="flex gap-2 self-end">
               <Button
-                onClick={() => {
-                  notify(
-                    "Sorry, this is a coming soon feature...",
-                    "inform"
-                  );
-                  console.log({
-                    acceptedFileItems: acceptedFileItems,
-                    uploadedFile: uploadedFile,
-                  });
-                  return;
-                  handleTranslateDocument();
-                }}
+                onClick={handleTranslateDocument}
                 disabled={loading || !!fileRejectionItems[0]}
                 className="hover:bg-primary/80 bg-primary"
               >
-                {loading ? "Uploading..." : "Upload"}
+                {loading ? "Translating..." : "Translate"}
               </Button>
               <Button
                 onClick={() => {
@@ -294,7 +319,7 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
           </div>
         )}
       </div>
-      {translatedDocumentUrl && <a href={translatedDocumentUrl} className="text-center flex justify-center hover:underline font-bold text-lg mt-3" download>Download Translated Document</a>}
+      {translatedDocument && <Button onClick={handleDownload} className="flex mx-auto mt-4">Download Translated Document</Button>}
       <DisplayErrorMessage
         errMessage={clearError ? "" : fileRejectionItems[0]}
       />
