@@ -18,10 +18,6 @@ const DocumentTranslator: React.FC = () => {
       return;
     }
 
-    const DOCUMENT_TRANSLATOR_ENDPOINT =
-      "https://language-a-i.cognitiveservices.azure.com";
-    const TRANSLATOR_KEY = "a38915a570704e338aafb2fd6d4c9725";
-
     const endpoint = process.env.NEXT_PUBLIC_DOCUMENT_TRANSLATOR_ENDPOINT;
     const path = "/translator/document:translate";
     const url = `${endpoint}${path}`;

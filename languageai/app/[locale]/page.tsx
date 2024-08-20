@@ -12,7 +12,6 @@ import {
   Footer,
 } from "@/src/components";
 import { ModalProvider, NotificationProvider } from "@/src/contexts";
-import DocumentTranslator from "@/src/components/DocumentTranslator";
 
 export default function Home({
   params: { locale },
@@ -32,7 +31,6 @@ export default function Home({
           <Features />
           <HowItWorks />
           <About />
-          <DocumentTranslator />
         </main>
         <Footer />
       </ModalProvider>

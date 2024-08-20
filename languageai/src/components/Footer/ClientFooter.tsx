@@ -25,81 +25,8 @@ export const ClientFooter: React.FC <{
   legalLink2: string;
   legalLink3: string;
 }> = ({ headingText, bodyText, buttonText, linksHeading, legalHeading, linksLink1, linksLink2, linksLink3, legalLink1, legalLink2, legalLink3 }) => {
-  const [file, setFile] = useState<File | null>(null);
   const locale = useLocale() as Locale;
   const isArabic = locale === 'ar';
-  const [ loading, setLoading] = useState(false);
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files) {
-      setFile(event.target.files[0]);
-    }
-  };
-  const handleTranslate = useCallback(async () => {
-    setLoading(true);
-    // if (!file) {
-    //   console.log("No file selected");
-    //   return;
-    // }
-    // console.log(`
-    //     file: ${file},
-    //     fileName: ${file.name}
-    //     body: ${file.text},
-    //     contentType: "application/pdf",
-    //     type: ${file.type}
-    //     arrayBuffer: ${file.arrayBuffer}
-    //     `);
-    const filePath = "C:/Users/USER/Desktop/index.docx";
-    function getFileName(filePath: string): string {
-      return filePath.split('\\').pop() || filePath.split('/').pop() || '';
-  }
-    // const formData = new FormData();
-    // formData.append("document", file);
-    // console.log("Translate button clicked");
-    const formData = new FormData();
-    if(!file){
-      console.log("No file selected");
-      return;
-    }
-    formData.append("file", file);
-    formData.append("from", "en");
-    formData.append("to", "fr");
-    try {
-      const response = await fetch("/en/api/test", {
-        method: "POST",
-        body: formData,
-      });
-
-      console.log("translated text in test translator", response);
-      if (!response.ok) {
-        console.log("Response was not ok, returned:", response)
-        throw new Error("Response was not ok");
-      }
-
-      // const jsonResponse = await response.json();
-      // const content = jsonResponse;
-      // console.log("translated text json response parsed", jsonResponse);
-      // const content = jsonResponse?.data.replace(/^\uFEFF/, ''); // Access the data key to get the HTML content
-
-      // const blob = new Blob([content], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
-      // const blob = new Blob([content], { type: "text/html" });
-      const blob = await response?.blob();
-      const url = window.URL.createObjectURL(blob);
-
-      // const url = window.URL.createObjectURL(new Blob([blob], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" }));
-      const link = document.createElement("a");
-      link.href = url;
-      link.setAttribute("download", `LanguageAI_${getFileName(filePath)}`);
-      document.body.appendChild(link);
-      link.click();
-      link?.parentNode?.removeChild(link);
-      console.log("translated text in test translator", response);
-    } catch (error) {
-      const errorMessage =
-        error instanceof Error ? error.message : "An unexpected error occurred";
-      console.log("error from testTranslation catch body:", errorMessage);
-    }
-  }, [file]);
 
   return (
     <>
@@ -121,7 +48,6 @@ export const ClientFooter: React.FC <{
           </div>
           <div>
             <Button
-              onClick={handleTranslate}
               variant="primary"
               className="font-bold"
               fullWidth={true}
@@ -148,7 +74,6 @@ export const ClientFooter: React.FC <{
             </div>
             <div>
               <Button
-                onClick={handleTranslate}
                 variant="white"
                 className="font-bold"
               >
@@ -156,13 +81,6 @@ export const ClientFooter: React.FC <{
               </Button>
             </div>
           </div>
-          <input
-            type="file"
-            name="document"
-            accept=".pdf"
-            onChange={handleFileChange}
-            // className="hidden"
-          />
           <div className="flex flex-col md:flex-row justify-between space-y-6 gap-2">
             <div>
               <Link
