@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./shared/Button";
 import Image from "next/image";
-import aboutImg from '@/src/assets/about.png';
+import aboutImg from '@/src/assets/about.webp';
 import { useLocale, useTranslations } from "next-intl";
 import { Locale } from "@/i18n.config";
 

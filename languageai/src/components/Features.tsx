@@ -1,8 +1,8 @@
 import Image from "next/image";
-import feature1 from "../assets/feature1.png";
-import feature2 from "../assets/feature2.png";
-import feature3 from "../assets/feature3.png";
-import feature4 from "../assets/feature4.png";
+import feature1 from "../assets/feature1.webp";
+import feature2 from "../assets/feature2.webp";
+import feature3 from "../assets/feature3.webp";
+import feature4 from "../assets/feature4.webp";
 import { useTranslations } from "next-intl";
 
 export const Features: React.FC = () => {
@@ -42,9 +42,9 @@ export const Features: React.FC = () => {
               <Image
                 src={feature2}
                 alt="Text-to-speech"
-                width="576"
-                height="1354"
-                className="rounded-tr-lg w-auto md:min-h-[316px]"
+                width="2031"
+                height="864"
+                className="rounded-tr-lg w-auto md:min-h-[316px] object-contain"
               />
             </div>
             <h3 className="font-semibold text-base md:text-xl text-[#101828] mx-4 md:mx-10">
@@ -56,14 +56,14 @@ export const Features: React.FC = () => {
           </div>
           <div className="col-span-6 shadow-custom mb-8 rounded-lg pb-4 md:pb-0">
             <div className="flex">
-              <h3 className="font-semibold text-base md:text-xl self-end text-[#101828] mx-4 md:mx-10 max-w-[15ch]">
+              <h3 className="font-semibold text-base md:text-xl self-end text-[#101828] ml-4 md:ml-10 max-w-[21ch]">
                 {t("gridContents.feature3.headingText")}
               </h3>
               <div className="flex justify-end">
                 <Image
                   src={feature3}
                   alt="Text-to-speech"
-                  width="475"
+                  width="420"
                   height="304"
                   className="rounded-tr-lg w-auto"
                 />
@@ -78,8 +78,8 @@ export const Features: React.FC = () => {
               <Image
                 src={feature4}
                 alt="Text-to-speech"
-                width="417"
-                height="300"
+                width="1310"
+                height="960"
                 className="rounded-tr-lg scale-90"
               />
             </div>

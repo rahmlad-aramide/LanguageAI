@@ -198,7 +198,7 @@ export const ClientTranslation: React.FC<{
         <p className="text-sm md:text-xl text-center text-[#475467] px-4 pt-3">
           {bodyText}
         </p>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-3.5 w-full max-w-lg lg:max-w-4xl mx-auto mb-4 mt-2 md:mt-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-3.5 w-full max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto mb-4 mt-2 md:mt-10">
           <SelectLanguage
             type="text"
             language={sourceLanguage}
@@ -239,7 +239,7 @@ export const ClientTranslation: React.FC<{
           />
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-col md:flex-row gap-8 justify-center w-full max-w-lg lg:max-w-4xl mx-auto mb-8 mt-8 md:mt-0">
+          <div className="flex flex-col md:flex-row gap-8 justify-center w-full max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto mb-8 mt-8 md:mt-0">
             <div className="w-full h-64 flex flex-col items-end rounded-lg bg-white shadow border-[0.4px] border-primary outline-none focus-within:border-2 resize-none">
               <TextArea
                 refProp={inputRef}

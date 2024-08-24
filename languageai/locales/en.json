@@ -27,7 +27,7 @@
     },
     "cta": {
       "buttonText": "Translate",
-      "buttonLink": "Or upload a PDF document",
+      "buttonLink": "Or upload your document",
       "instructionText": "Document size: Max 10MB"
     },
     "placeholder": "Select the language pair and type or paste the text for translation...",
@@ -84,6 +84,17 @@
         "heading": "Download",
         "body": "Download your copy in just a few seconds."
       }
+    }
+  },
+  "SupportedFormats": {
+    "heading": {
+      "headingText": "Our Supported Document Formats",
+      "bodyText": "Below is the list of our supported document formats"
+    },
+    "tableHeading": {
+      "column1": "File Type",
+      "column2": "File Extension",
+      "column3": "Description"
     }
   },
   "About": {

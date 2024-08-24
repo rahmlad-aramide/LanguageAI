@@ -27,7 +27,7 @@
     },
     "cta": {
       "buttonText": "翻译",
-      "buttonLink": "或上传 PDF 文件",
+      "buttonLink": "或者上传您的文档",
       "instructionText": "文件大小：最大 10MB"
     },
     "placeholder": "选择语言对并输入或粘贴要翻译的文本...",
@@ -84,6 +84,17 @@
         "heading": "下载",
         "body": "仅需几秒钟即可下载您的副本。"
       }
+    }
+  },
+  "SupportedFormats": {
+    "heading": {
+      "headingText": "我们支持的文档格式",
+      "bodyText": "以下是我们支持的文档格式列表"
+    },
+    "tableHeading": {
+      "column1": "文件类型",
+      "column2": "文件扩展名",
+      "column3": "描述"
     }
   },
   "About": {

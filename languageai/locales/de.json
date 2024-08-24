@@ -27,7 +27,7 @@
     },
     "cta": {
       "buttonText": "Übersetzen",
-      "buttonLink": "Oder laden Sie ein PDF-Dokument hoch",
+      "buttonLink": "Oder laden Sie Ihr Dokument hoch",
       "instructionText": "Dokumentgröße: max. 10MB"
     },
     "placeholder": "Wählen Sie das Sprachpaar aus und geben Sie den Text zum Übersetzen ein oder fügen Sie ihn ein...",
@@ -84,6 +84,17 @@
         "heading": "Herunterladen",
         "body": "Laden Sie Ihre Kopie in nur wenigen Sekunden herunter."
       }
+    }
+  },
+  "SupportedFormats": {
+    "heading": {
+      "headingText": "Unsere unterstützten Dokumentformate",
+      "bodyText": "Nachfolgend finden Sie die Liste unserer unterstützten Dokumentformate"
+    },
+    "tableHeading": {
+      "column1": "Dateityp",
+      "column2": "Dateierweiterung",
+      "column3": "Beschreibung"
     }
   },
   "About": {

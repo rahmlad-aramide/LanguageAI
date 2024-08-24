@@ -1,16 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import icon from "../../assets/icon-white.png";
+import icon from "../../assets/icon-white.webp";
 import arrow from "../../assets/arrow-white.png";
 import { Button } from "..";
-import { mainTranslator } from "@/app/[locale]/utils/azureService";
-import { useCallback, useState } from "react";
-import { testTranslator } from "@/app/[locale]/api";
 import { useLocale } from "next-intl";
 import { Locale } from "@/i18n.config";
 import { ArrowDark, ThreeFeathers } from "@/src/assets/svg";
-import { getExtension } from "@/app/[locale]/utils/helper";
 
 export const ClientFooter: React.FC <{
   headingText: string;

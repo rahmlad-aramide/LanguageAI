@@ -27,7 +27,7 @@
     },
     "cta": {
       "buttonText": "翻訳する",
-      "buttonLink": "またはPDF文書をアップロード",
+      "buttonLink": "または、ドキュメントをアップロードしてください",
       "instructionText": "文書のサイズ: 最大10MB"
     },
     "placeholder": "言語ペアを選択し、翻訳するテキストを入力または貼り付けてください...",
@@ -84,6 +84,17 @@
         "heading": "ダウンロード",
         "body": "数秒でコピーをダウンロードします。"
       }
+    }
+  },
+  "SupportedFormats": {
+    "heading": {
+      "headingText": "対応しているドキュメント形式",
+      "bodyText": "以下は、対応しているドキュメント形式のリストです"
+    },
+    "tableHeading": {
+      "column1": "ファイルの種類",
+      "column2": "ファイル拡張子",
+      "column3": "説明"
     }
   },
   "About": {

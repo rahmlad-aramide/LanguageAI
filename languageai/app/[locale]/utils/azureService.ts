@@ -361,3 +361,50 @@ export const mainTranslatorNew = async (
     // return error;
   }
 }
+
+export const mainTranslatorLatest = async (
+  file: File,
+  from: string,
+  to: string,
+): Promise<any> => {
+  console.log("== Synchronous Document Translation Starts ==");
+
+  const client = createClient(endpoint, credentials);
+
+  const arrayBuffer = await file.arrayBuffer();
+  const uint8Array = new Uint8Array(arrayBuffer);
+
+  const options: DocumentTranslateParameters = {
+    queryParameters: {
+      sourceLanguage: from,
+      targetLanguage: to,
+      "api-version": "2024-05-01",
+    },
+    contentType: "multipart/form-data",
+    body: [
+      {
+        name: "document",
+        body: uint8Array,
+        filename: file.name,
+        contentType: file.type || 'application/octet-stream',
+      },
+    ],
+  };
+
+  try {
+    const response = await client.path("/document:translate").post(options);
+
+    if (isUnexpected(response)) {
+      throw new Error(`Unexpected response: ${response.status}`);
+    }
+
+    console.log(
+      "Response code: " + response.status + ", Response body: " + response.body
+    );
+    console.log("== Synchronous Document Translation Ends ==");
+    return response.body;
+  } catch (error: any) {
+    console.error("Translation error:", error.message || error);
+    throw error;
+  }
+};

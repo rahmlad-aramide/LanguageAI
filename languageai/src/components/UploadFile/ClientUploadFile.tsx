@@ -129,8 +129,6 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
     ({ errors }) => `${errors[0].message}`
   );
 
-
-  console.log('acceptedObjects', generateAcceptObject())
   const handleTranslateDocument = async () => {
     setLoading(true);
     if (!uploadedFile) {
@@ -164,7 +162,6 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
       });
 
       const result = await response.data;
-      console.log("translated document result", result);
       notify("Translated document successfully", "success");
       setTranslatedDocument(result);
     } catch (err: any) {
@@ -203,7 +200,7 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
       >
         <div
           {...getRootProps()}
-          className={`flex flex-col items-center justify-center p-10 rounded-lg ${
+          className={`flex flex-col items-center justify-center p-4 md:p-10 rounded-lg ${
             entering ? "bg-primary/20 border-primary" : ""
           } ${uploadedFile ? "min-h-fit" : "min-h-[200px]"}`}
         >
@@ -298,7 +295,7 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
             >
               {acceptedFileItems}
             </div>
-            <div className="flex gap-2 self-end">
+            <div className="flex flex-col-reverse items-end sm:flex-row gap-2 self-end">
               <Button
                 onClick={handleTranslateDocument}
                 disabled={loading || !!fileRejectionItems[0]}

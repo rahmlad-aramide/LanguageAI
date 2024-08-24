@@ -12,6 +12,7 @@ import {
   Footer,
 } from "@/src/components";
 import { ModalProvider, NotificationProvider } from "@/src/contexts";
+import { SupportedFormats } from "@/src/components/SupportedFormat";
 
 export default function Home({
   params: { locale },
@@ -30,6 +31,7 @@ export default function Home({
           <Translation />
           <Features />
           <HowItWorks />
+          <SupportedFormats />
           <About />
         </main>
         <Footer />

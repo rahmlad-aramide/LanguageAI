@@ -27,7 +27,7 @@
     },
     "cta": {
       "buttonText": "Traducir",
-      "buttonLink": "O cargue un documento PDF",
+      "buttonLink": "O sube tu documento",
       "instructionText": "Tamaño del documento: máximo 10 MB"
     },
     "placeholder": "Seleccione el par de idiomas y escriba o pegue el texto para traducir...",
@@ -84,6 +84,17 @@
         "heading": "Descargar",
         "body": "Descargue su copia en solo unos segundos."
       }
+    }
+  },
+  "SupportedFormats": {
+    "heading": {
+      "headingText": "Nuestros formatos de documentos compatibles",
+      "bodyText": "A continuación se muestra la lista de nuestros formatos de documentos compatibles"
+    },
+    "tableHeading": {
+      "column1": "Tipo de archivo",
+      "column2": "Extensión de archivo",
+      "column3": "Descripción"
     }
   },
   "About": {

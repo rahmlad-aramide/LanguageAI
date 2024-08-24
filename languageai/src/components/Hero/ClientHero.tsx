@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import hero from "@/src/assets/hero.png";
-import heroMobile from "@/src/assets/hero-mobile.png";
-import avatars from "@/src/assets/avatars.png";
+import hero from "@/src/assets/hero.webp";
+import heroMobile from "@/src/assets/hero-mobile.webp";
+import avatars from "@/src/assets/avatars.webp";
 import stars from "@/src/assets/stars.png";
 import { Button } from "@/src/components/shared/Button";
 import { useModal } from "@/src/contexts";
@@ -40,7 +40,7 @@ export const ClientHero: React.FC<{
       id="home"
       className="pt-8 md:pt-16 flex flex-col md:flex-row  w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto gap-5"
     >
-      <div className="w-full md:w-1/2 flex flex-col items-start gap-10 -mt-3">
+      <div className="w-full md:w-1/2 flex flex-col items-start gap-10 mt-3 md:-mt-3">
         <div className="flex flex-col w-full">
           <h1 className={`clamped-h1 font-semibold leading-[2.8125rem] md:leading-[3.5rem] lg:leading-[4.5rem] mb-6 text-[#1F0610] text-center max-w-[20ch] mx-auto ${isArabic? "md:text-right": "md:text-left"}`}>
             {headingText}

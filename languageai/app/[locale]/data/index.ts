@@ -52,6 +52,11 @@ export const navLanguagesData: ILanguagesData[] = [
     key: "fr",
     flag: "fr",
   },
+  {
+    language: "German",
+    key: "de",
+    flag: "de",
+  },
 ]
 
 export const languagesData: ILanguagesData[] = [

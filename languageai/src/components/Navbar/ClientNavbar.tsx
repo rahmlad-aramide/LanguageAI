@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useRef, useState } from "react";
-import icon from "../../assets/icon.png";
+import { useState } from "react";
+import icon from "../../assets/icon.webp";
 import { Link, Locale } from "@/i18n.config";
 import { useLocale } from "next-intl";
 import LocaleSwitcher from "../LocaleSwitcher";
@@ -49,7 +49,6 @@ export const ClientNavbar: React.FC<{
   link3: string;
 }> = ({ link1, link2, link3 }) => {
   const locale = useLocale() as Locale;
-  const navRef = useRef<HTMLDivElement>(null);
   const [isToggled, setIsToggled] = useState<boolean>(false);
 
 
@@ -58,7 +57,7 @@ export const ClientNavbar: React.FC<{
   };
 
   return (
-    <nav id="navbar" className="flex justify-center items-center h-fit w-full z-50">
+    <nav id="navbar" className="flex justify-center items-center h-fit w-full z-50 shadow-md md:shadow-none">
       <div className="md:bg-primary/10 backdrop-blur-[6px] flex justify-between items-center w-full sm:w-[calc(100%_-_32px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto py-3 md:mt-6 mb-0 md:mb-2 h-fit md:h-20 rounded-none md:rounded-full px-4 md:px-7 z-50">
         <div className="mr-4 md:bg-transparent">
           <Link
@@ -78,7 +77,6 @@ export const ClientNavbar: React.FC<{
           </Link>
         </div>
         <button
-          data-aos="fade-left"
           aria-label="Open Navbar"
           aria-haspopup="true"
           onClick={handleOpenNav}
@@ -87,8 +85,7 @@ export const ClientNavbar: React.FC<{
           <HamburgarMenu isToggled={isToggled} />
         </button>
         <div
-          ref={navRef}
-          className={`flex absolute md:relative bg-white md:bg-transparent shadow-lg md:shadow-none border md:border-none rounded-xl md:rounded-full md:top-auto h-fit md:h-[50px] p-8 md:p-0 w-fit md:w-full max-w-[456px] transition-all duration-200 right-0 z-40 ${isToggled ? "top-14" : "-top-[250px]"}`}
+          className={`flex absolute md:relative bg-white md:bg-transparent shadow-lg md:shadow-none border md:border-none rounded-xl md:rounded-full md:top-auto h-fit md:h-[50px] p-8 md:p-0 w-fit md:w-full max-w-[456px] transition-all duration-200 right-3 z-40 top-16 ${isToggled ? "translate-y-0" : "-translate-y-[150%]"} md:translate-y-0`}
         >
           <ul className="flex items-center md:justify-end flex-col md:flex-row mt-0 w-full gap-2 md:gap-5">
             <LocaleSwitcher locale={locale} />

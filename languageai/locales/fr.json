@@ -27,8 +27,8 @@
       },
       "cta": {
         "buttonText": "Traduire",
-        "buttonLink": "Ou téléchargez un document PDF",
-        "instructionText": "Taille du document : maximum 10 Mo"
+        "buttonLink": "Ou téléchargez votre document",
+        "instructionText": "Taille du document: maximum 10 Mo"
       },
       "placeholder": "Sélectionnez la paire de langues et tapez ou collez le texte à traduire...",
       "placeholder2": "Votre sortie sera affichée ici",
@@ -86,6 +86,17 @@
         }
       }
     },
+    "SupportedFormats": {
+    "heading": {
+      "headingText": "Nos formats de documents pris en charge",
+      "bodyText": "Vous trouverez ci-dessous la liste de nos formats de documents pris en charge"
+    },
+    "tableHeading": {
+      "column1": "Type de fichier",
+      "column2": "Extension de fichier",
+      "column3": "Description"
+    }
+  },
     "About": {
       "heading": "À propos",
       "body": {
