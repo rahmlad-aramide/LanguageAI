@@ -23,28 +23,22 @@ export const SupportedFormats: React.FC = () => {
             <thead className="bg-gray-50">
               <tr>
                 <th className="px-3 sm:px-6 py-4 text-left text-xs font-medium text-[#475467] uppercase tracking-wider">
-                {t("tableHeading.column1")}
+                  {t("tableHeading.column1")}
                 </th>
                 <th className="px-3 sm:px-6 py-4 text-left text-xs font-medium text-[#475467] uppercase tracking-wider whitespace-normal sm:whitespace-nowrap">
-                {t("tableHeading.column2")}
+                  {t("tableHeading.column2")}
                 </th>
                 <th className="px-3 sm:px-6 py-4 text-left text-xs font-medium text-[#475467] uppercase tracking-wider">
-                {t("tableHeading.column3")}
+                  {t("tableHeading.column3")}
                 </th>
               </tr>
             </thead>
             <tbody className="bg-transparent divide-y divide-gray-200">
               {groupedFormats.map((format, index) => (
                 <tr key={index}>
-                  <td className="px-6 py-4">
-                    {format.fileType}
-                  </td>
-                  <td className="px-6 py-4">
-                    {format.extensions}
-                  </td>
-                  <td className="px-6 py-4">
-                    {format.description}
-                  </td>
+                  <td className="px-6 py-4">{format.fileType}</td>
+                  <td className="px-6 py-4">{format.extensions}</td>
+                  <td className="px-6 py-4">{format.description}</td>
                 </tr>
               ))}
             </tbody>

@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
-import axios from 'axios';
-import { mainTranslatorLatest } from '../../utils/azureService';
+import { NextRequest, NextResponse } from "next/server";
+import axios from "axios";
+import { mainTranslatorLatest } from "../../utils/azureService";
 
 export async function POST(request: NextRequest) {
   const endpoint = process.env.DOCUMENT_TRANSLATOR_ENDPOINT;
@@ -20,21 +20,21 @@ export async function POST(request: NextRequest) {
 
   try {
     const formData = await request.formData();
-    const file = formData.get('document') as File;
+    const file = formData.get("document") as File;
     const arrayBuffer = await file.arrayBuffer();
 
     const response = await axios.post(url, arrayBuffer, {
       headers,
       params,
-      responseType: 'arraybuffer',
+      responseType: "arraybuffer",
     });
     return new NextResponse(response.data, {
       status: 200,
       headers: {
-        'Content-Type': 'application/octet-stream',
+        "Content-Type": "application/octet-stream",
       },
     });
-  } catch (error:any) {
+  } catch (error: any) {
     console.error("Error during translation on server:", error);
     return NextResponse.json({ message: error.error }, { status: 500 });
   }

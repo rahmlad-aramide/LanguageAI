@@ -34,7 +34,7 @@ export const Features: React.FC = () => {
               {t("gridContents.feature1.headingText")}
             </h3>
             <p className="text-xs md:text-sm text-[#475467] mx-4 md:mx-10 pt-2">
-            {t("gridContents.feature2.bodyText")}
+              {t("gridContents.feature2.bodyText")}
             </p>
           </div>
           <div className="col-span-6 shadow-custom md:mb-8 rounded-lg pb-4">
@@ -51,7 +51,7 @@ export const Features: React.FC = () => {
               {t("gridContents.feature2.headingText")}
             </h3>
             <p className="text-xs md:text-sm text-[#475467] mx-4 md:mx-10 pt-2">
-            {t("gridContents.feature2.bodyText")}
+              {t("gridContents.feature2.bodyText")}
             </p>
           </div>
           <div className="col-span-6 shadow-custom mb-8 rounded-lg pb-4 md:pb-0">
@@ -70,7 +70,7 @@ export const Features: React.FC = () => {
               </div>
             </div>
             <p className="text-xs md:text-sm text-[#475467] mx-4 md:mx-10 pt-2">
-            {t("gridContents.feature3.bodyText")}
+              {t("gridContents.feature3.bodyText")}
             </p>
           </div>
           <div className="col-span-4 shadow-custom pb-4 md:pb-0 md:h-[428px] -mt-8 rounded-lg">
@@ -87,7 +87,7 @@ export const Features: React.FC = () => {
               {t("gridContents.feature4.headingText")}
             </h3>
             <p className="text-xs md:text-sm text-[#475467] mx-4 md:mx-10 pt-2">
-            {t("gridContents.feature4.bodyText")}
+              {t("gridContents.feature4.bodyText")}
             </p>
           </div>
         </div>

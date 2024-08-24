@@ -9,7 +9,7 @@ import useTextDirection from "@/src/hooks/useTextDirection";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    "https://res.cloudinary.com/dh4rm7b7b/image/upload/b_rgb:FFFFFF/c_pad,ar_1:1/v1707299721/Language-AI/logo_l1j3ny.png"
+    "https://res.cloudinary.com/dh4rm7b7b/image/upload/b_rgb:FFFFFF/c_pad,ar_1:1/v1707299721/Language-AI/logo_l1j3ny.png",
   ),
   title: "LanguageAI",
   description: "Empowering Global Communication and Language Mastery",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   publisher: "Abdrahman Oladimeji",
 };
 
-export function generateStaticParams(){
-  return locales.map((locale)=>({locale}));
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 export default function RootLayout({
   children,
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: Locale };
 }) {
-  unstable_setRequestLocale(locale)
+  unstable_setRequestLocale(locale);
   const dir = useTextDirection();
   return (
     <html lang={locale} dir={dir}>

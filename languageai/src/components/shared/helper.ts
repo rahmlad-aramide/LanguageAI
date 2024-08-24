@@ -1,4 +1,8 @@
-import { documentLanguagesData, navLanguagesData, textLanguagesData } from "@/app/[locale]/data";
+import {
+  documentLanguagesData,
+  navLanguagesData,
+  textLanguagesData,
+} from "@/app/[locale]/data";
 
 export const selectedLanguageOption = (language: string) =>
   textLanguagesData.find((option) => option.language === language);

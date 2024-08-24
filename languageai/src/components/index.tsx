@@ -1,10 +1,10 @@
-export {About} from './About'
-export {Navbar} from './Navbar'
-export {Hero} from './Hero'
-export {Button} from './shared/Button'
-export {HowItWorks} from './HowItWorks'
-export {Features} from './Features'
-export {Translation} from './Translation'
-export {Footer} from './Footer'
+export { About } from "./About";
+export { Navbar } from "./Navbar";
+export { Hero } from "./Hero";
+export { Button } from "./shared/Button";
+export { HowItWorks } from "./HowItWorks";
+export { Features } from "./Features";
+export { Translation } from "./Translation";
+export { Footer } from "./Footer";
 export { CircularCTA } from "./CircularCTA";
-export {UploadFile} from './UploadFile'
+export { UploadFile } from "./UploadFile";

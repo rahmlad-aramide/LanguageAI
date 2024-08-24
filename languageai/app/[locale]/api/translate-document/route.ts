@@ -22,7 +22,7 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
         file,
         from,
         to,
-        fileName
+        fileName,
       );
       console.log("translateDocumentRes", translateDocumentRes);
       const translatedDocumentUrl = await getTranslatedDocumentUrl(fileName);
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
         { error: error.message || "Failed to translate the document." },
         {
           status: 500,
-        }
+        },
       );
     }
   } else {

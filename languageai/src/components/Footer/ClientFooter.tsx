@@ -8,7 +8,7 @@ import { useLocale } from "next-intl";
 import { Locale } from "@/i18n.config";
 import { ArrowDark, ThreeFeathers } from "@/src/assets/svg";
 
-export const ClientFooter: React.FC <{
+export const ClientFooter: React.FC<{
   headingText: string;
   bodyText: string;
   buttonText: string;
@@ -20,34 +20,44 @@ export const ClientFooter: React.FC <{
   legalLink1: string;
   legalLink2: string;
   legalLink3: string;
-}> = ({ headingText, bodyText, buttonText, linksHeading, legalHeading, linksLink1, linksLink2, linksLink3, legalLink1, legalLink2, legalLink3 }) => {
+}> = ({
+  headingText,
+  bodyText,
+  buttonText,
+  linksHeading,
+  legalHeading,
+  linksLink1,
+  linksLink2,
+  linksLink3,
+  legalLink1,
+  legalLink2,
+  legalLink3,
+}) => {
   const locale = useLocale() as Locale;
-  const isArabic = locale === 'ar';
+  const isArabic = locale === "ar";
 
   return (
     <>
       <section className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] mx-auto justify-center">
         <div className="flex flex-col md:hidden my-20">
-        <ThreeFeathers className="flex mx-auto -mb-5" />
+          <ThreeFeathers className="flex mx-auto -mb-5" />
           <div className="flex items-center justify-center gap-2 mb-6">
             <h2 className="text-2xl text-[#050B2CCC] font-semibold">
               {headingText}
             </h2>
-            <ArrowDark className={`w-8 h-6 ${isArabic? "rotate-180": "rotate-0"}`} />
+            <ArrowDark
+              className={`w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
+            />
             <Image
               src={arrow}
               width={32}
               height={25}
               alt="Right arrow"
-              className={`hidden w-8 h-6 ${isArabic? "rotate-180": "rotate-0"}`}
+              className={`hidden w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
             />
           </div>
           <div>
-            <Button
-              variant="primary"
-              className="font-bold"
-              fullWidth={true}
-            >
+            <Button variant="primary" className="font-bold" fullWidth={true}>
               {buttonText}
             </Button>
           </div>
@@ -65,14 +75,11 @@ export const ClientFooter: React.FC <{
                 width={32}
                 height={25}
                 alt="Right arrow"
-                className={`w-8 h-6 ${isArabic? "rotate-180": "rotate-0"}`}
+                className={`w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
               />
             </div>
             <div>
-              <Button
-                variant="white"
-                className="font-bold"
-              >
+              <Button variant="white" className="font-bold">
                 {buttonText}
               </Button>
             </div>

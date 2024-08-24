@@ -45,7 +45,7 @@ export const ClientTranslation: React.FC<{
   instructionText1,
   instructionText2,
   instructionText3,
-  or
+  or,
 }) => {
   const { notify } = useNotification();
   const { openModal } = useModal();
@@ -124,7 +124,7 @@ export const ClientTranslation: React.FC<{
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [text]
+    [text],
   );
 
   const handleSubmit = useCallback(
@@ -169,7 +169,7 @@ export const ClientTranslation: React.FC<{
       setLoading,
       setOutput,
       setTranslateButton,
-    ]
+    ],
   );
 
   useEffect(() => {
@@ -339,7 +339,7 @@ export const ClientTranslation: React.FC<{
                     instructionText2={instructionText2}
                     instructionText3={instructionText3}
                     or={or}
-                  />
+                  />,
                 )
               }
               fullWidth={true}

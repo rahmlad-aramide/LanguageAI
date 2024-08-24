@@ -6,7 +6,7 @@ import { Link, Locale } from "@/i18n.config";
 import { useLocale } from "next-intl";
 import LocaleSwitcher from "../LocaleSwitcher";
 
-const linkHrefs = [ "/#features", "/#how-it-works", "/#about"];
+const linkHrefs = ["/#features", "/#how-it-works", "/#about"];
 const HamburgarMenu: React.FC<{ isToggled: boolean }> = ({ isToggled }) => {
   return (
     <div>
@@ -35,7 +35,10 @@ const SingleLink: React.FC<{
   return (
     <>
       <li className="mb-3 last:mb-0 md:mb-0">
-        <Link href={href} className="font-semibold text-[rgba(31,6,16,0.70)] whitespace-nowrap">
+        <Link
+          href={href}
+          className="font-semibold text-[rgba(31,6,16,0.70)] whitespace-nowrap"
+        >
           {link}
         </Link>
       </li>
@@ -51,13 +54,15 @@ export const ClientNavbar: React.FC<{
   const locale = useLocale() as Locale;
   const [isToggled, setIsToggled] = useState<boolean>(false);
 
-
   const handleOpenNav = () => {
     setIsToggled(!isToggled);
   };
 
   return (
-    <nav id="navbar" className="flex justify-center items-center h-fit w-full z-50 shadow-md md:shadow-none">
+    <nav
+      id="navbar"
+      className="flex justify-center items-center h-fit w-full z-50 shadow-md md:shadow-none"
+    >
       <div className="md:bg-primary/10 backdrop-blur-[6px] flex justify-between items-center w-full sm:w-[calc(100%_-_32px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto py-3 md:mt-6 mb-0 md:mb-2 h-fit md:h-20 rounded-none md:rounded-full px-4 md:px-7 z-50">
         <div className="mr-4 md:bg-transparent">
           <Link

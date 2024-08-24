@@ -75,16 +75,19 @@ const DisplayErrorMessage = ({ errMessage = "" }) => {
 };
 export default DisplayErrorMessage;
 
-export const ClientUploadFile: React.FC<{instructionText1: string;
+export const ClientUploadFile: React.FC<{
+  instructionText1: string;
   instructionText2: string;
   instructionText3: string;
-  or: string;}> = ({ instructionText1, instructionText2, instructionText3, or}) => {
+  or: string;
+}> = ({ instructionText1, instructionText2, instructionText3, or }) => {
   const { notify } = useNotification();
-  const {closeModal} = useModal()
+  const { closeModal } = useModal();
   const [text, setText] = useState<string>("");
   const [output, setOutput] = useState<string>("");
-  const [translatedDocument, setTranslatedDocument] =
-    useState<Blob | null>(null);
+  const [translatedDocument, setTranslatedDocument] = useState<Blob | null>(
+    null,
+  );
   const [translateButton, setTranslateButton] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
   const [sourceLanguage, setSourceLanguage] = useState("English");
@@ -116,7 +119,7 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
     return (
       <div key={idx} className="flex items-center gap-2">
         <div className="h-8">
-          <Document fileExtension={extractFileExtension(file?.name) || 'TXT'} />
+          <Document fileExtension={extractFileExtension(file?.name) || "TXT"} />
         </div>
         <p className="text-xs font-semibold text-[#424348] text-left">
           {file.name}
@@ -126,7 +129,7 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
   });
 
   const fileRejectionItems = fileRejections.map(
-    ({ errors }) => `${errors[0].message}`
+    ({ errors }) => `${errors[0].message}`,
   );
 
   const handleTranslateDocument = async () => {
@@ -142,23 +145,22 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
     const url = `${endpoint}${path}`;
 
     const headers = {
-      "Ocp-Apim-Subscription-Key": process.env.NEXT_PUBLIC_TRANSLATOR_KEY
+      "Ocp-Apim-Subscription-Key": process.env.NEXT_PUBLIC_TRANSLATOR_KEY,
     };
 
     const params = {
-      "sourceLanguage": sourceLang,
-      "targetLanguage": targetLang,
-      "api-version": "2024-05-01"
+      sourceLanguage: sourceLang,
+      targetLanguage: targetLang,
+      "api-version": "2024-05-01",
     };
 
     const formData = new FormData();
-    formData.append('document', uploadedFile[0], uploadedFile[0].name);
+    formData.append("document", uploadedFile[0], uploadedFile[0].name);
     try {
-
       const response = await axios.post(url, formData, {
         headers,
         params,
-        responseType: 'blob'
+        responseType: "blob",
       });
 
       const result = await response.data;
@@ -178,19 +180,20 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
     if (!translatedDocument) return;
 
     const url = window.URL.createObjectURL(translatedDocument);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
     const uid = generateUniqueId({
       length: 6,
     });
-    const fileName = uploadedFile? `LanguageAI_${uid}_${uploadedFile[0].name}` : `LanguageAI_${uid}.txt`;
+    const fileName = uploadedFile
+      ? `LanguageAI_${uid}_${uploadedFile[0].name}`
+      : `LanguageAI_${uid}.txt`;
     a.download = fileName;
     a.click();
     window.URL.revokeObjectURL(url);
     setTranslatedDocument(null);
     setUploadedFile(null);
     closeModal();
-    
   };
 
   return (
@@ -229,7 +232,8 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
                   {instructionText1}
                 </span>{" "}
                 <br />
-                {or} <span className="text-primary">{instructionText2}</span>&nbsp;
+                {or} <span className="text-primary">{instructionText2}</span>
+                &nbsp;
                 {instructionText3}
               </p>
             </div>
@@ -316,7 +320,11 @@ export const ClientUploadFile: React.FC<{instructionText1: string;
           </div>
         )}
       </div>
-      {translatedDocument && <Button onClick={handleDownload} className="flex mx-auto mt-4">Download Translated Document</Button>}
+      {translatedDocument && (
+        <Button onClick={handleDownload} className="flex mx-auto mt-4">
+          Download Translated Document
+        </Button>
+      )}
       <DisplayErrorMessage
         errMessage={clearError ? "" : fileRejectionItems[0]}
       />

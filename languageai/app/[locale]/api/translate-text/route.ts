@@ -17,7 +17,7 @@ export async function POST(req: Request, res: NextApiResponse) {
         { error: error.message || "Failed to translate the texts." },
         {
           status: 500,
-        }
+        },
       );
     }
   } else {

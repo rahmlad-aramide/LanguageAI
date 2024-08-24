@@ -13,7 +13,7 @@ const Step: React.FC<StepProps> = ({
   body,
 }) => {
   const locale = useLocale() as Locale;
-  const isArabic = locale === 'ar';
+  const isArabic = locale === "ar";
   return (
     <div className="flex flex-col items-center md:items-start">
       <div
@@ -29,7 +29,9 @@ const Step: React.FC<StepProps> = ({
         {number}
       </div>
       <h2 className="font-semibold text-center md:text-3xl mb-2">{heading}</h2>
-      <p className={`text-sm font-medium text-center md:text-xl max-w-[35ch] md:max-w-[40ch] ${isArabic ? "md:text-right": "md:text-left"}`}>
+      <p
+        className={`text-sm font-medium text-center md:text-xl max-w-[35ch] md:max-w-[40ch] ${isArabic ? "md:text-right" : "md:text-left"}`}
+      >
         {body}
       </p>
     </div>
@@ -47,17 +49,17 @@ export const HowItWorks: React.FC = () => {
         {t("heading.headingText")}
       </h2>
       <p className="text-sm md:text-xl text-center text-[#475467] px-4 pt-3">
-      {t("heading.bodyText")}
+        {t("heading.bodyText")}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-16 mt-6 md:mt-12">
-        {stepsData.map((step,idx) => (
+        {stepsData.map((step, idx) => (
           <Step
             background={step.background}
-            body={t(`gridContents.step${idx+1}.body`)}
+            body={t(`gridContents.step${idx + 1}.body`)}
             border={step.border}
-            heading={t(`gridContents.step${idx+1}.heading`)}
+            heading={t(`gridContents.step${idx + 1}.heading`)}
             icon={step.icon}
-            number={t(`gridContents.step${idx+1}.number`)}
+            number={t(`gridContents.step${idx + 1}.number`)}
             key={step.number}
           />
         ))}

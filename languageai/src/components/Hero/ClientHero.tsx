@@ -33,7 +33,7 @@ export const ClientHero: React.FC<{
 }) => {
   const { openModal } = useModal();
   const locale = useLocale() as Locale;
-  const isArabic = locale === 'ar'
+  const isArabic = locale === "ar";
 
   return (
     <section
@@ -42,14 +42,20 @@ export const ClientHero: React.FC<{
     >
       <div className="w-full md:w-1/2 flex flex-col items-start gap-10 mt-3 md:-mt-3">
         <div className="flex flex-col w-full">
-          <h1 className={`clamped-h1 font-semibold leading-[2.8125rem] md:leading-[3.5rem] lg:leading-[4.5rem] mb-6 text-[#1F0610] text-center max-w-[20ch] mx-auto ${isArabic? "md:text-right": "md:text-left"}`}>
+          <h1
+            className={`clamped-h1 font-semibold leading-[2.8125rem] md:leading-[3.5rem] lg:leading-[4.5rem] mb-6 text-[#1F0610] text-center max-w-[20ch] mx-auto ${isArabic ? "md:text-right" : "md:text-left"}`}
+          >
             {headingText}
           </h1>
-          <p className={`text-sm md:text-xl text-[#1F0610]/80 ${isArabic? "md:mr-0 md:ml-auto text-center md:text-right max-w-full mr-auto ml-auto": "md:ml-0 md:mr-auto text-center md:text-left mr-auto ml-auto max-w-[38ch] md:max-w-full"}`}>
+          <p
+            className={`text-sm md:text-xl text-[#1F0610]/80 ${isArabic ? "md:mr-0 md:ml-auto text-center md:text-right max-w-full mr-auto ml-auto" : "md:ml-0 md:mr-auto text-center md:text-left mr-auto ml-auto max-w-[38ch] md:max-w-full"}`}
+          >
             {bodyText}
           </p>
         </div>
-        <div className={`flex flex-col md:flex-row gap-3 w-[calc(100%_-_16px)] sm:w-[calc(100%_-_28px)] md:w-fit mx-auto ${isArabic? "md:mr-0": "md:ml-0"}`}>
+        <div
+          className={`flex flex-col md:flex-row gap-3 w-[calc(100%_-_16px)] sm:w-[calc(100%_-_28px)] md:w-fit mx-auto ${isArabic ? "md:mr-0" : "md:ml-0"}`}
+        >
           <Button className="font-bold w-full md:w-fit max-w-sm mx-auto text-center">
             {buttonText}
           </Button>
@@ -61,7 +67,7 @@ export const ClientHero: React.FC<{
                   instructionText2={instructionText2}
                   instructionText3={instructionText3}
                   or={or}
-                />
+                />,
               );
             }}
             variant="text"

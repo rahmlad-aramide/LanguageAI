@@ -9,7 +9,7 @@ interface ButtonProps {
   fullWidth?: boolean;
   href?: string;
   variant?: "text" | "outlined" | "primary" | "white";
-  type?: "button" | "submit" | "reset"; 
+  type?: "button" | "submit" | "reset";
   ariaLabel?: string;
   onClick?: () => void;
   onBlur?: () => void;
@@ -22,11 +22,11 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth = false,
   href,
   variant = "primary",
-  type="button",
+  type = "button",
   ariaLabel,
   onClick,
   onBlur,
-  loading = false
+  loading = false,
 }) => {
   const variantStyles = {
     text: "border-none outline-transparent focus:outline-none border-transparent bg-transparent",
@@ -48,7 +48,11 @@ export const Button: React.FC<ButtonProps> = ({
         variantStyles[variant]
       } py-2.5 px-[1.125rem] rounded-lg transition-all`}
     >
-      {href ? <Link href={href}>{loading? <LoadingIndicator />:children}</Link> : <>{loading? <LoadingIndicator />:children}</>}
+      {href ? (
+        <Link href={href}>{loading ? <LoadingIndicator /> : children}</Link>
+      ) : (
+        <>{loading ? <LoadingIndicator /> : children}</>
+      )}
     </button>
   );
 };

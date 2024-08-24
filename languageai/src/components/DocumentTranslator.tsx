@@ -98,15 +98,15 @@ export const DocumentTranslator: React.FC = () => {
     formData.append("document", sourceFile);
 
     try {
-      const response = await axios.post('/en/api/translate-doc', formData, {
+      const response = await axios.post("/en/api/translate-doc", formData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
-        responseType: 'blob',
+        responseType: "blob",
       });
 
       setTranslatedFile(response.data);
-      console.log("response data", response.data)
+      console.log("response data", response.data);
       return response;
     } catch (error) {
       console.error("Error during translation:", error);

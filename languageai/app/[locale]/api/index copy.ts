@@ -17,7 +17,7 @@ export default async function translate({
   // Validate input parameters
   if (!text || !sourceLang || !targetLang) {
     throw new Error(
-      "All parameters (text, sourceLang, targetLang) must be provided"
+      "All parameters (text, sourceLang, targetLang) must be provided",
     );
   }
 
@@ -35,7 +35,7 @@ export default async function translate({
           inputs: text,
           parameters: { src_lang: sourceLang, tgt_lang: targetLang },
         }),
-      }
+      },
     );
 
     if (!apiResponse.ok) {
@@ -64,43 +64,44 @@ export default async function translate({
   }
 }
 
-export async function translateText ({text,
+export async function translateText({
+  text,
   sourceLang,
   targetLang,
 }: ITranslateProps): Promise<string> {
   if (!text || !sourceLang || !targetLang) {
     throw new Error(
-      "All parameters (text, sourceLang, targetLang) must be provided"
+      "All parameters (text, sourceLang, targetLang) must be provided",
     );
   }
 
   try {
-  const response = await fetch('/api/translate-text', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      text,
-      from: sourceLang,
-      to: targetLang,
-    }),
-  });
+    const response = await fetch("/api/translate-text", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        text,
+        from: sourceLang,
+        to: targetLang,
+      }),
+    });
 
-  if (!response.ok) {
-    const errorBody = await response.json().catch(() => null);
-    const errorMessage =
-      response.status === 503
-        ? "Please, try again after some time..."
-        : response.statusText ||
-         errorBody?.message ||
-          "Unknown error occurred";
-    throw new Error(`Translation API failed: ${errorMessage}`);
+    if (!response.ok) {
+      const errorBody = await response.json().catch(() => null);
+      const errorMessage =
+        response.status === 503
+          ? "Please, try again after some time..."
+          : response.statusText ||
+            errorBody?.message ||
+            "Unknown error occurred";
+      throw new Error(`Translation API failed: ${errorMessage}`);
+    }
+
+    const result = await response.json();
+    return result.translatedText;
+  } catch (error: any) {
+    throw new Error(`Translation failed: ${error}`);
   }
-
-  const result = await response.json();
-  return result.translatedText;
-} catch (error: any){
-  throw new Error(`Translation failed: ${error}`);
 }
-};

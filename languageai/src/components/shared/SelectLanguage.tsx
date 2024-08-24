@@ -2,10 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Button } from "..";
-import {
-  documentLanguagesData,
-  textLanguagesData,
-} from "@/app/[locale]/data";
+import { documentLanguagesData, textLanguagesData } from "@/app/[locale]/data";
 import { selectedLanguageOption } from "./helper";
 
 interface SelectLanguageProps {
@@ -32,7 +29,7 @@ export const SelectLanguage: React.FC<SelectLanguageProps> = ({
   const languagesData =
     type === "document" ? documentLanguagesData : textLanguagesData;
   const filteredLanguages = languagesData.filter((option) =>
-    option.language.toLowerCase().includes(searchTerm.toLowerCase())
+    option.language.toLowerCase().includes(searchTerm.toLowerCase()),
   );
   const selectedLanguage = selectedLanguageOption(language);
 

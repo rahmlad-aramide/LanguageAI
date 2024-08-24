@@ -23,7 +23,11 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
         height={12}
         className="w-4 h-3 mr-1"
       />
-      <select value={locale} onChange={changeLocale} className="outline-none border-none bg-transparent font-semibold text-[rgba(31,6,16,0.70)]">
+      <select
+        value={locale}
+        onChange={changeLocale}
+        className="outline-none border-none bg-transparent font-semibold text-[rgba(31,6,16,0.70)]"
+      >
         {navLanguagesData.map((loc) => (
           <option key={loc.key} value={loc.key}>
             {loc.language}

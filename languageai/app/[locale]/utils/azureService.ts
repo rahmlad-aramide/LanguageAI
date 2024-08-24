@@ -34,7 +34,7 @@ const subscriptionRegion = process.env.SUBSCRIPTION_REGION as string;
 
 export const uploadDocument = async (
   file: File,
-  fileName: string
+  fileName: string,
 ): Promise<string> => {
   const blobServiceClient =
     BlobServiceClient.fromConnectionString(connectionString);
@@ -52,7 +52,7 @@ export const translateDocument = async (
   document: File,
   from: string,
   to: string,
-  fileName: string
+  fileName: string,
 ): Promise<any> => {
   const endpoint = documentTranslatorEndpoint;
   const route = "/translator/document:translate";
@@ -79,7 +79,7 @@ export const translateDocument = async (
     const translatedBlobName = `LanguageAI_${fileName}`;
     const translatedBlobUrl = await uploadDocument(
       response.data,
-      translatedBlobName
+      translatedBlobName,
     );
 
     return translatedBlobUrl;
@@ -92,7 +92,7 @@ export const translateDocument1 = async (
   documentUrl: string,
   from: string,
   to: string,
-  fileName: string
+  fileName: string,
 ): Promise<any> => {
   const response = await axios.post(
     `${documentTranslatorEndpoint}/translator/text/batch/v1.1/batches`,
@@ -122,13 +122,13 @@ export const translateDocument1 = async (
         "Ocp-Apim-Subscription-Key": translatorKey,
         "Content-Type": "application/json",
       },
-    }
+    },
   );
   return response.data;
 };
 
 export const getTranslatedDocumentUrl = async (
-  fileName: string
+  fileName: string,
 ): Promise<string> => {
   const blobServiceClient =
     BlobServiceClient.fromConnectionString(connectionString);
@@ -159,7 +159,7 @@ export const translateText = async ({
         "Ocp-Apim-Subscription-Region": subscriptionRegion,
       },
       params,
-    }
+    },
   );
 
   return response.data[0].translations[0].text;
@@ -176,18 +176,20 @@ const endpoint = documentTranslatorEndpoint;
 const apiKey = translatorKey;
 const credentials = { key: apiKey ?? "" };
 
-import { promises as fs } from 'fs';
-export const mainTranslator = async(document: File,
+import { promises as fs } from "fs";
+export const mainTranslator = async (
+  document: File,
   from: string,
-  to: string,):Promise<any> => {
+  to: string,
+): Promise<any> => {
   console.log("== Synchronous Document Translation ==");
 
   let path = "C:/Users/USER/Desktop/document.pdf";
   const client = createClient(endpoint, credentials);
   const formData = new FormData();
-  const fileContent = await fs.readFile('', 'utf8');
+  const fileContent = await fs.readFile("", "utf8");
   formData.append("document", document);
-  formData.get("document")
+  formData.get("document");
 
   const options: DocumentTranslateParameters = {
     queryParameters: {
@@ -205,20 +207,22 @@ export const mainTranslator = async(document: File,
     ],
   };
 
-  console.log({"body of the document": {
-    name: "document",
-    body: document,
-    filename: document.name,
-    contentType: "application/pdf",
-  },})
+  console.log({
+    "body of the document": {
+      name: "document",
+      body: document,
+      filename: document.name,
+      contentType: "application/pdf",
+    },
+  });
 
   const response = await client.path("/document:translate").post(options);
-  console.log('response from server:', response)
+  console.log("response from server:", response);
   if (isUnexpected(response)) {
     throw response.body;
   }
   console.log(
-    "Response code: " + response.status + ", Response body: " + response.body
+    "Response code: " + response.status + ", Response body: " + response.body,
   );
 
   // mainTranslator().catch((err) => {
@@ -226,13 +230,14 @@ export const mainTranslator = async(document: File,
   // });
 
   return response.body;
-}
+};
 
-
-export const mainTranslatorOld = async(document: File,
+export const mainTranslatorOld = async (
+  document: File,
   fileContent: any,
   from: string,
-  to: string,):Promise<any> => {
+  to: string,
+): Promise<any> => {
   console.log("== Synchronous Document Translation Starts ==");
 
   const client = createClient(endpoint, credentials);
@@ -274,7 +279,7 @@ export const mainTranslatorOld = async(document: File,
     throw response.body;
   }
   console.log(
-    "Response code: " + response.status + ", Response body: " + response.body
+    "Response code: " + response.status + ", Response body: " + response.body,
   );
   console.log("== Synchronous Document Translation Ends ==");
 
@@ -283,9 +288,9 @@ export const mainTranslatorOld = async(document: File,
   // });
 
   return response.body;
-}
+};
 
-import { readFile } from 'fs/promises';
+import { readFile } from "fs/promises";
 import { getMimeType } from "./helper";
 // import { createClient, DocumentTranslateParameters, isUnexpected } from '@azure/ai-language-text';
 
@@ -351,7 +356,7 @@ export const mainTranslatorNew = async (
       throw response.body;
     }
     console.log(
-      "Response code: " + response.status + ", Response body: " + response.body
+      "Response code: " + response.status + ", Response body: " + response.body,
     );
     console.log("== Synchronous Document Translation Ends ==");
     return response.body;
@@ -360,7 +365,7 @@ export const mainTranslatorNew = async (
     throw error;
     // return error;
   }
-}
+};
 
 export const mainTranslatorLatest = async (
   file: File,
@@ -386,7 +391,7 @@ export const mainTranslatorLatest = async (
         name: "document",
         body: uint8Array,
         filename: file.name,
-        contentType: file.type || 'application/octet-stream',
+        contentType: file.type || "application/octet-stream",
       },
     ],
   };
@@ -399,7 +404,7 @@ export const mainTranslatorLatest = async (
     }
 
     console.log(
-      "Response code: " + response.status + ", Response body: " + response.body
+      "Response code: " + response.status + ", Response body: " + response.body,
     );
     console.log("== Synchronous Document Translation Ends ==");
     return response.body;
