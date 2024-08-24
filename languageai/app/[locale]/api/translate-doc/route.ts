@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
-import { mainTranslatorLatest } from "../../utils/azureService";
 
 export async function POST(request: NextRequest) {
   const endpoint = process.env.DOCUMENT_TRANSLATOR_ENDPOINT;
@@ -39,9 +38,3 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: error.error }, { status: 500 });
   }
 }
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
