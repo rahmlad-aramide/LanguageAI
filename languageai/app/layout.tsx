@@ -4,9 +4,6 @@ import "./globals.css";
 import { monaSans } from "@/app/[locale]/fonts";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://languageai.vercel.app",
-  ),
   title: "LanguageAI",
   description: "Empowering Global Communication and Language Mastery",
   generator: "Rahmlad",

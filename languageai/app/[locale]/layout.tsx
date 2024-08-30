@@ -8,9 +8,6 @@ import { Locale, locales } from "@/i18n.config";
 import useTextDirection from "@/src/hooks/useTextDirection";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://res.cloudinary.com/dh4rm7b7b/image/upload/b_rgb:FFFFFF/c_pad,ar_1:1/v1707299721/Language-AI/logo_l1j3ny.png",
-  ),
   title: "LanguageAI",
   description: "Empowering Global Communication and Language Mastery",
   generator: "Rahmlad",
@@ -27,7 +24,7 @@ export const metadata: Metadata = {
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
-export default function RootLayout({
+export default function PageLayout({
   children,
   params: { locale },
 }: {
