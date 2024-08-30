@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { Locale, locales } from "@/i18n.config";
 import useTextDirection from "@/src/hooks/useTextDirection";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "LanguageAI",
