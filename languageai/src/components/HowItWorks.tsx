@@ -1,5 +1,5 @@
 import { useLocale, useTranslations } from "next-intl";
-import { inter } from "@/app/[locale]/fonts";
+import { inter, roboto } from "@/app/[locale]/fonts";
 import { stepsData } from "@/app/[locale]/data";
 import { StepProps } from "@/types";
 import { Locale } from "@/i18n.config";
@@ -23,7 +23,7 @@ const Step: React.FC<StepProps> = ({
         {icon()}
       </div>
       <div
-        style={inter.style}
+        style={roboto.style}
         className="bg-[#FEEBF3] rounded-xl px-2 text-sm text-[#090909] mt-4 mb-6 md:my-5"
       >
         {number}

@@ -101,14 +101,17 @@
     "heading": "Acerca de",
     "body": {
       "strong": "LanguageAI",
-      "normal": "ofrece servicios de traducción de idiomas de primer nivel en más de 130 idiomas. Dedicado a ayudar a individuos y empresas a romper las barreras del idioma y alcanzar sus objetivos de aprendizaje de idiomas...",
-      "button": "Más información"
+      "normal": "es una plataforma integral de traducción de idiomas que ofrece servicios de primer nivel en más de 130 idiomas. Nuestra misión es ayudar a individuos y empresas a superar las barreras del idioma, permitiendo una comunicación clara y efectiva en todo el mundo. Ya sea que necesite traducir textos o documentos en 10 formatos diferentes, LanguageAI lo tiene cubierto.",
+      "normal1": "Nuestra plataforma está diseñada con la inclusión en mente, presentando la interfaz en más de 10 idiomas para garantizar la accesibilidad para una audiencia global diversa. Estamos comprometidos a proporcionar una experiencia de traducción incomparable que no solo cumpla, sino que supere sus expectativas, permitiéndole conectarse con el mundo de manera fluida.",
+      "button": "Aprende más",
+      "more": "Ver más",
+      "less": "Ver menos"
     }
   },
   "Footer": {
     "heading": {
       "headingText": "Póngase en contacto con nosotros",
-      "bodyText": "Nuestra plataforma es fácil de usar y navegar, y proporcionamos una gama de recursos para ayudar a los estudiantes a mejorar sus habilidades lingüísticas.",
+      "bodyText": "LanguageAI está diseñado para ser fácil de usar y ofrece un conjunto de herramientas y funciones que enriquecen su experiencia de aprendizaje de idiomas, haciéndola tanto intuitiva como agradable.",
       "buttonText": "Chatea con nosotros"
     },
     "links": {
@@ -126,6 +129,9 @@
         "link2": "Política de privacidad",
         "link3": "Términos y condiciones"
       }
-    }
+    },
+    "designedBy": "Diseñado por",
+    "developedBy": "Desarrollado por",
+    "note": "LanguageAI puede cometer errores. Verifique información importante."
   }
 }

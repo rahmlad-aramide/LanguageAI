@@ -302,7 +302,7 @@ export const ClientUploadFile: React.FC<{
             <div className="flex flex-col-reverse items-end sm:flex-row gap-2 self-end">
               <Button
                 onClick={handleTranslateDocument}
-                disabled={loading || !!fileRejectionItems[0]}
+                disabled={loading || !!fileRejectionItems[0] || !translateButton}
                 className="hover:bg-primary/80 bg-primary"
               >
                 {loading ? "Translating..." : "Translate"}

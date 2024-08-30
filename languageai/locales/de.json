@@ -101,15 +101,18 @@
     "heading": "Über uns",
     "body": {
       "strong": "LanguageAI",
-      "normal": "bietet erstklassige Sprachübersetzungsdienste in über 130 Sprachen an. Wir helfen Einzelpersonen und Unternehmen dabei, Sprachbarrieren zu überwinden und ihre Sprachlernziele zu erreichen...",
-      "button": "Erfahren Sie mehr"
+      "normal": "ist eine umfassende Übersetzungsplattform, die erstklassige Dienstleistungen in über 130 Sprachen anbietet. Unsere Mission ist es, Einzelpersonen und Unternehmen dabei zu helfen, Sprachbarrieren zu überwinden und klare und effektive Kommunikation weltweit zu ermöglichen. Egal, ob Sie Texte oder Dokumente in 10 verschiedenen Formaten übersetzen möchten, LanguageAI deckt dies ab.",
+      "normal1": "Unsere Plattform ist mit Blick auf Inklusivität konzipiert und bietet die Benutzeroberfläche in über 10 Sprachen an, um sicherzustellen, dass sie für ein vielfältiges globales Publikum zugänglich ist. Wir sind bestrebt, eine unvergleichliche Übersetzungserfahrung zu bieten, die nicht nur Ihre Erwartungen erfüllt, sondern übertrifft, und Ihnen ermöglicht, sich nahtlos mit der Welt zu verbinden.",
+      "button": "Mehr erfahren",
+      "more": "Mehr anzeigen",
+      "less": "Weniger anzeigen"
     }
   },
   "Footer": {
     "heading": {
       "headingText": "Kontaktieren Sie uns",
-      "bodyText": "Unsere Plattform ist benutzerfreundlich und einfach zu navigieren, und wir bieten eine Reihe von Ressourcen, um Lernenden zu helfen, ihre Sprachkenntnisse zu verbessern.",
-      "buttonText": "Chatten Sie mit uns"
+      "bodyText": "LanguageAI wurde für Benutzerfreundlichkeit entwickelt und bietet eine Reihe von Tools und Funktionen, die Ihr Sprachenlernen bereichern und es sowohl intuitiv als auch angenehm machen.",
+      "buttonText": "Mit uns chatten"
     },
     "links": {
       "heading": "Links",
@@ -126,6 +129,9 @@
         "link2": "Datenschutzrichtlinie",
         "link3": "AGB"
       }
-    }
+    },
+    "designedBy": "Entworfen von",
+    "developedBy": "Entwickelt von",
+    "note": "LanguageAI kann Fehler machen. Überprüfen Sie wichtige Informationen."
   }
 }

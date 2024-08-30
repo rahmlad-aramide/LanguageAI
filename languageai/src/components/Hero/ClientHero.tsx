@@ -9,6 +9,7 @@ import { useModal } from "@/src/contexts";
 import { UploadFile } from "@/src/components";
 import { useLocale } from "next-intl";
 import { Locale } from "@/i18n.config";
+import Link from "next/link";
 
 export const ClientHero: React.FC<{
   headingText: string;
@@ -56,9 +57,9 @@ export const ClientHero: React.FC<{
         <div
           className={`flex flex-col md:flex-row gap-3 w-[calc(100%_-_16px)] sm:w-[calc(100%_-_28px)] md:w-fit mx-auto ${isArabic ? "md:mr-0" : "md:ml-0"}`}
         >
-          <Button className="font-bold w-full md:w-fit max-w-sm mx-auto text-center">
-            {buttonText}
-          </Button>
+          <Link href={`/${locale}/#translate`} className="font-bold text-center border outline-transparent focus:outline-primary border-primary disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed text-white py-2.5 px-[1.125rem] rounded-lg transition-all w-full md:w-auto mx-auto max-w-sm">
+              {buttonText}
+          </Link>
           <Button
             onClick={() => {
               openModal(

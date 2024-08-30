@@ -101,14 +101,17 @@
     "heading": "About",
     "body": {
         "strong": "LanguageAI",
-        "normal": "offers top-notch language translation services in over 130 languages. Dedicated to helping individuals and businesses break down language barriers and achieve their language learning goals...",
-        "button": "Learn More"
+        "normal": " is a comprehensive language translation platform offering top-notch services in over 130 languages. Our mission is to help individuals and businesses transcend language barriers, enabling clear and effective communication across the globe. Whether you need to translate text or documents in 10 different formats, LanguageAI has you covered.",
+        "normal1": "Our platform is designed with inclusivity in mind, presenting the interface in over 10 languages to ensure accessibility for a diverse global audience. We are committed to providing an unparalleled translation experience that not only meets but exceeds your expectations, empowering you to connect with the world seamlessly.",
+        "button": "Learn More",
+        "more": "See More",
+        "less": "See Less"
     }
   },
   "Footer": {
     "heading": {
         "headingText": "Get in Contact With Us",
-        "bodyText": "Our platform is user-friendly and easy to navigate, and we provide a range of resources to help learners improve their language skills.",
+        "bodyText": "Designed for ease of use, LanguageAI offers a suite of tools and features that enrich your language learning journey, making it both intuitive and enjoyable.",
         "buttonText": "Chat with us"
     },
     "links": {
@@ -126,6 +129,9 @@
             "link2": "Privacy policy",
             "link3": "Terms & Conditions"
         }
-    }
+    },
+    "designedBy": "Designed by",
+    "developedBy": "Developed by",
+    "note": "LanguageAI can make mistakes. Check important info."
   }
 }

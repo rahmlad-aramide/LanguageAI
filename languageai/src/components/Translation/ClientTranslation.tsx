@@ -79,8 +79,9 @@ export const ClientTranslation: React.FC<{
   }, [output]);
 
   const handleMic = useCallback(() => {
+    notify("Sorry, this is a coming soon feature...", "inform");
+    return;
     setMicOn(true);
-    notify("Start speaking to your mic...", "inform");
     if (!browserSupportsSpeechRecognition) {
       setMicOn(false);
       notify("Your browser does not support speech recognition", "warn");
@@ -115,6 +116,8 @@ export const ClientTranslation: React.FC<{
 
   const handleSpeak = useCallback(
     (text: string) => {
+      notify("Sorry, this is a coming soon feature...", "inform");
+      return;
       if ("speechSynthesis" in window && text) {
         const utterance = new SpeechSynthesisUtterance(text);
         window.speechSynthesis.speak(utterance);
@@ -191,7 +194,7 @@ export const ClientTranslation: React.FC<{
   return (
     <section>
       <div id="translate" className="h-7 md:h-20"></div>
-      <div className="bg-[#EE076814] w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-xl md:rounded-[2.5rem] pt-11 pb-4 px-8 md:px-11">
+      <div className="bg-[#EE076814] w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-xl md:rounded-[2.5rem] pt-11 pb-4 px-4 sm:px-8 md:px-11">
         <h2 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
           {headingText}
         </h2>

@@ -26,12 +26,12 @@ body {
   }
 }
 
-#navbar a, #footer a {
+#navbar a, #footer a, #footer button.legal {
   position: relative;
   width: fit-content;
 }
 
-#navbar a::after, #footer a::after {
+#navbar a::after, #footer a::after, #footer button.legal::after {
   content: '';
   position: absolute;
   width: 0;
@@ -41,13 +41,16 @@ body {
   transition: width 0.3s ease;
   transform: translate3d(0, 0, 0);
 }
+#navbar a.logo::after, #footer a.logo::after {
+  background-color: transparent;
+}
 #navbar a::after {
   background-color: #1f0610b3;
 }
-#footer a::after {
+#footer a::after, #footer button.legal::after {
   background-color: #fff;
 }
-#navbar a:hover::after, #footer a:hover::after {
+#navbar a:hover::after, #footer a:hover::after, #footer button.legal:hover::after {
   width: 100% !important;
 }
 
@@ -65,7 +68,7 @@ body {
 }
 
 #footer {
-  background-image: url('../../src/assets/LanguageAI-footer.png');
+  background-image: url('../src/assets/LanguageAI-footer.png');
   background-position: bottom right;
   background-size: 320px;
   background-repeat: no-repeat;

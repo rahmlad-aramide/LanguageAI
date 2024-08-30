@@ -2,7 +2,6 @@ import "regenerator-runtime/runtime";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { Locale } from "@/i18n.config";
 import {
-  About,
   CircularCTA,
   Hero,
   HowItWorks,
@@ -10,6 +9,7 @@ import {
   Translation,
   Features,
   Footer,
+  About,
 } from "@/src/components";
 import { ModalProvider, NotificationProvider } from "@/src/contexts";
 import { SupportedFormats } from "@/src/components/SupportedFormat";
@@ -18,6 +18,7 @@ export default function Home({
   params: { locale },
 }: Readonly<{ params: { locale: Locale } }>) {
   unstable_setRequestLocale(locale);
+  console.log(locale)
 
   return (
     <NotificationProvider>

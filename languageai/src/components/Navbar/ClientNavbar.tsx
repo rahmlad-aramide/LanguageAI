@@ -68,7 +68,7 @@ export const ClientNavbar: React.FC<{
           <Link
             href="#"
             aria-label="Language.ai"
-            className="flex text-lg font-bold text-secondary items-center"
+            className="flex text-lg font-bold text-secondary items-center logo"
           >
             <Image
               src={icon}

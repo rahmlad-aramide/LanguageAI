@@ -4,13 +4,16 @@ import { navLanguagesData } from "@/app/[locale]/data";
 import { usePathname, useRouter, type Locale } from "@/i18n.config";
 import Image from "next/image";
 import { selectedNavLanguageOption } from "./shared/helper";
+import { useState } from "react";
 
 export default function LocaleSwitcher({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const router = useRouter();
+  const [currentLocale, setCurrentLocale] = useState(locale);
 
   const changeLocale = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = event.target.value as Locale;
+    setCurrentLocale(newLocale)
     router.replace(pathname, { locale: newLocale });
   };
 
@@ -24,7 +27,7 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
         className="w-4 h-3 mr-1"
       />
       <select
-        value={locale}
+        value={currentLocale}
         onChange={changeLocale}
         className="outline-none border-none bg-transparent font-semibold text-[rgba(31,6,16,0.70)]"
       >

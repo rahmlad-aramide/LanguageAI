@@ -101,15 +101,18 @@
     "heading": "Sobre",
     "body": {
       "strong": "LanguageAI",
-      "normal": "oferece serviços de tradução de alta qualidade em mais de 130 idiomas. Dedicado a ajudar indivíduos e empresas a quebrar barreiras linguísticas e alcançar seus objetivos de aprendizado de idiomas...",
-      "button": "Saiba mais"
+      "normal": "é uma plataforma abrangente de tradução de idiomas que oferece serviços de alta qualidade em mais de 130 idiomas. Nossa missão é ajudar indivíduos e empresas a transcender as barreiras linguísticas, permitindo uma comunicação clara e eficaz em todo o mundo. Quer você precise traduzir textos ou documentos em 10 formatos diferentes, o LanguageAI tem o que você precisa.",
+      "normal1": "Nossa plataforma foi projetada com a inclusão em mente, apresentando a interface em mais de 10 idiomas para garantir a acessibilidade a um público global diversificado. Estamos comprometidos em fornecer uma experiência de tradução inigualável que não apenas atende, mas supera suas expectativas, permitindo que você se conecte com o mundo sem dificuldades.",
+      "button": "Saiba mais",
+      "more": "Ver mais",
+      "less": "Ver menos"
     }
   },
   "Footer": {
     "heading": {
-      "headingText": "Entre em Contato Conosco",
-      "bodyText": "Nossa plataforma é fácil de usar e navegar, e fornecemos uma variedade de recursos para ajudar os alunos a melhorar suas habilidades linguísticas.",
-      "buttonText": "Converse Conosco"
+      "headingText": "Entre em contato conosco",
+      "bodyText": "O LanguageAI foi projetado para ser fácil de usar e oferece um conjunto de ferramentas e recursos que enriquecem sua jornada de aprendizado de idiomas, tornando-a tanto intuitiva quanto agradável.",
+      "buttonText": "Converse conosco"
     },
     "links": {
       "heading": "Links",
@@ -126,6 +129,9 @@
         "link2": "Política de Privacidade",
         "link3": "Termos e Condições"
       }
-    }
+    },
+    "designedBy": "Desenhado por",
+    "developedBy": "Desenvolvido por",
+    "note": "O LanguageAI pode cometer erros. Verifique informações importantes."
   }
 }

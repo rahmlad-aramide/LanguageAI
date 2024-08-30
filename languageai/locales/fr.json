@@ -1,92 +1,92 @@
 {
-    "Navbar": {
-      "navLinks": {
-          "link1": "Fonctionnalités",
-          "link2": "Comment ça marche",
-          "link3": "À propos"
-      }
+  "Navbar": {
+    "navLinks": {
+      "link1": "Fonctionnalités",
+      "link2": "Comment ça marche",
+      "link3": "À propos"
+    }
+  },
+  "Hero": {
+    "heading": {
+      "headingText": "Favoriser la communication mondiale et la maîtrise des langues",
+      "bodyText": "Avec Language.ai, traduisez avec précision, apprenez avec passion, connectez-vous avec le monde."
     },
-    "Hero": {
-      "heading": {
-        "headingText": "Favoriser la communication mondiale et la maîtrise des langues",
-        "bodyText": "Avec Language.ai, traduisez avec précision, apprenez avec passion, connectez-vous avec le monde."
-      },
-      "cta": {
-        "buttonText": "Traduisez vos mots",
-        "buttonLink": "Ou déposez un fichier"
-      },
-      "ratings": {
-        "star": "5.0",
-        "reviews": "à partir de plus de 120 avis"
-      }
+    "cta": {
+      "buttonText": "Traduisez vos mots",
+      "buttonLink": "Ou déposez un fichier"
     },
-    "Translation": {
-      "heading": {
-        "headingText": "Traduisez vos mots ou documents",
-        "bodyText": "Choisissez la langue vers laquelle vous souhaitez effectuer la transition ci-dessous :"
-      },
-      "cta": {
-        "buttonText": "Traduire",
-        "buttonLink": "Ou téléchargez votre document",
-        "instructionText": "Taille du document: maximum 10 Mo"
-      },
-      "placeholder": "Sélectionnez la paire de langues et tapez ou collez le texte à traduire...",
-      "placeholder2": "Votre sortie sera affichée ici",
-      "uploadContent": {
-        "instructionText1": "Glisser le fichier ici",
-        "or": "ou",
-        "instructionText2": "cliquer pour parcourir",
-        "instructionText3": "(10 Mo max)"
-      }
+    "ratings": {
+      "star": "5.0",
+      "reviews": "à partir de plus de 120 avis"
+    }
+  },
+  "Translation": {
+    "heading": {
+      "headingText": "Traduisez vos mots ou documents",
+      "bodyText": "Choisissez la langue vers laquelle vous souhaitez effectuer la transition ci-dessous :"
     },
-    "Features": {
-      "heading": {
-        "headingText": "Nous offrons une gamme de fonctionnalités de pointe",
-        "bodyText": "Chez Language AI, nous sommes fiers de proposer des fonctionnalités conçues pour révolutionner votre expérience linguistique."
-      },
-      "gridContents": {
-        "feature1": {
-          "headingText": "Fonctionnalité de synthèse vocale",
-          "bodyText": "Convertir le texte écrit en mots parlés, permettant ainsi la compréhension auditive du contenu textuel."
-        },
-        "feature2": {
-          "headingText": "Traduction de plus de 130 langues",
-          "bodyText": "Traduisez le contenu textuel entre plus de 130 langues, en supprimant les barrières linguistiques et en permettant la communication à travers des paysages linguistiques diversifiés."
-        },
-        "feature3": {
-          "headingText": "Possibilité de copier la sortie et de la coller n'importe où",
-          "bodyText": "Copiez facilement la sortie de texte traduite depuis la plateforme et collez-la à l'endroit souhaité, comme des documents, des e-mails ou des applications de messagerie, pour une utilisation ultérieure ou un partage."
-        },
-        "feature4": {
-          "headingText": "Fonctionnalité de glisser-déposer pratique pour la traduction de fichiers",
-          "bodyText": "Simplifiez le processus de traduction en glissant et en déposant simplement les fichiers contenant du contenu textuel sur la plateforme, éliminant ainsi le besoin d'une saisie manuelle et augmentant l'efficacité."
-        }
-      }
+    "cta": {
+      "buttonText": "Traduire",
+      "buttonLink": "Ou téléchargez votre document",
+      "instructionText": "Taille du document: maximum 10 Mo"
     },
-    "HowItWorks": {
-      "heading": {
-        "headingText": "Découvrez comment ça marche en seulement trois étapes !",
-        "bodyText": "Veuillez suivre les étapes ci-dessous pour savoir comment les traductions fonctionnent parfaitement"
-      },
-      "gridContents": {
-        "step1": {
-          "number": "01",
-          "heading": "Sélectionner",
-          "body": "Choisissez la langue souhaitée dans laquelle vous souhaitez traduire votre document/texte."
-        },
-        "step2": {
-          "number": "02",
-          "heading": "Coller",
-          "body": "Collez votre document texte ou téléchargez votre document."
-        },
-        "step3": {
-          "number": "03",
-          "heading": "Télécharger",
-          "body": "Téléchargez votre copie en quelques secondes seulement."
-        }
-      }
+    "placeholder": "Sélectionnez la paire de langues et tapez ou collez le texte à traduire...",
+    "placeholder2": "Votre sortie sera affichée ici",
+    "uploadContent": {
+      "instructionText1": "Glisser le fichier ici",
+      "or": "ou",
+      "instructionText2": "cliquer pour parcourir",
+      "instructionText3": "(10 Mo max)"
+    }
+  },
+  "Features": {
+    "heading": {
+      "headingText": "Nous offrons une gamme de fonctionnalités de pointe",
+      "bodyText": "Chez Language AI, nous sommes fiers de proposer des fonctionnalités conçues pour révolutionner votre expérience linguistique."
     },
-    "SupportedFormats": {
+    "gridContents": {
+      "feature1": {
+        "headingText": "Fonctionnalité de synthèse vocale",
+        "bodyText": "Convertir le texte écrit en mots parlés, permettant ainsi la compréhension auditive du contenu textuel."
+      },
+      "feature2": {
+        "headingText": "Traduction de plus de 130 langues",
+        "bodyText": "Traduisez le contenu textuel entre plus de 130 langues, en supprimant les barrières linguistiques et en permettant la communication à travers des paysages linguistiques diversifiés."
+      },
+      "feature3": {
+        "headingText": "Possibilité de copier la sortie et de la coller n'importe où",
+        "bodyText": "Copiez facilement la sortie de texte traduite depuis la plateforme et collez-la à l'endroit souhaité, comme des documents, des e-mails ou des applications de messagerie, pour une utilisation ultérieure ou un partage."
+      },
+      "feature4": {
+        "headingText": "Fonctionnalité de glisser-déposer pratique pour la traduction de fichiers",
+        "bodyText": "Simplifiez le processus de traduction en glissant et en déposant simplement les fichiers contenant du contenu textuel sur la plateforme, éliminant ainsi le besoin d'une saisie manuelle et augmentant l'efficacité."
+      }
+    }
+  },
+  "HowItWorks": {
+    "heading": {
+      "headingText": "Découvrez comment ça marche en seulement trois étapes !",
+      "bodyText": "Veuillez suivre les étapes ci-dessous pour savoir comment les traductions fonctionnent parfaitement"
+    },
+    "gridContents": {
+      "step1": {
+        "number": "01",
+        "heading": "Sélectionner",
+        "body": "Choisissez la langue souhaitée dans laquelle vous souhaitez traduire votre document/texte."
+      },
+      "step2": {
+        "number": "02",
+        "heading": "Coller",
+        "body": "Collez votre document texte ou téléchargez votre document."
+      },
+      "step3": {
+        "number": "03",
+        "heading": "Télécharger",
+        "body": "Téléchargez votre copie en quelques secondes seulement."
+      }
+    }
+  },
+  "SupportedFormats": {
     "heading": {
       "headingText": "Nos formats de documents pris en charge",
       "bodyText": "Vous trouverez ci-dessous la liste de nos formats de documents pris en charge"
@@ -97,36 +97,41 @@
       "column3": "Description"
     }
   },
-    "About": {
-      "heading": "À propos",
-      "body": {
-          "strong": "LanguageAI",
-          "normal": "offre des services de traduction de langue de premier ordre dans plus de 130 langues. Dédiée à aider les individus et les entreprises à briser les barrières linguistiques et à atteindre leurs objectifs d'apprentissage des langues...",
-          "button": "En savoir plus"
+  "About": {
+    "heading": "À propos",
+    "body": {
+      "strong": "LanguageAI",
+      "normal": "est une plateforme de traduction linguistique complète offrant des services de premier ordre dans plus de 130 langues. Notre mission est d'aider les individus et les entreprises à surmonter les barrières linguistiques, permettant une communication claire et efficace à travers le monde. Que vous ayez besoin de traduire des textes ou des documents dans 10 formats différents, LanguageAI vous couvre.",
+      "normal1": "Notre plateforme est conçue avec l'inclusivité à l'esprit, présentant l'interface en plus de 10 langues pour garantir l'accessibilité à un public mondial diversifié. Nous nous engageons à offrir une expérience de traduction inégalée qui non seulement répond à vos attentes, mais les dépasse, vous permettant de vous connecter avec le monde en toute fluidité.",
+      "button": "En savoir plus",
+      "more": "Voir plus",
+      "less": "Voir moins"
+    }
+  },
+  "Footer": {
+    "heading": {
+      "headingText": "Contactez-nous",
+      "bodyText": "LanguageAI est conçu pour être facile à utiliser et offre une suite d'outils et de fonctionnalités qui enrichissent votre expérience d'apprentissage des langues, la rendant à la fois intuitive et agréable.",
+      "buttonText": "Discutez avec nous"
+    },
+    "links": {
+      "heading": "Liens",
+      "links": {
+        "link1": "Comment utiliser",
+        "link2": "Fonctionnalités",
+        "link3": "À propos"
       }
     },
-    "Footer": {
-      "heading": {
-          "headingText": "Contactez-nous",
-          "bodyText": "Notre plateforme est conviviale et facile à naviguer, et nous fournissons une gamme de ressources pour aider les apprenants à améliorer leurs compétences linguistiques.",
-          "buttonText": "Discutez avec nous"
-      },
+    "legal": {
+      "heading": "Légal",
       "links": {
-          "heading": "Liens",
-          "links": {
-              "link1": "Comment utiliser",
-              "link2": "Fonctionnalités",
-              "link3": "À propos"
-          }
-      },
-      "legal": {
-          "heading": "Légal",
-          "links": {
-              "link1": "Politique de cookies",
-              "link2": "Politique de confidentialité",
-              "link3": "Conditions générales"
-          }
+        "link1": "Politique de cookies",
+        "link2": "Politique de confidentialité",
+        "link3": "Conditions générales"
       }
-    }
+    },
+    "designedBy": "Conçu par",
+    "developedBy": "Développé par",
+    "note": "LanguageAI peut faire des erreurs. Vérifiez les informations importantes."
   }
-  
+}

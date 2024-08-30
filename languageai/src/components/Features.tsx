@@ -20,15 +20,15 @@ export const Features: React.FC = () => {
           {t("heading.bodyText")}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-10 gap-y-10 md:gap-8 pt-6 md:pt-20">
-          <div className="col-span-1 md:col-span-4 shadow-custom pb-4 md:pb-0 md:h-[428px] mt-8 rounded-lg">
+          <div className="col-span-1 md:col-span-4 shadow-custom pb-4 md:pb-0 md:h-[428px] mt-8 rounded-lg max-w-[450px] md:max-w-full mx-auto">
             <div className="flex justify-end">
               <Image
                 src={feature1}
                 alt="Text-to-speech"
                 width="372"
                 height="304"
-                className="rounded-tr-lg w-auto"
-              />
+                className="rounded-tr-lg"
+              /> 
             </div>
             <h3 className="font-semibold text-base md:text-xl text-[#101828] mx-4 md:mx-10">
               {t("gridContents.feature1.headingText")}
@@ -37,7 +37,7 @@ export const Features: React.FC = () => {
               {t("gridContents.feature2.bodyText")}
             </p>
           </div>
-          <div className="col-span-6 shadow-custom md:mb-8 rounded-lg pb-4">
+          <div className="col-span-6 shadow-custom md:mb-8 rounded-lg pb-4 max-w-[450px] md:max-w-full mx-auto">
             <div className="flex justify-center">
               <Image
                 src={feature2}
@@ -54,18 +54,18 @@ export const Features: React.FC = () => {
               {t("gridContents.feature2.bodyText")}
             </p>
           </div>
-          <div className="col-span-6 shadow-custom mb-8 rounded-lg pb-4 md:pb-0">
-            <div className="flex">
-              <h3 className="font-semibold text-base md:text-xl self-end text-[#101828] ml-4 md:ml-10 max-w-[21ch]">
+          <div className="col-span-6 shadow-custom mb-8 rounded-lg pb-4 md:pb-0 max-w-[450px] md:max-w-full mx-auto">
+            <div className="flex flex-col-reverse sm:flex-row justify-between">
+              <h3 className="font-semibold text-base md:text-xl self-start sm:self-end text-[#101828] ml-4 md:ml-10 sm:w-1/2 sm:max-w-[21ch]">
                 {t("gridContents.feature3.headingText")}
               </h3>
-              <div className="flex justify-end">
+              <div className="flex justify-end self-end sm:w-1/2">
                 <Image
                   src={feature3}
                   alt="Text-to-speech"
                   width="420"
                   height="304"
-                  className="rounded-tr-lg w-auto"
+                  className="rounded-tr-lg"
                 />
               </div>
             </div>
@@ -73,7 +73,7 @@ export const Features: React.FC = () => {
               {t("gridContents.feature3.bodyText")}
             </p>
           </div>
-          <div className="col-span-4 shadow-custom pb-4 md:pb-0 md:h-[428px] -mt-8 rounded-lg">
+          <div className="col-span-4 shadow-custom pb-4 md:pb-0 md:h-[428px] -mt-8 rounded-lg max-w-[450px] md:max-w-full mx-auto">
             <div className="flex justify-center">
               <Image
                 src={feature4}
