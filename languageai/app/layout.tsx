@@ -5,7 +5,7 @@ import { monaSans } from "@/app/[locale]/fonts";
 
 export const metadata: Metadata = {
   title: "LanguageAI",
-  description: "Empowering Global Communication and Language Mastery",
+  description: "LanguageAI: Translate texts and documents in 130+ languages effortlessly. Break language barriers and connect globally with our easy-to-use platform.",
   generator: "Rahmlad",
   applicationName: "LanguageAI",
   referrer: "origin-when-cross-origin",

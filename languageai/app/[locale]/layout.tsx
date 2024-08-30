@@ -6,11 +6,10 @@ import { NextIntlClientProvider } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { Locale, locales } from "@/i18n.config";
 import useTextDirection from "@/src/hooks/useTextDirection";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "LanguageAI",
-  description: "Empowering Global Communication and Language Mastery",
+  description: "LanguageAI: Translate texts and documents in 130+ languages effortlessly. Break language barriers and connect globally with our easy-to-use platform.",
   generator: "Rahmlad",
   applicationName: "LanguageAI",
   referrer: "origin-when-cross-origin",
