@@ -18,7 +18,6 @@ export default function Home({
   params: { locale },
 }: Readonly<{ params: { locale: Locale } }>) {
   unstable_setRequestLocale(locale);
-  console.log(locale)
 
   return (
     <NotificationProvider>
