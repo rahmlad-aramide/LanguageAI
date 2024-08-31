@@ -1,5 +1,7 @@
 import Link from "next/link";
 import './globals.css'
+import Image from "next/image";
+import favicon from './favicon.png'
 
 export default function NotFound() {
   return (
@@ -21,11 +23,7 @@ export default function NotFound() {
           padding: '1rem'
         }}>
           <div style={{ marginBottom: '1rem' }}>
-            <span style={{
-                
-              fontSize: '5rem',
-              color: '#9ca3af'
-            }}>☹️</span>
+            <Image src={favicon} alt="LanguageAI Icon" width={95} height={95} style={{width: 80, height: 80}} />
           </div>
           <h1 style={{
             marginBottom: '1rem',
@@ -55,13 +53,14 @@ export default function NotFound() {
                 borderRadius: '0.375rem',
                 padding: '0.5rem 1.25rem',
                 fontSize: '0.875rem',
+                fontWeight: 'bold',
                 color: '#ffffff',
                 transition: 'background-color 0.2s',
                 cursor: 'pointer',
                 textDecoration: 'none'
               }}>
               
-                Go Home
+                Go Back Home
             </Link>
           </div>
         </div>
