@@ -9,7 +9,7 @@ import useTextDirection from "@/src/hooks/useTextDirection";
 
 export const metadata: Metadata = {
   title: "LanguageAI - AI Texts and Documents Translator",
-  description: "LanguageAI: Translate texts and documents in 130+ languages effortlessly. Break language barriers and connect globally with our easy-to-use platform.",
+  description: "Translate texts and documents in 130+ languages effortlessly. Break language barriers and connect globally with our easy-to-use platform.",
   generator: "Rahmlad",
   applicationName: "LanguageAI",
   referrer: "origin-when-cross-origin",
