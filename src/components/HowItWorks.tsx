@@ -1,5 +1,5 @@
 import { useLocale, useTranslations } from "next-intl";
-import { inter, roboto } from "@/app/[locale]/fonts";
+import { roboto } from "@/app/[locale]/fonts";
 import { stepsData } from "@/app/[locale]/data";
 import { StepProps } from "@/types";
 import { Locale } from "@/i18n.config";
@@ -28,7 +28,7 @@ const Step: React.FC<StepProps> = ({
       >
         {number}
       </div>
-      <h2 className="font-semibold text-center md:text-3xl mb-2">{heading}</h2>
+      <h1 className="font-semibold text-center md:text-3xl mb-2">{heading}</h1>
       <p
         className={`text-sm font-medium text-center md:text-xl max-w-[35ch] md:max-w-[40ch] ${isArabic ? "md:text-right" : "md:text-left"}`}
       >

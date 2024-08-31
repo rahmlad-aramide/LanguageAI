@@ -14,7 +14,6 @@ interface SelectLanguageProps {
   type: "text" | "document";
 }
 
-// <Image src={`https://flagcdn.com/16x12/${option.code}.png`} alt="" className="w-4 h-3 mr-2" />
 export const SelectLanguage: React.FC<SelectLanguageProps> = ({
   language,
   setLanguage,

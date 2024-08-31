@@ -13,9 +13,9 @@ export const Features: React.FC = () => {
       className="pt-10 mt-10 pb-[4.5rem] bg-[#FFF9FB] w-full"
     >
       <div className="flex flex-col w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto">
-        <h2 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
+        <h1 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
           {t("heading.headingText")}
-        </h2>
+        </h1>
         <p className="text-sm md:text-xl text-center text-[#475467] px-4 pt-3">
           {t("heading.bodyText")}
         </p>
@@ -41,7 +41,7 @@ export const Features: React.FC = () => {
             <div className="flex justify-center">
               <Image
                 src={feature2}
-                alt="Text-to-speech"
+                alt="Translation of 130+ languages"
                 width="2031"
                 height="864"
                 className="rounded-tr-lg w-auto md:min-h-[316px] object-contain"
@@ -62,7 +62,7 @@ export const Features: React.FC = () => {
               <div className="flex justify-end self-end sm:w-1/2">
                 <Image
                   src={feature3}
-                  alt="Text-to-speech"
+                  alt="Text output copy and paste feature"
                   width="420"
                   height="304"
                   className="rounded-tr-lg"
@@ -77,7 +77,7 @@ export const Features: React.FC = () => {
             <div className="flex justify-center">
               <Image
                 src={feature4}
-                alt="Text-to-speech"
+                alt="Drag and drop for file upload"
                 width="1310"
                 height="960"
                 className="rounded-tr-lg scale-90"

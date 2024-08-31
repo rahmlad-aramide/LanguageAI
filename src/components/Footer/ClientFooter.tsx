@@ -108,7 +108,7 @@ export const ClientFooter: React.FC<{
                     src={icon}
                     width={97}
                     height={96}
-                    alt="Language.ai"
+                    alt="LanguageAI Logo"
                     className="w-6 h-6"
                   />
                   <span>Language.ai</span>

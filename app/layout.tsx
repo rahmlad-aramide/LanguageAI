@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   publisher: "Abdrahman Oladimeji",
   metadataBase: new URL('https://languageai.vercel.app'),
   alternates: {
-    canonical: '/',
     languages: {
       'en': '/en',
       'ar': '/ar',

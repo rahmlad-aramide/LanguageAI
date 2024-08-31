@@ -12,9 +12,9 @@ export const SupportedFormats: React.FC = () => {
       className="pt-10 my-10 pb-[4.5rem] bg-[#FFF9FB] w-full"
     >
       <div className="flex flex-col w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto">
-        <h2 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
+        <h1 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
           {t("heading.headingText")}
-        </h2>
+        </h1>
         <p className="text-sm md:text-xl text-center text-[#475467] px-4 pt-3">
           {t("heading.bodyText")}
         </p>

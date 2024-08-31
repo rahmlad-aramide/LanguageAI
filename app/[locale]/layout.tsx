@@ -9,11 +9,11 @@ import useTextDirection from "@/src/hooks/useTextDirection";
 
 export const metadata: Metadata = {
   title: "LanguageAI - AI Texts and Documents Translator",
-  description: "Translate texts and documents in 130+ languages effortlessly. Break language barriers and connect globally with our easy-to-use platform.",
+  description: "Translate texts and documents in 130+ languages effortlessly with LanguageAI. Break language barriers, connect globally, and enjoy a seamless, user-friendly experience on our advanced translation platform.",
   generator: "Rahmlad",
   applicationName: "LanguageAI",
   referrer: "origin-when-cross-origin",
-  keywords: ["Language", "AI", "LanguageAI", "Translation", "Document"],
+  keywords: ["language", "ai", "file", "translate", "documents", 'texts'],
   authors: [
     { name: "Abdrahman Oladimeji", url: "https://linkedin.com/in/rahmlad" },
   ],
@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   publisher: "Abdrahman Oladimeji",
   metadataBase: new URL('https://languageai.vercel.app'),
   alternates: {
-    canonical: '/',
     languages: {
       'en': '/en',
       'ar': '/ar',

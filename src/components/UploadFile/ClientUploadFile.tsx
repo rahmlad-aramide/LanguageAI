@@ -220,7 +220,7 @@ export const ClientUploadFile: React.FC<{
             <div
               className={`w-20 h-20 bg-white/50 rounded-full flex justify-center items-center`}
             >
-              <Image src={thumbGif} alt="" width={48} height={48} />
+              <Image src={thumbGif} alt="Thumbs up gif" width={48} height={48} />
             </div>
           )}
           {!uploadedFile ||

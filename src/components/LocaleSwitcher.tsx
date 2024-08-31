@@ -21,7 +21,7 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
     <div className="flex justify-center items-center border-b-2 transition-colors duration-200 border-transparent hover:border-[rgba(31,6,16,0.70)] mb-3 md:mb-0">
       <Image
         src={`https://flagcdn.com/16x12/${selectedNavLanguageOption(locale)?.flag}.png`}
-        alt=""
+        alt="Flag image"
         width={16}
         height={12}
         className="w-4 h-3 mr-1"

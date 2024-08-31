@@ -75,7 +75,7 @@ export const ClientNavbar: React.FC<{
               width={25}
               height={25}
               sizes="100vw"
-              alt="Language.ai"
+              alt="LanguageAI Icon"
               className="w-6 h-6"
             />
             <span className="ml-2">Language.ai</span>
