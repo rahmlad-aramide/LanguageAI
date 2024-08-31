@@ -25,9 +25,9 @@ export const ClientAbout: React.FC<{
     <section id="about" className="bg-[#FFF4F9]">
       <div className="flex flex-col md:flex-row justify-center w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto">
         <div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/2 mb-0 mt-10 md:my-10">
-          <h1 className="font-semibold text-2xl md:text-4xl text-[#101828] mb-4 text-center md:text-left">
+          <h3 className="font-semibold text-2xl md:text-4xl text-[#101828] mb-4 text-center md:text-left">
             {heading}
-          </h1>
+          </h3>
           <p
             className={`!leading-loose mb-3 md:mb-6 text-sm font-medium md:text-xl text-center ${isArabic ? "md:text-right" : "md:text-left"}`}
           >

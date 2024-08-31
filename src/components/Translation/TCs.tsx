@@ -23,7 +23,7 @@ export const TCs = () => {
       ]
     return (
         <div className="max-h-[80vh] overflow-y-auto">
-            <h1 className="text-xl font-bold">Terms & Conditions</h1>
+            <h3 className="text-xl font-bold">Terms & Conditions</h3>
             <p className="my-2">Welcome to LanguageAI! By using our services, you agree to the following terms:</p>
             <ol className="space-y-1.5">{conditions.map((condition, idx)=> (
                 <li key={idx}><strong>{idx+1}. {condition.title}:&nbsp;</strong>{condition.description}</li>

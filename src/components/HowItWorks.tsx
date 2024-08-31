@@ -28,7 +28,7 @@ const Step: React.FC<StepProps> = ({
       >
         {number}
       </div>
-      <h1 className="font-semibold text-center md:text-3xl mb-2">{heading}</h1>
+      <h3 className="font-semibold text-center md:text-3xl mb-2">{heading}</h3>
       <p
         className={`text-sm font-medium text-center md:text-xl max-w-[35ch] md:max-w-[40ch] ${isArabic ? "md:text-right" : "md:text-left"}`}
       >

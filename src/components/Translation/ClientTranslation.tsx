@@ -195,9 +195,9 @@ export const ClientTranslation: React.FC<{
     <section>
       <div id="translate" className="h-7 md:h-20"></div>
       <div className="bg-[#EE076814] w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-xl md:rounded-[2.5rem] pt-11 pb-4 px-4 sm:px-8 md:px-11">
-        <h1 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
+        <h3 className="font-semibold text-lg md:text-4xl text-center text-[#101828] mx-4">
           {headingText}
-        </h1>
+        </h3>
         <p className="text-sm md:text-xl text-center text-[#475467] px-4 pt-3">
           {bodyText}
         </p>
