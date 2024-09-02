@@ -57,7 +57,7 @@ export const ClientHero: React.FC<{
         <div
           className={`flex flex-col md:flex-row gap-3 w-[calc(100%_-_16px)] sm:w-[calc(100%_-_28px)] md:w-fit mx-auto ${isArabic ? "md:mr-0" : "md:ml-0"}`}
         >
-          <Link href={`/${locale}/#translate`} className="font-bold text-center border outline-transparent focus:outline-primary border-primary disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed text-white py-2.5 px-[1.125rem] rounded-lg transition-all w-full md:w-auto mx-auto max-w-sm">
+          <Link href={`/${locale}/#translate`} className="font-bold text-center border outline-transparent focus:outline-primary border-primary hover:border-primary/80 disabled:border-disabled bg-primary hover:bg-primary/80 disabled:bg-disabled disabled:cursor-not-allowed text-white py-2.5 px-[1.125rem] rounded-lg transition-all w-full md:w-auto mx-auto max-w-sm">
               {buttonText}
           </Link>
           <Button
@@ -78,7 +78,7 @@ export const ClientHero: React.FC<{
           </Button>
         </div>
         <div className="flex flex-col w-full">
-          <hr className="w-full md:w-2/3 h-[0.5px] bg-[#1f0610] border-0 mb-4 opacity-50 md:opacity-100" />
+          <hr className="w-full mx-auto md:mx-0 max-w-sm h-[0.5px] bg-[#1f0610] border-0 mb-4 opacity-50 md:opacity-100" />
           <div className="flex gap-1 sm:gap-2 items-center justify-center md:justify-start">
             <Image width={152} height={40} src={avatars} alt="Avatars" />
             <div className="flex flex-col font-medium text-xs md:text-base">

@@ -182,11 +182,16 @@ export const ClientTranslation: React.FC<{
   }, [transcript, micMode]);
 
   const handleCopy = useCallback(async () => {
-    if (navigator.clipboard && text) {
-      await navigator.clipboard.writeText(text);
-      notify("Text copied to clipboard!", "success");
-    } else {
-      notify("Sorry, Clipboard functionality is not supported.", "warn");
+    try {
+      if (navigator.clipboard && output) {
+        await navigator.clipboard.writeText(output);
+        notify("Text copied to clipboard!", "success");
+      } else {
+        notify("Sorry, Clipboard functionality is not supported.", "warn");
+      }
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+      notify("Failed to copy text. Please try again.", "error");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text]);

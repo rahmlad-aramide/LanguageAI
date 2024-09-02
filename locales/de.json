@@ -13,7 +13,7 @@
     },
     "cta": {
       "buttonText": "Übersetzen Sie Ihre Worte",
-      "buttonLink": "Oder Datei ablegen"
+      "buttonLink": "Oder eine Datei hochladen"
     },
     "ratings": {
       "star": "5.0",
@@ -61,7 +61,8 @@
         "headingText": "Bequeme Drag-and-Drop-Funktion für die Dateiübersetzung",
         "bodyText": "Vereinfachen Sie den Übersetzungsprozess, indem Sie Dateien mit Textinhalten einfach per Drag-and-Drop auf die Plattform ziehen, wodurch die manuelle Eingabe entfällt und die Effizienz gesteigert wird."
       }
-    }
+    },
+    "demo": "Demo ansehen"
   },
   "HowItWorks": {
     "heading": {

@@ -3,6 +3,7 @@ import { roboto } from "@/app/[locale]/fonts";
 import { stepsData } from "@/app/[locale]/data";
 import { StepProps } from "@/types";
 import { Locale } from "@/i18n.config";
+import Link from "next/link";
 
 const Step: React.FC<StepProps> = ({
   icon,
@@ -24,7 +25,7 @@ const Step: React.FC<StepProps> = ({
       </div>
       <div
         style={roboto.style}
-        className="bg-[#FEEBF3] rounded-xl px-2 text-sm text-[#090909] mt-4 mb-6 md:my-5"
+        className="bg-[#FEEBF3] rounded-xl pt-1 px-2 text-sm text-[#090909] mt-4 mb-6 md:my-5"
       >
         {number}
       </div>
@@ -39,6 +40,7 @@ const Step: React.FC<StepProps> = ({
 };
 
 export const HowItWorks: React.FC = () => {
+  const locale = useLocale() as Locale;
   const t = useTranslations("HowItWorks");
   return (
     <section
@@ -51,7 +53,7 @@ export const HowItWorks: React.FC = () => {
       <p className="text-sm md:text-xl text-center text-[#475467] px-4 pt-3">
         {t("heading.bodyText")}
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-16 mt-6 md:mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-16 my-6 md:my-12">
         {stepsData.map((step, idx) => (
           <Step
             background={step.background}
@@ -64,6 +66,7 @@ export const HowItWorks: React.FC = () => {
           />
         ))}
       </div>
+      <Link href={`/${locale}/demo`} className="flex mx-auto w-fit border outline-transparent focus:outline-primary border-primary disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed hover:bg-opacity-80 text-white py-2.5 px-[1.125rem] rounded-lg transition duration-200 mt-4 md:mt-10">{t('demo')}</Link>
     </section>
   );
 };

@@ -13,7 +13,7 @@
     },
     "cta": {
       "buttonText": "Traduce tus palabras",
-      "buttonLink": "O suelta un archivo"
+      "buttonLink": "O sube un archivo"
     },
     "ratings": {
       "star": "5.0",
@@ -84,7 +84,8 @@
         "heading": "Descargar",
         "body": "Descargue su copia en solo unos segundos."
       }
-    }
+    },
+    "demo": "Ver demostración"
   },
   "SupportedFormats": {
     "heading": {

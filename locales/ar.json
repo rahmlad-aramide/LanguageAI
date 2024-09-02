@@ -13,7 +13,7 @@
     },
     "cta": {
       "buttonText": "ترجم كلماتك",
-      "buttonLink": "أو أسقط ملفًا"
+      "buttonLink": "أو قم بتحميل ملف"
     },
     "ratings": {
       "star": "5.0",
@@ -84,7 +84,8 @@
         "heading": "حمل",
         "body": "حمل نسختك في بضع ثوانٍ فقط."
       }
-    }
+    },
+    "demo": "شاهد العرض التوضيحي"
   },
   "SupportedFormats": {
     "heading": {

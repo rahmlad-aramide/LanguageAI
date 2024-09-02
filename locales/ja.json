@@ -13,7 +13,7 @@
     },
     "cta": {
       "buttonText": "あなたの言葉を翻訳する",
-      "buttonLink": "またはファイルをドロップ"
+      "buttonLink": "またはファイルをアップロード"
     },
     "ratings": {
       "star": "5.0",
@@ -84,7 +84,8 @@
         "heading": "ダウンロード",
         "body": "数秒でコピーをダウンロードします。"
       }
-    }
+    },
+    "demo": "デモを見る"
   },
   "SupportedFormats": {
     "heading": {

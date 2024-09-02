@@ -66,7 +66,7 @@ export const ClientNavbar: React.FC<{
       <div className="md:bg-primary/10 backdrop-blur-[6px] flex justify-between items-center w-full sm:w-[calc(100%_-_32px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto py-3 md:mt-6 mb-0 md:mb-2 h-fit md:h-20 rounded-none md:rounded-full px-4 md:px-7 z-50">
         <div className="mr-4 md:bg-transparent">
           <Link
-            href="#"
+            href="/"
             aria-label="Language.ai"
             className="flex text-lg font-bold text-secondary items-center logo"
           >

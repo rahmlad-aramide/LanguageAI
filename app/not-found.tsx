@@ -1,7 +1,7 @@
 import Link from "next/link";
 import './globals.css'
 import Image from "next/image";
-import favicon from './favicon.png'
+import icon from '@/app/icon.png';
 
 export default function NotFound() {
   return (
@@ -23,7 +23,7 @@ export default function NotFound() {
           padding: '1rem'
         }}>
           <div style={{ marginBottom: '1rem' }}>
-            <Image src={favicon} alt="LanguageAI Icon" width={95} height={95} style={{width: 80, height: 80}} />
+            <Image src={icon} alt="LanguageAI Icon" width={300} height={300} style={{width: 80, height: 80}} />
           </div>
           <h1 style={{
             marginBottom: '1rem',

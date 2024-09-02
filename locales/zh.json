@@ -13,7 +13,7 @@
     },
     "cta": {
       "buttonText": "翻译您的文字",
-      "buttonLink": "或拖拽文件"
+      "buttonLink": "或上传文件"
     },
     "ratings": {
       "star": "5.0",
@@ -84,7 +84,8 @@
         "heading": "下载",
         "body": "仅需几秒钟即可下载您的副本。"
       }
-    }
+    },
+    "demo": "观看演示"
   },
   "SupportedFormats": {
     "heading": {

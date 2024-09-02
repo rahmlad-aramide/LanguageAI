@@ -13,7 +13,7 @@
     },
     "cta": {
       "buttonText": "Traduisez vos mots",
-      "buttonLink": "Ou déposez un fichier"
+      "buttonLink": "Ou téléchargez un fichier"
     },
     "ratings": {
       "star": "5.0",
@@ -84,7 +84,8 @@
         "heading": "Télécharger",
         "body": "Téléchargez votre copie en quelques secondes seulement."
       }
-    }
+    },
+    "demo": "Regarder la démo"
   },
   "SupportedFormats": {
     "heading": {

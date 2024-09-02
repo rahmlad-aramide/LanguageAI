@@ -11,6 +11,7 @@ import { useModal, useNotification } from "@/src/contexts";
 import { TCs } from "../Translation/TCs";
 import { PrivacyPolicy } from "../Translation/PrivacyPolicy";
 import { CookiesPolicy } from "../Translation/CookiesPolicy";
+import { usePathname } from "next/navigation";
 
 export const ClientFooter: React.FC<{
   headingText: string;
@@ -41,41 +42,54 @@ export const ClientFooter: React.FC<{
   legalLink3,
   designedBy,
   developedBy,
-  note
+  note,
 }) => {
   const locale = useLocale() as Locale;
   const isArabic = locale === "ar";
-  const {notify} = useNotification();
+  const { notify } = useNotification();
   const { openModal } = useModal();
+  const pathname = usePathname();
 
   return (
     <>
-      <section className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] mx-auto justify-center">
-        <div className="flex flex-col md:hidden my-20">
-          <ThreeFeathers className="flex mx-auto -mb-5" />
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <h2 className="text-2xl text-[#050B2CCC] font-semibold">
-              {headingText}
-            </h2>
-            <ArrowDark
-              className={`w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
-            />
-            <Image
-              src={arrow}
-              width={32}
-              height={25}
-              alt="Right arrow"
-              className={`hidden w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
-            />
+      {pathname !== `/${locale}/demo` && (
+        <section className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] mx-auto justify-center">
+          <div className="flex flex-col md:hidden my-20">
+            <ThreeFeathers className="flex mx-auto -mb-5" />
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <h2 className="text-2xl text-[#050B2CCC] font-semibold">
+                {headingText}
+              </h2>
+              <ArrowDark
+                className={`w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
+              />
+              <Image
+                src={arrow}
+                width={32}
+                height={25}
+                alt="Right arrow"
+                className={`hidden w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
+              />
+            </div>
+            <div>
+              <Button
+                variant="primary"
+                onClick={() =>
+                  notify("ChatBot is coming...", "inform")
+                }
+                className="font-bold"
+                fullWidth={true}
+              >
+                {buttonText}
+              </Button>
+            </div>
           </div>
-          <div>
-            <Button variant="primary" onClick={()=>notify("Sorry, this is a coming soon feature...", "inform")} className="font-bold" fullWidth={true}>
-              {buttonText}
-            </Button>
-          </div>
-        </div>
-      </section>
-      <footer id="footer" className="flex flex-col justify-center h-full bg-[#050B2C] py-16">
+        </section>
+      )}
+      <footer
+        id="footer"
+        className="flex flex-col justify-center h-full bg-[#050B2C] py-16"
+      >
         <div className="bg-primary w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] md:w-[calc(100%_-_120px)] max-w-6xl mx-auto rounded-3xl px-4 py-6 sm:px-6 md:px-8 md:py-11">
           <div className="hidden md:flex justify-between mb-11">
             <div className="flex items-center gap-2">
@@ -91,7 +105,13 @@ export const ClientFooter: React.FC<{
               />
             </div>
             <div>
-              <Button variant="white" onClick={()=>notify("ChatBot is also coming soon...", "inform")} className="font-bold">
+              <Button
+                variant="white"
+                onClick={() =>
+                  notify("ChatBot is also coming soon...", "inform")
+                }
+                className="font-bold"
+              >
                 {buttonText}
               </Button>
             </div>
@@ -117,7 +137,25 @@ export const ClientFooter: React.FC<{
                   {bodyText}
                 </h2>
               </div>
-              <p className="text-white mt-4 hidden md:block">{designedBy} <Link className="border-b" href={'https://linkedin.com/in/taofeeqahbello'} target="_blank">Pheeqoh</Link> & {developedBy} <Link className="border-b" href={'https://linkedin.com/in/rahmlad'} target="_blank">Rahmlad</Link> &copy; 2024 </p>
+              <p className="text-white mt-4 hidden md:block">
+                {designedBy}{" "}
+                <Link
+                  className="border-b"
+                  href={"https://linkedin.com/in/taofeeqahbello"}
+                  target="_blank"
+                >
+                  Pheeqoh
+                </Link>{" "}
+                & {developedBy}{" "}
+                <Link
+                  className="border-b"
+                  href={"https://linkedin.com/in/rahmlad"}
+                  target="_blank"
+                >
+                  Rahmlad
+                </Link>{" "}
+                &copy; 2024{" "}
+              </p>
             </div>
             <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 text-white">
               <div>
@@ -138,18 +176,51 @@ export const ClientFooter: React.FC<{
                 <h2 className="font-bold text-xl mb-5">{legalHeading}</h2>
                 <ul className="space-y-4">
                   <li>
-                    <button className="text-left legal cursor-pointer" onClick={()=>openModal(<CookiesPolicy />)}>{legalLink1}</button>
+                    <button
+                      className="text-left legal cursor-pointer"
+                      onClick={() => openModal(<CookiesPolicy />)}
+                    >
+                      {legalLink1}
+                    </button>
                   </li>
                   <li>
-                    <button className="text-left legal cursor-pointer" onClick={()=>openModal(<PrivacyPolicy />)}>{legalLink2}</button>
+                    <button
+                      className="text-left legal cursor-pointer"
+                      onClick={() => openModal(<PrivacyPolicy />)}
+                    >
+                      {legalLink2}
+                    </button>
                   </li>
                   <li>
-                    <button className="text-left legal cursor-pointer" onClick={()=>openModal(<TCs />)}>{legalLink3}</button>
+                    <button
+                      className="text-left legal cursor-pointer"
+                      onClick={() => openModal(<TCs />)}
+                    >
+                      {legalLink3}
+                    </button>
                   </li>
                 </ul>
               </div>
             </div>
-            <p className="text-white mt-4 md:hidden">{designedBy} <Link className="border-b" href={'https://linkedin.com/in/taofeeqahbello'} target="_blank">Pheeqoh</Link> & {developedBy} <Link className="border-b" href={'https://linkedin.com/in/rahmlad'} target="_blank">Rahmlad</Link> &copy; 2024 </p>
+            <p className="text-white mt-4 md:hidden">
+              {designedBy}{" "}
+              <Link
+                className="border-b"
+                href={"https://linkedin.com/in/taofeeqahbello"}
+                target="_blank"
+              >
+                Pheeqoh
+              </Link>{" "}
+              & {developedBy}{" "}
+              <Link
+                className="border-b"
+                href={"https://linkedin.com/in/rahmlad"}
+                target="_blank"
+              >
+                Rahmlad
+              </Link>{" "}
+              &copy; 2024{" "}
+            </p>
           </div>
         </div>
         <p className="mt-1 text-center text-xs text-gray-400 px-4">{note}</p>
