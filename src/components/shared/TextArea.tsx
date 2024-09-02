@@ -1,4 +1,5 @@
-import { RefObject } from "react";
+'use client'
+import { RefObject, useEffect } from "react";
 
 interface TextAreaProps {
   refProp?: RefObject<HTMLTextAreaElement> | undefined;
@@ -13,6 +14,12 @@ export const TextArea: React.FC<TextAreaProps> = ({
   onChange,
   placeholder = "Select the language pair and type or paste the text for translation...",
 }) => {
+  useEffect(() => {
+  if (refProp.current) {
+    refProp.current.focus({ preventScroll: true }); // prevents scrolling to the element
+  }
+}, []);
+  
   return (
     <textarea
       className="w-full h-full rounded-lg bg-transparent outline-none focus:border-none resize-none p-5 m-0.5"
