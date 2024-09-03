@@ -9,41 +9,50 @@ import useTextDirection from "@/src/hooks/useTextDirection";
 
 export const metadata: Metadata = {
   title: "LanguageAI - AI Texts and Documents Translator",
-  description: "Translate texts and documents in 130+ languages effortlessly with LanguageAI. Break language barriers, connect globally, and enjoy a seamless, user-friendly experience on our advanced translation platform.",
-  generator: "Rahmlad", 
+  description:
+    "Translate texts and documents in 130+ languages effortlessly with LanguageAI. Break language barriers, connect globally, and enjoy a seamless, user-friendly experience on our advanced translation platform.",
+  generator: "Rahmlad",
   applicationName: "LanguageAI",
   referrer: "origin-when-cross-origin",
-  keywords: ["language", "ai", "file", "translate", "documents", 'texts', 'translator'],
+  keywords: [
+    "language",
+    "ai",
+    "file",
+    "translate",
+    "documents",
+    "texts",
+    "translator",
+  ],
   authors: [
     { name: "Abdrahman Oladimeji", url: "https://linkedin.com/in/rahmlad" },
   ],
   creator: "Abdrahman Oladimeji",
   publisher: "Abdrahman Oladimeji",
-  metadataBase: new URL('https://uselanguageai.xyz'),
+  metadataBase: new URL("https://www.uselanguageai.xyz"),
   alternates: {
     languages: {
-      'en': '/en',
-      'ar': '/ar',
-      'fr': '/fr',
-      'es': '/es',
-      'de': '/de',
-      'hi': '/hi',
-      'zh': '/zh',
-      'pt': '/pt',
-      'ru': '/ru',
-      'ja': '/ja',
-      'bn': '/bn',
+      en: "/en",
+      ar: "/ar",
+      fr: "/fr",
+      es: "/es",
+      de: "/de",
+      hi: "/hi",
+      zh: "/zh",
+      pt: "/pt",
+      ru: "/ru",
+      ja: "/ja",
+      bn: "/bn",
     },
   },
   openGraph: {
-    images: '/og.png',
+    images: "/og.png",
     siteName: "LanguageAI",
-    url: "https://uselanguageai.xyz"
+    url: "https://www.uselanguageai.xyz",
   },
   twitter: {
-    images: '/og.png',
-    site: "https://uselanguageai.xyz"
-  }
+    images: "/og.png",
+    site: "https://www.uselanguageai.xyz",
+  },
 };
 
 export function generateStaticParams() {
