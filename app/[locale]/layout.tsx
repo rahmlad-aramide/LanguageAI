@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   generator: "Rahmlad",
   applicationName: "LanguageAI",
   referrer: "origin-when-cross-origin",
-  keywords: ["language", "ai", "file", "translate", "documents", 'texts'],
+  keywords: ["language", "ai", "file", "translate", "documents", 'texts', 'translator'],
   authors: [
     { name: "Abdrahman Oladimeji", url: "https://linkedin.com/in/rahmlad" },
   ],
   creator: "Abdrahman Oladimeji",
   publisher: "Abdrahman Oladimeji",
-  metadataBase: new URL('https://languageai.vercel.app'),
+  metadataBase: new URL('https://uselanguageai.xyz'),
   alternates: {
     languages: {
       'en': '/en',

@@ -17,13 +17,14 @@ export const metadata: Metadata = {
     "translation",
     "translate",
     "document",
+    "translator"
   ],
   authors: [
     { name: "Abdrahman Oladimeji", url: "https://linkedin.com/in/rahmlad" },
   ],
   creator: "Abdrahman Oladimeji",
   publisher: "Abdrahman Oladimeji",
-  metadataBase: new URL('https://languageai.vercel.app'),
+  metadataBase: new URL('https://uselanguageai.xyz'),
   alternates: {
     languages: {
       'en': '/en',
