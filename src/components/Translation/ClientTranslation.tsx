@@ -72,9 +72,6 @@ export const ClientTranslation: React.FC<{
       setIsVisible(true);
     } else {
       setIsVisible(false);
-      if (inputRef.current) {
-        inputRef.current.focus();
-      }
     }
   }, [output]);
 

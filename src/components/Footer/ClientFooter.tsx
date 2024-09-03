@@ -52,16 +52,15 @@ export const ClientFooter: React.FC<{
 
   return (
     <>
-      {pathname !== `/${locale}/demo` && (
         <section className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] mx-auto justify-center">
           <div className="flex flex-col md:hidden my-20">
             <ThreeFeathers className="flex mx-auto -mb-5" />
             <div className="flex items-center justify-center gap-2 mb-6">
-              <h2 className="text-2xl text-[#050B2CCC] font-semibold">
+              <h2 className="text-xl xs:text-2xl text-[#050B2CCC] font-semibold">
                 {headingText}
               </h2>
               <ArrowDark
-                className={`w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
+                className={`w-6 xs:w-8 h-4 xs:h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
               />
               <Image
                 src={arrow}
@@ -85,7 +84,6 @@ export const ClientFooter: React.FC<{
             </div>
           </div>
         </section>
-      )}
       <footer
         id="footer"
         className="flex flex-col justify-center h-full bg-[#050B2C] py-16"

@@ -10,6 +10,7 @@ import { UploadFile } from "@/src/components";
 import { useLocale } from "next-intl";
 import { Locale } from "@/i18n.config";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export const ClientHero: React.FC<{
   headingText: string;
@@ -36,6 +37,13 @@ export const ClientHero: React.FC<{
   const locale = useLocale() as Locale;
   const isArabic = locale === "ar";
 
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+  
+
   return (
     <section
       id="home"
@@ -57,7 +65,7 @@ export const ClientHero: React.FC<{
         <div
           className={`flex flex-col md:flex-row gap-3 w-[calc(100%_-_16px)] sm:w-[calc(100%_-_28px)] md:w-fit mx-auto ${isArabic ? "md:mr-0" : "md:ml-0"}`}
         >
-          <Link href={`/${locale}/#translate`} className="font-bold text-center border outline-transparent focus:outline-primary border-primary hover:border-primary/80 disabled:border-disabled bg-primary hover:bg-primary/80 disabled:bg-disabled disabled:cursor-not-allowed text-white py-2.5 px-[1.125rem] rounded-lg transition-all w-full md:w-auto mx-auto max-w-sm">
+          <Link href={`/${locale}/#translate`} className="font-bold text-center border outline-transparent focus:outline-black border-primary hover:border-primary/80 disabled:border-disabled bg-primary hover:bg-primary/80 disabled:bg-disabled disabled:cursor-not-allowed text-white py-2.5 px-[1.125rem] rounded-lg transition-all w-full md:w-auto mx-auto max-w-sm">
               {buttonText}
           </Link>
           <Button

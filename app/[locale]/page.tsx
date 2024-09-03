@@ -13,6 +13,7 @@ import {
 } from "@/src/components";
 import { ModalProvider, NotificationProvider } from "@/src/contexts";
 import { SupportedFormats } from "@/src/components/SupportedFormat";
+import Link from "next/link";
 
 export default function Home({
   params: { locale },
@@ -22,6 +23,12 @@ export default function Home({
   return (
     <NotificationProvider>
       <ModalProvider>
+        <Link href="/#home"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded focus:shadow-lg"
+        >
+          Skip to main content
+        </Link>
+
         <header className="sticky top-0 bg-white md:bg-transparent z-50">
           <Navbar />
         </header>

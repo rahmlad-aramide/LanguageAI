@@ -29,11 +29,11 @@ export const Button: React.FC<ButtonProps> = ({
   loading = false,
 }) => {
   const variantStyles = {
-    text: "border-none outline-transparent focus:outline-none border-transparent bg-transparent",
+    text: "border-none outline-transparent focus:outline-black border-transparent bg-transparent",
     primary:
-      "border outline-transparent focus:outline-primary border-primary hover:border-primary/80 hover:bg-primary/80 disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed text-white",
+      "border outline-transparent focus:outline-black border-primary hover:border-primary/80 hover:bg-primary/80 disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed text-white",
     white:
-      "border outline-transparent focus:outline-primary border-primary hover:border-primary/80 disabled:border-disabled bg-white disabled:bg-disabled disabled:cursor-not-allowed text-primary",
+      "border outline-transparent focus:outline-black border-primary hover:border-primary/80 disabled:border-disabled bg-white disabled:bg-disabled disabled:cursor-not-allowed text-primary",
     outlined:
       "border outline-transparent focus:outline-primary border-primary hover:border-primary/80 text-primary bg-transparent",
   };
