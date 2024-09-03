@@ -42,9 +42,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: '/og.png',
+    siteName: "LanguageAI",
+    url: "https://uselanguageai.xyz"
   },
   twitter: {
-    images: '/og.png'
+    images: '/og.png',
+    site: "https://uselanguageai.xyz"
   }
 };
 

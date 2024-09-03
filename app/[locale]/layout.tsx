@@ -10,7 +10,7 @@ import useTextDirection from "@/src/hooks/useTextDirection";
 export const metadata: Metadata = {
   title: "LanguageAI - AI Texts and Documents Translator",
   description: "Translate texts and documents in 130+ languages effortlessly with LanguageAI. Break language barriers, connect globally, and enjoy a seamless, user-friendly experience on our advanced translation platform.",
-  generator: "Rahmlad",
+  generator: "Rahmlad", 
   applicationName: "LanguageAI",
   referrer: "origin-when-cross-origin",
   keywords: ["language", "ai", "file", "translate", "documents", 'texts', 'translator'],
@@ -37,9 +37,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: '/og.png',
+    siteName: "LanguageAI",
+    url: "https://uselanguageai.xyz"
   },
   twitter: {
-    images: '/og.png'
+    images: '/og.png',
+    site: "https://uselanguageai.xyz"
   }
 };
 
