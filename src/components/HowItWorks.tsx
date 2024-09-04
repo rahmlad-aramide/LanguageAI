@@ -25,7 +25,7 @@ const Step: React.FC<StepProps> = ({
       </div>
       <div
         style={roboto.style}
-        className="bg-[#FEEBF3] rounded-xl pt-1 px-2 text-sm text-[#090909] mt-4 mb-6 md:my-5"
+        className="bg-[#FEEBF3] rounded-xl h-6 flex items-center leading-none px-2 text-sm text-[#090909] mt-4 mb-6 md:my-5"
       >
         {number}
       </div>
