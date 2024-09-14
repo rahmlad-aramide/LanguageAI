@@ -109,6 +109,21 @@
       "less": "Ver menos"
     }
   },
+  "Contact": {
+    "heading": {
+      "headingText": "Envie-nos uma mensagem",
+      "bodyText": "Você tem uma mensagem para nós, deixe-a abaixo"
+    },
+    "body": {
+      "nameLabel": "Nome",
+      "namePlaceholder": "Qual é o seu nome?",
+      "emailLabel": "Endereço de e-mail",
+      "emailPlaceholder": "Qual é o seu endereço de e-mail válido?",
+      "messageLabel": "Mensagem",
+      "messagePlaceholder": "Qual é a mensagem que você tem para nós?",
+      "send": "Enviar"
+    }
+  },
   "Footer": {
     "heading": {
       "headingText": "Entre em contato conosco",

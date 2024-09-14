@@ -9,7 +9,7 @@ import {
   UploadIcon,
   UploadIconActive,
 } from "../../assets/svg";
-import thumbGif from "./thumbs.gif";
+import thumbGif from "@/src/assets/thumbs.gif";
 import { Button } from "../shared/Button";
 import { useModal, useNotification } from "../../contexts";
 import { SelectLanguage } from "../shared/SelectLanguage";

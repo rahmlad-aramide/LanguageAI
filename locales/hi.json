@@ -109,6 +109,21 @@
       "less": "कम देखें"
     }
   },
+  "Contact": {
+    "heading": {
+      "headingText": "हमें संदेश भेजें",
+      "bodyText": "आपके पास हमारे लिए कोई संदेश है, इसे नीचे छोड़ें"
+    },
+    "body": {
+      "nameLabel": "नाम",
+      "namePlaceholder": "आपका नाम क्या है?",
+      "emailLabel": "ईमेल पता",
+      "emailPlaceholder": "आपका वैध ईमेल पता क्या है?",
+      "messageLabel": "संदेश",
+      "messagePlaceholder": "आपके पास हमारे लिए क्या संदेश है?",
+      "send": "भेजें"
+    }
+  },
   "Footer": {
     "heading": {
       "headingText": "हमसे संपर्क करें",

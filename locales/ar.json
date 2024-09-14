@@ -109,6 +109,21 @@
       "less": "شاهد أقل"
     }
   },
+  "Contact": {
+    "heading": {
+      "headingText": "راسلنا",
+      "bodyText": "لديك رسالة لنا، اتركها أدناه"
+    },
+    "body": {
+      "nameLabel": "الاسم",
+      "namePlaceholder": "ما هو اسمك؟",
+      "emailLabel": "عنوان البريد الإلكتروني",
+      "emailPlaceholder": "ما هو عنوان بريدك الإلكتروني الصحيح؟",
+      "messageLabel": "رسالة",
+      "messagePlaceholder": "ما هي الرسالة التي لديك لنا؟",
+      "send": "إرسال"
+    }
+  },
   "Footer": {
     "heading": {
       "headingText": "تواصل معنا",

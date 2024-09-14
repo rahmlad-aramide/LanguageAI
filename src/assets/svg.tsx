@@ -648,6 +648,27 @@ export const Alert = () => {
     </svg>
   );
 };
+export const AlertIcon = (props: any) => {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="50"
+      height="50"
+      viewBox="0 0 50 50"
+      fill="none"
+    >
+      <path
+        d="M24.9993 16.667V25.0003M24.9993 33.3337H25.0202M45.8327 25.0003C45.8327 36.5063 36.5053 45.8337 24.9993 45.8337C13.4934 45.8337 4.16602 36.5063 4.16602 25.0003C4.16602 13.4944 13.4934 4.16699 24.9993 4.16699C36.5053 4.16699 45.8327 13.4944 45.8327 25.0003Z"
+        stroke="#BF1F16"
+        strokeWidth="4.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
 
 export const TrashCanIcon = () => {
   return (

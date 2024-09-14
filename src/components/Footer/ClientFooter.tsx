@@ -48,7 +48,6 @@ export const ClientFooter: React.FC<{
   const isArabic = locale === "ar";
   const { notify } = useNotification();
   const { openModal } = useModal();
-  const pathname = usePathname();
 
   return (
     <>

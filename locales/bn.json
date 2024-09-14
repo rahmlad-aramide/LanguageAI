@@ -109,6 +109,21 @@
       "less": "কম দেখান"
     }
   },
+  "Contact": {
+    "heading": {
+      "headingText": "আমাদের বার্তা দিন",
+      "bodyText": "আপনার আমাদের জন্য একটি বার্তা আছে, নীচে দিন"
+    },
+    "body": {
+      "nameLabel": "নাম",
+      "namePlaceholder": "আপনার নাম কি?",
+      "emailLabel": "ইমেইল ঠিকানা",
+      "emailPlaceholder": "আপনার বৈধ ইমেইল ঠিকানা কি?",
+      "messageLabel": "বার্তা",
+      "messagePlaceholder": "আপনার আমাদের জন্য কি বার্তা আছে?",
+      "send": "পাঠান"
+    }
+  },
   "Footer": {
     "heading": {
       "headingText": "আমাদের সাথে যোগাযোগ করুন",

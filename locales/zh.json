@@ -109,6 +109,21 @@
       "less": "收起"
     }
   },
+  "Contact": {
+    "heading": {
+      "headingText": "给我们留言",
+      "bodyText": "您有给我们的留言，请在下面留下"
+    },
+    "body": {
+      "nameLabel": "姓名",
+      "namePlaceholder": "你的名字是什么？",
+      "emailLabel": "电子邮件地址",
+      "emailPlaceholder": "您的有效电子邮件地址是什么？",
+      "messageLabel": "留言",
+      "messagePlaceholder": "您想给我们传达什么消息？",
+      "send": "发送"
+    }
+  },
   "Footer": {
     "heading": {
       "headingText": "联系我们",

@@ -109,6 +109,21 @@
       "less": "Показать меньше"
     }
   },
+  "Contact": {
+    "heading": {
+      "headingText": "Свяжитесь с нами",
+      "bodyText": "У вас есть сообщение для нас, оставьте его ниже"
+    },
+    "body": {
+      "nameLabel": "Имя",
+      "namePlaceholder": "Как вас зовут?",
+      "emailLabel": "Адрес электронной почты",
+      "emailPlaceholder": "Какой у вас действующий адрес электронной почты?",
+      "messageLabel": "Сообщение",
+      "messagePlaceholder": "Какое сообщение вы хотите оставить для нас?",
+      "send": "Отправить"
+    }
+  },
   "Footer": {
     "heading": {
       "headingText": "Свяжитесь с нами",

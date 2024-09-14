@@ -76,31 +76,18 @@ export const ClientTranslation: React.FC<{
   }, [output]);
 
   const handleMic = useCallback(() => {
-    notify("Sorry, this is a coming soon feature...", "inform");
-    return;
-    setMicOn(true);
-    if (!browserSupportsSpeechRecognition) {
-      setMicOn(false);
-      notify("Your browser does not support speech recognition", "warn");
+    if(sourceLang === 'en' || targetLang === 'en'){
+      setMicOn(true);
+      if (!browserSupportsSpeechRecognition) {
+        setMicOn(false);
+        notify("Your browser does not support speech recognition", "warn");
+      }
+      SpeechRecognition.startListening();
+    } else {  
+      notify("Sorry, this works better for English...", "inform");
     }
-    SpeechRecognition.startListening();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [browserSupportsSpeechRecognition]);
-
-  const handlePause = useCallback(() => {
-    setMicMode("play");
-    SpeechRecognition.stopListening();
-    notify("Recording paused...", "inform");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const handleContinue = useCallback(() => {
-    setMicOn(true);
-    setMicMode("pause");
-    notify("Continue speaking to your mic...", "inform");
-    SpeechRecognition.startListening();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [browserSupportsSpeechRecognition, sourceLang, targetLang]);
 
   const handleStop = useCallback(() => {
     setMicOn(false);
@@ -113,18 +100,20 @@ export const ClientTranslation: React.FC<{
 
   const handleSpeak = useCallback(
     (text: string) => {
-      notify("Sorry, this is a coming soon feature...", "inform");
-      return;
-      if ("speechSynthesis" in window && text) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        window.speechSynthesis.speak(utterance);
-        notify("You are now listening to your texts...", "inform");
+      if(sourceLang === 'en' || targetLang === 'en'){
+        if ("speechSynthesis" in window && text) {
+          const utterance = new SpeechSynthesisUtterance(text);
+          window.speechSynthesis.speak(utterance);
+          notify("You are now listening to your texts...", "inform");
+        } else {
+          notify("Sorry, Text-to-Speech is not supported.", "warn");
+        }
       } else {
-        notify("Sorry, Text-to-Speech is not supported.", "warn");
+          notify("Sorry, this works better for English...", "inform");
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [text],
+    [text, sourceLang, targetLang],
   );
 
   const handleSubmit = useCallback(
@@ -255,23 +244,9 @@ export const ClientTranslation: React.FC<{
                   output && setTranslateButton(true);
                 }}
               />
-              <div className="flex justify-between w-full items-center">
+              <div className="flex justify-end w-full items-center">
                 {micOn && (
                   <div className="flex gap-2 mx-2 md:mx-4 m-4 mt-1">
-                    <Button
-                      onClick={handlePause}
-                      disabled={!listening}
-                      className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
-                    >
-                      <MicPause className="h-4" />
-                    </Button>
-                    <Button
-                      disabled={listening || micMode === "pause"}
-                      onClick={handleContinue}
-                      className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
-                    >
-                      <MicPlay className="h-4" />
-                    </Button>
                     <Button
                       onClick={handleStop}
                       className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"

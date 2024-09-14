@@ -14,6 +14,7 @@ import {
 import { ModalProvider, NotificationProvider } from "@/src/contexts";
 import { SupportedFormats } from "@/src/components/SupportedFormat";
 import Link from "next/link";
+import Contact from "@/src/components/Contact";
 
 export default function Home({
   params: { locale },
@@ -40,6 +41,7 @@ export default function Home({
           <HowItWorks />
           <SupportedFormats />
           <About />
+          <Contact />
         </main>
         <Footer />
       </ModalProvider>

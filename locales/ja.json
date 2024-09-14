@@ -109,6 +109,21 @@
       "less": "少なく見る"
     }
   },
+  "Contact": {
+    "heading": {
+      "headingText": "私たちにメッセージを送ってください",
+      "bodyText": "私たちへのメッセージがある場合は、以下に残してください"
+    },
+    "body": {
+      "nameLabel": "名前",
+      "namePlaceholder": "お名前は何ですか？",
+      "emailLabel": "メールアドレス",
+      "emailPlaceholder": "あなたの有効なメールアドレスは何ですか？",
+      "messageLabel": "メッセージ",
+      "messagePlaceholder": "私たちへのメッセージは何ですか？",
+      "send": "送信"
+    }
+  },
   "Footer": {
     "heading": {
       "headingText": "お問い合わせ",
