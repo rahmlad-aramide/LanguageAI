@@ -162,9 +162,13 @@ export const ClientTranslation: React.FC<{
   );
 
   useEffect(() => {
-    micMode === "play" && setText(transcript);
-    micMode === "pause" &&
-      setText((prev) => prev.trim() + " " + transcript.trim());
+    if (micMode === "play") {
+      setText((prev) => (prev ? prev.trim() + " " : "") + transcript.trim());
+    }
+  
+    if (micMode === "stop") {
+      setText((prev) => (prev ? prev.trim() + " " : "") + transcript.trim());
+    }
   }, [transcript, micMode]);
 
   const handleCopy = useCallback(async () => {
