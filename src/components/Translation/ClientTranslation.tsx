@@ -1,10 +1,6 @@
 "use client";
-import "regenerator-runtime/runtime";
 import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
 import { inter } from "@/app/[locale]/fonts";
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
 import { SelectLanguage } from "../shared/SelectLanguage";
 import {
   Arrows,
@@ -21,6 +17,7 @@ import { translateText } from "@/app/[locale]/api";
 import { useModal, useNotification } from "../../contexts";
 import { TextArea } from "../shared/TextArea";
 import { UploadFile } from "../UploadFile";
+import { useVoiceToText } from "react-speakup";
 
 export const ClientTranslation: React.FC<{
   headingText: string;
@@ -49,8 +46,7 @@ export const ClientTranslation: React.FC<{
 }) => {
   const { notify } = useNotification();
   const { openModal } = useModal();
-  const { transcript, listening, browserSupportsSpeechRecognition } =
-    useSpeechRecognition();
+  const { startListening, stopListening, transcript, reset } = useVoiceToText({continuous: false});
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const outputRef = useRef<HTMLTextAreaElement>(null);
   const [text, setText] = useState<string>("");
@@ -61,7 +57,7 @@ export const ClientTranslation: React.FC<{
   const [targetLanguage, setTargetLanguage] = useState("French");
   const [invert, setInvert] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [micOn, setMicOn] = useState<boolean>(listening);
+  const [micOn, setMicOn] = useState<boolean>(false);
   const [micMode, setMicMode] = useState<"play" | "pause" | "stop">("play");
 
   const sourceLang = `${selectedLanguageOption(sourceLanguage)?.key}`;
@@ -78,24 +74,19 @@ export const ClientTranslation: React.FC<{
   const handleMic = useCallback(() => {
     if(sourceLang === 'en' || targetLang === 'en'){
       setMicOn(true);
-      if (!browserSupportsSpeechRecognition) {
-        setMicOn(false);
-        notify("Your browser does not support speech recognition", "warn");
-      }
-      SpeechRecognition.startListening();
+      startListening();
+      notify("Start speaking now...", "inform");
     } else {  
       notify("Sorry, this works better for English...", "inform");
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [browserSupportsSpeechRecognition, sourceLang, targetLang]);
+  }, [sourceLang, targetLang]);
 
   const handleStop = useCallback(() => {
     setMicOn(false);
     setMicMode("stop");
-    SpeechRecognition.stopListening();
+    stopListening();
     notify("Recording stopped, you can translate now!", "success");
     setTranslateButton(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSpeak = useCallback(
@@ -163,13 +154,14 @@ export const ClientTranslation: React.FC<{
 
   useEffect(() => {
     if (micMode === "play") {
-      setText((prev) => (prev ? prev.trim() + " " : "") + transcript.trim());
+      setText(transcript.trim());
     }
   
     if (micMode === "stop") {
-      setText((prev) => (prev ? prev.trim() + " " : "") + transcript.trim());
+      setText(transcript.trim());
     }
   }, [transcript, micMode]);
+  
 
   const handleCopy = useCallback(async () => {
     try {
@@ -268,7 +260,6 @@ export const ClientTranslation: React.FC<{
                     <Speaker className="h-4" />
                   </Button>
                   <Button
-                    disabled={listening}
                     onClick={handleMic}
                     className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                   >
