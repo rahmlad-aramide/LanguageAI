@@ -79,7 +79,7 @@ export const ClientTranslation: React.FC<{
     } else {  
       notify("Sorry, this works better for English...", "inform");
     }
-  }, [sourceLang, targetLang]);
+  }, [sourceLang, targetLang, notify, startListening]);
 
   const handleStop = useCallback(() => {
     setMicOn(false);
@@ -87,7 +87,7 @@ export const ClientTranslation: React.FC<{
     stopListening();
     notify("Recording stopped, you can translate now!", "success");
     setTranslateButton(true);
-  }, []);
+  }, [notify, stopListening]);
 
   const handleSpeak = useCallback(
     (text: string) => {
