@@ -129,7 +129,7 @@ export const ClientContact: React.FC<{
           <textarea name='message' id='message' placeholder={messagePlaceholder} className='w-full h-40 rounded-lg bg-white shadow border border-primary outline-none ring-1 ring-transparent focus:ring-primary px-4 py-3' />
         </div>
         <div className="w-full max-w-sm mx-auto">
-          <Button type="submit" disabled={loading} loading={loading} className="w-full">{send}</Button>
+          <Button type="submit" disabled={loading} loading={loading} className="w-full font-bold">{send}</Button>
         </div>
       </form>
     </div>

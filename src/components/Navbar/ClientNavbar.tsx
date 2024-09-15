@@ -6,7 +6,7 @@ import { Link, Locale } from "@/i18n.config";
 import { useLocale } from "next-intl";
 import LocaleSwitcher from "../LocaleSwitcher";
 
-const linkHrefs = ["/#features", "/#how-it-works", "/#about"];
+const linkHrefs = ["/#features", "/#how-it-works", "/#about", "/demo"];
 const HamburgarMenu: React.FC<{ isToggled: boolean }> = ({ isToggled }) => {
   return (
     <div>
@@ -50,7 +50,8 @@ export const ClientNavbar: React.FC<{
   link1: string;
   link2: string;
   link3: string;
-}> = ({ link1, link2, link3 }) => {
+  link4: string;
+}> = ({ link1, link2, link3, link4 }) => {
   const locale = useLocale() as Locale;
   const [isToggled, setIsToggled] = useState<boolean>(false);
 
@@ -95,8 +96,11 @@ export const ClientNavbar: React.FC<{
           <ul className="flex items-center md:justify-end flex-col md:flex-row mt-0 w-full gap-2 md:gap-5">
             <LocaleSwitcher locale={locale} />
             <SingleLink link={link1} href={linkHrefs[0]} />
-            <SingleLink link={link2} href={linkHrefs[1]} />
+            <span className="md:hidden lg:flex">
+              <SingleLink link={link2} href={linkHrefs[1]} />
+            </span>
             <SingleLink link={link3} href={linkHrefs[2]} />
+            <SingleLink link={link4} href={linkHrefs[3]} />
           </ul>
         </div>
       </div>
