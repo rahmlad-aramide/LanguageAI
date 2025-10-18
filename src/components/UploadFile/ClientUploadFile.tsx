@@ -220,7 +220,12 @@ export const ClientUploadFile: React.FC<{
             <div
               className={`w-20 h-20 bg-white/50 rounded-full flex justify-center items-center`}
             >
-              <Image src={thumbGif} alt="Thumbs up gif" width={48} height={48} />
+              <Image
+                src={thumbGif}
+                alt="Thumbs up gif"
+                width={48}
+                height={48}
+              />
             </div>
           )}
           {!uploadedFile ||
@@ -302,7 +307,9 @@ export const ClientUploadFile: React.FC<{
             <div className="flex flex-col-reverse items-end sm:flex-row gap-2 self-end">
               <Button
                 onClick={handleTranslateDocument}
-                disabled={loading || !!fileRejectionItems[0] || !translateButton}
+                disabled={
+                  loading || !!fileRejectionItems[0] || !translateButton
+                }
                 className="hover:bg-primary/80 bg-primary"
               >
                 {loading ? "Translating..." : "Translate"}

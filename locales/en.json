@@ -149,5 +149,22 @@
     "designedBy": "Designed by",
     "developedBy": "Developed by",
     "note": "LanguageAI can make mistakes. Check important info."
+  },
+ "Login": {
+    "heading": {
+      "headingText": "Login",
+      "bodyText": "Enter your Login details"
+    },
+    "body": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter Password",
+      "rememberText": "Keep me logged in.",
+      "forgotPasswordLink": "Forgot password?",
+      "buttonText": "Login",
+      "registerText": "Don't have an account?",
+      "registerLink": "Register"
+    }
   }
 }

@@ -28,7 +28,7 @@ export const Features: React.FC = () => {
                 width="372"
                 height="304"
                 className="rounded-tr-lg"
-              /> 
+              />
             </div>
             <h3 className="font-semibold text-base md:text-xl text-[#101828] mx-4 md:mx-10">
               {t("gridContents.feature1.headingText")}

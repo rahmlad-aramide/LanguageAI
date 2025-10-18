@@ -149,5 +149,22 @@
     "designedBy": "设计者",
     "developedBy": "开发者",
     "note": "LanguageAI 可能会出错。请检查重要信息。"
-  }
+  },
+   "Login": {
+    "heading": {
+      "headingText": "登录",
+      "bodyText": "输入您的登录信息"
+    },
+    "body": {      
+      "emailLabel": "电子邮件地址",
+      "emailPlaceholder": "输入您的电子邮件",
+      "passwordLabel": "密码",
+      "passwordPlaceholder": "输入密码",
+      "rememberText": "保持登录状态。",
+      "forgotPasswordLink": "忘记密码？",
+      "buttonText": "登录",
+      "registerText": "还没有账户？",
+      "registerLink": "注册"
+   }
+ }
 }

@@ -12,7 +12,7 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
 
   const changeLocale = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = event.target.value as Locale;
-    setCurrentLocale(newLocale)
+    setCurrentLocale(newLocale);
     router.replace(pathname, { locale: newLocale });
   };
 

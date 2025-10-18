@@ -15,11 +15,10 @@ export const Input: React.FC<InputProps> = ({
   // value,
   // onChange,
   placeholder = "Enter value",
-  type = 'text',
+  type = "text",
   name,
-  id
+  id,
 }) => {
-
   return (
     <input
       className="w-full h-full rounded-lg bg-white shadow border border-primary outline-none ring-1 ring-transparent focus:ring-primary px-4 py-3"

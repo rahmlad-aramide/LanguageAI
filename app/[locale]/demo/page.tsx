@@ -7,9 +7,9 @@ import { Locale } from "@/i18n.config";
 import { LoadingIndicator } from "@/src/assets/svg";
 
 export default function DemoVideo({
-    params: { locale },
-  }: Readonly<{ params: { locale: Locale } }>) {
-    unstable_setRequestLocale(locale);
+  params: { locale },
+}: Readonly<{ params: { locale: Locale } }>) {
+  unstable_setRequestLocale(locale);
   return (
     <NotificationProvider>
       <ModalProvider>
@@ -17,7 +17,13 @@ export default function DemoVideo({
           <Navbar />
         </header>
         <main>
-          <Suspense fallback={<div className="w-full h-full flex justify-center items-center"><LoadingIndicator /></div>}>
+          <Suspense
+            fallback={
+              <div className="w-full h-full flex justify-center items-center">
+                <LoadingIndicator />
+              </div>
+            }
+          >
             <Video />
           </Suspense>
         </main>

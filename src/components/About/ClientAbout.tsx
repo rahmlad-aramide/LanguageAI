@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { Button } from "../shared/Button";
 import Image from "next/image";
@@ -19,7 +19,7 @@ export const ClientAbout: React.FC<{
   const [seeMore, setSeeMore] = useState(false);
   const toggleMore = () => {
     setSeeMore(!seeMore);
-  }
+  };
 
   return (
     <section id="about" className="bg-[#FFF4F9]">
@@ -41,7 +41,11 @@ export const ClientAbout: React.FC<{
               {bodyNormal1}
             </p>
           )}
-          {seeMore ? <Button onClick={toggleMore}>{bodyLess}</Button> : <Button onClick={toggleMore}>{bodyMore}</Button>}
+          {seeMore ? (
+            <Button onClick={toggleMore}>{bodyLess}</Button>
+          ) : (
+            <Button onClick={toggleMore}>{bodyMore}</Button>
+          )}
         </div>
         <div className="w-full md:w-1/2">
           <Image

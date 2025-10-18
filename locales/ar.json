@@ -149,5 +149,22 @@
     "designedBy": "تصميم من قبل",
     "developedBy": "تطوير من قبل",
     "note": "قد تحدث أخطاء في LanguageAI. تحقق من المعلومات الهامة."
+  },
+   "Login": {
+    "heading": {
+     "headingText": "تسجيل الدخول",
+      "bodyText": "أدخل بيانات تسجيل الدخول الخاصة بك"
+    },
+    "body": {
+      "emailLabel": "عنوان البريد الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "passwordLabel": "كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "rememberText": "تذكرني.",
+      "forgotPasswordLink": "هل نسيت كلمة المرور؟",
+      "buttonText": "تسجيل الدخول",
+      "registerText": "ليس لديك حساب؟",
+      "registerLink": "تسجيل"
+    }
   }
 }

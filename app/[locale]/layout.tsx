@@ -67,14 +67,15 @@ export default function PageLayout({
 }) {
   unstable_setRequestLocale(locale);
   const dir = useTextDirection();
+
   return (
     <html lang={locale} dir={dir}>
       <body className={monaSans.className}>
         <NextIntlClientProvider locale={locale}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
-      <Analytics />
     </html>
   );
 }

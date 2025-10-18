@@ -46,7 +46,9 @@ export const ClientTranslation: React.FC<{
 }) => {
   const { notify } = useNotification();
   const { openModal } = useModal();
-  const { startListening, stopListening, transcript, reset } = useVoiceToText({continuous: false});
+  const { startListening, stopListening, transcript, reset } = useVoiceToText({
+    continuous: false,
+  });
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const outputRef = useRef<HTMLTextAreaElement>(null);
   const [text, setText] = useState<string>("");
@@ -72,11 +74,11 @@ export const ClientTranslation: React.FC<{
   }, [output]);
 
   const handleMic = useCallback(() => {
-    if(sourceLang === 'en' || targetLang === 'en'){
+    if (sourceLang === "en" || targetLang === "en") {
       setMicOn(true);
       startListening();
       notify("Start speaking now...", "inform");
-    } else {  
+    } else {
       notify("Sorry, this works better for English...", "inform");
     }
   }, [sourceLang, targetLang, notify, startListening]);
@@ -91,7 +93,7 @@ export const ClientTranslation: React.FC<{
 
   const handleSpeak = useCallback(
     (text: string) => {
-      if(sourceLang === 'en' || targetLang === 'en'){
+      if (sourceLang === "en" || targetLang === "en") {
         if ("speechSynthesis" in window && text) {
           const utterance = new SpeechSynthesisUtterance(text);
           window.speechSynthesis.speak(utterance);
@@ -100,7 +102,7 @@ export const ClientTranslation: React.FC<{
           notify("Sorry, Text-to-Speech is not supported.", "warn");
         }
       } else {
-          notify("Sorry, this works better for English...", "inform");
+        notify("Sorry, this works better for English...", "inform");
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -156,12 +158,11 @@ export const ClientTranslation: React.FC<{
     if (micMode === "play") {
       setText(transcript.trim());
     }
-  
+
     if (micMode === "stop") {
       setText(transcript.trim());
     }
   }, [transcript, micMode]);
-  
 
   const handleCopy = useCallback(async () => {
     try {

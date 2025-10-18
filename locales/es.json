@@ -149,5 +149,22 @@
     "designedBy": "Diseñado por",
     "developedBy": "Desarrollado por",
     "note": "LanguageAI puede cometer errores. Verifique información importante."
+  },
+  "Login": {
+    "heading": {
+      "headingText": "Iniciar sesión",
+      "bodyText": "Ingrese sus datos de inicio de sesión"
+    },
+    "body": {
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Ingrese su correo electrónico",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Ingrese la contraseña",
+      "rememberText": "Mantenerme conectado.",
+      "forgotPasswordLink": "¿Olvidaste tu contraseña?",
+      "buttonText": "Iniciar sesión",
+      "registerText": "¿No tienes una cuenta?",
+      "registerLink": "Registrarse"
+    }
   }
 }
