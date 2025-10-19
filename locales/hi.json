@@ -166,5 +166,9 @@
       "registerText": "क्या आपके पास खाता नहीं है?",
       "registerLink": "रजिस्टर करें"
     }
+  },
+  "validation": {
+    "invalidEmail": "अमान्य ईमेल पता",
+    "passwordMin": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए"
   }
 }

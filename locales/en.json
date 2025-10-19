@@ -1,9 +1,9 @@
 {
   "Navbar": {
     "navLinks": {
-        "link1": "Features",
-        "link2": "How it works",
-        "link3": "About"
+      "link1": "Features",
+      "link2": "How it works",
+      "link3": "About"
     }
   },
   "Hero": {
@@ -101,12 +101,12 @@
   "About": {
     "heading": "About",
     "body": {
-        "strong": "LanguageAI",
-        "normal": " is a comprehensive language translation platform offering top-notch services in over 130 languages. Our mission is to help individuals and businesses transcend language barriers, enabling clear and effective communication across the globe. Whether you need to translate text or documents in 10 different formats, LanguageAI has you covered.",
-        "normal1": "Our platform is designed with inclusivity in mind, presenting the interface in over 10 languages to ensure accessibility for a diverse global audience. We are committed to providing an unparalleled translation experience that not only meets but exceeds your expectations, empowering you to connect with the world seamlessly.",
-        "button": "Learn More",
-        "more": "See More",
-        "less": "See Less"
+      "strong": "LanguageAI",
+      "normal": " is a comprehensive language translation platform offering top-notch services in over 130 languages. Our mission is to help individuals and businesses transcend language barriers, enabling clear and effective communication across the globe. Whether you need to translate text or documents in 10 different formats, LanguageAI has you covered.",
+      "normal1": "Our platform is designed with inclusivity in mind, presenting the interface in over 10 languages to ensure accessibility for a diverse global audience. We are committed to providing an unparalleled translation experience that not only meets but exceeds your expectations, empowering you to connect with the world seamlessly.",
+      "button": "Learn More",
+      "more": "See More",
+      "less": "See Less"
     }
   },
   "Contact": {
@@ -126,31 +126,31 @@
   },
   "Footer": {
     "heading": {
-        "headingText": "Get in Contact With Us",
-        "bodyText": "Designed for ease of use, LanguageAI offers a suite of tools and features that enrich your language learning journey, making it both intuitive and enjoyable.",
-        "buttonText": "Chat with us"
+      "headingText": "Get in Contact With Us",
+      "bodyText": "Designed for ease of use, LanguageAI offers a suite of tools and features that enrich your language learning journey, making it both intuitive and enjoyable.",
+      "buttonText": "Chat with us"
     },
     "links": {
-        "heading": "Links",
-        "links": {
-            "link1": "How to use",
-            "link2": "Features",
-            "link3": "About"
-        }
+      "heading": "Links",
+      "links": {
+        "link1": "How to use",
+        "link2": "Features",
+        "link3": "About"
+      }
     },
     "legal": {
-        "heading": "Legal",
-        "links": {
-            "link1": "Cookies policy",
-            "link2": "Privacy policy",
-            "link3": "Terms & Conditions"
-        }
+      "heading": "Legal",
+      "links": {
+        "link1": "Cookies policy",
+        "link2": "Privacy policy",
+        "link3": "Terms & Conditions"
+      }
     },
     "designedBy": "Designed by",
     "developedBy": "Developed by",
     "note": "LanguageAI can make mistakes. Check important info."
   },
- "Login": {
+  "Login": {
     "heading": {
       "headingText": "Login",
       "bodyText": "Enter your Login details"
@@ -166,5 +166,9 @@
       "registerText": "Don't have an account?",
       "registerLink": "Register"
     }
+  },
+  "validation": {
+    "invalidEmail": "Invalid email address",
+    "passwordMin": "Password must be at least 8 characters"
   }
 }

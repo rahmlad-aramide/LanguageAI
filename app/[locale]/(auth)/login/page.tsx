@@ -3,7 +3,7 @@ import LoginForm from "./LoginForm";
 
 export default function LoginPage() {
   const t = useTranslations("Login");
-  const tt = useTranslations("Translation");
+  const tValidation = useTranslations("validation");
 
   return (
     <LoginForm
@@ -18,6 +18,10 @@ export default function LoginPage() {
       buttonText={t("body.buttonText")}
       registerText={t("body.registerText")}
       registerLink={t("body.registerLink")}
+      validationMessages={{
+        invalidEmail: tValidation("invalidEmail"), // ✅ Now this works
+        passwordMin: tValidation("passwordMin"),
+      }}
     />
   );
 }

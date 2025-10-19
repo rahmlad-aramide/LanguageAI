@@ -166,5 +166,9 @@
       "registerText": "অ্যাকাউন্ট নেই?",
       "registerLink": "নিবন্ধন করুন"
     }
+  },
+  "validation": {
+    "invalidEmail": "অবৈধ ইমেল ঠিকানা",
+    "passwordMin": "পাসওয়ার্ড অন্তত ৮ অক্ষরের হতে হবে"
   }
 }

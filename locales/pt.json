@@ -166,5 +166,9 @@
       "registerText": "Não tem uma conta?",
       "registerLink": "Registrar-se"
     }
+  },
+  "validation": {
+    "invalidEmail": "Endereço de e-mail inválido",
+    "passwordMin": "A senha deve ter pelo menos 8 caracteres"
   }
 }

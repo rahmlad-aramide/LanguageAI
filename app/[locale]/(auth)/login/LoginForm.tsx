@@ -22,7 +22,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { FaCheckSquare, FaRegSquare } from "react-icons/fa";
+import { Label } from "@/components/ui/label";
 import Link from "next/link";
 
 type LoginProps = {
@@ -37,15 +37,11 @@ type LoginProps = {
   buttonText: string;
   registerText: string;
   registerLink: string;
+  validationMessages: {
+    invalidEmail: string;
+    passwordMin: string;
+  };
 };
-
-const loginSchema = z.object({
-  email: z.email({ message: "Invalid email address" }),
-  password: z.string().min(8, {
-    message: "Password must be at least 8 characters",
-  }),
-});
-type LoginSchema = z.infer<typeof loginSchema>;
 
 export default function LoginForm({
   headingText,
@@ -59,16 +55,21 @@ export default function LoginForm({
   buttonText,
   registerText,
   registerLink,
+  validationMessages,
 }: LoginProps) {
   const [showPassword, setShowPassword] = useState(false);
-  const [remember, setRemember] = useState(false);
+
+  const loginSchema = z.object({
+    email: z.string().email({ message: validationMessages.invalidEmail }),
+    password: z.string().min(8, { message: validationMessages.passwordMin }),
+    remember: z.boolean().catch(false),
+  });
+
+  type LoginSchema = z.infer<typeof loginSchema>;
 
   const form = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
-    defaultValues: {
-      email: "",
-      password: "",
-    },
+    defaultValues: { email: "", password: "", remember: false },
   });
 
   const onSubmit = (values: LoginSchema) => {
@@ -93,7 +94,7 @@ export default function LoginForm({
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="space-y-5"
               >
-                {/* email or phone number */}
+                {/* Email */}
                 <FormField
                   control={form.control}
                   name="email"
@@ -109,13 +110,12 @@ export default function LoginForm({
                           className="rounded-[10px] w-full py-6"
                         />
                       </FormControl>
-
                       <FormMessage />
                     </FormItem>
                   )}
                 />
 
-                {/* password */}
+                {/* Password */}
                 <FormField
                   control={form.control}
                   name="password"
@@ -129,11 +129,10 @@ export default function LoginForm({
                           <Input
                             {...field}
                             placeholder={passwordPlaceholder}
-                            className="rounded-[10px] w-full py-6"
                             type={showPassword ? "text" : "password"}
+                            className="rounded-[10px] w-full py-6"
                           />
-
-                          <div
+                          <button
                             className="absolute right-3 rtl:left-3 rtl:right-auto top-1/2 -translate-y-1/2 cursor-pointer"
                             onClick={() => setShowPassword(!showPassword)}
                           >
@@ -142,7 +141,7 @@ export default function LoginForm({
                             ) : (
                               <EyeOff size={20} />
                             )}
-                          </div>
+                          </button>
                         </div>
                       </FormControl>
                       <FormMessage />
@@ -150,20 +149,26 @@ export default function LoginForm({
                   )}
                 />
 
-                {/* Container for remember + forgot password */}
+                {/* Remember + Forgot Password */}
                 <div className="w-full flex items-center justify-between">
-                  {/* Keep me logged in */}
-                  <div
-                    className="flex items-center gap-1 cursor-pointer"
-                    onClick={() => setRemember(!remember)}
-                  >
-                    {remember ? (
-                      <FaCheckSquare className="text-xl text-primary" />
-                    ) : (
-                      <FaRegSquare className="text-xl" />
+                  <FormField
+                    control={form.control}
+                    name="remember"
+                    render={({ field }) => (
+                      <div className="flex items-center space-x-1 -mt-2">
+                        <input
+                          type="checkbox"
+                          id="remember"
+                          checked={field.value}
+                          onChange={(e) => field.onChange(e.target.checked)}
+                          className="w-[14px] h-[14px] accent-primary"
+                        />
+                        <Label htmlFor="remember" className="text-base">
+                          {rememberText}
+                        </Label>
+                      </div>
                     )}
-                    <span className="text-base">{rememberText}</span>
-                  </div>
+                  />
                   <Link
                     href="/forgot-password"
                     className="text-sm md:text-base text-primary hover:underline"

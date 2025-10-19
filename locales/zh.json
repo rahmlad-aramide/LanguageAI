@@ -150,12 +150,12 @@
     "developedBy": "开发者",
     "note": "LanguageAI 可能会出错。请检查重要信息。"
   },
-   "Login": {
+  "Login": {
     "heading": {
       "headingText": "登录",
       "bodyText": "输入您的登录信息"
     },
-    "body": {      
+    "body": {
       "emailLabel": "电子邮件地址",
       "emailPlaceholder": "输入您的电子邮件",
       "passwordLabel": "密码",
@@ -165,6 +165,10 @@
       "buttonText": "登录",
       "registerText": "还没有账户？",
       "registerLink": "注册"
-   }
- }
+    }
+  },
+  "validation": {
+    "invalidEmail": "无效的电子邮件地址",
+    "passwordMin": "密码长度至少为8个字符"
+  }
 }

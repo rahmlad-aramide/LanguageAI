@@ -166,5 +166,9 @@
       "registerText": "アカウントをお持ちではありませんか？",
       "registerLink": "登録"
     }
+  },
+  "validation": {
+    "invalidEmail": "無効なメールアドレスです",
+    "passwordMin": "パスワードは8文字以上である必要があります"
   }
 }
