@@ -19,7 +19,7 @@ export default function LoginPage() {
       registerText={t("body.registerText")}
       registerLink={t("body.registerLink")}
       validationMessages={{
-        invalidEmail: tValidation("invalidEmail"), // ✅ Now this works
+        invalidEmail: tValidation("invalidEmail"),
         passwordMin: tValidation("passwordMin"),
       }}
     />

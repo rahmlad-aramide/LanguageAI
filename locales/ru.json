@@ -170,5 +170,36 @@
   "validation": {
     "invalidEmail": "Недействительный адрес электронной почты",
     "passwordMin": "Пароль должен содержать не менее 8 символов"
+  },
+  "Signup": {
+    "heading": {
+      "headingText": "Создать аккаунт"
+    },
+    "body": {
+      "fullNameLabel": "Полное имя",
+      "emailLabel": "Адрес электронной почты",
+      "emailPlaceholder": "Введите адрес электронной почты",
+      "passwordLabel": "Пароль",
+      "passwordPlaceholder": "Введите пароль",
+      "confirmPasswordLabel": "Подтвердите пароль",
+      "confirmPasswordPlaceholder": "Введите пароль еще раз",
+      "languageLabel": "Выберите язык",
+      "arabicSelect": "Арабский",
+      "englishSelect": "Английский",
+      "frenchSelect": "Французский",
+      "germanSelect": "Немецкий",
+      "chineseSelect": "Китайский",
+      "buttonText": "Зарегистрироваться",
+      "signinText": "Уже есть аккаунт?",
+      "signinLink": "Войти"
+    }
+  },
+  "signUpvalidation": {
+    "fullName": "Полное имя слишком короткое",
+    "invalidEmail": "Неверный адрес электронной почты",
+    "passwordMin": "Пароль должен содержать не менее 8 символов",
+    "confirmPasswordMin": "Пароль должен содержать не менее 8 символов",
+    "languagePreferred": "Пожалуйста, выберите язык",
+    "refinePassword": "Пароли не совпадают"
   }
 }

@@ -170,5 +170,36 @@
   "validation": {
     "invalidEmail": "Endereço de e-mail inválido",
     "passwordMin": "A senha deve ter pelo menos 8 caracteres"
+  },
+  "Signup": {
+    "heading": {
+      "headingText": "Criar uma conta"
+    },
+    "body": {
+      "fullNameLabel": "Nome completo",
+      "emailLabel": "Endereço de e-mail",
+      "emailPlaceholder": "Digite seu e-mail",
+      "passwordLabel": "Senha",
+      "passwordPlaceholder": "Digite sua senha",
+      "confirmPasswordLabel": "Confirmar senha",
+      "confirmPasswordPlaceholder": "Confirme sua senha",
+      "languageLabel": "Escolha um idioma",
+      "arabicSelect": "Árabe",
+      "englishSelect": "Inglês",
+      "frenchSelect": "Francês",
+      "germanSelect": "Alemão",
+      "chineseSelect": "Chinês",
+      "buttonText": "Cadastrar-se",
+      "signinText": "Já tem uma conta?",
+      "signinLink": "Entrar"
+    }
+  },
+  "signUpvalidation": {
+    "fullName": "O nome completo é muito curto",
+    "invalidEmail": "Endereço de e-mail inválido",
+    "passwordMin": "A senha deve ter pelo menos 8 caracteres",
+    "confirmPasswordMin": "A senha deve ter pelo menos 8 caracteres",
+    "languagePreferred": "Por favor, selecione um idioma",
+    "refinePassword": "As senhas não coincidem"
   }
 }

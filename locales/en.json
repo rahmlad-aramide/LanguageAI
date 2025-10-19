@@ -170,5 +170,36 @@
   "validation": {
     "invalidEmail": "Invalid email address",
     "passwordMin": "Password must be at least 8 characters"
+  },
+  "Signup": {
+    "heading": {
+      "headingText": "Create an Account"
+    },
+    "body": {
+      "fullNameLabel": "Full Name",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter Password",
+      "confirmPasswordLabel": "Password",
+      "confirmPasswordPlaceholder": "Confirm Password",
+      "languageLabel": "Choose a Language",
+      "arabicSelect": "Arabic",
+      "englishSelect": "English",
+      "frenchSelect": "French",
+      "germanSelect": "German",
+      "chineseSelect": "Chinese",
+      "buttonText": "Sign up",
+      "signinText": "Already have an account?",
+      "signinLink": "Sign in"
+    }
+  },
+  "signUpvalidation": {
+    "fullName": "Full name is too short",
+    "invalidEmail": "Invalid email address",
+    "passwordMin": "Password must be at least 8 characters",
+    "confirmPasswordMin": "Password must be at least 8 characters",
+    "languagePreferred": "Please select a language",
+    "refinePassword": "Passwords do not match"
   }
 }
