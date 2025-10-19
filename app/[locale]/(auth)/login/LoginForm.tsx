@@ -59,12 +59,17 @@ export default function LoginForm({
 }: LoginProps) {
   const [showPassword, setShowPassword] = useState(false);
 
-  const loginSchema = z.object({
-    email: z.string().email({ message: validationMessages.invalidEmail }),
-    password: z.string().min(8, { message: validationMessages.passwordMin }),
-    remember: z.boolean().catch(false),
-  });
-
+  const loginSchema = useMemo(
+    () =>
+      z.object({
+        email: z.string().email({ message: validationMessages.invalidEmail }),
+        password: z
+          .string()
+          .min(8, { message: validationMessages.passwordMin }),
+        remember: z.boolean().catch(false),
+      }),
+    [validationMessages],
+  );
   type LoginSchema = z.infer<typeof loginSchema>;
 
   const form = useForm<LoginSchema>({

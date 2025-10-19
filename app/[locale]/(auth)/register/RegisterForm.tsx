@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -74,24 +74,32 @@ export default function SignupForm({
   validationMessages,
 }: SignupProps) {
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const signupSchema = z
-    .object({
-      full_name: z.string().min(2, { message: validationMessages.fullName }),
-      email: z.string().email({ message: validationMessages.invalidEmail }),
-      password: z.string().min(8, { message: validationMessages.passwordMin }),
-      confirmPassword: z
-        .string()
-        .min(8, { message: validationMessages.confirmPassswordMin }),
-      preferredLanguage: z
-        .string()
-        .min(1, { message: validationMessages.languagePreferred }),
-    })
-    .refine((data) => data.password === data.confirmPassword, {
-      message: validationMessages.refinePassword,
-      path: ["confirmPassword"],
-    });
-
+  const signupSchema = useMemo(
+    () =>
+      z
+        .object({
+          full_name: z
+            .string()
+            .min(2, { message: validationMessages.fullName }),
+          email: z.string().email({ message: validationMessages.invalidEmail }),
+          password: z
+            .string()
+            .min(8, { message: validationMessages.passwordMin }),
+          confirmPassword: z
+            .string()
+            .min(8, { message: validationMessages.confirmPasswordMin }),
+          preferredLanguage: z
+            .string()
+            .min(1, { message: validationMessages.languagePreferred }),
+        })
+        .refine((data) => data.password === data.confirmPassword, {
+          message: validationMessages.refinePassword,
+          path: ["confirmPassword"],
+        }),
+    [validationMessages],
+  );
   type SignupSchema = z.infer<typeof signupSchema>;
 
   const form = useForm<SignupSchema>({
@@ -185,6 +193,7 @@ export default function SignupForm({
                             className="rounded-[10px] w-full py-6"
                           />
                           <button
+                            type="button"
                             onClick={() => setShowPassword(!showPassword)}
                             className="absolute right-3 rtl:left-3 rtl:right-auto top-1/2 -translate-y-1/2 cursor-pointer"
                           >
@@ -219,6 +228,7 @@ export default function SignupForm({
                             className="rounded-[10px] w-full py-6"
                           />
                           <button
+                            type="button"
                             onClick={() => setShowPassword(!showPassword)}
                             className="absolute right-3 rtl:left-3 rtl:right-auto top-1/2 -translate-y-1/2 cursor-pointer"
                           >
@@ -250,7 +260,7 @@ export default function SignupForm({
                           defaultValue={field.value}
                         >
                           <SelectTrigger className="rounded-[10px] w-full py-6">
-                            <SelectValue placeholder="Choose a bank" />
+                            <SelectValue>{englishSelect}</SelectValue>
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="ar">{arabicSelect}</SelectItem>
