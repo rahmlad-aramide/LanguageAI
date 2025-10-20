@@ -149,5 +149,26 @@
     "designedBy": "द्वारा डिज़ाइन किया गया",
     "developedBy": "द्वारा विकसित",
     "note": "LanguageAI गलतियाँ कर सकता है। महत्वपूर्ण जानकारी की जाँच करें।"
+  },
+  "Login": {
+    "heading": {
+      "headingText": "लॉगिन",
+      "bodyText": "अपनी लॉगिन जानकारी दर्ज करें"
+    },
+    "body": {
+      "emailLabel": "ईमेल पता",
+      "emailPlaceholder": "अपना ईमेल दर्ज करें",
+      "passwordLabel": "पासवर्ड",
+      "passwordPlaceholder": "पासवर्ड दर्ज करें",
+      "rememberText": "मुझे लॉगिन रखे।",
+      "forgotPasswordLink": "पासवर्ड भूल गए?",
+      "buttonText": "लॉगिन",
+      "registerText": "क्या आपके पास खाता नहीं है?",
+      "registerLink": "रजिस्टर करें"
+    }
+  },
+  "validation": {
+    "invalidEmail": "अमान्य ईमेल पता",
+    "passwordMin": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए"
   }
 }

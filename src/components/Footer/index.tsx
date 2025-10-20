@@ -16,9 +16,9 @@ export const Footer: React.FC = () => {
       legalLink1={t("legal.links.link1")}
       legalLink2={t("legal.links.link2")}
       legalLink3={t("legal.links.link3")}
-      designedBy={t('designedBy')}
-      developedBy={t('developedBy')}
-      note={t('note')}
+      designedBy={t("designedBy")}
+      developedBy={t("developedBy")}
+      note={t("note")}
     />
   );
 };

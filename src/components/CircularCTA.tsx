@@ -14,7 +14,7 @@ export const CircularCTA: React.FC = () => {
           src={play}
           alt="Watch Demo"
           className="relative cursor-pointer z-10 hover:scale-90 active:scale-100 transition duration-200"
-          />
+        />
       </Link>
       <Image
         src={text}

@@ -149,5 +149,26 @@
     "designedBy": "デザイン：",
     "developedBy": "開発者：",
     "note": "LanguageAI は間違いを犯す可能性があります。重要な情報を確認してください。"
+  },
+  "Login": {
+    "heading": {
+      "headingText": "ログイン",
+      "bodyText": "ログイン情報を入力してください"
+    },
+    "body": {
+      "emailLabel": "メールアドレス",
+      "emailPlaceholder": "メールアドレスを入力",
+      "passwordLabel": "パスワード",
+      "passwordPlaceholder": "パスワードを入力",
+      "rememberText": "ログイン状態を維持する。",
+      "forgotPasswordLink": "パスワードをお忘れですか？",
+      "buttonText": "ログイン",
+      "registerText": "アカウントをお持ちではありませんか？",
+      "registerLink": "登録"
+    }
+  },
+  "validation": {
+    "invalidEmail": "無効なメールアドレスです",
+    "passwordMin": "パスワードは8文字以上である必要があります"
   }
 }

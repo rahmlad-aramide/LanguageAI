@@ -149,5 +149,26 @@
     "designedBy": "নকশা করেছেন",
     "developedBy": "উন্নত করেছেন",
     "note": "LanguageAI ভুল করতে পারে। গুরুত্বপূর্ণ তথ্য চেক করুন।"
+  },
+  "Login": {
+    "heading": {
+      "headingText": "লগইন",
+      "bodyText": "আপনার লগইন তথ্য দিন"
+    },
+    "body": {
+      "emailLabel": "ইমেইল ঠিকানা",
+      "emailPlaceholder": "আপনার ইমেইল লিখুন",
+      "passwordLabel": "পাসওয়ার্ড",
+      "passwordPlaceholder": "পাসওয়ার্ড লিখুন",
+      "rememberText": "আমাকে লগইন অবস্থায় রাখুন।",
+      "forgotPasswordLink": "পাসওয়ার্ড ভুলে গেছেন?",
+      "buttonText": "লগইন",
+      "registerText": "অ্যাকাউন্ট নেই?",
+      "registerLink": "নিবন্ধন করুন"
+    }
+  },
+  "validation": {
+    "invalidEmail": "অবৈধ ইমেল ঠিকানা",
+    "passwordMin": "পাসওয়ার্ড অন্তত ৮ অক্ষরের হতে হবে"
   }
 }

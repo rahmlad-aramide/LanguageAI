@@ -669,7 +669,6 @@ export const AlertIcon = (props: any) => {
   );
 };
 
-
 export const TrashCanIcon = () => {
   return (
     <svg

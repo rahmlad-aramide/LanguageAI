@@ -149,5 +149,26 @@
     "designedBy": "Conçu par",
     "developedBy": "Développé par",
     "note": "LanguageAI peut faire des erreurs. Vérifiez les informations importantes."
+  },
+  "Login": {
+    "heading": {
+      "headingText": "Connexion",
+      "bodyText": "Entrez vos informations de connexion"
+    },
+    "body": {
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "Entrez votre e-mail",
+      "passwordLabel": "Mot de passe",
+      "passwordPlaceholder": "Entrez le mot de passe",
+      "rememberText": "Restez connecté.",
+      "forgotPasswordLink": "Mot de passe oublié ?",
+      "buttonText": "Connexion",
+      "registerText": "Vous n'avez pas de compte ?",
+      "registerLink": "S'inscrire"
+    }
+  },
+  "validation": {
+    "invalidEmail": "Adresse e-mail invalide",
+    "passwordMin": "Le mot de passe doit contenir au moins 8 caractères"
   }
 }

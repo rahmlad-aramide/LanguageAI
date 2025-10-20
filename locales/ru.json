@@ -149,5 +149,26 @@
     "designedBy": "Разработано",
     "developedBy": "Создано",
     "note": "LanguageAI может допускать ошибки. Проверьте важную информацию."
+  },
+  "Login": {
+    "heading": {
+      "headingText": "Вход",
+      "bodyText": "Введите свои данные для входа"
+    },
+    "body": {
+      "emailLabel": "Адрес электронной почты",
+      "emailPlaceholder": "Введите свой e-mail",
+      "passwordLabel": "Пароль",
+      "passwordPlaceholder": "Введите пароль",
+      "rememberText": "Оставаться в системе.",
+      "forgotPasswordLink": "Забыли пароль?",
+      "buttonText": "Войти",
+      "registerText": "Нет аккаунта?",
+      "registerLink": "Зарегистрироваться"
+    }
+  },
+  "validation": {
+    "invalidEmail": "Недействительный адрес электронной почты",
+    "passwordMin": "Пароль должен содержать не менее 8 символов"
   }
 }

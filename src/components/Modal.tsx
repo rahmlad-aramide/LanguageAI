@@ -9,7 +9,10 @@ const Modal: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <div className="fixed inset-0 bg-black backdrop-blur bg-opacity-50 flex flex-col justify-center items-center z-50">
       <div
         className="fixed inset-0 bg-transparent -z-10"
-        onClick={(e)=>{e.stopPropagation(); closeModal()}}
+        onClick={(e) => {
+          e.stopPropagation();
+          closeModal();
+        }}
       ></div>
       <div className="flex justify-end max-w-lg w-[90%] z-50">
         <button

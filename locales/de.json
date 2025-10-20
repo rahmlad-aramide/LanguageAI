@@ -149,5 +149,26 @@
     "designedBy": "Entworfen von",
     "developedBy": "Entwickelt von",
     "note": "LanguageAI kann Fehler machen. Überprüfen Sie wichtige Informationen."
+  },
+  "Login": {
+    "heading": {
+      "headingText": "Anmelden",
+      "bodyText": "Geben Sie Ihre Anmeldedaten ein"
+    },
+    "body": {
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+      "passwordLabel": "Passwort",
+      "passwordPlaceholder": "Passwort eingeben",
+      "rememberText": "Angemeldet bleiben.",
+      "forgotPasswordLink": "Passwort vergessen?",
+      "buttonText": "Anmelden",
+      "registerText": "Sie haben kein Konto?",
+      "registerLink": "Registrieren"
+    }
+  },
+  "validation": {
+    "invalidEmail": "Ungültige E-Mail-Adresse",
+    "passwordMin": "Das Passwort muss mindestens 8 Zeichen lang sein"
   }
 }

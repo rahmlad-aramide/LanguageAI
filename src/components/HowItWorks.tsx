@@ -66,7 +66,12 @@ export const HowItWorks: React.FC = () => {
           />
         ))}
       </div>
-      <Link href={`/${locale}/demo`} className="flex mx-auto w-fit border outline-transparent focus:outline-black border-primary disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed hover:bg-opacity-80 text-white py-2.5 px-[1.125rem] rounded-lg transition duration-200 mt-4 md:mt-10">{t('demo')}</Link>
+      <Link
+        href={`/${locale}/demo`}
+        className="flex mx-auto w-fit border outline-transparent focus:outline-black border-primary disabled:border-disabled bg-primary disabled:bg-disabled disabled:cursor-not-allowed hover:bg-opacity-80 text-white py-2.5 px-[1.125rem] rounded-lg transition duration-200 mt-4 md:mt-10"
+      >
+        {t("demo")}
+      </Link>
     </section>
   );
 };

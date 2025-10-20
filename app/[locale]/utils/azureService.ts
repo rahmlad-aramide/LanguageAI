@@ -127,4 +127,3 @@ export const translateText = async ({
   return response.data[0].translations[0].text;
   // return response.data[0].translations[0].text;
 };
-

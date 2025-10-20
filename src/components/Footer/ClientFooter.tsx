@@ -51,38 +51,36 @@ export const ClientFooter: React.FC<{
 
   return (
     <>
-        <section className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] mx-auto justify-center">
-          <div className="flex flex-col md:hidden my-20">
-            <ThreeFeathers className="flex mx-auto -mb-5" />
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <h2 className="text-xl xs:text-2xl text-[#050B2CCC] font-semibold">
-                {headingText}
-              </h2>
-              <ArrowDark
-                className={`w-6 xs:w-8 h-4 xs:h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
-              />
-              <Image
-                src={arrow}
-                width={32}
-                height={25}
-                alt="Right arrow"
-                className={`hidden w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
-              />
-            </div>
-            <div>
-              <Button
-                variant="primary"
-                onClick={() =>
-                  notify("ChatBot is coming...", "inform")
-                }
-                className="font-bold"
-                fullWidth={true}
-              >
-                {buttonText}
-              </Button>
-            </div>
+      <section className="w-[calc(100%_-_32px)] sm:w-[calc(100%_-_64px)] mx-auto justify-center">
+        <div className="flex flex-col md:hidden my-20">
+          <ThreeFeathers className="flex mx-auto -mb-5" />
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <h2 className="text-xl xs:text-2xl text-[#050B2CCC] font-semibold">
+              {headingText}
+            </h2>
+            <ArrowDark
+              className={`w-6 xs:w-8 h-4 xs:h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
+            />
+            <Image
+              src={arrow}
+              width={32}
+              height={25}
+              alt="Right arrow"
+              className={`hidden w-8 h-6 ${isArabic ? "rotate-180" : "rotate-0"}`}
+            />
           </div>
-        </section>
+          <div>
+            <Button
+              variant="primary"
+              onClick={() => notify("ChatBot is coming...", "inform")}
+              className="font-bold"
+              fullWidth={true}
+            >
+              {buttonText}
+            </Button>
+          </div>
+        </div>
+      </section>
       <footer
         id="footer"
         className="flex flex-col justify-center h-full bg-[#050B2C] py-16"

@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { ClientAbout } from "./ClientAbout";
 
 export const About: React.FC = () => {
-    const t = useTranslations("About");
+  const t = useTranslations("About");
 
   return (
     <ClientAbout
