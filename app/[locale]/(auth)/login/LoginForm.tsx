@@ -59,12 +59,17 @@ export default function LoginForm({
 }: LoginProps) {
   const [showPassword, setShowPassword] = useState(false);
 
-  const loginSchema = z.object({
-    email: z.string().email({ message: validationMessages.invalidEmail }),
-    password: z.string().min(8, { message: validationMessages.passwordMin }),
-    remember: z.boolean().catch(false),
-  });
-
+  const loginSchema = useMemo(
+    () =>
+      z.object({
+        email: z.string().email({ message: validationMessages.invalidEmail }),
+        password: z
+          .string()
+          .min(8, { message: validationMessages.passwordMin }),
+        remember: z.boolean().catch(false),
+      }),
+    [validationMessages],
+  );
   type LoginSchema = z.infer<typeof loginSchema>;
 
   const form = useForm<LoginSchema>({
@@ -186,7 +191,7 @@ export default function LoginForm({
               </form>
             </Form>
 
-            <div className="flex flex-row items-center justify-center gap-2 text-sm md:text-base mt-8">
+            <div className="flex flex-row items-center justify-center gap-2 text-base mt-8">
               <p>{registerText}</p>
               <Link href="/register">
                 <span className="text-primary">{registerLink}</span>

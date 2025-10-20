@@ -170,5 +170,36 @@
   "validation": {
     "invalidEmail": "无效的电子邮件地址",
     "passwordMin": "密码长度至少为8个字符"
+  },
+  "Signup": {
+    "heading": {
+      "headingText": "创建账户"
+    },
+    "body": {
+      "fullNameLabel": "全名",
+      "emailLabel": "电子邮箱",
+      "emailPlaceholder": "请输入邮箱地址",
+      "passwordLabel": "密码",
+      "passwordPlaceholder": "请输入密码",
+      "confirmPasswordLabel": "确认密码",
+      "confirmPasswordPlaceholder": "再次输入密码",
+      "languageLabel": "选择语言",
+      "arabicSelect": "阿拉伯语",
+      "englishSelect": "英语",
+      "frenchSelect": "法语",
+      "germanSelect": "德语",
+      "chineseSelect": "中文",
+      "buttonText": "注册",
+      "signinText": "已经有账户？",
+      "signinLink": "登录"
+    }
+  },
+  "signUpvalidation": {
+    "fullName": "全名太短",
+    "invalidEmail": "无效的电子邮箱地址",
+    "passwordMin": "密码长度至少为8个字符",
+    "confirmPasswordMin": "密码长度至少为8个字符",
+    "languagePreferred": "请选择语言",
+    "refinePassword": "两次输入的密码不一致"
   }
 }

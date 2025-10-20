@@ -170,5 +170,36 @@
   "validation": {
     "invalidEmail": "अमान्य ईमेल पता",
     "passwordMin": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए"
+  },
+  "Signup": {
+    "heading": {
+      "headingText": "खाता बनाएँ"
+    },
+    "body": {
+      "fullNameLabel": "पूरा नाम",
+      "emailLabel": "ईमेल पता",
+      "emailPlaceholder": "अपना ईमेल दर्ज करें",
+      "passwordLabel": "पासवर्ड",
+      "passwordPlaceholder": "पासवर्ड दर्ज करें",
+      "confirmPasswordLabel": "पासवर्ड की पुष्टि करें",
+      "confirmPasswordPlaceholder": "पासवर्ड दोबारा दर्ज करें",
+      "languageLabel": "भाषा चुनें",
+      "arabicSelect": "अरबी",
+      "englishSelect": "अंग्रेज़ी",
+      "frenchSelect": "फ़्रेंच",
+      "germanSelect": "जर्मन",
+      "chineseSelect": "चीनी",
+      "buttonText": "साइन अप करें",
+      "signinText": "क्या आपके पास पहले से खाता है?",
+      "signinLink": "साइन इन करें"
+    }
+  },
+  "signUpvalidation": {
+    "fullName": "पूरा नाम बहुत छोटा है",
+    "invalidEmail": "अमान्य ईमेल पता",
+    "passwordMin": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए",
+    "confirmPasswordMin": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए",
+    "languagePreferred": "कृपया एक भाषा चुनें",
+    "refinePassword": "पासवर्ड मेल नहीं खाते"
   }
 }

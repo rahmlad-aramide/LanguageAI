@@ -170,5 +170,36 @@
   "validation": {
     "invalidEmail": "無効なメールアドレスです",
     "passwordMin": "パスワードは8文字以上である必要があります"
+  },
+  "Signup": {
+    "heading": {
+      "headingText": "アカウントを作成"
+    },
+    "body": {
+      "fullNameLabel": "氏名",
+      "emailLabel": "メールアドレス",
+      "emailPlaceholder": "メールアドレスを入力",
+      "passwordLabel": "パスワード",
+      "passwordPlaceholder": "パスワードを入力",
+      "confirmPasswordLabel": "パスワードの確認",
+      "confirmPasswordPlaceholder": "もう一度入力",
+      "languageLabel": "言語を選択",
+      "arabicSelect": "アラビア語",
+      "englishSelect": "英語",
+      "frenchSelect": "フランス語",
+      "germanSelect": "ドイツ語",
+      "chineseSelect": "中国語",
+      "buttonText": "サインアップ",
+      "signinText": "すでにアカウントをお持ちですか？",
+      "signinLink": "ログイン"
+    }
+  },
+  "signUpvalidation": {
+    "fullName": "氏名が短すぎます",
+    "invalidEmail": "無効なメールアドレスです",
+    "passwordMin": "パスワードは8文字以上である必要があります",
+    "confirmPasswordMin": "パスワードは8文字以上である必要があります",
+    "languagePreferred": "言語を選択してください",
+    "refinePassword": "パスワードが一致しません"
   }
 }

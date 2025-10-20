@@ -170,5 +170,36 @@
   "validation": {
     "invalidEmail": "عنوان البريد الإلكتروني غير صالح",
     "passwordMin": "يجب أن تكون كلمة المرور 8 أحرف على الأقل"
+  },
+  "Signup": {
+    "heading": {
+      "headingText": "إنشاء حساب"
+    },
+    "body": {
+      "fullNameLabel": "الاسم الكامل",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "passwordLabel": "كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "confirmPasswordLabel": "تأكيد كلمة المرور",
+      "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
+      "languageLabel": "اختر اللغة",
+      "arabicSelect": "العربية",
+      "englishSelect": "الإنجليزية",
+      "frenchSelect": "الفرنسية",
+      "germanSelect": "الألمانية",
+      "chineseSelect": "الصينية",
+      "buttonText": "إنشاء حساب",
+      "signinText": "هل لديك حساب بالفعل؟",
+      "signinLink": "تسجيل الدخول"
+    }
+  },
+  "signUpvalidation": {
+    "fullName": "الاسم الكامل قصير جدًا",
+    "invalidEmail": "عنوان البريد الإلكتروني غير صالح",
+    "passwordMin": "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل",
+    "confirmPasswordMin": "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل",
+    "languagePreferred": "يرجى اختيار اللغة",
+    "refinePassword": "كلمتا المرور غير متطابقتين"
   }
 }

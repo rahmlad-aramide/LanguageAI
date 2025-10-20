@@ -170,5 +170,36 @@
   "validation": {
     "invalidEmail": "অবৈধ ইমেল ঠিকানা",
     "passwordMin": "পাসওয়ার্ড অন্তত ৮ অক্ষরের হতে হবে"
+  },
+  "Signup": {
+    "heading": {
+      "headingText": "একটি অ্যাকাউন্ট তৈরি করুন"
+    },
+    "body": {
+      "fullNameLabel": "পুরো নাম",
+      "emailLabel": "ইমেল ঠিকানা",
+      "emailPlaceholder": "আপনার ইমেল লিখুন",
+      "passwordLabel": "পাসওয়ার্ড",
+      "passwordPlaceholder": "পাসওয়ার্ড লিখুন",
+      "confirmPasswordLabel": "পাসওয়ার্ড নিশ্চিত করুন",
+      "confirmPasswordPlaceholder": "আবার পাসওয়ার্ড লিখুন",
+      "languageLabel": "ভাষা নির্বাচন করুন",
+      "arabicSelect": "আরবি",
+      "englishSelect": "ইংরেজি",
+      "frenchSelect": "ফরাসি",
+      "germanSelect": "জার্মান",
+      "chineseSelect": "চাইনিজ",
+      "buttonText": "সাইন আপ",
+      "signinText": "ইতিমধ্যে একটি অ্যাকাউন্ট আছে?",
+      "signinLink": "সাইন ইন"
+    }
+  },
+  "signUpvalidation": {
+    "fullName": "পুরো নামটি খুব ছোট",
+    "invalidEmail": "অবৈধ ইমেল ঠিকানা",
+    "passwordMin": "পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে",
+    "confirmPasswordMin": "পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে",
+    "languagePreferred": "দয়া করে একটি ভাষা নির্বাচন করুন",
+    "refinePassword": "পাসওয়ার্ডগুলো মেলেনি"
   }
 }

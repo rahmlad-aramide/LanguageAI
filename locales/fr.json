@@ -170,5 +170,36 @@
   "validation": {
     "invalidEmail": "Adresse e-mail invalide",
     "passwordMin": "Le mot de passe doit contenir au moins 8 caractères"
+  },
+  "Signup": {
+    "heading": {
+      "headingText": "Créer un compte"
+    },
+    "body": {
+      "fullNameLabel": "Nom complet",
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "Entrez votre e-mail",
+      "passwordLabel": "Mot de passe",
+      "passwordPlaceholder": "Entrez le mot de passe",
+      "confirmPasswordLabel": "Confirmer le mot de passe",
+      "confirmPasswordPlaceholder": "Confirmez le mot de passe",
+      "languageLabel": "Choisissez une langue",
+      "arabicSelect": "Arabe",
+      "englishSelect": "Anglais",
+      "frenchSelect": "Français",
+      "germanSelect": "Allemand",
+      "chineseSelect": "Chinois",
+      "buttonText": "S'inscrire",
+      "signinText": "Vous avez déjà un compte ?",
+      "signinLink": "Se connecter"
+    }
+  },
+  "signUpvalidation": {
+    "fullName": "Le nom complet est trop court",
+    "invalidEmail": "Adresse e-mail invalide",
+    "passwordMin": "Le mot de passe doit comporter au moins 8 caractères",
+    "confirmPasswordMin": "Le mot de passe doit comporter au moins 8 caractères",
+    "languagePreferred": "Veuillez sélectionner une langue",
+    "refinePassword": "Les mots de passe ne correspondent pas"
   }
 }
