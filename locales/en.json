@@ -202,5 +202,18 @@
     "confirmPasswordMin": "Password must be at least 8 characters",
     "languagePreferred": "Please select a language",
     "refinePassword": "Passwords do not match"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "Forgot Password",
+      "bodyText": "Enter your email address and we'll send you a link to reset your password"
+    },
+    "body": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "Invalid email address"
+    }
   }
 }

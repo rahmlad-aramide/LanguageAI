@@ -202,5 +202,18 @@
     "confirmPasswordMin": "Пароль должен содержать не менее 8 символов",
     "languagePreferred": "Пожалуйста, выберите язык",
     "refinePassword": "Пароли не совпадают"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "Забыли пароль",
+      "bodyText": "Введите свой адрес электронной почты, и мы отправим вам ссылку для сброса пароля"
+    },
+    "body": {
+      "emailLabel": "Адрес электронной почты",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "Неверный адрес электронной почты"
+    }
   }
 }

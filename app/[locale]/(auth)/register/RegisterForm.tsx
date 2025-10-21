@@ -48,7 +48,7 @@ type SignupProps = {
     fullName: string;
     invalidEmail: string;
     passwordMin: string;
-    confirmPassswordMin: string;
+    confirmPasswordMin: string;
     languagePreferred: string;
     refinePassword: string;
   };
@@ -91,7 +91,7 @@ export default function SignupForm({
             .min(8, { message: validationMessages.passwordMin }),
           confirmPassword: z
             .string()
-            .min(8, { message: validationMessages.confirmPassswordMin }),
+            .min(8, { message: validationMessages.confirmPasswordMin }),
           preferredLanguage: z
             .string()
             .min(1, { message: validationMessages.languagePreferred }),

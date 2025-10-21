@@ -202,5 +202,18 @@
     "confirmPasswordMin": "A senha deve ter pelo menos 8 caracteres",
     "languagePreferred": "Por favor, selecione um idioma",
     "refinePassword": "As senhas não coincidem"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "Esqueceu a senha",
+      "bodyText": "Digite seu endereço de e-mail e enviaremos um link para redefinir sua senha"
+    },
+    "body": {
+      "emailLabel": "Endereço de e-mail",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "Endereço de e-mail inválido"
+    }
   }
 }

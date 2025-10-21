@@ -202,5 +202,18 @@
     "confirmPasswordMin": "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل",
     "languagePreferred": "يرجى اختيار اللغة",
     "refinePassword": "كلمتا المرور غير متطابقتين"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "نسيت كلمة المرور",
+      "bodyText": "أدخل عنوان بريدك الإلكتروني وسنرسل لك رابطًا لإعادة تعيين كلمة المرور الخاصة بك"
+    },
+    "body": {
+      "emailLabel": "عنوان البريد الإلكتروني",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "عنوان البريد الإلكتروني غير صالح"
+    }
   }
 }

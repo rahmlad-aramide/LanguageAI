@@ -202,5 +202,18 @@
     "confirmPasswordMin": "La contraseña debe tener al menos 8 caracteres",
     "languagePreferred": "Por favor selecciona un idioma",
     "refinePassword": "Las contraseñas no coinciden"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "Olvidé mi contraseña",
+      "bodyText": "Introduce tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña"
+    },
+    "body": {
+      "emailLabel": "Dirección de correo electrónico",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "Dirección de correo electrónico no válida"
+    }
   }
 }

@@ -202,5 +202,18 @@
     "confirmPasswordMin": "パスワードは8文字以上である必要があります",
     "languagePreferred": "言語を選択してください",
     "refinePassword": "パスワードが一致しません"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "パスワードをお忘れですか",
+      "bodyText": "メールアドレスを入力すると、パスワードをリセットするリンクを送信します"
+    },
+    "body": {
+      "emailLabel": "メールアドレス",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "無効なメールアドレスです"
+    }
   }
 }

@@ -202,5 +202,18 @@
     "confirmPasswordMin": "密码长度至少为8个字符",
     "languagePreferred": "请选择语言",
     "refinePassword": "两次输入的密码不一致"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "忘记密码",
+      "bodyText": "请输入您的电子邮件地址，我们将向您发送重置密码的链接"
+    },
+    "body": {
+      "emailLabel": "电子邮件地址",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "无效的电子邮件地址"
+    }
   }
 }
