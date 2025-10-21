@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -86,7 +86,7 @@ export default function LoginForm({
       <div className="max-w-md w-full">
         <Card className="border-border shadow-lg">
           <CardHeader>
-            <CardTitle className="text-primary text-xl md:text-2xl lg:text-3xl">
+            <CardTitle className="text-primary text-xl lg:text-3xl">
               {headingText}
             </CardTitle>
             <CardDescription className="text-sm mb-2">

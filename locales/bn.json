@@ -202,5 +202,18 @@
     "confirmPasswordMin": "পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে",
     "languagePreferred": "দয়া করে একটি ভাষা নির্বাচন করুন",
     "refinePassword": "পাসওয়ার্ডগুলো মেলেনি"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "পাসওয়ার্ড ভুলে গেছেন",
+      "bodyText": "আপনার ইমেল ঠিকানা লিখুন এবং আমরা আপনাকে পাসওয়ার্ড রিসেট করার একটি লিঙ্ক পাঠাবো"
+    },
+    "body": {
+      "emailLabel": "ইমেল ঠিকানা",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "অবৈধ ইমেল ঠিকানা"
+    }
   }
 }

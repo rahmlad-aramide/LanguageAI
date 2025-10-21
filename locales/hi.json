@@ -202,5 +202,18 @@
     "confirmPasswordMin": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए",
     "languagePreferred": "कृपया एक भाषा चुनें",
     "refinePassword": "पासवर्ड मेल नहीं खाते"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "पासवर्ड भूल गए",
+      "bodyText": "अपना ईमेल पता दर्ज करें और हम आपको पासवर्ड रीसेट करने का लिंक भेजेंगे"
+    },
+    "body": {
+      "emailLabel": "ईमेल पता",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "अमान्य ईमेल पता"
+    }
   }
 }

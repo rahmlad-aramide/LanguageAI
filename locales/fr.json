@@ -202,5 +202,18 @@
     "confirmPasswordMin": "Le mot de passe doit comporter au moins 8 caractères",
     "languagePreferred": "Veuillez sélectionner une langue",
     "refinePassword": "Les mots de passe ne correspondent pas"
+  },
+  "ForgotPassword": {
+    "heading": {
+      "headingText": "Mot de passe oublié",
+      "bodyText": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe"
+    },
+    "body": {
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "example@mail.com"
+    },
+    "signUpvalidation": {
+      "invalidEmail": "Adresse e-mail invalide"
+    }
   }
 }
