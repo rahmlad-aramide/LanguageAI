@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { Locale, locales } from "@/i18n.config";
 import useTextDirection from "@/src/hooks/useTextDirection";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "LanguageAI - AI Texts and Documents Translator",
@@ -74,6 +75,7 @@ export default function PageLayout({
         <NextIntlClientProvider locale={locale}>
           {children}
         </NextIntlClientProvider>
+        <Toaster richColors position="top-center" />
         <Analytics />
       </body>
     </html>

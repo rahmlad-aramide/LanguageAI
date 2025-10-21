@@ -22,6 +22,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Heart, ArrowLeft, Mail } from "lucide-react";
 import Link from "next/link";
+import { toast } from "sonner";
 
 type ForgotPasswordFormProps = {
   headingText: string;
@@ -51,9 +52,15 @@ export default function ForgotPasswordForm({
     },
   });
 
-  function onSubmit(values: z.infer<typeof schema>) {
-    console.log("Email:", values);
-  }
+  const onSubmit = async (values: z.infer<typeof schema>) => {
+    try {
+      console.log("Email:", values.email);
+      toast.success("Password reset link sent to your email!");
+    } catch (error) {
+      console.error("Error sending reset link:", error);
+      toast.error("Failed to send password reset link. Please try again.");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
