@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "全名",
+      "fullNamePlaceholder": "张伟",
       "emailLabel": "电子邮箱",
       "emailPlaceholder": "请输入邮箱地址",
       "passwordLabel": "密码",

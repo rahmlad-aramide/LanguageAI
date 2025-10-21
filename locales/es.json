@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "Nombre completo",
+      "fullNamePlaceholder": "Juan Pérez",
       "emailLabel": "Correo electrónico",
       "emailPlaceholder": "Introduce tu correo electrónico",
       "passwordLabel": "Contraseña",

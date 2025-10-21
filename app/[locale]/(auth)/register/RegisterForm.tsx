@@ -28,6 +28,7 @@ import {
 type SignupProps = {
   headingText: string;
   fullNameLabel: string;
+  fullNamePlaceholder: string;
   emailLabel: string;
   emailPlaceholder: string;
   passwordLabel: string;
@@ -56,6 +57,7 @@ type SignupProps = {
 export default function SignupForm({
   headingText,
   fullNameLabel,
+  fullNamePlaceholder,
   emailLabel,
   emailPlaceholder,
   passwordLabel,
@@ -89,7 +91,7 @@ export default function SignupForm({
             .min(8, { message: validationMessages.passwordMin }),
           confirmPassword: z
             .string()
-            .min(8, { message: validationMessages.confirmPasswordMin }),
+            .min(8, { message: validationMessages.confirmPassswordMin }),
           preferredLanguage: z
             .string()
             .min(1, { message: validationMessages.languagePreferred }),
@@ -144,7 +146,7 @@ export default function SignupForm({
                       <FormControl>
                         <Input
                           {...field}
-                          placeholder="John Doe"
+                          placeholder={fullNamePlaceholder}
                           className="rounded-[10px] w-full py-6"
                         />
                       </FormControl>

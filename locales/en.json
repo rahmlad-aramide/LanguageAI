@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "Full Name",
+      "fullNamePlaceholder": "John Doe",
       "emailLabel": "Email Address",
       "emailPlaceholder": "Enter your email",
       "passwordLabel": "Password",

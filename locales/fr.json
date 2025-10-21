@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "Nom complet",
+      "fullNamePlaceholder": "Jean Dupont",
       "emailLabel": "Adresse e-mail",
       "emailPlaceholder": "Entrez votre e-mail",
       "passwordLabel": "Mot de passe",

@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "Nome completo",
+      "fullNamePlaceholder": "João Silva",
       "emailLabel": "Endereço de e-mail",
       "emailPlaceholder": "Digite seu e-mail",
       "passwordLabel": "Senha",

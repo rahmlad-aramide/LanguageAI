@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "Vollständiger Name",
+      "fullNamePlaceholder": "Max Mustermann",
       "emailLabel": "E-Mail-Adresse",
       "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
       "passwordLabel": "Passwort",

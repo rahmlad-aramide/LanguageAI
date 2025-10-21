@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "الاسم الكامل",
+      "fullNamePlaceholder": "جون دو",
       "emailLabel": "البريد الإلكتروني",
       "emailPlaceholder": "أدخل بريدك الإلكتروني",
       "passwordLabel": "كلمة المرور",

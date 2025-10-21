@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "Полное имя",
+      "fullNamePlaceholder": "Иван Иванов",
       "emailLabel": "Адрес электронной почты",
       "emailPlaceholder": "Введите адрес электронной почты",
       "passwordLabel": "Пароль",
