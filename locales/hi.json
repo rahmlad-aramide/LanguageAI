@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "पूरा नाम",
+      "fullNamePlaceholder": "राहुल शर्मा",
       "emailLabel": "ईमेल पता",
       "emailPlaceholder": "अपना ईमेल दर्ज करें",
       "passwordLabel": "पासवर्ड",

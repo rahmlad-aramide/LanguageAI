@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "氏名",
+      "fullNamePlaceholder": "山田太郎",
       "emailLabel": "メールアドレス",
       "emailPlaceholder": "メールアドレスを入力",
       "passwordLabel": "パスワード",

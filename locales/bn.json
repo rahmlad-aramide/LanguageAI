@@ -177,6 +177,7 @@
     },
     "body": {
       "fullNameLabel": "পুরো নাম",
+      "fullNamePlaceholder": "রাজীব হোসেন",
       "emailLabel": "ইমেল ঠিকানা",
       "emailPlaceholder": "আপনার ইমেল লিখুন",
       "passwordLabel": "পাসওয়ার্ড",

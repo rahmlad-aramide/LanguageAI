@@ -9,6 +9,7 @@ export default function LoginPage() {
     <SignupForm
       headingText={t("heading.headingText")}
       fullNameLabel={t("body.fullNameLabel")}
+      fullNamePlaceholder={t("body.fullNamePlaceholder")}
       emailLabel={t("body.emailLabel")}
       emailPlaceholder={t("body.emailPlaceholder")}
       passwordLabel={t("body.passwordLabel")}
