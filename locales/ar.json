@@ -215,5 +215,26 @@
     "signUpvalidation": {
       "invalidEmail": "عنوان البريد الإلكتروني غير صالح"
     }
+  },
+  "ResetPassword": {
+    "heading": {
+      "headingText": "إعادة تعيين كلمة المرور",
+      "bodyText": "أدخل كلمة المرور الجديدة لإعادة تعيينها"
+    },
+    "body": {
+      "passwordLabel": "كلمة المرور الجديدة",
+      "confirmPasswordLabel": "تأكيد كلمة المرور",
+      "buttonText": "إعادة تعيين كلمة المرور"
+    },
+    "success": {
+      "isSuccessHeadingText": "تم بنجاح!",
+      "isSuccessBodyText": "تمت إعادة تعيين كلمة المرور بنجاح.",
+      "isSuccessLink": "تسجيل الدخول"
+    },
+    "signUpvalidation": {
+      "passwordMin": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
+      "confirmPasswordMin": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
+      "refinePassword": "كلمتا المرور غير متطابقتين"
+    }
   }
 }

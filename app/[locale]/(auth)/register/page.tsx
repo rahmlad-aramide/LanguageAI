@@ -29,7 +29,7 @@ export default function LoginPage() {
         fullName: tValidation("fullName"),
         invalidEmail: tValidation("invalidEmail"),
         passwordMin: tValidation("passwordMin"),
-        confirmPassswordMin: tValidation("confirmPasswordMin"),
+        confirmPasswordMin: tValidation("confirmPasswordMin"),
         languagePreferred: tValidation("languagePreferred"),
         refinePassword: tValidation("refinePassword"),
       }}

@@ -215,5 +215,26 @@
     "signUpvalidation": {
       "invalidEmail": "無効なメールアドレスです"
     }
+  },
+  "ResetPassword": {
+    "heading": {
+      "headingText": "パスワードをリセット",
+      "bodyText": "新しいパスワードを入力してリセットしてください"
+    },
+    "body": {
+      "passwordLabel": "新しいパスワード",
+      "confirmPasswordLabel": "パスワードを確認",
+      "buttonText": "パスワードをリセット"
+    },
+    "success": {
+      "isSuccessHeadingText": "成功しました！",
+      "isSuccessBodyText": "パスワードが正常にリセットされました。",
+      "isSuccessLink": "ログイン"
+    },
+    "signUpvalidation": {
+      "passwordMin": "パスワードは8文字以上である必要があります",
+      "confirmPasswordMin": "パスワードは8文字以上である必要があります",
+      "refinePassword": "パスワードが一致しません"
+    }
   }
 }

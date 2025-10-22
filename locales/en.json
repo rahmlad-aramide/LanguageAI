@@ -182,7 +182,7 @@
       "emailPlaceholder": "Enter your email",
       "passwordLabel": "Password",
       "passwordPlaceholder": "Enter Password",
-      "confirmPasswordLabel": "Password",
+      "confirmPasswordLabel": "Confirm Password",
       "confirmPasswordPlaceholder": "Confirm Password",
       "languageLabel": "Choose a Language",
       "arabicSelect": "Arabic",
@@ -214,6 +214,27 @@
     },
     "signUpvalidation": {
       "invalidEmail": "Invalid email address"
+    }
+  },
+  "ResetPassword": {
+    "heading": {
+      "headingText": "Reset Password",
+      "bodyText": "Enter your new password to reset your password"
+    },
+    "body": {
+      "passwordLabel": "New Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "buttonText": "Reset Password"
+    },
+    "success": {
+      "isSuccessHeadingText": "Successful!",
+      "isSuccessBodyText": "Your password has been successfully reset.",
+      "isSuccessLink": "Log In"
+    },
+    "signUpvalidation": {
+      "passwordMin": "Password must be at least 8 characters",
+      "confirmPasswordMin": "Password must be at least 8 characters",
+      "refinePassword": "Passwords do not match"
     }
   }
 }

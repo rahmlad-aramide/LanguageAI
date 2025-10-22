@@ -215,5 +215,26 @@
     "signUpvalidation": {
       "invalidEmail": "Endereço de e-mail inválido"
     }
+  },
+  "ResetPassword": {
+    "heading": {
+      "headingText": "Redefinir senha",
+      "bodyText": "Digite sua nova senha para redefinir"
+    },
+    "body": {
+      "passwordLabel": "Nova senha",
+      "confirmPasswordLabel": "Confirmar senha",
+      "buttonText": "Redefinir senha"
+    },
+    "success": {
+      "isSuccessHeadingText": "Sucesso!",
+      "isSuccessBodyText": "Sua senha foi redefinida com sucesso.",
+      "isSuccessLink": "Entrar"
+    },
+    "signUpvalidation": {
+      "passwordMin": "A senha deve ter pelo menos 8 caracteres",
+      "confirmPasswordMin": "A senha deve ter pelo menos 8 caracteres",
+      "refinePassword": "As senhas não coincidem"
+    }
   }
 }

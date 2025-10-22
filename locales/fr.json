@@ -215,5 +215,26 @@
     "signUpvalidation": {
       "invalidEmail": "Adresse e-mail invalide"
     }
+  },
+  "ResetPassword": {
+    "heading": {
+      "headingText": "Réinitialiser le mot de passe",
+      "bodyText": "Entrez votre nouveau mot de passe pour le réinitialiser"
+    },
+    "body": {
+      "passwordLabel": "Nouveau mot de passe",
+      "confirmPasswordLabel": "Confirmer le mot de passe",
+      "buttonText": "Réinitialiser le mot de passe"
+    },
+    "success": {
+      "isSuccessHeadingText": "Réussi !",
+      "isSuccessBodyText": "Votre mot de passe a été réinitialisé avec succès.",
+      "isSuccessLink": "Se connecter"
+    },
+    "signUpvalidation": {
+      "passwordMin": "Le mot de passe doit comporter au moins 8 caractères",
+      "confirmPasswordMin": "Le mot de passe doit comporter au moins 8 caractères",
+      "refinePassword": "Les mots de passe ne correspondent pas"
+    }
   }
 }

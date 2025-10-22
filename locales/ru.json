@@ -215,5 +215,26 @@
     "signUpvalidation": {
       "invalidEmail": "Неверный адрес электронной почты"
     }
+  },
+  "ResetPassword": {
+    "heading": {
+      "headingText": "Сбросить пароль",
+      "bodyText": "Введите новый пароль, чтобы сбросить его"
+    },
+    "body": {
+      "passwordLabel": "Новый пароль",
+      "confirmPasswordLabel": "Подтвердите пароль",
+      "buttonText": "Сбросить пароль"
+    },
+    "success": {
+      "isSuccessHeadingText": "Успешно!",
+      "isSuccessBodyText": "Ваш пароль был успешно сброшен.",
+      "isSuccessLink": "Войти"
+    },
+    "signUpvalidation": {
+      "passwordMin": "Пароль должен содержать не менее 8 символов",
+      "confirmPasswordMin": "Пароль должен содержать не менее 8 символов",
+      "refinePassword": "Пароли не совпадают"
+    }
   }
 }
