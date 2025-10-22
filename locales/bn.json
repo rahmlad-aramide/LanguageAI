@@ -217,25 +217,24 @@
     }
   },
   "ResetPassword": {
-  "heading": {
-    "headingText": "পাসওয়ার্ড রিসেট করুন",
-    "bodyText": "পাসওয়ার্ড রিসেট করতে আপনার নতুন পাসওয়ার্ড লিখুন"
-  },
-  "body": {
-    "passwordLabel": "নতুন পাসওয়ার্ড",
-    "confirmPasswordLabel": "পাসওয়ার্ড নিশ্চিত করুন",
-    "buttonText": "পাসওয়ার্ড রিসেট করুন"
-  },
-  "success": {
-    "isSuccessHeadingText": "সফল!",
-    "isSuccessBodyText": "আপনার পাসওয়ার্ড সফলভাবে রিসেট হয়েছে।",
-    "isSuccessLink": "লগ ইন করুন"
-  },
-  "signUpvalidation": {
-    "passwordMin": "পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে",
-    "confirmPasswordMin": "পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে",
-    "refinePassword": "পাসওয়ার্ড মেলেনি"
+    "heading": {
+      "headingText": "পাসওয়ার্ড রিসেট করুন",
+      "bodyText": "পাসওয়ার্ড রিসেট করতে আপনার নতুন পাসওয়ার্ড লিখুন"
+    },
+    "body": {
+      "passwordLabel": "নতুন পাসওয়ার্ড",
+      "confirmPasswordLabel": "পাসওয়ার্ড নিশ্চিত করুন",
+      "buttonText": "পাসওয়ার্ড রিসেট করুন"
+    },
+    "success": {
+      "isSuccessHeadingText": "সফল!",
+      "isSuccessBodyText": "আপনার পাসওয়ার্ড সফলভাবে রিসেট হয়েছে।",
+      "isSuccessLink": "লগ ইন করুন"
+    },
+    "signUpvalidation": {
+      "passwordMin": "পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে",
+      "confirmPasswordMin": "পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে",
+      "refinePassword": "পাসওয়ার্ড মেলেনি"
+    }
   }
-}
-
 }

@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl";
 import PasswordResetForm from "./reset-password";
 
-export default function LoginPage() {
+export default function PasswordResetPage() {
   const t = useTranslations("ResetPassword");
-  const tValidation = useTranslations("signUpvalidation");
+  const tValidation = useTranslations("validation");
 
   return (
     <PasswordResetForm

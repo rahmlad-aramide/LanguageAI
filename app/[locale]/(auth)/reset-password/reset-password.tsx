@@ -24,7 +24,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { error } from "console";
 
 type PasswordResetFormProps = {
   headingText: string;
@@ -77,15 +76,16 @@ export default function PasswordResetForm({
     },
   });
 
-  const onSubmit = (values: z.infer<typeof schema>) => {
+  const onSubmit = async (values: z.infer<typeof schema>) => {
     try {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
       setIsResetSuccessful(true);
       toast.success("Password reset successful!", {
         description: "You can now log in with your new password.",
       });
     } catch (err) {
-      toast.error("Link invalid!", {
-        description: "Check the reset link and try again!",
+      toast.error("Something went wrong!", {
+        description: "Please try again later.",
       });
     }
   };
@@ -104,12 +104,14 @@ export default function PasswordResetForm({
           </CardHeader>
 
           <CardContent>
-            <Link
-              href="/login"
-              className="px-4 py-2 bg-primary text-white rounded-md"
-            >
-              {isSuccessLink}
-            </Link>
+            <Button asChild>
+              <Link
+                href="/login"
+                className="px-4 py-2 bg-primary text-white rounded-md"
+              >
+                {isSuccessLink}
+              </Link>
+            </Button>
           </CardContent>
         </Card>
       </div>
