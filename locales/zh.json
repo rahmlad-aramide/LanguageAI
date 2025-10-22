@@ -215,5 +215,26 @@
     "signUpvalidation": {
       "invalidEmail": "无效的电子邮件地址"
     }
+  },
+  "ResetPassword": {
+    "heading": {
+      "headingText": "重置密码",
+      "bodyText": "请输入新密码以重置您的密码"
+    },
+    "body": {
+      "passwordLabel": "新密码",
+      "confirmPasswordLabel": "确认密码",
+      "buttonText": "重置密码"
+    },
+    "success": {
+      "isSuccessHeadingText": "成功！",
+      "isSuccessBodyText": "您的密码已成功重置。",
+      "isSuccessLink": "登录"
+    },
+    "signUpvalidation": {
+      "passwordMin": "密码长度至少为8个字符",
+      "confirmPasswordMin": "密码长度至少为8个字符",
+      "refinePassword": "两次输入的密码不一致"
+    }
   }
 }

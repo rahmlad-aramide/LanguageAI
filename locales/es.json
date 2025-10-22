@@ -215,5 +215,27 @@
     "signUpvalidation": {
       "invalidEmail": "Dirección de correo electrónico no válida"
     }
+  },
+  "ResetPassword": {
+  "heading": {
+    "headingText": "Restablecer contraseña",
+    "bodyText": "Ingresa tu nueva contraseña para restablecerla"
+  },
+  "body": {
+    "passwordLabel": "Nueva contraseña",
+    "confirmPasswordLabel": "Confirmar contraseña",
+    "buttonText": "Restablecer contraseña"
+  },
+  "success": {
+    "isSuccessHeadingText": "¡Exitoso!",
+    "isSuccessBodyText": "Tu contraseña se ha restablecido correctamente.",
+    "isSuccessLink": "Iniciar sesión"
+  },
+  "signUpvalidation": {
+    "passwordMin": "La contraseña debe tener al menos 8 caracteres",
+    "confirmPasswordMin": "La contraseña debe tener al menos 8 caracteres",
+    "refinePassword": "Las contraseñas no coinciden"
   }
+}
+
 }

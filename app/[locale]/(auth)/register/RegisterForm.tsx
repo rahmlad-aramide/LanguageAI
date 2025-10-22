@@ -225,16 +225,18 @@ export default function SignupForm({
                         <div className="relative">
                           <Input
                             {...field}
-                            type={showPassword ? "text" : "password"}
+                            type={showConfirmPassword ? "text" : "password"}
                             placeholder={confirmPasswordPlaceholder}
                             className="rounded-[10px] w-full py-6"
                           />
                           <button
                             type="button"
-                            onClick={() => setShowPassword(!showPassword)}
+                            onClick={() =>
+                              setShowConfirmPassword(!showConfirmPassword)
+                            }
                             className="absolute right-3 rtl:left-3 rtl:right-auto top-1/2 -translate-y-1/2 cursor-pointer"
                           >
-                            {showPassword ? (
+                            {showConfirmPassword ? (
                               <Eye size={20} />
                             ) : (
                               <EyeOff size={20} />
