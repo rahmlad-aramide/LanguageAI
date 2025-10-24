@@ -236,5 +236,11 @@
       "confirmPasswordMin": "La contraseña debe tener al menos 8 caracteres",
       "refinePassword": "Las contraseñas no coinciden"
     }
+  },
+  "TopNav": {
+    "Dashboard": "Panel de control",
+    "TranslationHistory": "Historial de traducción",
+    "Settings": "Configuración",
+    "AccountSettings": "Configuración de la cuenta"
   }
 }

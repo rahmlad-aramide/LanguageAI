@@ -236,5 +236,18 @@
       "confirmPasswordMin": "Le mot de passe doit comporter au moins 8 caractères",
       "refinePassword": "Les mots de passe ne correspondent pas"
     }
+  },
+  "TopNav": {
+    "Dashboard": "Tableau de bord",
+    "TranslationHistory": "Historique de traduction",
+    "Settings": "Paramètres",
+    "AccountSettings": "Paramètres du compte"
+  },
+  "Sidebar": {
+    "Dashboard": "Tableau de bord",
+    "TranslationHistory": "Historique des traductions",
+    "Settings": "Paramètres",
+    "AccountSettings": "Paramètres du compte",
+    "Logout": "Se déconnecter"
   }
 }

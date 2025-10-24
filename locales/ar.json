@@ -236,5 +236,18 @@
       "confirmPasswordMin": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
       "refinePassword": "كلمتا المرور غير متطابقتين"
     }
+  },
+  "TopNav": {
+    "Dashboard": "لوحة التحكم",
+    "TranslationHistory": "سجل الترجمة",
+    "Settings": "الإعدادات",
+    "AccountSettings": "إعدادات الحساب"
+  },
+  "Sidebar": {
+    "Dashboard": "لوحة التحكم",
+    "TranslationHistory": "سجل الترجمة",
+    "Settings": "الإعدادات",
+    "AccountSettings": "إعدادات الحساب",
+    "Logout": "تسجيل الخروج"
   }
 }

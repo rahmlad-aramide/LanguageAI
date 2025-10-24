@@ -236,5 +236,18 @@
       "confirmPasswordMin": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए",
       "refinePassword": "पासवर्ड मेल नहीं खाते"
     }
+  },
+  "TopNav": {
+    "Dashboard": "डैशबोर्ड",
+    "TranslationHistory": "अनुवाद इतिहास",
+    "Settings": "सेटिंग्स",
+    "AccountSettings": "खाता सेटिंग्स"
+  },
+  "Sidebar": {
+    "Dashboard": "डैशबोर्ड",
+    "TranslationHistory": "अनुवाद इतिहास",
+    "Settings": "सेटिंग्स",
+    "AccountSettings": "खाता सेटिंग्स",
+    "Logout": "लॉग आउट"
   }
 }

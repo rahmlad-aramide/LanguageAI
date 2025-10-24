@@ -236,5 +236,18 @@
       "confirmPasswordMin": "密码长度至少为8个字符",
       "refinePassword": "两次输入的密码不一致"
     }
+  },
+  "TopNav": {
+    "Dashboard": "仪表板",
+    "TranslationHistory": "翻译历史",
+    "Settings": "设置",
+    "AccountSettings": "账户设置"
+  },
+  "Sidebar": {
+    "Dashboard": "仪表板",
+    "TranslationHistory": "翻译历史",
+    "Settings": "设置",
+    "AccountSettings": "账户设置",
+    "Logout": "登出"
   }
 }

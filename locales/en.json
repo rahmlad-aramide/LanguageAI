@@ -236,5 +236,18 @@
       "confirmPasswordMin": "Password must be at least 8 characters",
       "refinePassword": "Passwords do not match"
     }
+  },
+  "TopNav": {
+    "Dashboard": "Dashboard",
+    "TranslationHistory": "Translation History",
+    "Settings": "Settings",
+    "AccountSettings": "Account Settings"
+  },
+  "Sidebar": {
+    "Dashboard": "Dashboard",
+    "TranslationHistory": "Translation History",
+    "Settings": "Settings",
+    "AccountSettings": "Account Settings",
+    "Logout": "Logout"
   }
 }
