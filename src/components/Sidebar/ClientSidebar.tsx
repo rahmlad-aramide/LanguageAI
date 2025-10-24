@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n.config";
+import { useTranslations } from "next-intl";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdTranslate } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -10,19 +11,20 @@ import { FaUser, FaSignOutAlt } from "react-icons/fa";
 
 export default function ClientSidebar() {
   const pathname = usePathname();
+  const t = useTranslations("Sidebar");
   const [sideBarOpen, setSideBarOpen] = useState(false);
 
   const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}\b/, "");
 
   const navLinks = [
-    { href: "/dashboard", label: "Dashboard", icon: LuLayoutDashboard },
+    { href: "/dashboard", label: t("Dashboard"), icon: LuLayoutDashboard },
     {
       href: "/translation-history",
-      label: "Translation History",
+      label: t("TranslationHistory"),
       icon: MdTranslate,
     },
-    { href: "/settings", label: "Settings", icon: IoSettingsOutline },
-    { href: "/account", label: "Account Settings", icon: FaUser },
+    { href: "/settings", label: t("Settings"), icon: IoSettingsOutline },
+    { href: "/account", label: t("AccountSettings"), icon: FaUser },
   ];
 
   const handleLogout = () => {
@@ -53,6 +55,7 @@ export default function ClientSidebar() {
         text-gray-700 shadow-sm z-50 transform transition-transform duration-300 ease-in-out 
         ${sideBarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 flex flex-col justify-between`}
       >
+        {/* Top Section */}
         <div className="flex flex-col gap-6 pt-6 pb-10 px-4">
           <Link
             href="/dashboard"
@@ -87,13 +90,14 @@ export default function ClientSidebar() {
           </nav>
         </div>
 
+        {/* Bottom Section */}
         <div className="border-t border-gray-200 mt-6 px-4 pb-6">
           <button
             onClick={handleLogout}
             className="flex items-center gap-3 w-full text-left px-4 py-3 text-sm md:text-base rounded-xl font-medium text-gray-700"
           >
             <FaSignOutAlt size={18} />
-            Logout
+            {t("Logout")}
           </button>
         </div>
       </aside>

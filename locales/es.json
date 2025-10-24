@@ -242,5 +242,12 @@
     "TranslationHistory": "Historial de traducción",
     "Settings": "Configuración",
     "AccountSettings": "Configuración de la cuenta"
+  },
+  "Sidebar": {
+    "Dashboard": "Panel de control",
+    "TranslationHistory": "Historial de traducciones",
+    "Settings": "Configuración",
+    "AccountSettings": "Configuración de la cuenta",
+    "Logout": "Cerrar sesión"
   }
 }

@@ -242,5 +242,12 @@
     "TranslationHistory": "Übersetzungsverlauf",
     "Settings": "Einstellungen",
     "AccountSettings": "Kontoeinstellungen"
+  },
+  "Sidebar": {
+    "Dashboard": "Übersicht",
+    "TranslationHistory": "Übersetzungshistorie",
+    "Settings": "Einstellungen",
+    "AccountSettings": "Kontoeinstellungen",
+    "Logout": "Abmelden"
   }
 }
