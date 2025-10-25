@@ -236,5 +236,18 @@
       "confirmPasswordMin": "パスワードは8文字以上である必要があります",
       "refinePassword": "パスワードが一致しません"
     }
+  },
+  "TopNav": {
+    "Dashboard": "ダッシュボード",
+    "TranslationHistory": "翻訳履歴",
+    "Settings": "設定",
+    "AccountSettings": "アカウント設定"
+  },
+  "Sidebar": {
+    "Dashboard": "ダッシュボード",
+    "TranslationHistory": "翻訳履歴",
+    "Settings": "設定",
+    "AccountSettings": "アカウント設定",
+    "Logout": "ログアウト"
   }
 }

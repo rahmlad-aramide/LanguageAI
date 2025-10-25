@@ -236,5 +236,18 @@
       "confirmPasswordMin": "A senha deve ter pelo menos 8 caracteres",
       "refinePassword": "As senhas não coincidem"
     }
+  },
+  "TopNav": {
+    "Dashboard": "Painel de Controle",
+    "TranslationHistory": "Histórico de Tradução",
+    "Settings": "Configurações",
+    "AccountSettings": "Configurações da Conta"
+  },
+  "Sidebar": {
+    "Dashboard": "Painel de controle",
+    "TranslationHistory": "Histórico de traduções",
+    "Settings": "Configurações",
+    "AccountSettings": "Configurações da conta",
+    "Logout": "Sair"
   }
 }

@@ -236,5 +236,11 @@
       "confirmPasswordMin": "Пароль должен содержать не менее 8 символов",
       "refinePassword": "Пароли не совпадают"
     }
+  },
+  "TopNav": {
+    "Dashboard": "Панель управления",
+    "TranslationHistory": "История переводов",
+    "Settings": "Настройки",
+    "AccountSettings": "Настройки аккаунта"
   }
 }
