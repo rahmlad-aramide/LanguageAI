@@ -22,14 +22,19 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <div className="flex min-h-screen">
-        {/* Sidebar (always visible on desktop) */}
+      <div className="min-h-screen flex bg-gray-50">
+        {/* ✅ Sidebar on the left */}
         <SidebarPage />
 
-        {/* Main content area */}
+        {/* ✅ Main area beside sidebar */}
         <div className="flex-1 flex flex-col">
+          {/* ✅ Top Nav stays at the top of the content area */}
           <TopNavPage />
-          <main className="p-6 bg-gray-50 flex-1">{children}</main>
+
+          {/* ✅ Main content below TopNav */}
+          <main className="flex-1 p-4 sm:p-6 md:p-8 overflow-y-auto">
+            {children}
+          </main>
         </div>
       </div>
     </NextIntlClientProvider>

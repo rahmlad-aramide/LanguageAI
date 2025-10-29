@@ -1,26 +1,33 @@
 "use client";
 
-import { usePathname } from "@/i18n.config";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 export default function ClientTopNav() {
   const pathname = usePathname();
-  const t = useTranslations("TopNav");
+  const t = useTranslations("Sidebar");
+  const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}\b/, "");
 
   const titles: Record<string, string> = {
     "/dashboard": t("Dashboard"),
     "/translation-history": t("TranslationHistory"),
+    "/translated-documents": t("TranslatedDocuments"),
     "/settings": t("Settings"),
     "/account": t("AccountSettings"),
   };
 
-  const title = titles[pathname] || t("Dashboard");
+  const currentTitle =
+    titles[pathWithoutLocale] ||
+    Object.entries(titles).find(([key]) =>
+      pathWithoutLocale.startsWith(`${key}/`),
+    )?.[1] ||
+    "Dashboard";
 
   return (
-    <header>
-      <div className="fixed top-0 left-0 z-40 bg-white flex justify-between items-center px-10 h-20 lg:h-24 border-b w-full md:w-[calc(100%-250px)] md:left-[250px]">
-        <h1 className="text-xl lg:text-3xl font-semibold">{title}</h1>
-      </div>
+    <header className="bg-white border-b h-16 lg:h-20 flex items-center px-6 md:px-10 shadow-sm sticky top-0 z-40">
+      <h1 className="text-xl lg:text-2xl font-semibold text-gray-900">
+        {currentTitle}
+      </h1>
     </header>
   );
 }

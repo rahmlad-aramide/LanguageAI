@@ -240,6 +240,7 @@
   "TopNav": {
     "Dashboard": "Dashboard",
     "TranslationHistory": "Übersetzungsverlauf",
+     "TranslatedDocuments": "Übersetzte Dokumente",
     "Settings": "Einstellungen",
     "AccountSettings": "Kontoeinstellungen"
   },
@@ -249,5 +250,24 @@
     "Settings": "Einstellungen",
     "AccountSettings": "Kontoeinstellungen",
     "Logout": "Abmelden"
+  },
+  "Dashboard": {
+  "Welcome": "Willkommen zurück, {name}!",
+  "TotalTranslations": "Gesamtübersetzungen",
+  "MostUsedLanguage": "Meistgenutzte Sprache",
+  "WordsThisWeek": "Diese Woche übersetzte Wörter",
+  "DocumentsCount": "Gespeicherte Dokumente",
+  "RecentTranslations": "Letzte Übersetzungen",
+  "StartTranslation": "Neue Übersetzung starten",
+  "UploadDocument": "Dokument hochladen"
+  },
+  "TranslationHistory": {
+    "StartNewTranslation": "Neue Übersetzung starten",
+    "History": "Verlauf",
+    "NoHistory": "Noch kein Übersetzungsverlauf",
+    "InputText": "Eingabetext",
+    "TranslatedText": "Übersetzter Text",
+    "Date": "Datum",
+    "ClearHistory": "Verlauf löschen"
   }
 }

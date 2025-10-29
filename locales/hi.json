@@ -246,8 +246,28 @@
   "Sidebar": {
     "Dashboard": "डैशबोर्ड",
     "TranslationHistory": "अनुवाद इतिहास",
+    "TranslatedDocuments": "अनुवादित दस्तावेज़",
     "Settings": "सेटिंग्स",
     "AccountSettings": "खाता सेटिंग्स",
     "Logout": "लॉग आउट"
+  },
+  "Dashboard": {
+  "Welcome": "वापसी पर स्वागत है, {name}!",
+  "TotalTranslations": "कुल अनुवाद",
+  "MostUsedLanguage": "सबसे अधिक उपयोग की जाने वाली भाषा",
+  "WordsThisWeek": "इस सप्ताह अनुवादित शब्द",
+  "DocumentsCount": "सहेजे गए दस्तावेज़",
+  "RecentTranslations": "हाल के अनुवाद",
+  "StartTranslation": "नई अनुवाद शुरू करें",
+  "UploadDocument": "दस्तावेज़ अपलोड करें"
+  },
+  "TranslationHistory": {
+  "StartNewTranslation": "नई अनुवाद शुरू करें",
+  "History": "इतिहास",
+  "NoHistory": "अभी तक कोई अनुवाद इतिहास नहीं है",
+  "InputText": "इनपुट टेक्स्ट",
+  "TranslatedText": "अनुवादित टेक्स्ट",
+  "Date": "तारीख",
+  "ClearHistory": "इतिहास साफ़ करें"
   }
 }

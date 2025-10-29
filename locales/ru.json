@@ -242,5 +242,32 @@
     "TranslationHistory": "История переводов",
     "Settings": "Настройки",
     "AccountSettings": "Настройки аккаунта"
+  },
+  "Sidebar": {
+    "Dashboard": "Панель управления",
+    "TranslationHistory": "История переводов",
+    "TranslatedDocuments": "Переведённые документы",
+    "Settings": "Настройки",
+    "AccountSettings": "Настройки аккаунта",
+    "Logout": "Выйти"
+  },
+  "Dashboard": {
+    "Welcome": "С возвращением, {name}!",
+    "TotalTranslations": "Всего переводов",
+    "MostUsedLanguage": "Самый используемый язык",
+    "WordsThisWeek": "Переведённые слова за неделю",
+    "DocumentsCount": "Сохранённые документы",
+    "RecentTranslations": "Недавние переводы",
+    "StartTranslation": "Начать новый перевод",
+    "UploadDocument": "Загрузить документ"
+  },
+  "TranslationHistory": {
+  "StartNewTranslation": "Начать новый перевод",
+  "History": "История",
+  "NoHistory": "История переводов пуста",
+  "InputText": "Исходный текст",
+  "TranslatedText": "Переведённый текст",
+  "Date": "Дата",
+  "ClearHistory": "Очистить историю"
   }
 }
