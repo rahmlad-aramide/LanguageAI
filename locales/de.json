@@ -286,6 +286,9 @@
     "ChangePassword": "Passwort ändern",
     "SaveChanges": "Änderungen speichern",
     "DangerZone": "Gefahrenzone",
-    "DeleteAccount": "Konto löschen"
+    "DeleteAccount": "Konto löschen",
+    "EnterYourName": "Geben Sie Ihren Namen ein",
+    "EnterYourEmail": "Geben Sie Ihre E-Mail ein",
+    "Saving": "Speichern läuft"
   }
 }

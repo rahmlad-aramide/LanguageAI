@@ -286,6 +286,9 @@
     "ChangePassword": "পাসওয়ার্ড পরিবর্তন করুন",
     "SaveChanges": "পরিবর্তনগুলি সংরক্ষণ করুন",
     "DangerZone": "বিপজ্জনক এলাকা",
-    "DeleteAccount": "অ্যাকাউন্ট মুছে ফেলুন"
+    "DeleteAccount": "অ্যাকাউন্ট মুছে ফেলুন",
+    "EnterYourName": "আপনার নাম লিখুন",
+    "EnterYourEmail": "আপনার ইমেইল লিখুন",
+    "Saving": "সংরক্ষণ করা হচ্ছে"
   }
 }

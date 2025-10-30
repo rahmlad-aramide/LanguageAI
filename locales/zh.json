@@ -270,22 +270,25 @@
     "ClearHistory": "清除历史记录"
   },
   "TranslatedDocuments": {
-  "UploadNewDocument": "上传新文档",
-  "DocumentsList": "已翻译文件",
-  "FileName": "文件名",
-  "LanguagePair": "语言对",
-  "WordCount": "字数",
-  "Date": "日期",
-  "Actions": "操作"
+    "UploadNewDocument": "上传新文档",
+    "DocumentsList": "已翻译文件",
+    "FileName": "文件名",
+    "LanguagePair": "语言对",
+    "WordCount": "字数",
+    "Date": "日期",
+    "Actions": "操作"
   },
   "AccountSettings": {
-  "ProfileSettings": "个人资料设置",
-  "AccountDetails": "账户详情",
-  "Name": "姓名",
-  "Email": "电子邮件",
-  "ChangePassword": "更改密码",
-  "SaveChanges": "保存更改",
-  "DangerZone": "危险区域",
-  "DeleteAccount": "删除账户"
+    "ProfileSettings": "个人资料设置",
+    "AccountDetails": "账户详情",
+    "Name": "姓名",
+    "Email": "电子邮件",
+    "ChangePassword": "更改密码",
+    "SaveChanges": "保存更改",
+    "DangerZone": "危险区域",
+    "DeleteAccount": "删除账户",
+    "EnterYourName": "输入您的姓名",
+    "EnterYourEmail": "输入您的电子邮件",
+    "Saving": "正在保存"
   }
 }

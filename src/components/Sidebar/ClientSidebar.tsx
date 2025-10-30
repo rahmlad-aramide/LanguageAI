@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdTranslate, MdFileCopy } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
-import { FaUser, FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 
 export default function ClientSidebar() {
   const pathname = usePathname();

@@ -286,6 +286,9 @@
     "ChangePassword": "पासवर्ड बदलें",
     "SaveChanges": "परिवर्तनों को सहेजें",
     "DangerZone": "खतरनाक क्षेत्र",
-    "DeleteAccount": "खाता हटाएँ"
+    "DeleteAccount": "खाता हटाएँ",
+    "EnterYourName": "अपना नाम दर्ज करें",
+    "EnterYourEmail": "अपना ईमेल दर्ज करें",
+    "Saving": "सहेजा जा रहा है"
   }
 }

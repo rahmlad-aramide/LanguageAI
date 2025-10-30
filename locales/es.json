@@ -286,6 +286,9 @@
     "ChangePassword": "Cambiar contraseña",
     "SaveChanges": "Guardar cambios",
     "DangerZone": "Zona de peligro",
-    "DeleteAccount": "Eliminar cuenta"
+    "DeleteAccount": "Eliminar cuenta",
+    "EnterYourName": "Ingresa tu nombre",
+    "EnterYourEmail": "Ingresa tu correo electrónico",
+    "Saving": "Guardando"
   }
 }

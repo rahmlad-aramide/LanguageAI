@@ -286,6 +286,9 @@
     "ChangePassword": "تغيير كلمة المرور",
     "SaveChanges": "حفظ التغييرات",
     "DangerZone": "منطقة الخطر",
-    "DeleteAccount": "حذف الحساب"
+    "DeleteAccount": "حذف الحساب",
+    "EnterYourName": "أدخل اسمك",
+    "EnterYourEmail": "أدخل بريدك الإلكتروني",
+    "Saving": "جارٍ الحفظ"
   }
 }

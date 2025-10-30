@@ -71,9 +71,9 @@ export default function TranslatedDocumentsPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {documents.map((doc, i) => (
+                  {documents.map((doc) => (
                     <tr
-                      key={i}
+                      key={doc.id}
                       className="border-b last:border-none hover:bg-gray-50 transition"
                     >
                       <td className="p-3 font-medium text-gray-800">

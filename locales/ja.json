@@ -270,22 +270,25 @@
     "ClearHistory": "履歴を消去"
   },
   "TranslatedDocuments": {
-  "UploadNewDocument": "新しいドキュメントをアップロード",
-  "DocumentsList": "翻訳済みファイル一覧",
-  "FileName": "ファイル名",
-  "LanguagePair": "言語ペア",
-  "WordCount": "単語数",
-  "Date": "日付",
-  "Actions": "操作"
+    "UploadNewDocument": "新しいドキュメントをアップロード",
+    "DocumentsList": "翻訳済みファイル一覧",
+    "FileName": "ファイル名",
+    "LanguagePair": "言語ペア",
+    "WordCount": "単語数",
+    "Date": "日付",
+    "Actions": "操作"
   },
   "AccountSettings": {
-  "ProfileSettings": "プロフィール設定",
-  "AccountDetails": "アカウント詳細",
-  "Name": "名前",
-  "Email": "メール",
-  "ChangePassword": "パスワードを変更",
-  "SaveChanges": "変更を保存",
-  "DangerZone": "危険ゾーン",
-  "DeleteAccount": "アカウントを削除"
+    "ProfileSettings": "プロフィール設定",
+    "AccountDetails": "アカウント詳細",
+    "Name": "名前",
+    "Email": "メール",
+    "ChangePassword": "パスワードを変更",
+    "SaveChanges": "変更を保存",
+    "DangerZone": "危険ゾーン",
+    "DeleteAccount": "アカウントを削除",
+    "EnterYourName": "名前を入力してください",
+    "EnterYourEmail": "メールアドレスを入力してください",
+    "Saving": "保存中"
   }
 }

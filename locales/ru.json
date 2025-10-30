@@ -286,6 +286,9 @@
     "ChangePassword": "Изменить пароль",
     "SaveChanges": "Сохранить изменения",
     "DangerZone": "Опасная зона",
-    "DeleteAccount": "Удалить аккаунт"
+    "DeleteAccount": "Удалить аккаунт",
+    "EnterYourName": "Введите ваше имя",
+    "EnterYourEmail": "Введите ваш адрес электронной почты",
+    "Saving": "Сохранение"
   }
 }
