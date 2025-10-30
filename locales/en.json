@@ -240,15 +240,14 @@
   "TopNav": {
     "Dashboard": "Dashboard",
     "TranslationHistory": "Translation History",
-    "Settings": "Settings",
-    "AccountSettings": "Account Settings"
+    "TranslatedDocuments": "Translated Documents",
+    "Settings": "Settings"
   },
   "Sidebar": {
     "Dashboard": "Dashboard",
     "TranslationHistory": "Translation History",
     "TranslatedDocuments": "Translated Documents",
     "Settings": "Settings",
-    "AccountSettings": "Account Settings",
     "Logout": "Logout"
   },
   "Dashboard": {
@@ -262,12 +261,31 @@
     "UploadDocument": "Upload Document"
   },
   "TranslationHistory": {
-  "StartNewTranslation": "Start a New Translation",
-  "History": "History",
-  "NoHistory": "No translation history yet",
-  "InputText": "Input Text",
-  "TranslatedText": "Translated Text",
-  "Date": "Date",
-  "ClearHistory": "Clear History"
+    "StartNewTranslation": "Start a New Translation",
+    "History": "History",
+    "NoHistory": "No translation history yet",
+    "InputText": "Input Text",
+    "TranslatedText": "Translated Text",
+    "Date": "Date",
+    "ClearHistory": "Clear History"
+  },
+  "TranslatedDocuments": {
+     "UploadNewDocument": "Upload New Document",
+    "DocumentsList": "Your Translated Files",
+    "FileName": "File Name",
+    "LanguagePair": "Language Pair",
+    "WordCount": "Word Count",
+    "Date": "Date",
+    "Actions": "Actions"
+  },
+"AccountSettings": {
+  "ProfileSettings": "Profile Settings",
+  "AccountDetails": "Account Details",
+  "Name": "Name",
+  "Email": "Email",
+  "ChangePassword": "Change Password",
+  "SaveChanges": "Save Changes",
+  "DangerZone": "Danger Zone",
+  "DeleteAccount": "Delete Account"
   }
 }

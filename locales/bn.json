@@ -240,34 +240,52 @@
   "TopNav": {
     "Dashboard": "ড্যাশবোর্ড",
     "TranslationHistory": "অনুবাদের ইতিহাস",
-    "Settings": "সেটিংস",
-    "AccountSettings": "অ্যাকাউন্ট সেটিংস"
+    "TranslatedDocuments": "অনূদিত নথি",
+    "Settings": "সেটিংস"
   },
   "Sidebar": {
     "Dashboard": "ড্যাশবোর্ড",
     "TranslationHistory": "অনুবাদ ইতিহাস",
     "TranslatedDocuments": "অনূদিত নথি",
     "Settings": "সেটিংস",
-    "AccountSettings": "অ্যাকাউন্ট সেটিংস",
     "Logout": "লগ আউট"
   },
   "Dashboard": {
-  "Welcome": "ফিরে আসার জন্য স্বাগতম, {name}!",
-  "TotalTranslations": "মোট অনুবাদ",
-  "MostUsedLanguage": "সবচেয়ে ব্যবহৃত ভাষা",
-  "WordsThisWeek": "এই সপ্তাহে অনূদিত শব্দ",
-  "DocumentsCount": "সংরক্ষিত নথি",
-  "RecentTranslations": "সাম্প্রতিক অনুবাদ",
-  "StartTranslation": "নতুন অনুবাদ শুরু করুন",
-  "UploadDocument": "নথি আপলোড করুন"
+    "Welcome": "ফিরে আসার জন্য স্বাগতম, {name}!",
+    "TotalTranslations": "মোট অনুবাদ",
+    "MostUsedLanguage": "সবচেয়ে ব্যবহৃত ভাষা",
+    "WordsThisWeek": "এই সপ্তাহে অনূদিত শব্দ",
+    "DocumentsCount": "সংরক্ষিত নথি",
+    "RecentTranslations": "সাম্প্রতিক অনুবাদ",
+    "StartTranslation": "নতুন অনুবাদ শুরু করুন",
+    "UploadDocument": "নথি আপলোড করুন"
   },
   "TranslationHistory": {
-  "StartNewTranslation": "নতুন অনুবাদ শুরু করুন",
-  "History": "ইতিহাস",
-  "NoHistory": "এখনও কোনো অনুবাদের ইতিহাস নেই",
-  "InputText": "ইনপুট টেক্সট",
-  "TranslatedText": "অনূদিত টেক্সট",
-  "Date": "তারিখ",
-  "ClearHistory": "ইতিহাস মুছে ফেলুন"
+    "StartNewTranslation": "নতুন অনুবাদ শুরু করুন",
+    "History": "ইতিহাস",
+    "NoHistory": "এখনও কোনো অনুবাদের ইতিহাস নেই",
+    "InputText": "ইনপুট টেক্সট",
+    "TranslatedText": "অনূদিত টেক্সট",
+    "Date": "তারিখ",
+    "ClearHistory": "ইতিহাস মুছে ফেলুন"
+  },
+  "TranslatedDocuments": {
+    "UploadNewDocument": "নতুন নথি আপলোড করুন",
+    "DocumentsList": "আপনার অনুবাদিত ফাইলগুলি",
+    "FileName": "ফাইলের নাম",
+    "LanguagePair": "ভাষা জুটি",
+    "WordCount": "শব্দ সংখ্যা",
+    "Date": "তারিখ",
+    "Actions": "কর্ম"
+  },
+  "AccountSettings": {
+    "ProfileSettings": "প্রোফাইল সেটিংস",
+    "AccountDetails": "অ্যাকাউন্টের বিবরণ",
+    "Name": "নাম",
+    "Email": "ইমেইল",
+    "ChangePassword": "পাসওয়ার্ড পরিবর্তন করুন",
+    "SaveChanges": "পরিবর্তনগুলি সংরক্ষণ করুন",
+    "DangerZone": "বিপজ্জনক এলাকা",
+    "DeleteAccount": "অ্যাকাউন্ট মুছে ফেলুন"
   }
 }

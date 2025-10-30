@@ -240,34 +240,52 @@
   "TopNav": {
     "Dashboard": "لوحة التحكم",
     "TranslationHistory": "سجل الترجمة",
-    "Settings": "الإعدادات",
-    "AccountSettings": "إعدادات الحساب"
+    "TranslatedDocuments": "الوثائق المترجمة",
+    "Settings": "الإعدادات"
   },
   "Sidebar": {
     "Dashboard": "لوحة التحكم",
     "TranslationHistory": "سجل الترجمة",
     "TranslatedDocuments": "الوثائق المترجمة",
     "Settings": "الإعدادات",
-    "AccountSettings": "إعدادات الحساب",
     "Logout": "تسجيل الخروج"
   },
   "Dashboard": {
-  "Welcome": "مرحبًا بعودتك، {name}!",
-  "TotalTranslations": "إجمالي الترجمات",
-  "MostUsedLanguage": "اللغة الأكثر استخدامًا",
-  "WordsThisWeek": "الكلمات المترجمة هذا الأسبوع",
-  "DocumentsCount": "الوثائق المحفوظة",
-  "RecentTranslations": "الترجمات الأخيرة",
-  "StartTranslation": "ابدأ ترجمة جديدة",
-  "UploadDocument": "تحميل مستند"
+    "Welcome": "مرحبًا بعودتك، {name}!",
+    "TotalTranslations": "إجمالي الترجمات",
+    "MostUsedLanguage": "اللغة الأكثر استخدامًا",
+    "WordsThisWeek": "الكلمات المترجمة هذا الأسبوع",
+    "DocumentsCount": "الوثائق المحفوظة",
+    "RecentTranslations": "الترجمات الأخيرة",
+    "StartTranslation": "ابدأ ترجمة جديدة",
+    "UploadDocument": "تحميل مستند"
   },
   "TranslationHistory": {
-  "StartNewTranslation": "ابدأ ترجمة جديدة",
-  "History": "السجل",
-  "NoHistory": "لا يوجد سجل للترجمة بعد",
-  "InputText": "النص المُدخل",
-  "TranslatedText": "النص المترجم",
-  "Date": "التاريخ",
-  "ClearHistory": "مسح السجل"
+    "StartNewTranslation": "ابدأ ترجمة جديدة",
+    "History": "السجل",
+    "NoHistory": "لا يوجد سجل للترجمة بعد",
+    "InputText": "النص المُدخل",
+    "TranslatedText": "النص المترجم",
+    "Date": "التاريخ",
+    "ClearHistory": "مسح السجل"
+  },
+  "TranslatedDocuments": {
+    "UploadNewDocument": "تحميل مستند جديد",
+    "DocumentsList": "الملفات المترجمة الخاصة بك",
+    "FileName": "اسم الملف",
+    "LanguagePair": "زوج اللغات",
+    "WordCount": "عدد الكلمات",
+    "Date": "التاريخ",
+    "Actions": "الإجراءات"
+  },
+  "AccountSettings": {
+    "ProfileSettings": "إعدادات الملف الشخصي",
+    "AccountDetails": "تفاصيل الحساب",
+    "Name": "الاسم",
+    "Email": "البريد الإلكتروني",
+    "ChangePassword": "تغيير كلمة المرور",
+    "SaveChanges": "حفظ التغييرات",
+    "DangerZone": "منطقة الخطر",
+    "DeleteAccount": "حذف الحساب"
   }
 }

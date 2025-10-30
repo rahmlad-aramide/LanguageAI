@@ -14,7 +14,6 @@ export default function ClientSidebar() {
   const t = useTranslations("Sidebar");
   const [sideBarOpen, setSideBarOpen] = useState(false);
 
-  // ✅ Support locale-aware paths if needed
   const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}\b/, "");
 
   const navLinks = [
@@ -30,7 +29,6 @@ export default function ClientSidebar() {
       icon: MdFileCopy,
     },
     { href: "/settings", label: t("Settings"), icon: IoSettingsOutline },
-    { href: "/account", label: t("AccountSettings"), icon: FaUser },
   ];
 
   const handleLogout = () => {
@@ -55,7 +53,7 @@ export default function ClientSidebar() {
         />
       )}
 
-      {/* ✅ Sidebar */}
+      {/* Sidebar */}
       <aside
         className={`fixed md:sticky top-0 left-0 h-screen overflow-y-auto w-[220px] md:w-[250px] bg-white border-r 
         text-gray-700 shadow-sm z-50 transform transition-transform duration-300 ease-in-out 

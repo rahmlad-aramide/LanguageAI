@@ -13,7 +13,6 @@ export default function ClientTopNav() {
     "/translation-history": t("TranslationHistory"),
     "/translated-documents": t("TranslatedDocuments"),
     "/settings": t("Settings"),
-    "/account": t("AccountSettings"),
   };
 
   const currentTitle =

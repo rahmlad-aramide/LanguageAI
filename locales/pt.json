@@ -240,34 +240,52 @@
   "TopNav": {
     "Dashboard": "Painel de Controle",
     "TranslationHistory": "Histórico de Tradução",
-    "Settings": "Configurações",
-    "AccountSettings": "Configurações da Conta"
+    "TranslatedDocuments": "Documentos traduzidos",
+    "Settings": "Configurações"
   },
   "Sidebar": {
     "Dashboard": "Painel de controle",
     "TranslationHistory": "Histórico de traduções",
     "TranslatedDocuments": "Documentos traduzidos",
     "Settings": "Configurações",
-    "AccountSettings": "Configurações da conta",
     "Logout": "Sair"
   },
   "Dashboard": {
-  "Welcome": "Bem-vindo de volta, {name}!",
-  "TotalTranslations": "Traduções totais",
-  "MostUsedLanguage": "Idioma mais usado",
-  "WordsThisWeek": "Palavras traduzidas esta semana",
-  "DocumentsCount": "Documentos salvos",
-  "RecentTranslations": "Traduções recentes",
-  "StartTranslation": "Iniciar nova tradução",
-  "UploadDocument": "Carregar documento"
+    "Welcome": "Bem-vindo de volta, {name}!",
+    "TotalTranslations": "Traduções totais",
+    "MostUsedLanguage": "Idioma mais usado",
+    "WordsThisWeek": "Palavras traduzidas esta semana",
+    "DocumentsCount": "Documentos salvos",
+    "RecentTranslations": "Traduções recentes",
+    "StartTranslation": "Iniciar nova tradução",
+    "UploadDocument": "Carregar documento"
   },
   "TranslationHistory": {
-  "StartNewTranslation": "Iniciar nova tradução",
-  "History": "Histórico",
-  "NoHistory": "Nenhum histórico de tradução ainda",
-  "InputText": "Texto de entrada",
-  "TranslatedText": "Texto traduzido",
-  "Date": "Data",
-  "ClearHistory": "Limpar histórico"
+    "StartNewTranslation": "Iniciar nova tradução",
+    "History": "Histórico",
+    "NoHistory": "Nenhum histórico de tradução ainda",
+    "InputText": "Texto de entrada",
+    "TranslatedText": "Texto traduzido",
+    "Date": "Data",
+    "ClearHistory": "Limpar histórico"
+  },
+  "TranslatedDocuments": {
+    "UploadNewDocument": "Carregar novo documento",
+    "DocumentsList": "Seus arquivos traduzidos",
+    "FileName": "Nome do arquivo",
+    "LanguagePair": "Par de idiomas",
+    "WordCount": "Contagem de palavras",
+    "Date": "Data",
+    "Actions": "Ações"
+  },
+  "AccountSettings": {
+    "ProfileSettings": "Configurações do perfil",
+    "AccountDetails": "Detalhes da conta",
+    "Name": "Nome",
+    "Email": "E-mail",
+    "ChangePassword": "Alterar senha",
+    "SaveChanges": "Salvar alterações",
+    "DangerZone": "Zona de perigo",
+    "DeleteAccount": "Excluir conta"
   }
 }

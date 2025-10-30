@@ -240,34 +240,52 @@
   "TopNav": {
     "Dashboard": "ダッシュボード",
     "TranslationHistory": "翻訳履歴",
-    "Settings": "設定",
-    "AccountSettings": "アカウント設定"
+    "TranslatedDocuments": "翻訳された文書",
+    "Settings": "設定"
   },
   "Sidebar": {
     "Dashboard": "ダッシュボード",
     "TranslationHistory": "翻訳履歴",
     "TranslatedDocuments": "翻訳された文書",
     "Settings": "設定",
-    "AccountSettings": "アカウント設定",
     "Logout": "ログアウト"
   },
   "Dashboard": {
-  "Welcome": "{name}さん、お帰りなさい！",
-  "TotalTranslations": "合計翻訳数",
-  "MostUsedLanguage": "最も使用された言語",
-  "WordsThisWeek": "今週翻訳された単語数",
-  "DocumentsCount": "保存されたドキュメント",
-  "RecentTranslations": "最近の翻訳",
-  "StartTranslation": "新しい翻訳を開始",
-  "UploadDocument": "ドキュメントをアップロード"
+    "Welcome": "{name}さん、お帰りなさい！",
+    "TotalTranslations": "合計翻訳数",
+    "MostUsedLanguage": "最も使用された言語",
+    "WordsThisWeek": "今週翻訳された単語数",
+    "DocumentsCount": "保存されたドキュメント",
+    "RecentTranslations": "最近の翻訳",
+    "StartTranslation": "新しい翻訳を開始",
+    "UploadDocument": "ドキュメントをアップロード"
   },
   "TranslationHistory": {
-  "StartNewTranslation": "新しい翻訳を始める",
-  "History": "履歴",
-  "NoHistory": "翻訳履歴はまだありません",
-  "InputText": "入力テキスト",
-  "TranslatedText": "翻訳されたテキスト",
+    "StartNewTranslation": "新しい翻訳を始める",
+    "History": "履歴",
+    "NoHistory": "翻訳履歴はまだありません",
+    "InputText": "入力テキスト",
+    "TranslatedText": "翻訳されたテキスト",
+    "Date": "日付",
+    "ClearHistory": "履歴を消去"
+  },
+  "TranslatedDocuments": {
+  "UploadNewDocument": "新しいドキュメントをアップロード",
+  "DocumentsList": "翻訳済みファイル一覧",
+  "FileName": "ファイル名",
+  "LanguagePair": "言語ペア",
+  "WordCount": "単語数",
   "Date": "日付",
-  "ClearHistory": "履歴を消去"
+  "Actions": "操作"
+  },
+  "AccountSettings": {
+  "ProfileSettings": "プロフィール設定",
+  "AccountDetails": "アカウント詳細",
+  "Name": "名前",
+  "Email": "メール",
+  "ChangePassword": "パスワードを変更",
+  "SaveChanges": "変更を保存",
+  "DangerZone": "危険ゾーン",
+  "DeleteAccount": "アカウントを削除"
   }
 }

@@ -240,26 +240,25 @@
   "TopNav": {
     "Dashboard": "Panel de control",
     "TranslationHistory": "Historial de traducción",
-    "Settings": "Configuración",
-    "AccountSettings": "Configuración de la cuenta"
+    "TranslatedDocuments": "Documentos traducidos",
+    "Settings": "Configuración"
   },
   "Sidebar": {
     "Dashboard": "Panel de control",
     "TranslationHistory": "Historial de traducciones",
     "TranslatedDocuments": "Documentos traducidos",
     "Settings": "Configuración",
-    "AccountSettings": "Configuración de la cuenta",
     "Logout": "Cerrar sesión"
   },
   "Dashboard": {
-  "Welcome": "¡Bienvenido de nuevo, {name}!",
-  "TotalTranslations": "Traducciones totales",
-  "MostUsedLanguage": "Idioma más utilizado",
-  "WordsThisWeek": "Palabras traducidas esta semana",
-  "DocumentsCount": "Documentos guardados",
-  "RecentTranslations": "Traducciones recientes",
-  "StartTranslation": "Iniciar nueva traducción",
-  "UploadDocument": "Subir documento"
+    "Welcome": "¡Bienvenido de nuevo, {name}!",
+    "TotalTranslations": "Traducciones totales",
+    "MostUsedLanguage": "Idioma más utilizado",
+    "WordsThisWeek": "Palabras traducidas esta semana",
+    "DocumentsCount": "Documentos guardados",
+    "RecentTranslations": "Traducciones recientes",
+    "StartTranslation": "Iniciar nueva traducción",
+    "UploadDocument": "Subir documento"
   },
   "TranslationHistory": {
     "StartNewTranslation": "Iniciar una nueva traducción",
@@ -269,5 +268,24 @@
     "TranslatedText": "Texto traducido",
     "Date": "Fecha",
     "ClearHistory": "Borrar historial"
+  },
+  "TranslatedDocuments": {
+    "UploadNewDocument": "Subir nuevo documento",
+    "DocumentsList": "Tus archivos traducidos",
+    "FileName": "Nombre del archivo",
+    "LanguagePair": "Par de idiomas",
+    "WordCount": "Recuento de palabras",
+    "Date": "Fecha",
+    "Actions": "Acciones"
+  },
+  "AccountSettings": {
+    "ProfileSettings": "Configuración del perfil",
+    "AccountDetails": "Detalles de la cuenta",
+    "Name": "Nombre",
+    "Email": "Correo electrónico",
+    "ChangePassword": "Cambiar contraseña",
+    "SaveChanges": "Guardar cambios",
+    "DangerZone": "Zona de peligro",
+    "DeleteAccount": "Eliminar cuenta"
   }
 }

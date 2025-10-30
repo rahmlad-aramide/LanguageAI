@@ -240,34 +240,52 @@
   "TopNav": {
     "Dashboard": "仪表板",
     "TranslationHistory": "翻译历史",
-    "Settings": "设置",
-    "AccountSettings": "账户设置"
+    "TranslatedDocuments": "翻译文件",
+    "Settings": "设置"
   },
   "Sidebar": {
     "Dashboard": "仪表板",
     "TranslationHistory": "翻译历史",
     "TranslatedDocuments": "翻译文件",
     "Settings": "设置",
-    "AccountSettings": "账户设置",
     "Logout": "登出"
   },
   "Dashboard": {
-  "Welcome": "欢迎回来，{name}！",
-  "TotalTranslations": "总翻译数",
-  "MostUsedLanguage": "最常用语言",
-  "WordsThisWeek": "本周翻译的词数",
-  "DocumentsCount": "已保存的文档",
-  "RecentTranslations": "最近的翻译",
-  "StartTranslation": "开始新的翻译",
-  "UploadDocument": "上传文档"
+    "Welcome": "欢迎回来，{name}！",
+    "TotalTranslations": "总翻译数",
+    "MostUsedLanguage": "最常用语言",
+    "WordsThisWeek": "本周翻译的词数",
+    "DocumentsCount": "已保存的文档",
+    "RecentTranslations": "最近的翻译",
+    "StartTranslation": "开始新的翻译",
+    "UploadDocument": "上传文档"
   },
   "TranslationHistory": {
-  "StartNewTranslation": "开始新的翻译",
-  "History": "历史记录",
-  "NoHistory": "暂无翻译记录",
-  "InputText": "输入文本",
-  "TranslatedText": "翻译文本",
+    "StartNewTranslation": "开始新的翻译",
+    "History": "历史记录",
+    "NoHistory": "暂无翻译记录",
+    "InputText": "输入文本",
+    "TranslatedText": "翻译文本",
+    "Date": "日期",
+    "ClearHistory": "清除历史记录"
+  },
+  "TranslatedDocuments": {
+  "UploadNewDocument": "上传新文档",
+  "DocumentsList": "已翻译文件",
+  "FileName": "文件名",
+  "LanguagePair": "语言对",
+  "WordCount": "字数",
   "Date": "日期",
-  "ClearHistory": "清除历史记录"
+  "Actions": "操作"
+  },
+  "AccountSettings": {
+  "ProfileSettings": "个人资料设置",
+  "AccountDetails": "账户详情",
+  "Name": "姓名",
+  "Email": "电子邮件",
+  "ChangePassword": "更改密码",
+  "SaveChanges": "保存更改",
+  "DangerZone": "危险区域",
+  "DeleteAccount": "删除账户"
   }
 }

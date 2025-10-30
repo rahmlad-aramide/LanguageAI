@@ -240,26 +240,25 @@
   "TopNav": {
     "Dashboard": "Dashboard",
     "TranslationHistory": "Übersetzungsverlauf",
-     "TranslatedDocuments": "Übersetzte Dokumente",
-    "Settings": "Einstellungen",
-    "AccountSettings": "Kontoeinstellungen"
+    "TranslatedDocuments": "Übersetzte Dokumente",
+    "Settings": "Einstellungen"
   },
   "Sidebar": {
     "Dashboard": "Übersicht",
     "TranslationHistory": "Übersetzungshistorie",
+    "TranslatedDocuments": "Übersetzte Dokumente",
     "Settings": "Einstellungen",
-    "AccountSettings": "Kontoeinstellungen",
     "Logout": "Abmelden"
   },
   "Dashboard": {
-  "Welcome": "Willkommen zurück, {name}!",
-  "TotalTranslations": "Gesamtübersetzungen",
-  "MostUsedLanguage": "Meistgenutzte Sprache",
-  "WordsThisWeek": "Diese Woche übersetzte Wörter",
-  "DocumentsCount": "Gespeicherte Dokumente",
-  "RecentTranslations": "Letzte Übersetzungen",
-  "StartTranslation": "Neue Übersetzung starten",
-  "UploadDocument": "Dokument hochladen"
+    "Welcome": "Willkommen zurück, {name}!",
+    "TotalTranslations": "Gesamtübersetzungen",
+    "MostUsedLanguage": "Meistgenutzte Sprache",
+    "WordsThisWeek": "Diese Woche übersetzte Wörter",
+    "DocumentsCount": "Gespeicherte Dokumente",
+    "RecentTranslations": "Letzte Übersetzungen",
+    "StartTranslation": "Neue Übersetzung starten",
+    "UploadDocument": "Dokument hochladen"
   },
   "TranslationHistory": {
     "StartNewTranslation": "Neue Übersetzung starten",
@@ -269,5 +268,24 @@
     "TranslatedText": "Übersetzter Text",
     "Date": "Datum",
     "ClearHistory": "Verlauf löschen"
+  },
+  "TranslatedDocuments": {
+    "UploadNewDocument": "Neues Dokument hochladen",
+    "DocumentsList": "Ihre übersetzten Dateien",
+    "FileName": "Dateiname",
+    "LanguagePair": "Sprachenpaar",
+    "WordCount": "Wortanzahl",
+    "Date": "Datum",
+    "Actions": "Aktionen"
+  },
+  "AccountSettings": {
+    "ProfileSettings": "Profileinstellungen",
+    "AccountDetails": "Kontodetails",
+    "Name": "Name",
+    "Email": "E-Mail",
+    "ChangePassword": "Passwort ändern",
+    "SaveChanges": "Änderungen speichern",
+    "DangerZone": "Gefahrenzone",
+    "DeleteAccount": "Konto löschen"
   }
 }
