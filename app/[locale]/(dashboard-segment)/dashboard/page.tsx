@@ -18,9 +18,7 @@ export default function Dashboard() {
     mostUsedLanguage: "English → French",
   });
 
-  useEffect(() => {
-    // Later you can fetch actual data from your backend here
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className="flex flex-col gap-8 p-6 md:p-10 w-full">
@@ -118,23 +116,26 @@ export default function Dashboard() {
 
           {[
             {
+              id: 1,
               text: "Hello world",
               lang: "English → French",
               date: "2025-10-10",
             },
             {
+              id: 2,
               text: "Good morning",
               lang: "English → Spanish",
               date: "2025-10-09",
             },
             {
+              id: 3,
               text: "Translate this text",
               lang: "English → German",
               date: "2025-10-08",
             },
-          ].map((item, i) => (
+          ].map((item) => (
             <div
-              key={i}
+              key={item.id}
               className="p-4 flex justify-between text-sm border-b last:border-none hover:bg-gray-50 transition"
             >
               <span className="truncate w-[40%]">{item.text}</span>

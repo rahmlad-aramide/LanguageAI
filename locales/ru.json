@@ -240,15 +240,14 @@
   "TopNav": {
     "Dashboard": "Панель управления",
     "TranslationHistory": "История переводов",
-    "Settings": "Настройки",
-    "AccountSettings": "Настройки аккаунта"
+    "TranslatedDocuments": "Переведённые документы",
+    "Settings": "Настройки"
   },
   "Sidebar": {
     "Dashboard": "Панель управления",
     "TranslationHistory": "История переводов",
     "TranslatedDocuments": "Переведённые документы",
     "Settings": "Настройки",
-    "AccountSettings": "Настройки аккаунта",
     "Logout": "Выйти"
   },
   "Dashboard": {
@@ -262,12 +261,34 @@
     "UploadDocument": "Загрузить документ"
   },
   "TranslationHistory": {
-  "StartNewTranslation": "Начать новый перевод",
-  "History": "История",
-  "NoHistory": "История переводов пуста",
-  "InputText": "Исходный текст",
-  "TranslatedText": "Переведённый текст",
-  "Date": "Дата",
-  "ClearHistory": "Очистить историю"
+    "StartNewTranslation": "Начать новый перевод",
+    "History": "История",
+    "NoHistory": "История переводов пуста",
+    "InputText": "Исходный текст",
+    "TranslatedText": "Переведённый текст",
+    "Date": "Дата",
+    "ClearHistory": "Очистить историю"
+  },
+  "TranslatedDocuments": {
+    "UploadNewDocument": "Загрузить новый документ",
+    "DocumentsList": "Ваши переведённые файлы",
+    "FileName": "Имя файла",
+    "LanguagePair": "Пара языков",
+    "WordCount": "Количество слов",
+    "Date": "Дата",
+    "Actions": "Действия"
+  },
+  "AccountSettings": {
+    "ProfileSettings": "Настройки профиля",
+    "AccountDetails": "Данные аккаунта",
+    "Name": "Имя",
+    "Email": "Электронная почта",
+    "ChangePassword": "Изменить пароль",
+    "SaveChanges": "Сохранить изменения",
+    "DangerZone": "Опасная зона",
+    "DeleteAccount": "Удалить аккаунт",
+    "EnterYourName": "Введите ваше имя",
+    "EnterYourEmail": "Введите ваш адрес электронной почты",
+    "Saving": "Сохранение"
   }
 }

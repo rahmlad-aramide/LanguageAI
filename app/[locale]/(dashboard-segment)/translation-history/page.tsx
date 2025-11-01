@@ -24,7 +24,7 @@ export default function TranslationHistory() {
     {
       id: 3,
       input: "How are you?",
-      output: "Wie geht’s dir?",
+      output: "Wie geht's dir?",
       date: "2025-10-10",
     },
   ];

@@ -240,34 +240,55 @@
   "TopNav": {
     "Dashboard": "Tableau de bord",
     "TranslationHistory": "Historique de traduction",
-    "Settings": "Paramètres",
-    "AccountSettings": "Paramètres du compte"
+    "TranslatedDocuments": "Documents traduits",
+    "Settings": "Paramètres"
   },
   "Sidebar": {
     "Dashboard": "Tableau de bord",
     "TranslationHistory": "Historique des traductions",
     "TranslatedDocuments": "Documents traduits",
     "Settings": "Paramètres",
-    "AccountSettings": "Paramètres du compte",
     "Logout": "Se déconnecter"
   },
   "Dashboard": {
-  "Welcome": "Bon retour, {name} !",
-  "TotalTranslations": "Traductions totales",
-  "MostUsedLanguage": "Langue la plus utilisée",
-  "WordsThisWeek": "Mots traduits cette semaine",
-  "DocumentsCount": "Documents enregistrés",
-  "RecentTranslations": "Traductions récentes",
-  "StartTranslation": "Commencer une nouvelle traduction",
-  "UploadDocument": "Téléverser un document"
+    "Welcome": "Bon retour, {name} !",
+    "TotalTranslations": "Traductions totales",
+    "MostUsedLanguage": "Langue la plus utilisée",
+    "WordsThisWeek": "Mots traduits cette semaine",
+    "DocumentsCount": "Documents enregistrés",
+    "RecentTranslations": "Traductions récentes",
+    "StartTranslation": "Commencer une nouvelle traduction",
+    "UploadDocument": "Téléverser un document"
   },
   "TranslationHistory": {
-  "StartNewTranslation": "Commencer une nouvelle traduction",
-  "History": "Historique",
-  "NoHistory": "Aucun historique de traduction pour le moment",
-  "InputText": "Texte d'entrée",
-  "TranslatedText": "Texte traduit",
-  "Date": "Date",
-  "ClearHistory": "Effacer l'historique"
+    "StartNewTranslation": "Commencer une nouvelle traduction",
+    "History": "Historique",
+    "NoHistory": "Aucun historique de traduction pour le moment",
+    "InputText": "Texte d'entrée",
+    "TranslatedText": "Texte traduit",
+    "Date": "Date",
+    "ClearHistory": "Effacer l'historique"
+  },
+  "TranslatedDocuments": {
+    "UploadNewDocument": "Téléverser un nouveau document",
+    "DocumentsList": "Vos fichiers traduits",
+    "FileName": "Nom du fichier",
+    "LanguagePair": "Paire de langues",
+    "WordCount": "Nombre de mots",
+    "Date": "Date",
+    "Actions": "Actions"
+  },
+  "AccountSettings": {
+    "ProfileSettings": "Paramètres du profil",
+    "AccountDetails": "Détails du compte",
+    "Name": "Nom",
+    "Email": "E-mail",
+    "ChangePassword": "Changer le mot de passe",
+    "SaveChanges": "Enregistrer les modifications",
+    "DangerZone": "Zone de danger",
+    "DeleteAccount": "Supprimer le compte",
+    "EnterYourName": "Entrez votre nom",
+    "EnterYourEmail": "Entrez votre e-mail",
+    "Saving": "Enregistrement"
   }
 }
