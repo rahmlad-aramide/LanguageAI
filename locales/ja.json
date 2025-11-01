@@ -236,5 +236,38 @@
       "confirmPasswordMin": "パスワードは8文字以上である必要があります",
       "refinePassword": "パスワードが一致しません"
     }
+  },
+  "TopNav": {
+    "Dashboard": "ダッシュボード",
+    "TranslationHistory": "翻訳履歴",
+    "Settings": "設定",
+    "AccountSettings": "アカウント設定"
+  },
+  "Sidebar": {
+    "Dashboard": "ダッシュボード",
+    "TranslationHistory": "翻訳履歴",
+    "TranslatedDocuments": "翻訳された文書",
+    "Settings": "設定",
+    "AccountSettings": "アカウント設定",
+    "Logout": "ログアウト"
+  },
+  "Dashboard": {
+  "Welcome": "{name}さん、お帰りなさい！",
+  "TotalTranslations": "合計翻訳数",
+  "MostUsedLanguage": "最も使用された言語",
+  "WordsThisWeek": "今週翻訳された単語数",
+  "DocumentsCount": "保存されたドキュメント",
+  "RecentTranslations": "最近の翻訳",
+  "StartTranslation": "新しい翻訳を開始",
+  "UploadDocument": "ドキュメントをアップロード"
+  },
+  "TranslationHistory": {
+  "StartNewTranslation": "新しい翻訳を始める",
+  "History": "履歴",
+  "NoHistory": "翻訳履歴はまだありません",
+  "InputText": "入力テキスト",
+  "TranslatedText": "翻訳されたテキスト",
+  "Date": "日付",
+  "ClearHistory": "履歴を消去"
   }
 }

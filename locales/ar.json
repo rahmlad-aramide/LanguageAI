@@ -236,5 +236,38 @@
       "confirmPasswordMin": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
       "refinePassword": "كلمتا المرور غير متطابقتين"
     }
+  },
+  "TopNav": {
+    "Dashboard": "لوحة التحكم",
+    "TranslationHistory": "سجل الترجمة",
+    "Settings": "الإعدادات",
+    "AccountSettings": "إعدادات الحساب"
+  },
+  "Sidebar": {
+    "Dashboard": "لوحة التحكم",
+    "TranslationHistory": "سجل الترجمة",
+    "TranslatedDocuments": "الوثائق المترجمة",
+    "Settings": "الإعدادات",
+    "AccountSettings": "إعدادات الحساب",
+    "Logout": "تسجيل الخروج"
+  },
+  "Dashboard": {
+  "Welcome": "مرحبًا بعودتك، {name}!",
+  "TotalTranslations": "إجمالي الترجمات",
+  "MostUsedLanguage": "اللغة الأكثر استخدامًا",
+  "WordsThisWeek": "الكلمات المترجمة هذا الأسبوع",
+  "DocumentsCount": "الوثائق المحفوظة",
+  "RecentTranslations": "الترجمات الأخيرة",
+  "StartTranslation": "ابدأ ترجمة جديدة",
+  "UploadDocument": "تحميل مستند"
+  },
+  "TranslationHistory": {
+  "StartNewTranslation": "ابدأ ترجمة جديدة",
+  "History": "السجل",
+  "NoHistory": "لا يوجد سجل للترجمة بعد",
+  "InputText": "النص المُدخل",
+  "TranslatedText": "النص المترجم",
+  "Date": "التاريخ",
+  "ClearHistory": "مسح السجل"
   }
 }

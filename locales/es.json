@@ -236,5 +236,38 @@
       "confirmPasswordMin": "La contraseña debe tener al menos 8 caracteres",
       "refinePassword": "Las contraseñas no coinciden"
     }
+  },
+  "TopNav": {
+    "Dashboard": "Panel de control",
+    "TranslationHistory": "Historial de traducción",
+    "Settings": "Configuración",
+    "AccountSettings": "Configuración de la cuenta"
+  },
+  "Sidebar": {
+    "Dashboard": "Panel de control",
+    "TranslationHistory": "Historial de traducciones",
+    "TranslatedDocuments": "Documentos traducidos",
+    "Settings": "Configuración",
+    "AccountSettings": "Configuración de la cuenta",
+    "Logout": "Cerrar sesión"
+  },
+  "Dashboard": {
+  "Welcome": "¡Bienvenido de nuevo, {name}!",
+  "TotalTranslations": "Traducciones totales",
+  "MostUsedLanguage": "Idioma más utilizado",
+  "WordsThisWeek": "Palabras traducidas esta semana",
+  "DocumentsCount": "Documentos guardados",
+  "RecentTranslations": "Traducciones recientes",
+  "StartTranslation": "Iniciar nueva traducción",
+  "UploadDocument": "Subir documento"
+  },
+  "TranslationHistory": {
+    "StartNewTranslation": "Iniciar una nueva traducción",
+    "History": "Historial",
+    "NoHistory": "Aún no hay historial de traducciones",
+    "InputText": "Texto de entrada",
+    "TranslatedText": "Texto traducido",
+    "Date": "Fecha",
+    "ClearHistory": "Borrar historial"
   }
 }

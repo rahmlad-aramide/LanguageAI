@@ -236,5 +236,38 @@
       "confirmPasswordMin": "Password must be at least 8 characters",
       "refinePassword": "Passwords do not match"
     }
+  },
+  "TopNav": {
+    "Dashboard": "Dashboard",
+    "TranslationHistory": "Translation History",
+    "Settings": "Settings",
+    "AccountSettings": "Account Settings"
+  },
+  "Sidebar": {
+    "Dashboard": "Dashboard",
+    "TranslationHistory": "Translation History",
+    "TranslatedDocuments": "Translated Documents",
+    "Settings": "Settings",
+    "AccountSettings": "Account Settings",
+    "Logout": "Logout"
+  },
+  "Dashboard": {
+    "Welcome": "Welcome back, {name}!",
+    "TotalTranslations": "Total Translations",
+    "MostUsedLanguage": "Most Used Language",
+    "WordsThisWeek": "Words Translated This Week",
+    "DocumentsCount": "Saved Documents",
+    "RecentTranslations": "Recent Translations",
+    "StartTranslation": "Start New Translation",
+    "UploadDocument": "Upload Document"
+  },
+  "TranslationHistory": {
+  "StartNewTranslation": "Start a New Translation",
+  "History": "History",
+  "NoHistory": "No translation history yet",
+  "InputText": "Input Text",
+  "TranslatedText": "Translated Text",
+  "Date": "Date",
+  "ClearHistory": "Clear History"
   }
 }
