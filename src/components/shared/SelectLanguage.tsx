@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Button } from "..";
-import { documentLanguagesData, textLanguagesData } from "@/app/[locale]/data";
+import { documentLanguagesData, textLanguagesData } from "@/app/data";
 import { selectedLanguageOption } from "./helper";
 
 interface SelectLanguageProps {

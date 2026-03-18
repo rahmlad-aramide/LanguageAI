@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { LuLayoutDashboard } from "react-icons/lu";
-import { MdTranslate, MdFileCopy } from "react-icons/md";
+import { MdTranslate, MdFileCopy, MdChat, MdImage, MdSchool } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaSignOutAlt } from "react-icons/fa";
 
@@ -28,11 +28,16 @@ export default function ClientSidebar() {
       label: t("TranslatedDocuments"),
       icon: MdFileCopy,
     },
+    { href: "/image-translation", label: "Image Translation", icon: MdImage },
+    { href: "/learning", label: "Learning", icon: MdSchool },
+    { href: "/chat", label: "Live Chat", icon: MdChat },
     { href: "/settings", label: t("Settings"), icon: IoSettingsOutline },
   ];
 
   const handleLogout = () => {
-    console.log("User logged out");
+    document.cookie = "session_token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    localStorage.clear();
+    window.location.href = "/login";
   };
 
   return (

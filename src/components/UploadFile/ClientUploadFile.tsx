@@ -17,7 +17,7 @@ import { Arrows } from "../../assets/svg";
 import { selectedLanguageOption } from "../shared/helper";
 import axios from "axios";
 import generateUniqueId from "generate-unique-id";
-import { generateAcceptObject } from "@/app/[locale]/utils/helper";
+import { generateAcceptObject } from "@/app/utils/helper";
 
 export function formatFileSize(fileSizeBytes: number) {
   // Define size units and their respective suffixes
@@ -155,11 +155,11 @@ export const ClientUploadFile: React.FC<{
     };
 
     const formData = new FormData();
-    formData.append("document", uploadedFile[0], uploadedFile[0].name);
+    formData.append("file", uploadedFile[0], uploadedFile[0].name);
+    formData.append("from", sourceLang);
+    formData.append("to", targetLang);
     try {
-      const response = await axios.post(url, formData, {
-        headers,
-        params,
+      const response = await axios.post("/api/translate-document", formData, {
         responseType: "blob",
       });
 

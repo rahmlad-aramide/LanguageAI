@@ -17,6 +17,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Eye, EyeOff } from "lucide-react";
+import { useRouter, useParams } from "next/navigation";
+import { useNotification } from "@/src/contexts";
 import {
   Select,
   SelectContent,
@@ -77,6 +79,10 @@ export default function SignupForm({
 }: SignupProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
+  const { notify } = useNotification();
 
   const signupSchema = useMemo(
     () =>
@@ -115,8 +121,24 @@ export default function SignupForm({
     },
   });
 
-  function onSubmit(values: SignupSchema) {
-    console.log("Form submitted:", values);
+  async function onSubmit(values: SignupSchema) {
+    try {
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        notify("Registration successful! Please login.", "success");
+        router.push(`/${locale}/login`);
+      } else {
+        notify(data.error || "Registration failed", "error");
+      }
+    } catch (error) {
+      console.error("Registration Error:", error);
+      notify("An error occurred during registration", "error");
+    }
   }
 
   return (
@@ -293,7 +315,7 @@ export default function SignupForm({
               <div className="flex flex-row items-center justify-center gap-2 text-base mt-5">
                 <p>
                   {signinText}
-                  <Link href="/login">
+                  <Link href={`/${locale}/login`}>
                     <span className="text-primary"> {signinLink}</span>
                   </Link>
                 </p>

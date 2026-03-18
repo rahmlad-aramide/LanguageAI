@@ -72,6 +72,15 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: any) {
+      addUtilities({
+        '.perspective-1000': {
+          perspective: '1000px',
+        },
+      });
+    },
+  ],
 };
 export default config;

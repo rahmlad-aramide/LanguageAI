@@ -1,5 +1,5 @@
 "use client";
-import { navLanguagesData } from "@/app/[locale]/data";
+import { navLanguagesData } from "@/app/data";
 import { usePathname, useRouter, type Locale } from "@/i18n.config";
 import Image from "next/image";
 import { selectedNavLanguageOption } from "./shared/helper";

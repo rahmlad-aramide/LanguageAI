@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
-import { roboto } from "@/app/[locale]/fonts";
-import { stepsData } from "@/app/[locale]/data";
+import { roboto } from "@/app/fonts";
+import { stepsData } from "@/app/data";
 import { StepProps } from "@/types";
 import { Locale } from "@/i18n.config";
 import Link from "next/link";

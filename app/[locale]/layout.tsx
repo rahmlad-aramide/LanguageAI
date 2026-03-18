@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import "../globals.css";
-import { monaSans } from "@/app/[locale]/fonts";
+import { monaSans } from "@/app/fonts";
 import { NextIntlClientProvider } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { Locale, locales } from "@/i18n.config";

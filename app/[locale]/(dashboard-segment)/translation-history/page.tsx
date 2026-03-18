@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
@@ -9,25 +9,33 @@ import { FaClock, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Translation } from "@/src/components";
 import { ModalProvider, NotificationProvider } from "@/src/contexts";
 
+interface TranslationItem {
+  id: string;
+  inputText: string;
+  sourceLanguage: string;
+  targetLanguage: string;
+  createdAt: string;
+}
+
 export default function TranslationHistory() {
   const t = useTranslations("TranslationHistory");
   const [showHistory, setShowHistory] = useState(true);
+  const [historyItems, setHistoryItems] = useState<TranslationItem[]>([]);
 
-  const historyItems = [
-    {
-      id: 1,
-      input: "Hello world",
-      output: "Bonjour le monde",
-      date: "2025-10-12",
-    },
-    { id: 2, input: "Good morning", output: "Buenos días", date: "2025-10-11" },
-    {
-      id: 3,
-      input: "How are you?",
-      output: "Wie geht's dir?",
-      date: "2025-10-10",
-    },
-  ];
+  useEffect(() => {
+    const fetchHistory = async () => {
+      try {
+        const response = await fetch("/api/user/stats");
+        const data = await response.json();
+        if (response.ok) {
+          setHistoryItems(data.recentTranslations);
+        }
+      } catch (error) {
+        console.error("Failed to fetch history", error);
+      }
+    };
+    fetchHistory();
+  }, []);
 
   return (
     <NotificationProvider>
@@ -80,10 +88,13 @@ export default function TranslationHistory() {
                 key={item.id}
                 className="p-3 border-b hover:bg-gray-50 rounded-lg mb-2 cursor-pointer"
               >
-                <p className="text-sm text-gray-700 truncate">{item.input}</p>
-                <p className="text-xs text-gray-500">{item.date}</p>
+                <p className="text-sm text-gray-700 truncate">{item.inputText}</p>
+                <p className="text-xs text-gray-500">{new Date(item.createdAt).toLocaleDateString()}</p>
               </div>
             ))}
+            {historyItems.length === 0 && (
+                <p className="text-sm text-gray-400 text-center py-4">No history yet.</p>
+            )}
           </motion.aside>
 
           {/* Toggle Button (if collapsed) */}

@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+}
+
+model User {
+  id                String         @id @default(auto()) @map("_id") @db.ObjectId
+  email             String         @unique
+  password          String
+  fullName          String?
+  preferredLanguage String         @default("en")
+  createdAt         DateTime       @default(now())
+  translations      Translation[]
+  flashcards        Flashcard[]
+  corrections       Correction[]
+  chatMessages      ChatMessage[]
+  sessions          Session[]
+}
+
+model Session {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  sessionToken String   @unique
+  userId       String   @db.ObjectId
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expires      DateTime
+  createdAt    DateTime @default(now())
+}
+
+model Translation {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId         String   @db.ObjectId
+  user           User     @relation(fields: [userId], references: [id])
+  inputText      String
+  outputText     String
+  sourceLanguage String
+  targetLanguage String
+  type           String   @default("text") // "text" or "document"
+  createdAt      DateTime @default(now())
+}
+
+model Flashcard {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id])
+  front     String
+  back      String
+  createdAt DateTime @default(now())
+}
+
+model Correction {
+  id                   String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId               String   @db.ObjectId
+  user                 User     @relation(fields: [userId], references: [id])
+  originalTranslation  String
+  suggestedTranslation String
+  createdAt            DateTime @default(now())
+}
+
+model ChatMessage {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId         String   @db.ObjectId
+  user           User     @relation(fields: [userId], references: [id])
+  message        String
+  translatedText String
+  isUser         Boolean  @default(true)
+  createdAt      DateTime @default(now())
+}

@@ -24,6 +24,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
+import { useRouter, useParams } from "next/navigation";
+import { useNotification } from "@/src/contexts";
 
 type LoginProps = {
   headingText: string;
@@ -58,6 +60,10 @@ export default function LoginForm({
   validationMessages,
 }: LoginProps) {
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
+  const { notify } = useNotification();
 
   const loginSchema = useMemo(
     () =>
@@ -77,8 +83,27 @@ export default function LoginForm({
     defaultValues: { email: "", password: "", remember: false },
   });
 
-  const onSubmit = (values: LoginSchema) => {
-    console.log(values);
+  const onSubmit = async (values: LoginSchema) => {
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        localStorage.setItem("user_id", data.user.id);
+        localStorage.setItem("user_email", data.user.email);
+        localStorage.setItem("user_name", data.user.fullName || "User");
+        notify("Login successful!", "success");
+        router.push(`/${locale}/dashboard`);
+      } else {
+        notify(data.error || "Login failed", "error");
+      }
+    } catch (error) {
+      console.error("Login Error:", error);
+      notify("An error occurred during login", "error");
+    }
   };
 
   return (
@@ -138,6 +163,7 @@ export default function LoginForm({
                             className="rounded-[10px] w-full py-6"
                           />
                           <button
+                            type="button"
                             className="absolute right-3 rtl:left-3 rtl:right-auto top-1/2 -translate-y-1/2 cursor-pointer"
                             onClick={() => setShowPassword(!showPassword)}
                           >
@@ -175,7 +201,7 @@ export default function LoginForm({
                     )}
                   />
                   <Link
-                    href="/forgot-password"
+                    href={`/${locale}/forgot-password`}
                     className="text-sm md:text-base text-primary hover:underline"
                   >
                     {forgotPasswordLink}
@@ -193,7 +219,7 @@ export default function LoginForm({
 
             <div className="flex flex-row items-center justify-center gap-2 text-base mt-8">
               <p>{registerText}</p>
-              <Link href="/register">
+              <Link href={`/${locale}/register`}>
                 <span className="text-primary">{registerLink}</span>
               </Link>
             </div>
