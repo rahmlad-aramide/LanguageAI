@@ -115,8 +115,22 @@ export default function SignupForm({
     },
   });
 
-  function onSubmit(values: SignupSchema) {
-    console.log("Form submitted:", values);
+  async function onSubmit(values: SignupSchema) {
+    try {
+      const response = await fetch("/en/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        window.location.href = "/en/login";
+      } else {
+        alert(data.error || "Registration failed");
+      }
+    } catch (error) {
+      console.error("Registration Error:", error);
+    }
   }
 
   return (

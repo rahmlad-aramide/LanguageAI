@@ -11,14 +11,38 @@ import Link from "next/link";
 
 export default function Dashboard() {
   const t = useTranslations("Dashboard");
+  const [userName, setUserName] = useState("User");
   const [stats, setStats] = useState({
-    totalTranslations: 128,
-    wordsThisWeek: 4200,
-    documentsCount: 23,
-    mostUsedLanguage: "English → French",
+    totalTranslations: 0,
+    wordsThisWeek: 0,
+    documentsCount: 0,
+    mostUsedLanguage: "N/A",
   });
+  const [recentTranslations, setRecentTranslations] = useState<any[]>([]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const storedName = localStorage.getItem("user_name");
+    if (storedName) setUserName(storedName);
+
+    const fetchStats = async () => {
+      try {
+        const response = await fetch("/en/api/user/stats");
+        const data = await response.json();
+        if (response.ok) {
+          setStats({
+            totalTranslations: data.totalTranslations,
+            wordsThisWeek: data.wordsThisWeek,
+            documentsCount: data.documentsCount,
+            mostUsedLanguage: data.mostUsedLanguage,
+          });
+          setRecentTranslations(data.recentTranslations);
+        }
+      } catch (error) {
+        console.error("Failed to fetch dashboard stats", error);
+      }
+    };
+    fetchStats();
+  }, []);
 
   return (
     <div className="flex flex-col gap-8 p-6 md:p-10 w-full">
@@ -29,7 +53,7 @@ export default function Dashboard() {
         className="flex flex-col md:flex-row justify-between items-start md:items-center"
       >
         <h1 className="text-2xl md:text-3xl font-semibold text-gray-900">
-          {t("Welcome", { name: "Olamide" })}
+          {t("Welcome", { name: userName })}
         </h1>
         <div className="flex gap-3 mt-4 md:mt-0">
           <Link href="/translation-history">
@@ -114,35 +138,19 @@ export default function Dashboard() {
             <span>Date</span>
           </div>
 
-          {[
-            {
-              id: 1,
-              text: "Hello world",
-              lang: "English → French",
-              date: "2025-10-10",
-            },
-            {
-              id: 2,
-              text: "Good morning",
-              lang: "English → Spanish",
-              date: "2025-10-09",
-            },
-            {
-              id: 3,
-              text: "Translate this text",
-              lang: "English → German",
-              date: "2025-10-08",
-            },
-          ].map((item) => (
+          {recentTranslations.map((item) => (
             <div
               key={item.id}
               className="p-4 flex justify-between text-sm border-b last:border-none hover:bg-gray-50 transition"
             >
-              <span className="truncate w-[40%]">{item.text}</span>
-              <span>{item.lang}</span>
-              <span className="text-gray-500">{item.date}</span>
+              <span className="truncate w-[40%]">{item.inputText}</span>
+              <span>{item.sourceLanguage} → {item.targetLanguage}</span>
+              <span className="text-gray-500">{new Date(item.createdAt).toLocaleDateString()}</span>
             </div>
           ))}
+          {recentTranslations.length === 0 && (
+            <div className="p-8 text-center text-gray-400">No recent translations found.</div>
+          )}
         </div>
       </motion.div>
     </div>

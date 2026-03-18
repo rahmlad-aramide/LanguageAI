@@ -1,13 +1,31 @@
 import { NextApiResponse } from "next";
-import { translateText } from "@/app/[locale]/utils/azureService";
-import { NextResponse } from "next/server";
+import { translateTextHF } from "@/app/[locale]/utils/huggingFaceService";
+import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
-export async function POST(req: Request, res: NextApiResponse) {
+export async function POST(req: NextRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const body = await req.json();
     const { text, from, to } = body;
     try {
-      const translatedText = await translateText({ text, from, to });
+      const translatedText = await translateTextHF({ text, from, to });
+
+      // Persist to database if user is logged in
+      const sessionToken = req.cookies.get("session_token")?.value;
+      if (sessionToken) {
+        const userId = sessionToken.replace("mock_token_", "");
+        await prisma.translation.create({
+            data: {
+                userId,
+                inputText: text,
+                outputText: translatedText,
+                sourceLanguage: from,
+                targetLanguage: to,
+                type: "text"
+            }
+        });
+      }
+
       return NextResponse.json(translatedText, {
         status: 200,
       });

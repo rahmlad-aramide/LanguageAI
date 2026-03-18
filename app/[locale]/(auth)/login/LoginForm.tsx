@@ -77,8 +77,25 @@ export default function LoginForm({
     defaultValues: { email: "", password: "", remember: false },
   });
 
-  const onSubmit = (values: LoginSchema) => {
-    console.log(values);
+  const onSubmit = async (values: LoginSchema) => {
+    try {
+      const response = await fetch("/en/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        localStorage.setItem("user_id", data.user.id);
+        localStorage.setItem("user_email", data.user.email);
+        localStorage.setItem("user_name", data.user.fullName || "User");
+        window.location.href = "/en/dashboard";
+      } else {
+        alert(data.error || "Login failed");
+      }
+    } catch (error) {
+      console.error("Login Error:", error);
+    }
   };
 
   return (

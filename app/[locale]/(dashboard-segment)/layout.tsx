@@ -3,6 +3,7 @@ import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { Locale, locales } from "@/i18n.config";
 import SidebarPage from "@/src/components/Sidebar";
 import TopNavPage from "@/src/components/TopNav";
+import { ModalProvider, NotificationProvider } from "@/src/contexts";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -22,13 +23,17 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <div className="min-h-screen flex bg-gray-50">
-        <SidebarPage />
-        <div className="flex-1 flex flex-col">
-          <TopNavPage />
-          <main className="flex-1 p-4 overflow-y-auto">{children}</main>
-        </div>
-      </div>
+      <NotificationProvider>
+        <ModalProvider>
+          <div className="min-h-screen flex bg-gray-50">
+            <SidebarPage />
+            <div className="flex-1 flex flex-col">
+              <TopNavPage />
+              <main className="flex-1 p-4 overflow-y-auto">{children}</main>
+            </div>
+          </div>
+        </ModalProvider>
+      </NotificationProvider>
     </NextIntlClientProvider>
   );
 }

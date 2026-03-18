@@ -18,6 +18,7 @@ import { useModal, useNotification } from "../../contexts";
 import { TextArea } from "../shared/TextArea";
 import { UploadFile } from "../UploadFile";
 import { useVoiceToText } from "react-speakup";
+import { FaEdit, FaPlus } from "react-icons/fa";
 
 export const ClientTranslation: React.FC<{
   headingText: string;
@@ -61,6 +62,8 @@ export const ClientTranslation: React.FC<{
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [micOn, setMicOn] = useState<boolean>(false);
   const [micMode, setMicMode] = useState<"play" | "pause" | "stop">("play");
+  const [aiLoading, setAiLoading] = useState<boolean>(false);
+  const [keywords, setKeywords] = useState<string[]>([]);
 
   const sourceLang = `${selectedLanguageOption(sourceLanguage)?.key}`;
   const targetLang = `${selectedLanguageOption(targetLanguage)?.key}`;
@@ -92,17 +95,14 @@ export const ClientTranslation: React.FC<{
   }, [notify, stopListening]);
 
   const handleSpeak = useCallback(
-    (text: string) => {
-      if (sourceLang === "en" || targetLang === "en") {
-        if ("speechSynthesis" in window && text) {
-          const utterance = new SpeechSynthesisUtterance(text);
-          window.speechSynthesis.speak(utterance);
-          notify("You are now listening to your texts...", "inform");
-        } else {
-          notify("Sorry, Text-to-Speech is not supported.", "warn");
-        }
+    (text: string, lang: string) => {
+      if ("speechSynthesis" in window && text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang === "zh" ? "zh-CN" : lang;
+        window.speechSynthesis.speak(utterance);
+        notify("You are now listening...", "inform");
       } else {
-        notify("Sorry, this works better for English...", "inform");
+        notify("Sorry, Text-to-Speech is not supported.", "warn");
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -179,6 +179,96 @@ export const ClientTranslation: React.FC<{
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text]);
 
+  const handleSummarize = async () => {
+    setAiLoading(true);
+    try {
+      const response = await fetch("/en/api/summarize", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text }),
+      });
+      const data = await response.json();
+      setOutput(data);
+      notify("Text summarized successfully!", "success");
+    } catch (error) {
+      notify("Summarization failed", "error");
+    } finally {
+      setAiLoading(false);
+    }
+  };
+
+  const handleKeywords = async () => {
+    setAiLoading(true);
+    try {
+      const response = await fetch("/en/api/keywords", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text }),
+      });
+      const data = await response.json();
+      setKeywords(data);
+      notify("Keywords extracted successfully!", "success");
+    } catch (error) {
+      notify("Keyword extraction failed", "error");
+    } finally {
+      setAiLoading(false);
+    }
+  };
+
+  const handleRewrite = async (style: string) => {
+    setAiLoading(true);
+    try {
+      const response = await fetch("/en/api/rewrite", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text, style }),
+      });
+      const data = await response.json();
+      setOutput(data);
+      notify(`Text rewritten to be ${style}!`, "success");
+    } catch (error) {
+      notify("Rewriting failed", "error");
+    } finally {
+      setAiLoading(false);
+    }
+  };
+
+  const handleSuggestCorrection = async () => {
+    const suggestion = prompt("Enter a better translation:");
+    if (!suggestion) return;
+
+    try {
+      const response = await fetch("/en/api/corrections", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            originalTranslation: output,
+            suggestedTranslation: suggestion
+        }),
+      });
+      if (response.ok) {
+        notify("Thank you for your suggestion!", "success");
+      }
+    } catch (error) {
+      notify("Failed to submit suggestion", "error");
+    }
+  };
+
+  const handleSaveFlashcard = async () => {
+    try {
+      const response = await fetch("/en/api/learning/flashcards", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ front: text, back: output }),
+      });
+      if (response.ok) {
+        notify("Saved to flashcards!", "success");
+      }
+    } catch (error) {
+      notify("Failed to save flashcard", "error");
+    }
+  };
+
   return (
     <section>
       <div id="translate" className="h-7 md:h-20"></div>
@@ -242,6 +332,37 @@ export const ClientTranslation: React.FC<{
                 }}
               />
               <div className="flex justify-end w-full items-center">
+                {text && (
+                  <div className="flex gap-2 mx-2 md:mx-4 m-4 mt-1">
+                    <Button
+                      variant="text"
+                      className="text-[10px] md:text-xs !p-1 underline"
+                      onClick={handleSummarize}
+                      disabled={aiLoading}
+                    >
+                      Summarize
+                    </Button>
+                    <Button
+                      variant="text"
+                      className="text-[10px] md:text-xs !p-1 underline"
+                      onClick={handleKeywords}
+                      disabled={aiLoading}
+                    >
+                      Keywords
+                    </Button>
+                    <select
+                      className="text-[10px] md:text-xs bg-transparent border-none outline-none underline"
+                      onChange={(e) => handleRewrite(e.target.value)}
+                      defaultValue=""
+                      disabled={aiLoading}
+                    >
+                      <option value="" disabled>Rewrite...</option>
+                      <option value="simpler">Simpler</option>
+                      <option value="more polite">Polite</option>
+                      <option value="professional">Professional</option>
+                    </select>
+                  </div>
+                )}
                 {micOn && (
                   <div className="flex gap-2 mx-2 md:mx-4 m-4 mt-1">
                     <Button
@@ -254,7 +375,7 @@ export const ClientTranslation: React.FC<{
                 )}
                 <div className="flex gap-2 mx-2 md:mx-4 m-4 mt-1 ml-auto">
                   <Button
-                    onClick={() => handleSpeak(text)}
+                    onClick={() => handleSpeak(text, sourceLang)}
                     disabled={!text}
                     className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                   >
@@ -279,7 +400,7 @@ export const ClientTranslation: React.FC<{
                 />
                 <div className="flex gap-2 m-4 mt-1">
                   <Button
-                    onClick={() => handleSpeak(output)}
+                    onClick={() => handleSpeak(output, targetLang)}
                     disabled={!output || micOn}
                     className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary disabled:border-[#FEEBF3]"
                   >
@@ -291,10 +412,33 @@ export const ClientTranslation: React.FC<{
                   >
                     <Copy />
                   </Button>
+                  <Button
+                    onClick={handleSuggestCorrection}
+                    title="Suggest better translation"
+                    className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-[#FEEBF3] border-[#FEEBF3] focus:border-primary"
+                  >
+                    <FaEdit className="h-4" />
+                  </Button>
+                  <Button
+                    onClick={handleSaveFlashcard}
+                    title="Save as flashcard"
+                    className="rounded-2xl !px-1.5 md:!px-3 !py-1 max-h-6 !bg-primary border-primary text-white"
+                  >
+                    <FaPlus className="h-3" />
+                  </Button>
                 </div>
               </div>
             )}
           </div>
+          {keywords.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-4 justify-center">
+              {keywords.map((kw, i) => (
+                <span key={i} className="bg-primary/20 text-primary px-2 py-1 rounded-full text-xs">
+                  {kw}
+                </span>
+              ))}
+            </div>
+          )}
           <div className="w-full max-w-sm mx-auto">
             {translateButton && (
               <Button

@@ -1,4 +1,8 @@
-import { TranslateDocumentProps, TranslateProps } from "../utils/azureService";
+import { HFTranslateProps as TranslateProps } from "../utils/huggingFaceService";
+
+export interface TranslateDocumentProps extends TranslateProps {
+  file: File[];
+}
 
 export async function translateText({
   text,

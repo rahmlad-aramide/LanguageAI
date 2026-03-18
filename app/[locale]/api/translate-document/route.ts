@@ -1,10 +1,7 @@
 import { NextApiResponse } from "next";
-import {
-  translateDocument,
-  getTranslatedDocumentUrl,
-} from "@/app/[locale]/utils/azureService";
+import { translateTextHF } from "@/app/[locale]/utils/huggingFaceService";
 import { NextRequest, NextResponse } from "next/server";
-import generateUniqueId from "generate-unique-id";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(req: NextRequest, res: NextApiResponse) {
   if (req.method === "POST") {
@@ -12,22 +9,29 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
     const file = body.get("file") as File;
     const from = body.get("from") as string;
     const to = body.get("to") as string;
-    const uid = generateUniqueId({
-      length: 5,
-    });
-    const fileName = `${uid}_${file.name}`;
 
     try {
-      const translateDocumentRes = await translateDocument(
-        file,
-        from,
-        to,
-        fileName,
-      );
-      console.log("translateDocumentRes", translateDocumentRes);
-      const translatedDocumentUrl = await getTranslatedDocumentUrl(fileName);
-      console.log("getTranslatedDocumentUrl", getTranslatedDocumentUrl);
-      return NextResponse.json(translatedDocumentUrl, {
+      // For document translation with HF, we'll read the text from the file and translate it
+      const text = await file.text();
+      const translatedText = await translateTextHF({ text, from, to });
+
+      // Persist to database if user is logged in
+      const sessionToken = req.cookies.get("session_token")?.value;
+      if (sessionToken) {
+        const userId = sessionToken.replace("mock_token_", "");
+        await prisma.translation.create({
+            data: {
+                userId,
+                inputText: file.name,
+                outputText: translatedText,
+                sourceLanguage: from,
+                targetLanguage: to,
+                type: "document"
+            }
+        });
+      }
+
+      return NextResponse.json(translatedText, {
         status: 200,
       });
     } catch (error: any) {
