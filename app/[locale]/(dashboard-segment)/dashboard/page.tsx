@@ -8,9 +8,20 @@ import { useState, useEffect } from "react";
 import { FaUpload, FaPlus, FaLanguage } from "react-icons/fa";
 import { BsGraphUp } from "react-icons/bs";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+
+interface Translation {
+  id: string;
+  inputText: string;
+  sourceLanguage: string;
+  targetLanguage: string;
+  createdAt: string;
+}
 
 export default function Dashboard() {
   const t = useTranslations("Dashboard");
+  const params = useParams();
+  const locale = params.locale as string;
   const [userName, setUserName] = useState("User");
   const [stats, setStats] = useState({
     totalTranslations: 0,
@@ -18,7 +29,7 @@ export default function Dashboard() {
     documentsCount: 0,
     mostUsedLanguage: "N/A",
   });
-  const [recentTranslations, setRecentTranslations] = useState<any[]>([]);
+  const [recentTranslations, setRecentTranslations] = useState<Translation[]>([]);
 
   useEffect(() => {
     const storedName = localStorage.getItem("user_name");
@@ -26,7 +37,7 @@ export default function Dashboard() {
 
     const fetchStats = async () => {
       try {
-        const response = await fetch("/en/api/user/stats");
+        const response = await fetch(`/api/user/stats`);
         const data = await response.json();
         if (response.ok) {
           setStats({
@@ -56,7 +67,7 @@ export default function Dashboard() {
           {t("Welcome", { name: userName })}
         </h1>
         <div className="flex gap-3 mt-4 md:mt-0">
-          <Link href="/translation-history">
+          <Link href={`/${locale}/dashboard`}>
             <Button className="flex items-center gap-2">
               <FaPlus /> {t("StartTranslation")}
             </Button>

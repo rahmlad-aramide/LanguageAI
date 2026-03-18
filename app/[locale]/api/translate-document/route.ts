@@ -1,10 +1,9 @@
-import { NextApiResponse } from "next";
 import { translateTextHF } from "@/app/[locale]/utils/huggingFaceService";
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { getSession } from "@/lib/auth";
 
-export async function POST(req: NextRequest, res: NextApiResponse) {
-  if (req.method === "POST") {
+export async function POST(req: NextRequest) {
     const body = await req.formData();
     const file = body.get("file") as File;
     const from = body.get("from") as string;
@@ -17,11 +16,12 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
 
       // Persist to database if user is logged in
       const sessionToken = req.cookies.get("session_token")?.value;
-      if (sessionToken) {
-        const userId = sessionToken.replace("mock_token_", "");
+      const session = await getSession(sessionToken);
+
+      if (session) {
         await prisma.translation.create({
             data: {
-                userId,
+                userId: session.userId,
                 inputText: file.name,
                 outputText: translatedText,
                 sourceLanguage: from,
@@ -42,7 +42,4 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
         },
       );
     }
-  } else {
-    res.status(405).json({ message: "Method not allowed" });
-  }
 }

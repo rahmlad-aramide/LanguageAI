@@ -1,4 +1,8 @@
-import { HFTranslateProps as TranslateProps } from "../utils/huggingFaceService";
+export interface TranslateProps {
+  text: string;
+  from: string;
+  to: string;
+}
 
 export interface TranslateDocumentProps extends TranslateProps {
   file: File[];
@@ -16,7 +20,7 @@ export async function translateText({
   }
 
   try {
-    const response = await fetch("/en/api/translate-text", {
+    const response = await fetch("/api/translate-text", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +58,7 @@ export async function translateDocument({
   }
 
   try {
-    const response = await fetch("/en/api/translate-document", {
+    const response = await fetch("/api/translate-document", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,29 +68,6 @@ export async function translateDocument({
         from,
         to,
       }),
-    });
-
-    if (!response.ok) {
-      const errorBody = await response.json().catch(() => null);
-      const errorMessage =
-        response.statusText || errorBody?.message || "Unknown error occurred";
-      throw new Error(`Translation API failed: ${errorMessage}`);
-    }
-
-    const result = await response.json();
-    return result;
-  } catch (error: any) {
-    throw new Error(`Translation failed: ${error}`);
-  }
-}
-
-export async function testTranslator(): Promise<string> {
-  try {
-    const response = await fetch("/api/test", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
     });
 
     if (!response.ok) {

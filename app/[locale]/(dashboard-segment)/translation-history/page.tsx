@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
@@ -9,17 +9,23 @@ import { FaClock, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Translation } from "@/src/components";
 import { ModalProvider, NotificationProvider } from "@/src/contexts";
 
-import { useEffect } from "react";
+interface TranslationItem {
+  id: string;
+  inputText: string;
+  sourceLanguage: string;
+  targetLanguage: string;
+  createdAt: string;
+}
 
 export default function TranslationHistory() {
   const t = useTranslations("TranslationHistory");
   const [showHistory, setShowHistory] = useState(true);
-  const [historyItems, setHistoryItems] = useState<any[]>([]);
+  const [historyItems, setHistoryItems] = useState<TranslationItem[]>([]);
 
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch("/en/api/user/stats");
+        const response = await fetch("/api/user/stats");
         const data = await response.json();
         if (response.ok) {
           setHistoryItems(data.recentTranslations);

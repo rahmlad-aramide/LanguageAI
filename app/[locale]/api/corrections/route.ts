@@ -1,10 +1,12 @@
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
+import { getSession } from "@/lib/auth";
 
 export async function POST(req: NextRequest) {
   const sessionToken = req.cookies.get("session_token")?.value;
-  if (!sessionToken) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  const userId = sessionToken.replace("mock_token_", "");
+  const session = await getSession(sessionToken);
+  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const userId = session.userId;
 
   try {
     const { originalTranslation, suggestedTranslation } = await req.json();
@@ -18,6 +20,11 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET(req: NextRequest) {
+  // Restrict to authorized users (for now, any logged in user can see them, but it's not public)
+  const sessionToken = req.cookies.get("session_token")?.value;
+  const session = await getSession(sessionToken);
+  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
   try {
     const corrections = await prisma.correction.findMany({
       orderBy: { createdAt: "desc" },

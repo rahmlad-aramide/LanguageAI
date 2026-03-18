@@ -1,13 +1,16 @@
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
+import { getSession } from "@/lib/auth";
 
 export async function GET(req: NextRequest) {
   const sessionToken = req.cookies.get("session_token")?.value;
-  if (!sessionToken) {
+  const session = await getSession(sessionToken);
+
+  if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const userId = sessionToken.replace("mock_token_", "");
+  const userId = session.userId;
 
   try {
     const totalTranslations = await prisma.translation.count({ where: { userId } });

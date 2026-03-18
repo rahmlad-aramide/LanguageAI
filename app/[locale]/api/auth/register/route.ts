@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
 
 export async function POST(req: Request) {
   try {
@@ -17,11 +18,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "User already exists" }, { status: 400 });
     }
 
-    // In a production app, hash the password!
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 12);
+
     const user = await prisma.user.create({
       data: {
         email,
-        password, // Simple for mock/demo
+        password: hashedPassword,
         fullName: full_name,
         preferredLanguage: preferredLanguage || "en",
       },

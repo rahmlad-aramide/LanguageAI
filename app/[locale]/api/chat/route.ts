@@ -1,10 +1,12 @@
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
+import { getSession } from "@/lib/auth";
 
 export async function GET(req: NextRequest) {
   const sessionToken = req.cookies.get("session_token")?.value;
-  if (!sessionToken) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  const userId = sessionToken.replace("mock_token_", "");
+  const session = await getSession(sessionToken);
+  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const userId = session.userId;
 
   try {
     const messages = await prisma.chatMessage.findMany({
@@ -20,8 +22,9 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   const sessionToken = req.cookies.get("session_token")?.value;
-  if (!sessionToken) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  const userId = sessionToken.replace("mock_token_", "");
+  const session = await getSession(sessionToken);
+  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const userId = session.userId;
 
   try {
     const { message, translatedText, isUser } = await req.json();

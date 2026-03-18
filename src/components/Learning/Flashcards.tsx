@@ -20,7 +20,7 @@ export const Flashcards: React.FC = () => {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await fetch("/en/api/learning/flashcards");
+        const response = await fetch("/api/learning/flashcards");
         const data = await response.json();
         if (response.ok && data.length > 0) {
           setCards(data);

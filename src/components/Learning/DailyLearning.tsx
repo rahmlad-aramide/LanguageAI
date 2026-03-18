@@ -21,7 +21,7 @@ export const DailyLearning: React.FC = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const response = await fetch("/en/api/learning/daily");
+        const response = await fetch("/api/learning/daily");
         const data = await response.json();
         if (response.ok) {
           setQuiz(data.quiz);

@@ -1,44 +1,46 @@
-import { NextApiResponse } from "next";
-import { translateTextHF } from "@/app/[locale]/utils/huggingFaceService";
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { getSession } from "@/lib/auth";
+import * as hf from "@/app/[locale]/utils/huggingFaceService";
+import * as azure from "@/app/[locale]/utils/azureService";
 
-export async function POST(req: NextRequest, res: NextApiResponse) {
-  if (req.method === "POST") {
+export async function POST(req: NextRequest) {
     const body = await req.json();
     const { text, from, to } = body;
+
     try {
-      const translatedText = await translateTextHF({ text, from, to });
+        const provider = process.env.AI_PROVIDER || "huggingface";
+        let translatedText: string;
 
-      // Persist to database if user is logged in
-      const sessionToken = req.cookies.get("session_token")?.value;
-      if (sessionToken) {
-        const userId = sessionToken.replace("mock_token_", "");
-        await prisma.translation.create({
-            data: {
-                userId,
-                inputText: text,
-                outputText: translatedText,
-                sourceLanguage: from,
-                targetLanguage: to,
-                type: "text"
-            }
-        });
-      }
+        if (provider === "azure") {
+            translatedText = await azure.translateText({ text, from: from || "en", to: to || "fr" });
+        } else {
+            translatedText = await hf.translateTextHF({ text, from, to });
+        }
 
-      return NextResponse.json(translatedText, {
-        status: 200,
-      });
+        // Persist to database if user is logged in
+        const sessionToken = req.cookies.get("session_token")?.value;
+        const session = await getSession(sessionToken);
+
+        if (session) {
+            await prisma.translation.create({
+                data: {
+                    userId: session.userId,
+                    inputText: text,
+                    outputText: translatedText,
+                    sourceLanguage: from,
+                    targetLanguage: to,
+                    type: "text"
+                }
+            });
+        }
+
+        return NextResponse.json(translatedText, { status: 200 });
     } catch (error: any) {
-      console.log("translateText Error", error);
-      return NextResponse.json(
-        { error: error.message || "Failed to translate the texts." },
-        {
-          status: 500,
-        },
-      );
+        console.error("translateText Error", error);
+        return NextResponse.json(
+            { error: error.message || "Failed to translate the texts." },
+            { status: 500 }
+        );
     }
-  } else {
-    res.status(405).json({ message: "Method not allowed" });
-  }
 }

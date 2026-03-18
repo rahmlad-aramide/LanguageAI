@@ -22,7 +22,7 @@ export const LiveChat: React.FC = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch("/en/api/chat");
+        const response = await fetch("/api/chat");
         const data = await response.json();
         if (response.ok) setMessages(data);
       } catch (error) {
@@ -46,7 +46,7 @@ export const LiveChat: React.FC = () => {
 
     try {
       // 1. Translate user message (Mocking real-time translation)
-      const transRes = await fetch("/en/api/translate-text", {
+      const transRes = await fetch("/api/translate-text", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: userMsg, from: "en", to: "fr" }),
@@ -54,7 +54,7 @@ export const LiveChat: React.FC = () => {
       const translatedText = await transRes.json();
 
       // 2. Save user message
-      const saveRes = await fetch("/en/api/chat", {
+      const saveRes = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMsg, translatedText, isUser: true }),
@@ -65,14 +65,14 @@ export const LiveChat: React.FC = () => {
       // 3. Simulate bot response
       setTimeout(async () => {
         const botMsg = "I received your message: " + translatedText;
-        const botTransRes = await fetch("/en/api/translate-text", {
+        const botTransRes = await fetch("/api/translate-text", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text: botMsg, from: "en", to: "fr" }),
         });
         const botTranslated = await botTransRes.json();
 
-        const botSaveRes = await fetch("/en/api/chat", {
+        const botSaveRes = await fetch("/api/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: botMsg, translatedText: botTranslated, isUser: false }),

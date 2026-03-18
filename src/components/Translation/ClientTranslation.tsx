@@ -19,6 +19,7 @@ import { TextArea } from "../shared/TextArea";
 import { UploadFile } from "../UploadFile";
 import { useVoiceToText } from "react-speakup";
 import { FaEdit, FaPlus } from "react-icons/fa";
+import { CorrectionModal } from "./CorrectionModal";
 
 export const ClientTranslation: React.FC<{
   headingText: string;
@@ -182,7 +183,7 @@ export const ClientTranslation: React.FC<{
   const handleSummarize = async () => {
     setAiLoading(true);
     try {
-      const response = await fetch("/en/api/summarize", {
+      const response = await fetch("/api/summarize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text }),
@@ -200,7 +201,7 @@ export const ClientTranslation: React.FC<{
   const handleKeywords = async () => {
     setAiLoading(true);
     try {
-      const response = await fetch("/en/api/keywords", {
+      const response = await fetch("/api/keywords", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text }),
@@ -218,7 +219,7 @@ export const ClientTranslation: React.FC<{
   const handleRewrite = async (style: string) => {
     setAiLoading(true);
     try {
-      const response = await fetch("/en/api/rewrite", {
+      const response = await fetch("/api/rewrite", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text, style }),
@@ -233,30 +234,13 @@ export const ClientTranslation: React.FC<{
     }
   };
 
-  const handleSuggestCorrection = async () => {
-    const suggestion = prompt("Enter a better translation:");
-    if (!suggestion) return;
-
-    try {
-      const response = await fetch("/en/api/corrections", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            originalTranslation: output,
-            suggestedTranslation: suggestion
-        }),
-      });
-      if (response.ok) {
-        notify("Thank you for your suggestion!", "success");
-      }
-    } catch (error) {
-      notify("Failed to submit suggestion", "error");
-    }
+  const handleSuggestCorrection = () => {
+    openModal(<CorrectionModal originalTranslation={output} />);
   };
 
   const handleSaveFlashcard = async () => {
     try {
-      const response = await fetch("/en/api/learning/flashcards", {
+      const response = await fetch("/api/learning/flashcards", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ front: text, back: output }),

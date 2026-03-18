@@ -20,6 +20,16 @@ model User {
   flashcards        Flashcard[]
   corrections       Correction[]
   chatMessages      ChatMessage[]
+  sessions          Session[]
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  sessionToken String   @unique
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expires      DateTime
+  createdAt    DateTime @default(now())
 }
 
 model Translation {
