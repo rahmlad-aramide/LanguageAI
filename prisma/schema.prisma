@@ -6,11 +6,11 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mongodb"
 }
 
 model User {
-  id                String         @id @default(uuid())
+  id                String         @id @default(auto()) @map("_id") @db.ObjectId
   email             String         @unique
   password          String
   fullName          String?
@@ -24,17 +24,17 @@ model User {
 }
 
 model Session {
-  id           String   @id @default(uuid())
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
   sessionToken String   @unique
-  userId       String
+  userId       String   @db.ObjectId
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   expires      DateTime
   createdAt    DateTime @default(now())
 }
 
 model Translation {
-  id             String   @id @default(uuid())
-  userId         String
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId         String   @db.ObjectId
   user           User     @relation(fields: [userId], references: [id])
   inputText      String
   outputText     String
@@ -45,8 +45,8 @@ model Translation {
 }
 
 model Flashcard {
-  id        String   @id @default(uuid())
-  userId    String
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
   user      User     @relation(fields: [userId], references: [id])
   front     String
   back      String
@@ -54,8 +54,8 @@ model Flashcard {
 }
 
 model Correction {
-  id                   String   @id @default(uuid())
-  userId               String
+  id                   String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId               String   @db.ObjectId
   user                 User     @relation(fields: [userId], references: [id])
   originalTranslation  String
   suggestedTranslation String
@@ -63,8 +63,8 @@ model Correction {
 }
 
 model ChatMessage {
-  id             String   @id @default(uuid())
-  userId         String
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId         String   @db.ObjectId
   user           User     @relation(fields: [userId], references: [id])
   message        String
   translatedText String
