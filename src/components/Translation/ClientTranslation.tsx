@@ -1,6 +1,6 @@
 "use client";
 import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
-import { inter } from "@/app/[locale]/fonts";
+import { inter } from "@/app/fonts";
 import { SelectLanguage } from "../shared/SelectLanguage";
 import {
   Arrows,
@@ -13,7 +13,7 @@ import {
 } from "../../assets/svg";
 import { Button } from "..";
 import { selectedLanguageOption } from "../shared/helper";
-import { translateText } from "@/app/[locale]/api";
+import { translateText } from "@/app/api";
 import { useModal, useNotification } from "../../contexts";
 import { TextArea } from "../shared/TextArea";
 import { UploadFile } from "../UploadFile";

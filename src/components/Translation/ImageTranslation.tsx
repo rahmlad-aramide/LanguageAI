@@ -5,7 +5,7 @@ import Tesseract from "tesseract.js";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNotification } from "@/src/contexts";
-import { translateText } from "@/app/[locale]/api";
+import { translateText } from "@/app/api";
 import { FaCamera, FaUpload, FaSpinner } from "react-icons/fa";
 
 export const ImageTranslation = () => {

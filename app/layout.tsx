@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
-import { monaSans } from "@/app/[locale]/fonts";
+import { monaSans } from "@/app/fonts";
 
 export const metadata: Metadata = {
   title: "LanguageAI - Texts and Documents Translator.",

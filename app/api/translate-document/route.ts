@@ -1,4 +1,4 @@
-import { translateTextHF } from "@/app/[locale]/utils/huggingFaceService";
+import { translateTextHF } from "@/app/utils/huggingFaceService";
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getSession } from "@/lib/auth";

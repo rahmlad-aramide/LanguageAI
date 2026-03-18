@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { extractKeywordsHF } from "@/app/[locale]/utils/huggingFaceService";
+import { extractKeywordsHF } from "@/app/utils/huggingFaceService";
 
 export async function POST(req: NextRequest) {
   try {

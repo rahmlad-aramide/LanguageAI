@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { rewriteTextHF } from "@/app/[locale]/utils/huggingFaceService";
+import { rewriteTextHF } from "@/app/utils/huggingFaceService";
 
 export async function POST(req: NextRequest) {
   try {

@@ -1,4 +1,4 @@
-import { supportedFormatsGroupedByFileType } from "@/app/[locale]/utils/helper";
+import { supportedFormatsGroupedByFileType } from "@/app/utils/helper";
 import { useLocale, useTranslations } from "next-intl";
 import { Locale } from "@/i18n.config";
 

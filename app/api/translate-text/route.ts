@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getSession } from "@/lib/auth";
-import * as hf from "@/app/[locale]/utils/huggingFaceService";
-import * as azure from "@/app/[locale]/utils/azureService";
+import * as hf from "@/app/utils/huggingFaceService";
+import * as azure from "@/app/utils/azureService";
 
 export async function POST(req: NextRequest) {
     const body = await req.json();

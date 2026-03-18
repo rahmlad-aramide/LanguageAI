@@ -2,7 +2,7 @@ import {
   documentLanguagesData,
   navLanguagesData,
   textLanguagesData,
-} from "@/app/[locale]/data";
+} from "@/app/data";
 
 export const selectedLanguageOption = (language: string) =>
   textLanguagesData.find((option) => option.language === language);
